@@ -20,6 +20,7 @@ import CheckAuth from "./components/common/Check-auth";
 import UnAuthPage from "./Pages/un-auth";
 import { useDispatch, useSelector } from "react-redux";
 import { checkAuth } from "./Store/auth-slice";
+import { Skeleton } from "./components/ui/skeleton";
 
 function App() {
 
@@ -33,7 +34,15 @@ function App() {
   },[dispatch])
 
 
-  if(isLoading) return  <div>Loading....</div>
+  if(isLoading) return  <div>
+    <div className="flex flex-col space-y-3">
+      <Skeleton className="h-[250px] w-full rounded-xl" />
+      <div className="space-y-2">
+        <Skeleton className="h-8 w-full" />
+        <Skeleton className="h-8 w-full" />
+      </div>
+    </div>
+  </div>
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       
