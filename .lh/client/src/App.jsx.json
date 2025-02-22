@@ -1,0 +1,62 @@
+{
+    "sourceFile": "client/src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1739516538254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739523360886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const [count, setCount] = useState(0)\n \n   return (\n     <>\n-      \n+      <Layout\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1739523372550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const [count, setCount] = useState(0)\n \n   return (\n     <>\n-      <Layout\n+      <Layout/>\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1739523384258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { useState } from 'react'\n import reactLogo from './assets/react.svg'\n import viteLogo from '/vite.svg'\n+import Layout\n import './App.css'\n \n function App() {\n   const [count, setCount] = useState(0)\n"
+                },
+                {
+                    "date": 1739523391526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useState } from 'react'\n import reactLogo from './assets/react.svg'\n import viteLogo from '/vite.svg'\n-import Layout\n+import Layout from './'\n import './App.css'\n \n function App() {\n   const [count, setCount] = useState(0)\n"
+                },
+                {
+                    "date": 1739523408388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useState } from 'react'\n import reactLogo from './assets/react.svg'\n import viteLogo from '/vite.svg'\n-import Layout from './'\n+import Layout from './components/auth/Layout'\n import './App.css'\n \n function App() {\n   const [count, setCount] = useState(0)\n"
+                },
+                {
+                    "date": 1739526671675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n   const [count, setCount] = useState(0)\n \n   return (\n     <>\n-      <Layout/>\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1739526676881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,11 @@\n function App() {\n   const [count, setCount] = useState(0)\n \n   return (\n-    <>\n-    </>\n+  <div>\n+    \n+  </div>\n   )\n }\n \n export default App\n"
+                },
+                {
+                    "date": 1739526683620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   const [count, setCount] = useState(0)\n \n   return (\n   <div>\n-    \n+    <h1>Header </h1>\n   </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1739526690017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   const [count, setCount] = useState(0)\n \n   return (\n   <div>\n-    <h1>Header </h1>\n+    <h1>Header Component</h1>\n   </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1739526702078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   return (\n   <div>\n     <h1>Header Component</h1>\n \n-    <R\n+    <Ro\n   </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1739881944297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,81 @@\n+import { useEffect, useState } from \"react\";\n+import \"./App.css\";\n+import { Route, Routes } from \"react-router-dom\";\n+import AuthLayout from \"./components/auth/Layout\";\n+import Login from \"./Pages/auth/Login\";\n+import Register from \"./Pages/auth/Register\";\n+import AdminLayout from \"./components/admin-view/Layout\";\n+import AdminDashboard from \"./Pages/admin-view/Dashboard\";\n+import AdminProducts from \"./Pages/admin-view/Products\";\n+import AdminOrders from \"./Pages/admin-view/Orders\";\n+import AdminFeatures from \"./Pages/admin-view/Features\";\n+import ShoppingLayout from \"./components/shopping-view/Layout\";\n+import ErrorPage from \"./Pages/ErrorPage\";\n+import ShoppingHome from \"./Pages/shopping-view/Home\";\n+import ShoppingListing from \"./Pages/shopping-view/Listing\";\n+import ShoppingCheckout from \"./Pages/shopping-view/Checkout\";\n+import ShoppingAccount from \"./Pages/shopping-view/Account\";\n+import CheckAuth from \"./components/common/Check-auth\";\n+import UnAuthPage from \"./Pages/un-auth\";\n+import { useDispatch, useSelector } from \"react-redux\";\n+\n+function App() {\n+\n+\n+\n+  const {user,isAuthenticated} = useSelector(state=> state.auth);\n+  const dispatch = useDispatch();\n+\n+  useEffect(()=>{\n+    dispatch\n+  })\n+\n+  return (\n+    <div className=\"flex flex-col overflow-hidden bg-white\">\n+      <Routes>\n+        <Route\n+          path=\"/auth\"\n+          element={\n+            <CheckAuth isAuthenticated={isAuthenticated} user={user}>\n+              <AuthLayout />\n+            </CheckAuth>\n+          }\n+        >\n+          <Route path=\"login\" element={<Login />} />\n+          <Route path=\"register\" element={<Register />} />\n+        </Route>\n+\n+        <Route\n+          path=\"/admin\"\n+          element={\n+            <CheckAuth isAuthenticated={isAuthenticated} user={user}>\n+              <AdminLayout />\n+            </CheckAuth>\n+          }\n+        >\n+          <Route path=\"dashboard\" element={<AdminDashboard />} />\n+          <Route path=\"products\" element={<AdminProducts />} />\n+          <Route path=\"orders\" element={<AdminOrders />} />\n+          <Route path=\"features\" element={<AdminFeatures />} />\n+        </Route>\n+        <Route\n+          path=\"/shop\"\n+          element={\n+            <CheckAuth isAuthenticated={isAuthenticated}  user={user}>\n+              <ShoppingLayout />\n+            </CheckAuth>\n+          }\n+        >\n+          <Route path=\"home\" element={<ShoppingHome />} />\n+          <Route path=\"listing\" element={<ShoppingListing />} />\n+          <Route path=\"checkout\" element={<ShoppingCheckout />} />\n+          <Route path=\"account\" element={<ShoppingAccount />} />\n+        </Route>\n+        <Route path=\"/unauth-page\" element={<UnAuthPage/>} />\n+        <Route path=\"*\" element={<ErrorPage />} />\n+      </Routes>\n+    </div>\n+  );\n+}\n+\n+export default App;\n"
+                }
+            ],
+            "date": 1739516538254,
+            "name": "Commit-0",
+            "content": "import { useState } from 'react'\nimport reactLogo from './assets/react.svg'\nimport viteLogo from '/vite.svg'\nimport './App.css'\n\nfunction App() {\n  const [count, setCount] = useState(0)\n\n  return (\n    <>\n      \n    </>\n  )\n}\n\nexport default App\n"
+        }
+    ]
+}

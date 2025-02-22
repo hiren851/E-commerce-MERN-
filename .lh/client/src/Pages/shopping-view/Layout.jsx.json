@@ -1,0 +1,42 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Layout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1739530810245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739530820557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Layout = () => {\r\n+const ShoppingLayout = () => {\r\n   return (\r\n-    <div>Layout</div>\r\n+    <div>ShoppingLayout</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Layout\n+export default ShoppingLayout\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739530826697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const ShoppingLayout = () => {\r\n   return (\r\n-    <div>ShoppingLayout</div>\r\n+    <div>Shopping Layout</div>\r\n   )\r\n }\r\n \r\n export default ShoppingLayout\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739530887285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const ShoppingLayout = () => {\r\n   return (\r\n-    <div>Shopping Layout</div>\r\n+    <div className=''></div>\r\n   )\r\n }\r\n \r\n export default ShoppingLayout\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739530893550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const ShoppingLayout = () => {\r\n   return (\r\n-    <div className=''></div>\r\n+    <div className='flex flex-col '></div>\r\n   )\r\n }\r\n \r\n export default ShoppingLayout\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739530901768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const ShoppingLayout = () => {\r\n   return (\r\n-    <div className='flex flex-col '></div>\r\n+    <div className='flex flex-col bg-white overflow-hidden'></div>\r\n   )\r\n }\r\n \r\n export default ShoppingLayout\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739530909454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n const ShoppingLayout = () => {\r\n   return (\r\n     <div className='flex flex-col bg-white overflow-hidden'>\r\n \r\n-        \r\n+        <main>\r\n+            \r\n+        </main>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1739530810245,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Layout = () => {\r\n  return (\r\n    <div>Layout</div>\r\n  )\r\n}\r\n\r\nexport default Layout"
+        }
+    ]
+}

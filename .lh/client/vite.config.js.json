@@ -1,0 +1,62 @@
+{
+    "sourceFile": "client/vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1739516794498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739516800960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +0,0 @@\n-import { defineConfig } from 'vite'\n-import react from '@vitejs/plugin-react'\n-\n-// https://vite.dev/config/\n-export default defineConfig({\n-  plugins: [react()],\n-})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739516822337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n+import path from \"path\"\n+import react from \"@vitejs/plugin-react\"\n+import { defineConfig } from \"vite\"\n \n+export default defineConfig({\n+  plugins: [react()],\n+  resolve: {\n+    alias: {\n+      \"@\": path.resolve(__dirname, \"./src\"),\n+    },\n+  },\n+})\n"
+                },
+                {
+                    "date": 1739524518608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n import react from \"@vitejs/plugin-react\"\n import { defineConfig } from \"vite\"\n \n export default defineConfig({\n-  plugins: [react()],\n+  plugins: [react(),\n+    \n+  ],\n   resolve: {\n     alias: {\n       \"@\": path.resolve(__dirname, \"./src\"),\n     },\n"
+                },
+                {
+                    "date": 1739524524815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { defineConfig } from \"vite\"\n \n export default defineConfig({\n   plugins: [react(),\n-    \n+    tail\n   ],\n   resolve: {\n     alias: {\n       \"@\": path.resolve(__dirname, \"./src\"),\n"
+                },
+                {
+                    "date": 1739524531631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { defineConfig } from \"vite\"\n \n export default defineConfig({\n   plugins: [react(),\n-    tail\n+    tailwin\n   ],\n   resolve: {\n     alias: {\n       \"@\": path.resolve(__dirname, \"./src\"),\n"
+                },
+                {
+                    "date": 1739524537940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { defineConfig } from \"vite\"\n \n export default defineConfig({\n   plugins: [react(),\n-    tailwin\n+    ta\n   ],\n   resolve: {\n     alias: {\n       \"@\": path.resolve(__dirname, \"./src\"),\n"
+                },
+                {
+                    "date": 1739524553943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import path from \"path\"\n import react from \"@vitejs/plugin-react\"\n import { defineConfig } from \"vite\"\n+import tailwindcss from './'\n \n export default defineConfig({\n   plugins: [react(),\n     ta\n"
+                },
+                {
+                    "date": 1739524559422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import path from \"path\"\n import react from \"@vitejs/plugin-react\"\n import { defineConfig } from \"vite\"\n-import tailwindcss from './'\n+import tailwindcss from '.'\n \n export default defineConfig({\n   plugins: [react(),\n     ta\n"
+                },
+                {
+                    "date": 1739524567584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import path from \"path\"\n import react from \"@vitejs/plugin-react\"\n import { defineConfig } from \"vite\"\n-import tailwindcss from '.'\n+import tailwindcss from ''\n \n export default defineConfig({\n   plugins: [react(),\n     ta\n"
+                },
+                {
+                    "date": 1739524576589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import path from \"path\"\n import react from \"@vitejs/plugin-react\"\n import { defineConfig } from \"vite\"\n-import tailwindcss from ''\n+import tailwindcss from '@'\n \n export default defineConfig({\n   plugins: [react(),\n     ta\n"
+                },
+                {
+                    "date": 1739524588384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import path from \"path\"\n import react from \"@vitejs/plugin-react\"\n import { defineConfig } from \"vite\"\n-import tailwindcss from '@'\n+import tailwindcss from '@tailwindcss/vite'\n \n export default defineConfig({\n   plugins: [react(),\n-    ta\n+    tailwindcss()\n   ],\n   resolve: {\n     alias: {\n       \"@\": path.resolve(__dirname, \"./src\"),\n"
+                }
+            ],
+            "date": 1739516794498,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// https://vite.dev/config/\nexport default defineConfig({\n  plugins: [react()],\n})\n"
+        }
+    ]
+}

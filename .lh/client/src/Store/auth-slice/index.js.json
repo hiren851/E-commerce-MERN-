@@ -1,0 +1,274 @@
+{
+    "sourceFile": "client/src/Store/auth-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 64,
+            "patches": [
+                {
+                    "date": 1739518109527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739518114997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n \r\n \r\n-const \n\\ No newline at end of file\n+const authSlice \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518123657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n \r\n\\ No newline at end of file\n-const authSlice \n+const authSlice  = createSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518129255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n \r\n-const authSlice  = createSlice\n\\ No newline at end of file\n+const authSlice  = createSlice()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518135077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n \r\n-const authSlice  = createSlice()\n\\ No newline at end of file\n+const authSlice  = createSlice({\r\n+    name: \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518143169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n \r\n \r\n \r\n const authSlice  = createSlice({\r\n-    name: \r\n+    name: \"auth\",\r\n+    initialState\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518153194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n+const initialState = \r\n \r\n-\r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n-    initialState\r\n+    initialState,\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518163766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n-const initialState = \r\n+const initialState = {\r\n+    isAuthenticte\r\n+}\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1739518170388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n-    isAuthenticte\r\n+    isAuthenticated = \r\n }\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739518175730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n-    isAuthenticated = \r\n+    isAuthenticated : false , \r\n+    \r\n }\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739518183707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n     isAuthenticated : false , \r\n-    \r\n+    isLoading : false \r\n }\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739518191021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n     isAuthenticated : false , \r\n-    isLoading : false \r\n+    isLoading : false ,\r\n+    \r\n }\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739518196948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n-    \r\n+    user: null ,\r\n }\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739518207629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,6 @@\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n+    \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518213820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n-    \r\n+    reducers : \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518220520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,8 @@\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n-    reducers : \r\n+    reducers : {\r\n+        setUser \r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518227590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n     reducers : {\r\n-        setUser \r\n+        setUser : ()=>{}\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518234065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n     reducers : {\r\n-        setUser : ()=>{}\r\n+        setUser : (state,action)=>{}\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518256294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const { createSlice } = require(\"@reduxjs/toolkit\");\r\n+\r\n+const initialState = {\r\n+    isAuthenticated : false , \r\n+    isLoading : false ,\r\n+    user: null ,\r\n+}\r\n+\r\n+const authSlice  = createSlice({\r\n+    name: \"auth\",\r\n+    initialState,\r\n+    reducers : {\r\n+        setUser : (state,action)=>{}\r\n+    }\r\n+})\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1739518263880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,19 +14,5 @@\n     }\r\n })\r\n \r\n \r\n-const { createSlice } = require(\"@reduxjs/toolkit\");\r\n-\r\n-const initialState = {\r\n-    isAuthenticated : false , \r\n-    isLoading : false ,\r\n-    user: null ,\r\n-}\r\n-\r\n-const authSlice  = createSlice({\r\n-    name: \"auth\",\r\n-    initialState,\r\n-    reducers : {\r\n-        setUser : (state,action)=>{}\r\n-    }\r\n-})\n\\ No newline at end of file\n+export const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518271651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n     }\r\n })\r\n \r\n \r\n-export const \n\\ No newline at end of file\n+export const {setUser} = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518277893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n     }\r\n })\r\n \r\n \r\n-export const {setUser} = \n\\ No newline at end of file\n+export const {setUser} = authSlice.actions\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518285182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,6 @@\n     }\r\n })\r\n \r\n \r\n-export const {setUser} = authSlice.actions\n\\ No newline at end of file\n+export const {setUser} = authSlice.actions\r\n+\r\n"
+                },
+                {
+                    "date": 1739518290381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n })\r\n \r\n \r\n export const {setUser} = authSlice.actions\r\n-\r\n+export default \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518295456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n })\r\n \r\n \r\n export const {setUser} = authSlice.actions\r\n-export default \n\\ No newline at end of file\n+export default authSlice.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739518301831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n })\r\n \r\n \r\n export const {setUser} = authSlice.actions\r\n-export default authSlice.\n\\ No newline at end of file\n+export default authSlice.reducer;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739523231424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-const { createSlice } = require(\"@reduxjs/toolkit\");\r\n-\r\n+import \r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n@@ -14,6 +13,6 @@\n     }\r\n })\r\n \r\n \r\n-export const {setUser} = authSlice.actions\r\n+export const {setUser} = authSlice.actions;\r\n export default authSlice.reducer;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739523242376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-import \r\n+const { createSlice } = require(\"@reduxjs/toolkit\");\r\n+\r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n"
+                },
+                {
+                    "date": 1739523251328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-const { createSlice } = require(\"@reduxjs/toolkit\");\r\n-\r\n+import \r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n"
+                },
+                {
+                    "date": 1739523257973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import \r\n+import create\r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n"
+                },
+                {
+                    "date": 1739523263457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-import create\r\n+import { createSlice\r\n+    \r\n+ } from \"@reduxjs/toolkit\";\r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n"
+                },
+                {
+                    "date": 1739523271146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-import { createSlice\r\n-    \r\n- } from \"@reduxjs/toolkit\";\r\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+\r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n"
+                },
+                {
+                    "date": 1739691089926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    isAuthenticated: false,\r\n+    isLoading: false,\r\n+    user: null,\r\n+    error: null\r\n+}\r\n+\r\n+const authSlice = createSlice({\r\n+    name: \"auth\",\r\n+    initialState,\r\n+    reducers: {\r\n+        loginStart: (state) => {\r\n+            state.isLoading = true;\r\n+            state.error = null;\r\n+        },\r\n+        loginSuccess: (state, action) => {\r\n+            state.isAuthenticated = true;\r\n+            state.isLoading = false;\r\n+            state.user = action.payload;\r\n+            state.error = null;\r\n+        },\r\n+        loginFailure: (state, action) => {\r\n+            state.isLoading = false;\r\n+            state.error = action.payload;\r\n+        },\r\n+        logout: (state) => {\r\n+            state.isAuthenticated = false;\r\n+            state.user = null;\r\n+        },\r\n+        setUser: (state, action) => {\r\n+            state.user = action.payload;\r\n+            state.isAuthenticated = !!action.payload;\r\n+        }\r\n+    }\r\n+})\r\n+\r\n+export const { \r\n+    loginStart,\r\n+    loginSuccess,\r\n+    loginFailure,\r\n+    logout,\r\n+    setUser\r\n+} = authSlice.actions;\r\n+\r\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739691098153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,54 +1,7 @@\n import { createSlice } from \"@reduxjs/toolkit\";\r\n \r\n-const initialState = {\r\n-    isAuthenticated: false,\r\n-    isLoading: false,\r\n-    user: null,\r\n-    error: null\r\n-}\r\n \r\n-const authSlice = createSlice({\r\n-    name: \"auth\",\r\n-    initialState,\r\n-    reducers: {\r\n-        loginStart: (state) => {\r\n-            state.isLoading = true;\r\n-            state.error = null;\r\n-        },\r\n-        loginSuccess: (state, action) => {\r\n-            state.isAuthenticated = true;\r\n-            state.isLoading = false;\r\n-            state.user = action.payload;\r\n-            state.error = null;\r\n-        },\r\n-        loginFailure: (state, action) => {\r\n-            state.isLoading = false;\r\n-            state.error = action.payload;\r\n-        },\r\n-        logout: (state) => {\r\n-            state.isAuthenticated = false;\r\n-            state.user = null;\r\n-        },\r\n-        setUser: (state, action) => {\r\n-            state.user = action.payload;\r\n-            state.isAuthenticated = !!action.payload;\r\n-        }\r\n-    }\r\n-})\r\n-\r\n-export const { \r\n-    loginStart,\r\n-    loginSuccess,\r\n-    loginFailure,\r\n-    logout,\r\n-    setUser\r\n-} = authSlice.actions;\r\n-\r\n-export default authSlice.reducer;\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-\r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n"
+                },
+                {
+                    "date": 1739856287814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n     isLoading : false ,\r\n     user: null ,\r\n }\r\n \r\n+export const \r\n+\r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n     reducers : {\r\n"
+                },
+                {
+                    "date": 1739856294310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     isLoading : false ,\r\n     user: null ,\r\n }\r\n \r\n-export const \r\n+export const registerUser \r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1739856299841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     isLoading : false ,\r\n     user: null ,\r\n }\r\n \r\n-export const registerUser \r\n+export const registerUser = cre\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1739856305092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n+import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n \r\n \r\n const initialState = {\r\n     isAuthenticated : false , \r\n     isLoading : false ,\r\n     user: null ,\r\n }\r\n \r\n-export const registerUser = cre\r\n+export const registerUser = createAsyncThunk()\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1739856310501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     isLoading : false ,\r\n     user: null ,\r\n }\r\n \r\n-export const registerUser = createAsyncThunk()\r\n+export const registerUser = createAsyncThunk('/auth/')\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1739856317279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n     isLoading : false ,\r\n     user: null ,\r\n }\r\n \r\n-export const registerUser = createAsyncThunk('/auth/')\r\n+export const registerUser = createAsyncThunk('/auth/register',\r\n+    \r\n+)\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1739856322601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     user: null ,\r\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n-    \r\n+    async\r\n )\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739856329284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     user: null ,\r\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n-    async\r\n+    async(FormData )\r\n )\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739856338643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     user: null ,\r\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n-    async(FormData )\r\n+    async(formData)\r\n )\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739856358313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n     user: null ,\r\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n-    async(formData)\r\n+    async(formData)=>{\r\n+        \r\n+    }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n"
+                },
+                {
+                    "date": 1739856363892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        \r\n+        const response \r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856375805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response \r\n+        const response = await\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856381782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n     isAuthenticated : false , \r\n@@ -8,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await\r\n+        const response = await axios\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856419538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios\r\n+        const response = await axios.post(\"\")\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856427609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios.post(\"\")\r\n+        const response = await axios.post(\"http://localhost:7000\")\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856463299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios.post(\"http://localhost:7000\")\r\n+        const response = await axios.post(\"http://localhost:7000/\")\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856469392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios.post(\"http://localhost:7000/\")\r\n+        const response = await axios.post(\"http://localhost:7000/api/auth/\")\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856479538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios.post(\"http://localhost:7000/api/auth/\")\r\n+        const response = await axios.post(\"http://localhost:7000/api/auth/register\")\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856486864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios.post(\"http://localhost:7000/api/auth/register\")\r\n+        const response = await axios.post(\"http://localhost:7000/api/auth/register\",formData)\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856497327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n }\r\n \r\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n-        const response = await axios.post(\"http://localhost:7000/api/auth/register\",formData)\r\n+        const response = await axios.post(\"http://localhost:7000/api/auth/register\",formData,{\r\n+            withCredentials: true ,\r\n+        })\r\n     }\r\n )\r\n \r\n const authSlice  = createSlice({\r\n"
+                },
+                {
+                    "date": 1739856508163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n         })\r\n     }\r\n )\r\n \r\n+\r\n const authSlice  = createSlice({\r\n     name: \"auth\",\r\n     initialState,\r\n     reducers : {\r\n"
+                },
+                {
+                    "date": 1739856518545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n export const registerUser = createAsyncThunk('/auth/register',\r\n     async(formData)=>{\r\n         const response = await axios.post(\"http://localhost:7000/api/auth/register\",formData,{\r\n             withCredentials: true ,\r\n-        })\r\n+        });\r\n+        \r\n     }\r\n )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739856528092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     async(formData)=>{\r\n         const response = await axios.post(\"http://localhost:7000/api/auth/register\",formData,{\r\n             withCredentials: true ,\r\n         });\r\n-        \r\n+        return response.data ;\r\n     }\r\n )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739857367774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,31 +1,33 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n-\r\n const initialState = {\r\n-    isAuthenticated : false , \r\n-    isLoading : false ,\r\n-    user: null ,\r\n-}\r\n+  isAuthenticated: false,\r\n+  isLoading: false,\r\n+  user: null,\r\n+};\r\n \r\n-export const registerUser = createAsyncThunk('/auth/register',\r\n-    async(formData)=>{\r\n-        const response = await axios.post(\"http://localhost:7000/api/auth/register\",formData,{\r\n-            withCredentials: true ,\r\n-        });\r\n-        return response.data ;\r\n-    }\r\n-)\r\n+export const registerUser = createAsyncThunk(\r\n+  \"/auth/register\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/auth/register\",\r\n+      formData,\r\n+      {\r\n+        withCredentials: true,\r\n+      }\r\n\\ No newline at end of file\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n \r\n+const authSlice = createSlice({\r\n+  name: \"auth\",\r\n+  initialState,\r\n+  reducers: {\r\n+    setUser: (state, action) => {},\r\n+  },\r\n+});\r\n \r\n-const authSlice  = createSlice({\r\n-    name: \"auth\",\r\n-    initialState,\r\n-    reducers : {\r\n-        setUser : (state,action)=>{}\r\n-    }\r\n-})\r\n-\r\n-\r\n-export const {setUser} = authSlice.actions;\r\n-export default authSlice.reducer;\n+export const { setUser } = authSlice.actions;\r\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739858061162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n   initialState,\r\n   reducers: {\r\n     setUser: (state, action) => {},\r\n   },\r\n+  extraReducers\r\n });\r\n \r\n export const { setUser } = authSlice.actions;\r\n\\ No newline at end of file\n-export default authSlice.reducer;\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739858070549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   initialState,\r\n   reducers: {\r\n     setUser: (state, action) => {},\r\n   },\r\n-  extraReducers\r\n+  extraReducers: ()\r\n });\r\n \r\n export const { setUser } = authSlice.actions;\r\n\\ No newline at end of file\n-export default authSlice.reducer;\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739858080362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n   initialState,\r\n   reducers: {\r\n     setUser: (state, action) => {},\r\n   },\r\n-  extraReducers: ()\r\n+  extraReducers: (builder)=>{\r\n+    \r\n+  }\r\n });\r\n\\ No newline at end of file\n \r\n export const { setUser } = authSlice.actions;\r\n-export default authSlice.reducer;\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739858088077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,10 @@\n   reducers: {\r\n     setUser: (state, action) => {},\r\n   },\r\n   extraReducers: (builder)=>{\r\n-    \r\n+    builder.addCase()\r\n   }\r\n });\r\n \r\n export const { setUser } = authSlice.actions;\r\n\\ No newline at end of file\n-export default authSlice.reducer;\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739858096547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,10 @@\n   reducers: {\r\n     setUser: (state, action) => {},\r\n   },\r\n   extraReducers: (builder)=>{\r\n-    builder.addCase()\r\n+    builder.addCase(registerUser.pending)\r\n   }\r\n });\r\n \r\n export const { setUser } = authSlice.actions;\r\n\\ No newline at end of file\n-export default authSlice.reducer;\n+export default authSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1739858103143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   reducers: {\r\n     setUser: (state, action) => {},\r\n   },\r\n   extraReducers: (builder)=>{\r\n-    builder.addCase(registerUser.pending,())\r\n+    builder.addCase(registerUser.pending,()\r\n   }\r\n });\r\n \r\n export const { setUser } = authSlice.actions;\r\n"
+                },
+                {
+                    "date": 1739874251329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,63 @@\n+import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n+\r\n+const initialState = {\r\n+  isAuthenticated: false,\r\n+  isLoading: false,\r\n+  user: null,\r\n+};\r\n+\r\n+export const registerUser = createAsyncThunk(\r\n+  \"/auth/register\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/auth/register\",\r\n+      formData,\r\n+      {\r\n+        withCredentials: true,\r\n+      }\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n+export const loginUser = createAsyncThunk(\r\n+  \"/auth/register\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/auth/register\",\r\n+      formData,\r\n+      {\r\n+        withCredentials: true,\r\n+      }\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n+const authSlice = createSlice({\r\n+  name: \"auth\",\r\n+  initialState,\r\n+  reducers: {\r\n+    setUser: (state, action) => {},\r\n+  },\r\n+  extraReducers: (builder) => {\r\n+    builder\r\n+      .addCase(registerUser.pending, (state) => {\r\n+        state.isLoading = true;\r\n+      })\r\n+      .addCase(registerUser.fulfilled, (state, action) => {\r\n+        state.isLoading = false;\r\n+        state.user = null;\r\n+        state.isAuthenticated = false;\r\n+      })\r\n+      .addCase(registerUser.rejected, (state, action) => {\r\n+        state.isLoading = false;\r\n+        state.user = null;\r\n+        state.isAuthenticated = false;\r\n+      });\r\n+  },\r\n+});\r\n+\r\n+export const { setUser } = authSlice.actions;\r\n+export default authSlice.reducer;\r\n"
+                }
+            ],
+            "date": 1739518109527,
+            "name": "Commit-0",
+            "content": "\r\n\r\n\r\nconst "
+        }
+    ]
+}

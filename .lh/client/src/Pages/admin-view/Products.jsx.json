@@ -1,0 +1,382 @@
+{
+    "sourceFile": "client/src/Pages/admin-view/Products.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 91,
+            "patches": [
+                {
+                    "date": 1739529164299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739529244918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Products = () => {\r\n+const Admin = () => {\r\n   return (\r\n-    <div>Products</div>\r\n+    <div>Admin</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Products\n+export default Admin\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740050924167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,70 @@\n-import React from 'react'\r\n+import ProductImageUpload from \"@/components/admin-view/Image-upload\";\r\n+import CommonForm from \"@/components/common/Form\";\r\n+import { Button } from \"@/components/ui/button\";\r\n+import {\r\n+  Sheet,\r\n+  SheetContent,\r\n+  SheetHeader,\r\n+  SheetTitle,\r\n\\ No newline at end of file\n+} from \"@/components/ui/sheet\";\r\n+import { addProductFormElements } from \"@/config\";\r\n+import React, { Fragment, useState } from \"react\";\r\n \r\n-const Admin = () => {\r\n+const initialFormData = {\r\n+  image: null,\r\n+  title: \"\",\r\n+  description: \"\",\r\n+  category: \" \",\r\n+  brand: \" \",\r\n+  price: \" \",\r\n+  salePrice: \"\",\r\n+  totalStock: \" \",\r\n+};\r\n+\r\n+const AdminProducts = () => {\r\n+  const [openCreateProductsDialog, setOpenCreateProductsDialog] =\r\n+    useState(false);\r\n+  const [formData, setFormData] = useState(initialFormData);\r\n+  const [imageFile, setImageFile] = useState(null);\r\n+  const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n+  const \r\n+\r\n+  function onSubmit() {}\r\n   return (\r\n-    <div>Admin</div>\r\n-  )\r\n-}\r\n+    <Fragment>\r\n+      <div className=\"mb-5 flex justify-end w-full\">\r\n+        <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n+          Add new product\r\n+        </Button>\r\n+      </div>\r\n+      <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\"></div>\r\n+      <Sheet\r\n+        open={openCreateProductsDialog}\r\n+        onOpenChange={() => setOpenCreateProductsDialog(false)}\r\n+      >\r\n+        <SheetContent side=\"right\" className=\"overflow-auto\">\r\n+          <SheetHeader>\r\n+            <SheetTitle>Add new product</SheetTitle>\r\n+          </SheetHeader>\r\n+          <ProductImageUpload\r\n+            imageFile={imageFile}\r\n+            setImageFile={setImageFile}\r\n+            uploadedImageURL={uploadedImageURL}\r\n+            setUploadedImageURL={setUploadedImageURL}\r\n+          />\r\n+          <div className=\"py-6\">\r\n+            <CommonForm\r\n+              onSubmit={onSubmit}\r\n+              formData={formData}\r\n+              setFormData={setFormData}\r\n+              buttonText={\"Add\"}\r\n+              formControls={addProductFormElements}\r\n+            />\r\n+          </div>\r\n+        </SheetContent>\r\n+      </Sheet>\r\n+    </Fragment>\r\n+  );\r\n+};\r\n \r\n-export default Admin\n+export default AdminProducts;\r\n"
+                },
+                {
+                    "date": 1740050935628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     useState(false);\r\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n-  const \r\n+  const [imageLoadingState , ]\r\n \r\n   function onSubmit() {}\r\n   return (\r\n     <Fragment>\r\n@@ -66,5 +66,5 @@\n     </Fragment>\r\n   );\r\n };\r\n \r\n-export default AdminProducts;\n\\ No newline at end of file\n+export default AdminProducts;\r\n"
+                },
+                {
+                    "date": 1740050945125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     useState(false);\r\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n-  const [imageLoadingState , ]\r\n+  const [imageLoadingState , setImageLoadingState]\r\n \r\n   function onSubmit() {}\r\n   return (\r\n     <Fragment>\r\n"
+                },
+                {
+                    "date": 1740050951790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     useState(false);\r\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n-  const [imageLoadingState , setImageLoadingState]\r\n+  const [imageLoadingState , setImageLoadingState] = useState(false)\r\n \r\n   function onSubmit() {}\r\n   return (\r\n     <Fragment>\r\n"
+                },
+                {
+                    "date": 1740050969962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     useState(false);\r\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n-  const [imageLoadingState , setImageLoadingState] = useState(false)\r\n+  const [imageLoadingState , setImageLoadingState] = useState(false);\r\n \r\n   function onSubmit() {}\r\n   return (\r\n     <Fragment>\r\n@@ -50,8 +50,9 @@\n             imageFile={imageFile}\r\n             setImageFile={setImageFile}\r\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n+            \r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1740050976552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,10 @@\n             imageFile={imageFile}\r\n             setImageFile={setImageFile}\r\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n-            \r\n+            imageLoadingState={imageLoadingState}\r\n+            set\r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1740050985661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n             setImageFile={setImageFile}\r\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n             imageLoadingState={imageLoadingState}\r\n-            set\r\n+            setImageLoadingState={setImageLoadingState}\r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1740053774528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n \r\n-  function onSubmit() {}\r\n+  function onSubmit(e) {}\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740054045696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,11 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n \r\n-  function onSubmit(e) {}\r\n+  function onSubmit(e) {\r\n+    e.preventDefa\r\n+  }\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740054055814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n \r\n   function onSubmit(e) {\r\n-    e.preventDefa\r\n+    e.preventDefault();\r\n+\r\n+    \r\n   }\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n"
+                },
+                {
+                    "date": 1740054061906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   SheetHeader,\r\n   SheetTitle,\r\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n-import React, { Fragment, useState } from \"react\";\r\n+import React, { Fragment, useEffect, useState } from \"react\";\r\n \r\n const initialFormData = {\r\n   image: null,\r\n   title: \"\",\r\n@@ -31,10 +31,12 @@\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n \r\n-    \r\n+\r\n   }\r\n+\r\n+  useEffect\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740054069580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,11 @@\n \r\n \r\n   }\r\n \r\n-  useEffect\r\n+  useEffect(()=>{\r\n+    \r\n+  })\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740054077891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n-    \r\n-  })\r\n+\r\n+  },[dispatch])\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740054095178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   SheetTitle,\r\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n+import { useDispatch } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n   image: null,\r\n   title: \"\",\r\n@@ -27,8 +28,9 @@\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n+  const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n \r\n"
+                },
+                {
+                    "date": 1740054100636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n-\r\n+    \r\n   },[dispatch])\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n"
+                },
+                {
+                    "date": 1740054188867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n-    \r\n+    dispatch.\r\n   },[dispatch])\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n"
+                },
+                {
+                    "date": 1740054205786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n-    dispatch.\r\n+    dispatch(fetch)\r\n   },[dispatch])\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n"
+                },
+                {
+                    "date": 1740054211876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n   SheetHeader,\r\n   SheetTitle,\r\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n+import { fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n import { useDispatch } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n@@ -37,9 +38,9 @@\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n-    dispatch(fetch)\r\n+    dispatch(fetchAllProducts())\r\n   },[dispatch])\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n"
+                },
+                {
+                    "date": 1740054242364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n+  const {productList} = usesE\r\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740054248461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n import { fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n-import { useDispatch } from \"react-redux\";\r\n+import { useDispatch, useSelector } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n   image: null,\r\n   title: \"\",\r\n@@ -29,9 +29,9 @@\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n-  const {productList} = usesE\r\n+  const {productList} = useSelector()\r\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740054256225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n-  const {productList} = useSelector()\r\n+  const {productList} = useSelector(state)\r\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740054269666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n-  const {productList} = useSelector(state)\r\n+  const {productList} = useSelector(state=> state.)\r\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740054288673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n-  const {productList} = useSelector(state=> state.)\r\n+  const {productList} = useSelector(state=> state.adminProducts)\r\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740054303770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,10 @@\n \r\n   useEffect(()=>{\r\n     dispatch(fetchAllProducts())\r\n   },[dispatch])\r\n+\r\n+  \r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740054310418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   useEffect(()=>{\r\n     dispatch(fetchAllProducts())\r\n   },[dispatch])\r\n \r\n-  \r\n+  console.log(productList,)\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740055139680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   useEffect(()=>{\r\n     dispatch(fetchAllProducts())\r\n   },[dispatch])\r\n \r\n-  console.log(productList,)\r\n+  console.log(productList,uploadedImageURL)\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n"
+                },
+                {
+                    "date": 1740055205042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,10 +34,10 @@\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n+    dispatch.\r\n \r\n-\r\n   }\r\n \r\n   useEffect(()=>{\r\n     dispatch(fetchAllProducts())\r\n"
+                },
+                {
+                    "date": 1740055211641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   SheetHeader,\r\n   SheetTitle,\r\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n-import { fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n+import { addNewProduct, fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n import { useDispatch, useSelector } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n@@ -34,9 +34,9 @@\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n-    dispatch.\r\n+    dispatch(addNewProduct)\r\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740055217118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,11 @@\n   const dispatch = useDispatch()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n-    dispatch(addNewProduct)\r\n+    dispatch(addNewProduct({\r\n+      \r\n+    }))\r\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740055223285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n-      \r\n+      ...formData,\r\n     }))\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740055228867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n-      ...formData,\r\n+      ...formData,image:uplo\r\n     }))\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740055245778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n-      ...formData,image:uplo\r\n-    }))\r\n+      ...formData,image:uploadedImageURL\r\n+    })).then\r\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740055293345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n-    })).then\r\n+    })).then()\r\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740055298457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n-    })).then()\r\n+    })).then((data))\r\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740055304769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,11 @@\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n-    })).then((data))\r\n+    })).then((data)=>{\r\n+      console.log(first)\r\n+    })\r\n \r\n   }\r\n \r\n   useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740055455049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n     })).then((data)=>{\r\n-      console.log(first)\r\n+      console.log(data)\r\n+      if\r\n     })\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740055461695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n     })).then((data)=>{\r\n       console.log(data)\r\n-      if\r\n+      if(data?.payloa)\r\n     })\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740055468658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n     })).then((data)=>{\r\n       console.log(data)\r\n-      if(data?.payloa)\r\n+      if(data?.payload?.success)\r\n     })\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740055535362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,11 @@\n     dispatch(addNewProduct({\r\n       ...formData,image:uploadedImageURL\r\n     })).then((data)=>{\r\n       console.log(data)\r\n-      if(data?.payload?.success)\r\n+      if(data?.payload?.success){\r\n+        dispatch\r\n+      }\r\n     })\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740055542370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,10 @@\n       ...formData,image:uploadedImageURL\r\n     })).then((data)=>{\r\n       console.log(data)\r\n       if(data?.payload?.success){\r\n-        dispatch\r\n+        dispatch(fetchAllProducts)\r\n+        setOp\r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055547884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,10 @@\n     })).then((data)=>{\r\n       console.log(data)\r\n       if(data?.payload?.success){\r\n         dispatch(fetchAllProducts)\r\n-        setOp\r\n+        setOpenCreateProductsDialog(false)\r\n+        \r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055555645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n       console.log(data)\r\n       if(data?.payload?.success){\r\n         dispatch(fetchAllProducts)\r\n         setOpenCreateProductsDialog(false)\r\n-        \r\n+        setImageFile(null)\r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055568335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,10 @@\n       if(data?.payload?.success){\r\n         dispatch(fetchAllProducts)\r\n         setOpenCreateProductsDialog(false)\r\n         setImageFile(null)\r\n+        setFormData(initialFormData)\r\n+        \r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055584427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n   const dispatch = useDispatch()\r\n+  const {toast} = \r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n@@ -43,9 +44,9 @@\n         dispatch(fetchAllProducts)\r\n         setOpenCreateProductsDialog(false)\r\n         setImageFile(null)\r\n         setFormData(initialFormData)\r\n-        \r\n+\r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055591073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n   SheetHeader,\r\n   SheetTitle,\r\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n+import { useToast } from \"@/hooks/use-toast\";\r\n import { addNewProduct, fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n import { useDispatch, useSelector } from \"react-redux\";\r\n \r\n@@ -31,9 +32,9 @@\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n   const dispatch = useDispatch()\r\n-  const {toast} = \r\n+  const {toast} = useToast\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n"
+                },
+                {
+                    "date": 1740055600665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n   const dispatch = useDispatch()\r\n-  const {toast} = useToast\r\n+  const {toast} = useToast()\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewProduct({\r\n@@ -45,9 +45,9 @@\n         dispatch(fetchAllProducts)\r\n         setOpenCreateProductsDialog(false)\r\n         setImageFile(null)\r\n         setFormData(initialFormData)\r\n-\r\n+        \r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055607586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n import { useToast } from \"@/hooks/use-toast\";\r\n import { addNewProduct, fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n+import { title } from \"process\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n import { useDispatch, useSelector } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n@@ -45,9 +46,11 @@\n         dispatch(fetchAllProducts)\r\n         setOpenCreateProductsDialog(false)\r\n         setImageFile(null)\r\n         setFormData(initialFormData)\r\n-        \r\n+        toast({\r\n+          title\r\n+        })\r\n       }\r\n     })\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1740055618163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n } from \"@/components/ui/sheet\";\r\n import { addProductFormElements } from \"@/config\";\r\n import { useToast } from \"@/hooks/use-toast\";\r\n import { addNewProduct, fetchAllProducts } from \"@/Store/admin/products-slice\";\r\n-import { title } from \"process\";\r\n import React, { Fragment, useEffect, useState } from \"react\";\r\n import { useDispatch, useSelector } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n"
+                },
+                {
+                    "date": 1740055630032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n         setOpenCreateProductsDialog(false)\r\n         setImageFile(null)\r\n         setFormData(initialFormData)\r\n         toast({\r\n-          title\r\n+          title: \"Product added successfullyt\"\r\n         })\r\n       }\r\n     })\r\n \r\n"
+                },
+                {
+                    "date": 1740117450158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n         setOpenCreateProductsDialog(false)\r\n         setImageFile(null)\r\n         setFormData(initialFormData)\r\n         toast({\r\n-          title: \"Product added successfullyt\"\r\n+          title: \"Product added successfully\"\r\n         })\r\n       }\r\n     })\r\n \r\n@@ -65,9 +65,11 @@\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n-      <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\"></div>\r\n+      <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n+        \r\n+      </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n         onOpenChange={() => setOpenCreateProductsDialog(false)}\r\n       >\r\n"
+                },
+                {
+                    "date": 1740117463694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n           Add new product\r\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n-        \r\n+        {}\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n         onOpenChange={() => setOpenCreateProductsDialog(false)}\r\n"
+                },
+                {
+                    "date": 1740117469431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,11 @@\n           Add new product\r\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n-        {}\r\n+        {\r\n+          productList?.\r\n+        }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n         onOpenChange={() => setOpenCreateProductsDialog(false)}\r\n"
+                },
+                {
+                    "date": 1740117477106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n-          productList?.\r\n+          productList && productList\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117491307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n-          productList && productList\r\n+          productList && productList.\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117501855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n-          productList && productList.\r\n+          productList && productList.length > 0 \r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117509760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,10 @@\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n-          productList && productList.length > 0 \r\n+          productList && productList.length > 0 ? \r\n+          productList.map\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117518880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map\r\n+          productList.map(productItem)\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117534838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem)\r\n+          productList.map(productItem => <Admin)\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117540063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\r\n+import AdminProductTile from \"@/components/admin-view/Product-tile\";\r\n import CommonForm from \"@/components/common/Form\";\r\n import { Button } from \"@/components/ui/button\";\r\n import {\r\n   Sheet,\r\n@@ -68,9 +69,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <Admin)\r\n+          productList.map(productItem => <AdminProductTile/>)\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117548590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile/>)\r\n+          productList.map(productItem => <AdminProductTile product={}/>)\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117554705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={}/>)\r\n+          productList.map(productItem => <AdminProductTile product={productItem}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740117673194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \r\n   console.log(productList,uploadedImageURL)\r\n   return (\r\n     <Fragment>\r\n-      <div className=\"mb-5 flex justify-end w-full\">\r\n+      <div className=\"mb-5 flex  justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117763289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \r\n   console.log(productList,uploadedImageURL)\r\n   return (\r\n     <Fragment>\r\n-      <div className=\"mb-5 flex  justify-end w-full\">\r\n+      <div className=\"mb-5 flex-col  justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117769271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \r\n   console.log(productList,uploadedImageURL)\r\n   return (\r\n     <Fragment>\r\n-      <div className=\"mb-5 flex-col  justify-end w-full\">\r\n+      <div className=\"mb-5   justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117778238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \r\n   console.log(productList,uploadedImageURL)\r\n   return (\r\n     <Fragment>\r\n-      <div className=\"mb-5   justify-end w-full\">\r\n+      <div className=\"mb-5 flex flex-  justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117783590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \r\n   console.log(productList,uploadedImageURL)\r\n   return (\r\n     <Fragment>\r\n-      <div className=\"mb-5 flex flex-  justify-end w-full\">\r\n+      <div className=\"mb-5 flex   justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740119968716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n+  const []\r\n   const dispatch = useDispatch()\r\n   const {toast} = useToast()\r\n \r\n   function onSubmit(e) {\r\n"
+                },
+                {
+                    "date": 1740119976702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n-  const []\r\n+  const [currentEditi]\r\n   const dispatch = useDispatch()\r\n   const {toast} = useToast()\r\n \r\n   function onSubmit(e) {\r\n"
+                },
+                {
+                    "date": 1740119994626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n-  const [currentEditi]\r\n+  const [currentEditingId ,setCurrentEditingId]\r\n   const dispatch = useDispatch()\r\n   const {toast} = useToast()\r\n \r\n   function onSubmit(e) {\r\n"
+                },
+                {
+                    "date": 1740120000164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n-  const [currentEditingId ,setCurrentEditingId]\r\n+  const [currentEditingId ,setCurrentEditingId] = useState\r\n   const dispatch = useDispatch()\r\n   const {toast} = useToast()\r\n \r\n   function onSubmit(e) {\r\n"
+                },
+                {
+                    "date": 1740120011444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n   const [imageLoadingState , setImageLoadingState] = useState(false);\r\n   const {productList} = useSelector(state=> state.adminProducts)\r\n-  const [currentEditingId ,setCurrentEditingId] = useState\r\n+  const [currentEditingId ,setCurrentEditingId] = useState(null);\r\n   const dispatch = useDispatch()\r\n   const {toast} = useToast()\r\n \r\n   function onSubmit(e) {\r\n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem}/>) : null\r\n+          productList.map(productItem => <AdminProductTile product={productItem} />) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120016826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem} />) : null\r\n+          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120022533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={/>) : null\r\n+          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} />) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120038227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} />) : null\r\n+          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} setOpenCreateProductsDialog/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120048857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} setOpenCreateProductsDialog/>) : null\r\n+          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} from setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120055274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} from setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120450997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120456351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={productItem.id} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120517791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={productItem.id} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={productItem.name} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120528154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={productItem.name} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={index} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120535683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={index} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120577098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={p} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120582818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n         {\r\n           productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={p} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n+          productList.map(productItem => <AdminProductTile key={productItem.title} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n"
+                },
+                {
+                    "date": 1740120858360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,11 @@\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n-        onOpenChange={() => setOpenCreateProductsDialog(false)}\r\n+        onOpenChange={() => setOpenCreateProductsDialog(false)\r\n+          \r\n+        }\r\n       >\r\n         <SheetContent side=\"right\" className=\"overflow-auto\">\r\n           <SheetHeader>\r\n             <SheetTitle>Add new product</SheetTitle>\r\n"
+                },
+                {
+                    "date": 1740120865853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n         onOpenChange={() => setOpenCreateProductsDialog(false)\r\n-          \r\n+          setFormData(initialFormData)\r\n         }\r\n       >\r\n         <SheetContent side=\"right\" className=\"overflow-auto\">\r\n           <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740120871126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,10 +75,10 @@\n         }\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n-        onOpenChange={() => setOpenCreateProductsDialog(false)\r\n-          setFormData(initialFormData)\r\n+        onOpenChange={() => {setOpenCreateProductsDialog(false)\r\n+          setFormData(initialFormData)}\r\n         }\r\n       >\r\n         <SheetContent side=\"right\" className=\"overflow-auto\">\r\n           <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740120970856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,56 +30,66 @@\n     useState(false);\r\n   const [formData, setFormData] = useState(initialFormData);\r\n   const [imageFile, setImageFile] = useState(null);\r\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\r\n-  const [imageLoadingState , setImageLoadingState] = useState(false);\r\n-  const {productList} = useSelector(state=> state.adminProducts)\r\n-  const [currentEditingId ,setCurrentEditingId] = useState(null);\r\n-  const dispatch = useDispatch()\r\n-  const {toast} = useToast()\r\n+  const [imageLoadingState, setImageLoadingState] = useState(false);\r\n+  const { productList } = useSelector((state) => state.adminProducts);\r\n+  const [currentEditingId, setCurrentEditingId] = useState(null);\r\n+  const dispatch = useDispatch();\r\n+  const { toast } = useToast();\r\n \r\n   function onSubmit(e) {\r\n     e.preventDefault();\r\n-    dispatch(addNewProduct({\r\n-      ...formData,image:uploadedImageURL\r\n-    })).then((data)=>{\r\n-      console.log(data)\r\n-      if(data?.payload?.success){\r\n-        dispatch(fetchAllProducts)\r\n-        setOpenCreateProductsDialog(false)\r\n-        setImageFile(null)\r\n-        setFormData(initialFormData)\r\n+    dispatch(\r\n+      addNewProduct({\r\n+        ...formData,\r\n+        image: uploadedImageURL,\r\n+      })\r\n+    ).then((data) => {\r\n+      console.log(data);\r\n+      if (data?.payload?.success) {\r\n+        dispatch(fetchAllProducts);\r\n+        setOpenCreateProductsDialog(false);\r\n+        setImageFile(null);\r\n+        setFormData(initialFormData);\r\n         toast({\r\n-          title: \"Product added successfully\"\r\n-        })\r\n+          title: \"Product added successfully\",\r\n+        });\r\n       }\r\n-    })\r\n-\r\n+    });\r\n   }\r\n \r\n-  useEffect(()=>{\r\n-    dispatch(fetchAllProducts())\r\n-  },[dispatch])\r\n+  useEffect(() => {\r\n+    dispatch(fetchAllProducts());\r\n+  }, [dispatch]);\r\n \r\n-  console.log(productList,uploadedImageURL)\r\n+  console.log(productList, uploadedImageURL);\r\n   return (\r\n     <Fragment>\r\n       <div className=\"mb-5 flex   justify-end w-full\">\r\n         <Button onClick={() => setOpenCreateProductsDialog(true)}>\r\n           Add new product\r\n         </Button>\r\n       </div>\r\n       <div className=\"grid gap-4 md:grid-cols-3 lg:grid-cols-4\">\r\n-        {\r\n-          productList && productList.length > 0 ? \r\n-          productList.map(productItem => <AdminProductTile key={productItem.title} product={productItem} setCurrentEditingId={setCurrentEditingId} setFormData={setFormData} setOpenCreateProductsDialog={setOpenCreateProductsDialog}/>) : null\r\n-        }\r\n+        {productList && productList.length > 0\r\n+          ? productList.map((productItem) => (\r\n+              <AdminProductTile\r\n+                key={productItem.title}\r\n+                product={productItem}\r\n+                setCurrentEditingId={setCurrentEditingId}\r\n+                setFormData={setFormData}\r\n+                setOpenCreateProductsDialog={setOpenCreateProductsDialog}\r\n+              />\r\n+            ))\r\n+          : null}\r\n       </div>\r\n       <Sheet\r\n         open={openCreateProductsDialog}\r\n-        onOpenChange={() => {setOpenCreateProductsDialog(false)\r\n-          setFormData(initialFormData)}\r\n-        }\r\n+        onOpenChange={() => {\r\n+          setOpenCreateProductsDialog(false);\r\n+          setFormData(initialFormData);\r\n+        }}\r\n       >\r\n         <SheetContent side=\"right\" className=\"overflow-auto\">\r\n           <SheetHeader>\r\n             <SheetTitle>Add new product</SheetTitle>\r\n@@ -90,8 +100,9 @@\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n             imageLoadingState={imageLoadingState}\r\n             setImageLoadingState={setImageLoadingState}\r\n+            isEditedMode\r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1740120979753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n             imageLoadingState={imageLoadingState}\r\n             setImageLoadingState={setImageLoadingState}\r\n-            isEditedMode\r\n+            isEditedMode = {}\r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1740120997041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n             imageLoadingState={imageLoadingState}\r\n             setImageLoadingState={setImageLoadingState}\r\n-            isEditedMode = {}\r\n+            isEditedMode = {currentEditingId}\r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1740121086355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n             uploadedImageURL={uploadedImageURL}\r\n             setUploadedImageURL={setUploadedImageURL}\r\n             imageLoadingState={imageLoadingState}\r\n             setImageLoadingState={setImageLoadingState}\r\n-            isEditedMode = {currentEditingId == }\r\n+            isEditedMode = {currentEditingId == !}\r\n           />\r\n           <div className=\"py-6\">\r\n             <CommonForm\r\n               onSubmit={onSubmit}\r\n"
+                }
+            ],
+            "date": 1739529164299,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Products = () => {\r\n  return (\r\n    <div>Products</div>\r\n  )\r\n}\r\n\r\nexport default Products"
+        }
+    ]
+}

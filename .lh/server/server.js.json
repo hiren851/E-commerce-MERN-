@@ -1,0 +1,378 @@
+{
+    "sourceFile": "server/server.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 90,
+            "patches": [
+                {
+                    "date": 1739511971884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739511976988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const express\n\\ No newline at end of file\n+const express = require\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739511982697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const express = require\n\\ No newline at end of file\n+const express = require(\"\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739511989808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-const express = require(\"\")\n\\ No newline at end of file\n+const express = require(\"express\");\r\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739511995672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n const express = require(\"express\");\r\n-const \n\\ No newline at end of file\n+const mongoose \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512002368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n const express = require(\"express\");\r\n-const mongoose \n\\ No newline at end of file\n+const mongoose = require(\"\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512011004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n const express = require(\"express\");\r\n-const mongoose = require(\"\")\n\\ No newline at end of file\n+const mongoose = require(\"mongoose\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512016707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,6 @@\n const express = require(\"express\");\r\n-const mongoose = require(\"mongoose\")\n\\ No newline at end of file\n+const mongoose = require(\"mongoose\");\r\n+\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1739512024535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,5 @@\n \r\n \r\n \r\n \r\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512031454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n \r\n \r\n \r\n \r\n-const \n\\ No newline at end of file\n+const app = express()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512041161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n \r\n \r\n \r\n \r\n-const app = express()\n\\ No newline at end of file\n+const app = express();\r\n+const PORT = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512050252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n \r\n \r\n \r\n const app = express();\r\n-const PORT = \n\\ No newline at end of file\n+const PORT = process.env.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512055308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n \r\n \r\n \r\n const app = express();\r\n-const PORT = process.env.\n\\ No newline at end of file\n+const PORT = process.env.PORT || \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512065114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n \r\n \r\n \r\n const app = express();\r\n-const PORT = process.env.PORT || \n\\ No newline at end of file\n+const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512078367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n+mongoose\r\n \r\n-\r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512087139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n-mongoose\r\n+mongoose.connect(\"mongodb+srv://hirenkanzariya851:<db_password>@e-commerce-cluster.43guc.mongodb.net/\")\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512095472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n-mongoose.connect(\"mongodb+srv://hirenkanzariya851:<db_password>@e-commerce-cluster.43guc.mongodb.net/\")\r\n+mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512106859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,8 @@\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n+.thern\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512113858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n-.thern\r\n+.then(()=>)\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512121468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n-.then(()=>)\r\n+.then(()=>console.log(\"Mogo\"))\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512127737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n-.then(()=>console.log(\"Mogo\"))\r\n+.then(()=>console.log(\"MongoDB\"))\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512139361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n const mongoose = require(\"mongoose\");\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n-.then(()=>console.log(\"MongoDB\"))\r\n+.then(()=>console.log(\"MongoDB Connected\"))\r\n+.catch\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512144833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n-.catch\r\n+.catch((console.error();\r\n+))\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512151275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n-.catch((console.error();\r\n-))\r\n+.catch((error))\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512158669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n-.catch((error))\r\n+.catch((error)=> console.log(error))\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512207151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n+const \r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n-.catch((error)=> console.log(error))\r\n+.catch((error)=> console.log(error));\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n"
+                },
+                {
+                    "date": 1739512213578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n-const \r\n+const cookieParser = \r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1739512218745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n-const cookieParser = \r\n+const cookieParser = require(\"\")\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1739512224854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n-const cookieParser = require(\"\")\r\n+const cookieParser = require(\"cookie-parser\");\r\n+const \r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1739512679917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n-const \r\n+const cors = require(\"cors\");\r\n \r\n \r\n mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n .then(()=>console.log(\"MongoDB Connected\"))\r\n .catch((error)=> console.log(error));\r\n \r\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1739512686716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,4 +11,5 @@\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n \r\n \r\n+app.use\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512692170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,7 @@\n const app = express();\r\n const PORT = process.env.PORT || 7000;\r\n \r\n \r\n-app.use\n\\ No newline at end of file\n+app.use(\r\n+    cors\r\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512699188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,8 @@\n const PORT = process.env.PORT || 7000;\r\n \r\n \r\n app.use(\r\n-    cors\r\n+    cors({\r\n+        \r\n+    }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512705507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n \r\n \r\n app.use(\r\n     cors({\r\n-        \r\n+        origin\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512711441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,8 @@\n \r\n \r\n app.use(\r\n     cors({\r\n-        origin\r\n+        origin : \"http://localhost:5173/\",\r\n+        \r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512719909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \r\n app.use(\r\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n-        \r\n+        methods : []\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512727320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \r\n app.use(\r\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n-        methods : []\r\n+        methods : ['GET' , 'POST']\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512734088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \r\n app.use(\r\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n-        methods : ['GET' , 'POST']\r\n+        methods : ['GET' , 'POST' , 'DELETE']\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512740108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \r\n app.use(\r\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n-        methods : ['GET' , 'POST' , 'DELETE']\r\n+        methods : ['GET' , 'POST' , 'DELETE' , 'PUT']\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512749976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,8 @@\n \r\n app.use(\r\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n-        methods : ['GET' , 'POST' , 'DELETE' , 'PUT']\r\n+        methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n+        alloe\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512755348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,9 @@\n app.use(\r\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n-        alloe\r\n+        allowedHeaders : [\r\n+            \r\n+        ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512767103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n         allowedHeaders : [\r\n-            \r\n+            \"Content\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512772915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n         allowedHeaders : [\r\n-            \"Content\"\r\n+            \"Content-Type\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512780269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n     cors({\r\n         origin : \"http://localhost:5173/\",\r\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n         allowedHeaders : [\r\n-            \"Content-Type\"\r\n+            \"Content-Type\",\r\n+            \"Authoria\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512790552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n         origin : \"http://localhost:5173/\",\r\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n         allowedHeaders : [\r\n             \"Content-Type\",\r\n-            \"Authoria\"\r\n+            \"Authorization\",\r\n+            \"C\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512796663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n         allowedHeaders : [\r\n             \"Content-Type\",\r\n             \"Authorization\",\r\n-            \"C\"\r\n+            \"Cache-Control\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512803303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n         methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n         allowedHeaders : [\r\n             \"Content-Type\",\r\n             \"Authorization\",\r\n-            \"Cache-Control\"\r\n+            \"Cache-Control\",\r\n+            \"Expires\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512809804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n         allowedHeaders : [\r\n             \"Content-Type\",\r\n             \"Authorization\",\r\n             \"Cache-Control\",\r\n-            \"Expires\"\r\n+            \"Expires\",\r\n+            \"Pragma\"\r\n         ]\r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512826866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,8 @@\n             \"Authorization\",\r\n             \"Cache-Control\",\r\n             \"Expires\",\r\n             \"Pragma\"\r\n-        ]\r\n+        ],\r\n+        \r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512832339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,7 @@\n             \"Cache-Control\",\r\n             \"Expires\",\r\n             \"Pragma\"\r\n         ],\r\n-        \r\n+        credentials: \r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512838356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,7 @@\n             \"Cache-Control\",\r\n             \"Expires\",\r\n             \"Pragma\"\r\n         ],\r\n-        credentials: \r\n+        credentials: true \r\n     }),\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512878133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,6 @@\n             \"Pragma\"\r\n         ],\r\n         credentials: true \r\n     }),\r\n-)\n\\ No newline at end of file\n+);\r\n+\r\n"
+                },
+                {
+                    "date": 1739512886410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,4 +26,5 @@\n         credentials: true \r\n     }),\r\n );\r\n \r\n+app.use(cookieParser())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512893089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,6 @@\n         credentials: true \r\n     }),\r\n );\r\n \r\n-app.use(cookieParser())\n\\ No newline at end of file\n+app.use(cookieParser());\r\n+app.use()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512901637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n     }),\r\n );\r\n \r\n app.use(cookieParser());\r\n-app.use()\n\\ No newline at end of file\n+app.use(express.json())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739512908063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,6 @@\n     }),\r\n );\r\n \r\n app.use(cookieParser());\r\n-app.use(express.json())\n\\ No newline at end of file\n+app.use(express.json());\r\n+\r\n"
+                },
+                {
+                    "date": 1739513052397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,4 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n+app.listen()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513061274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen()\n\\ No newline at end of file\n+app.listen(PORT , )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513068351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , )\n\\ No newline at end of file\n+app.listen(PORT , ()=> console.log(first))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513074021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , ()=> console.log(first))\n\\ No newline at end of file\n+app.listen(PORT , ()=> console.log()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513085909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , ()=> console.log()\n\\ No newline at end of file\n+app.listen(PORT , ()=> console.log(`Server is Now R`))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513091812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , ()=> console.log(`Server is Now R`))\n\\ No newline at end of file\n+app.listen(PORT , ()=> console.log(`Server is Now Running on $`))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513099887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , ()=> console.log(`Server is Now Running on $`))\n\\ No newline at end of file\n+app.listen(PORT , ()=> console.log(`Server is Now Running on Port `))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513616415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n .then(()=>console.log(\"MongoDB Connected\"))\r\n .catch((error)=> console.log(error));\r\n \r\n const app = express();\r\n-const PORT = process.env.PORT || 7000;\r\n+const PORT = process.env.PORT || 5000;\r\n \r\n \r\n app.use(\r\n     cors({\r\n@@ -29,5 +29,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , ()=> console.log(`Server is Now Running on Port `))\n\\ No newline at end of file\n+app.listen(PORT , ()=> console.log(`Server is Now Running on Port ${PORT}`));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739513638130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,32 +2,33 @@\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n \r\n+mongoose\r\n+  .connect(\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\"\r\n+  )\r\n+  .then(() => console.log(\"MongoDB Connected\"))\r\n+  .catch((error) => console.log(error));\r\n \r\n-mongoose.connect(\"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\")\r\n-.then(()=>console.log(\"MongoDB Connected\"))\r\n-.catch((error)=> console.log(error));\r\n-\r\n const app = express();\r\n const PORT = process.env.PORT || 5000;\r\n \r\n-\r\n app.use(\r\n-    cors({\r\n-        origin : \"http://localhost:5173/\",\r\n-        methods : ['GET' , 'POST' , 'DELETE' , 'PUT'],\r\n-        allowedHeaders : [\r\n-            \"Content-Type\",\r\n-            \"Authorization\",\r\n-            \"Cache-Control\",\r\n-            \"Expires\",\r\n-            \"Pragma\"\r\n-        ],\r\n-        credentials: true \r\n-    }),\r\n\\ No newline at end of file\n+  cors({\r\n+    origin: \"http://localhost:5173/\",\r\n+    methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n+    allowedHeaders: [\r\n+      \"Content-Type\",\r\n+      \"Authorization\",\r\n+      \"Cache-Control\",\r\n+      \"Expires\",\r\n+      \"Pragma\",\r\n+    ],\r\n+    credentials: true,\r\n+  })\r\n );\r\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT , ()=> console.log(`Server is Now Running on Port ${PORT}`));\n+app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739514545219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const cors = require(\"cors\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren@10@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:<db_password>@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n"
+                },
+                {
+                    "date": 1739514551490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const cors = require(\"cors\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:<db_password>@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n"
+                },
+                {
+                    "date": 1739514559824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const cors = require(\"cors\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n"
+                },
+                {
+                    "date": 1739514662984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n const app = express();\r\n-const PORT = process.env.PORT || 5000;\r\n+const PORT = process.env.PORT || 7000;\r\n \r\n app.use(\r\n   cors({\r\n     origin: \"http://localhost:5173/\",\r\n"
+                },
+                {
+                    "date": 1739515724320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n const cors = require(\"cors\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren%4010@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n+\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n const app = express();\r\n"
+                },
+                {
+                    "date": 1739515750612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,4 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n-app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739515760872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,15 @@\n const cors = require(\"cors\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren%4010@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n-\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n const app = express();\r\n-const PORT = process.env.PORT || 7000;\r\n+const PORT = process.env.PORT || 000;\r\n \r\n app.use(\r\n   cors({\r\n     origin: \"http://localhost:5173/\",\r\n@@ -31,4 +30,5 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n \r\n+app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739516471613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n const app = express();\r\n-const PORT = process.env.PORT || 000;\r\n+const PORT = process.env.PORT || 7000;\r\n \r\n app.use(\r\n   cors({\r\n-    origin: \"http://localhost:5173/\",\r\n+    origin: \"http://localhost:5174/\",\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n     allowedHeaders: [\r\n       \"Content-Type\",\r\n       \"Authorization\",\r\n"
+                },
+                {
+                    "date": 1739516513864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const PORT = process.env.PORT || 7000;\r\n \r\n app.use(\r\n   cors({\r\n-    origin: \"http://localhost:5174/\",\r\n+    origin: \"http://localhost:5173/\",\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n     allowedHeaders: [\r\n       \"Content-Type\",\r\n       \"Authorization\",\r\n"
+                },
+                {
+                    "date": 1739523316637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const PORT = process.env.PORT || 7000;\r\n \r\n app.use(\r\n   cors({\r\n-    origin: \"http://localhost:5173/\",\r\n+    origin: \"http://localhost:5175/\",\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n     allowedHeaders: [\r\n       \"Content-Type\",\r\n       \"Authorization\",\r\n"
+                },
+                {
+                    "date": 1739523324085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const PORT = process.env.PORT || 7000;\r\n \r\n app.use(\r\n   cors({\r\n-    origin: \"http://localhost:5175/\",\r\n+    origin: \"http://localhost:5173/\",\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n     allowedHeaders: [\r\n       \"Content-Type\",\r\n       \"Authorization\",\r\n"
+                },
+                {
+                    "date": 1739855809245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n+const \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1739855817771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const \r\n+const authRouter = \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1739855823981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = \r\n+const authRouter = requires(\"../\")\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1739855830242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = requires(\"../\")\r\n+const authRouter = requirs(\".\")\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1739855836186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = requirs(\".\")\r\n+const authRouter = require(\"../\")\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1739855842788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = require(\"../\")\r\n+const authRouter = require(\"../server/routes\")\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1739855870280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = require(\"../server/routes\")\r\n+const authRouter = require(\"../server/routes/auth/auth-routes\")\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n@@ -30,6 +30,7 @@\n );\r\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n+app.use()\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739855883601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n );\r\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n-app.use()\r\n+app.use('/api/auth')\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739855897388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n );\r\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n-app.use('/api/auth')\r\n+app.use('/api/auth',authRouter)\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739857398641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = require(\"../server/routes/auth/auth-routes\")\r\n+const authRouter = require(\"../server/routes/auth/auth-routes\");\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n@@ -30,7 +30,7 @@\n );\r\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n-app.use('/api/auth',authRouter)\r\n+app.use(\"/api/auth\", authRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1739858818146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n const PORT = process.env.PORT || 7000;\r\n \r\n app.use(\r\n   cors({\r\n-    origin: \"http://localhost:5173/\",\r\n+    origin: \"http://localhost:5173\",\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n     allowedHeaders: [\r\n       \"Content-Type\",\r\n       \"Authorization\",\r\n"
+                },
+                {
+                    "date": 1739860849615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const authRouter = require(\"../server/routes/auth/auth-routes\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:<db_password>@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n"
+                },
+                {
+                    "date": 1739860860283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const authRouter = require(\"../server/routes/auth/auth-routes\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:<db_password>@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n"
+                },
+                {
+                    "date": 1739861239989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = require(\"../server/routes/auth/auth-routes\");\r\n+const authRouter = require(\"./\");\r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.log(error));\r\n \r\n"
+                },
+                {
+                    "date": 1739861256985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = require(\"./\");\r\n+const authRouter = require(\"./routes/auth/auth-routes\");\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                }
+            ],
+            "date": 1739511971884,
+            "name": "Commit-0",
+            "content": "const express"
+        }
+    ]
+}

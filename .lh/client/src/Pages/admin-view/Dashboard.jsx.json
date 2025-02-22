@@ -1,0 +1,22 @@
+{
+    "sourceFile": "client/src/Pages/admin-view/Dashboard.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1739529119969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739529223497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Dashboard = () => {\r\n+const AdminDas = () => {\r\n   return (\r\n-    <div>Dashboard</div>\r\n+    <div>AdminDas</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Dashboard\n+export default AdminDas\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739529119969,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Dashboard = () => {\r\n  return (\r\n    <div>Dashboard</div>\r\n  )\r\n}\r\n\r\nexport default Dashboard"
+        }
+    ]
+}

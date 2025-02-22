@@ -1,0 +1,122 @@
+{
+    "sourceFile": "server/models/Products.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1740042186091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740042192395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const mon\n\\ No newline at end of file\n+const mongoose = requi\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042199254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const mongoose = requi\n\\ No newline at end of file\n+const mongoose = require(\"mongoos\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042208289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const mongoose = require(\"mongoos\")\n\\ No newline at end of file\n+const mongoose = require('mongoose')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042228037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-const mongoose = require('mongoose')\n\\ No newline at end of file\n+const mongoose = require('mongoose');\r\n+\r\n+const productSchema = []\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042234479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const mongoose = require('mongoose');\r\n \r\n-const productSchema = []\n\\ No newline at end of file\n+const productSchema = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042241212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const mongoose = require('mongoose');\r\n \r\n-const productSchema = \n\\ No newline at end of file\n+const productSchema = new mongoose.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042248496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n const mongoose = require('mongoose');\r\n \r\n-const productSchema = new mongoose.\n\\ No newline at end of file\n+const productSchema = new mongoose.Schema(\r\n+    {\r\n+        \r\n+    }\r\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042257263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require('mongoose');\r\n \r\n const productSchema = new mongoose.Schema(\r\n     {\r\n-        \r\n+        image : \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042269859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const mongoose = require('mongoose');\r\n \r\n const productSchema = new mongoose.Schema(\r\n     {\r\n-        image : \r\n+        image : String,\r\n+        title : String , \r\n+        \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042282239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n const productSchema = new mongoose.Schema(\r\n     {\r\n         image : String,\r\n         title : String , \r\n-        \r\n+        description \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042290023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n const productSchema = new mongoose.Schema(\r\n     {\r\n         image : String,\r\n         title : String , \r\n-        description \r\n+        description : String ,\r\n+        category \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042296131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n     {\r\n         image : String,\r\n         title : String , \r\n         description : String ,\r\n-        category \r\n+        category : String ,\r\n+        \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042303199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n         image : String,\r\n         title : String , \r\n         description : String ,\r\n         category : String ,\r\n+        brand : String ,\r\n         \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042312944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n         title : String , \r\n         description : String ,\r\n         category : String ,\r\n         brand : String ,\r\n-        \r\n+        price : \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042318909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n         title : String , \r\n         description : String ,\r\n         category : String ,\r\n         brand : String ,\r\n-        price : \r\n+        price : Number ,\r\n+        salePrice : \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042324947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n         description : String ,\r\n         category : String ,\r\n         brand : String ,\r\n         price : Number ,\r\n-        salePrice : \r\n+        salePrice : Number,\r\n+        \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042332771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         category : String ,\r\n         brand : String ,\r\n         price : Number ,\r\n         salePrice : Number,\r\n-        \r\n+        totalStock : \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042342677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         category : String ,\r\n         brand : String ,\r\n         price : Number ,\r\n         salePrice : Number,\r\n-        totalStock : \r\n+        totalStock : Number\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042435924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n         category : String ,\r\n         brand : String ,\r\n         price : Number ,\r\n         salePrice : Number,\r\n-        totalStock : Number\r\n+        totalStock : Number,\r\n     }\r\n\\ No newline at end of file\n-)\n+)\r\n+\r\n"
+                },
+                {
+                    "date": 1740042443476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n         brand : String ,\r\n         price : Number ,\r\n         salePrice : Number,\r\n         totalStock : Number,\r\n-    }\r\n+    },\r\n )\r\n+\r\n"
+                },
+                {
+                    "date": 1740042450258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n         brand : String ,\r\n         price : Number ,\r\n         salePrice : Number,\r\n         totalStock : Number,\r\n-    },\r\n+    },{timestamps:true}\r\n )\r\n \r\n"
+                },
+                {
+                    "date": 1740042498480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,4 +12,6 @@\n         totalStock : Number,\r\n     },{timestamps:true}\r\n )\r\n \r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1740042505532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n         totalStock : Number,\r\n     },{timestamps:true}\r\n )\r\n \r\n+module.exports\r\n \r\n-\r\n"
+                },
+                {
+                    "date": 1740042513058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n         totalStock : Number,\r\n     },{timestamps:true}\r\n )\r\n \r\n-module.exports\r\n+module.exports = mongoose.\r\n \r\n"
+                },
+                {
+                    "date": 1740042523257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n         totalStock : Number,\r\n     },{timestamps:true}\r\n )\r\n \r\n-module.exports = mongoose.\r\n+module.exports = mongoose.model(\"Product\" ,)\r\n \r\n"
+                },
+                {
+                    "date": 1740042528458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n         totalStock : Number,\r\n     },{timestamps:true}\r\n )\r\n \r\n-module.exports = mongoose.model(\"Product\" ,)\r\n+module.exports = mongoose.model(\"Product\" , productSchema)\r\n \r\n"
+                }
+            ],
+            "date": 1740042186091,
+            "name": "Commit-0",
+            "content": "const mon"
+        }
+    ]
+}

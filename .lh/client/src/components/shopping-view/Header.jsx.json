@@ -1,0 +1,314 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 74,
+            "patches": [
+                {
+                    "date": 1740136614460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740136621529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      \r\n+      <Header></Header>\r\n      );\r\n }\r\n \r\n export default ShoppingHeader;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740136631286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      <Header></Header>\r\n+      <header></header>\r\n      );\r\n }\r\n \r\n export default ShoppingHeader;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740136645729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      <header></header>\r\n+      <header className=\"sticky \">\r\n+\r\n+      </header>\r\n      );\r\n }\r\n \r\n export default ShoppingHeader;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740136655380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      <header className=\"sticky \">\r\n+      <header className=\"sticky top\">\r\n \r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740136661653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      <header className=\"sticky top\">\r\n+      <header className=\"sticky top-0 z-40 \">\r\n \r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740136671401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      <header className=\"sticky top-0 z-40 \">\r\n+      <header className=\"sticky top-0 z-40 w-full border-b \">\r\n \r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740136750111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHeader() {\r\n     return ( \r\n-      <header className=\"sticky top-0 z-40 w-full border-b \">\r\n+      <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n \r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740136758922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n-\r\n+        <div>\r\n+            \r\n+        </div>\r\n       </header>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740136765326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n-        <div>\r\n-            \r\n+        <div className=\"flex \">\r\n+\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740136774479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n-        <div className=\"flex \">\r\n+        <div className=\"flex h-16 \">\r\n \r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740136786592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n-        <div className=\"flex h-16 \">\r\n+        <div className=\"flex h-16 items-center justify-between\">\r\n \r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740136797652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n-        <div className=\"flex h-16 items-center justify-between\">\r\n+        <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n \r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740136803528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-\r\n+            <Link\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740140515255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n+import { Link } from \"react-router-dom\";\r\n+\r\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link\r\n+            <Link>\r\n+            <\r\n+            </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740140563354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n+import { HousePlug } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n-            <\r\n+            <HousePlug/>\r\n+            <Hi\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140571573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             <HousePlug/>\r\n-            <Hi\r\n+            \r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140630314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             <HousePlug/>\r\n-            \r\n+            <Hi\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140666408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import { HousePlug } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n+import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n \r\n+\r\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             <HousePlug/>\r\n-            <Hi\r\n+            <\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140673107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             <HousePlug/>\r\n-            <\r\n+            <HiBuildingStorefront />\r\n+\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140693514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,10 @@\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n-            <HousePlug/>\r\n+            {/* <HousePlug/> */}\r\n             <HiBuildingStorefront />\r\n-\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140796620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront />\r\n+            <HiBuildingStorefront size={} />\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140814921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront size={} />\r\n+            <HiBuildingStorefront size={30}  />\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140821651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront size={30}  />\r\n+            <HiBuildingStorefront size={30} className=\"h-6 w-6\" />\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140837695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6\" />\r\n+            <span></span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140843386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6\" />\r\n-            <span></span>\r\n+            <span>ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140882771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6\" />\r\n-            <span>ShopXpress</span>\r\n+            <span className=\"\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140890779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link>\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6\" />\r\n-            <span className=\"\">ShopXpress</span>\r\n+            <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740140905860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link>\r\n+            <Link className=\"\">\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront size={30} className=\"h-6 w-6\" />\r\n+            <HiBuildingStorefront size={30} className=\"h-6 w-6 \" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740140910934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link className=\"\">\r\n+            <Link className=\"flex itenm \">\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6 \" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n"
+                },
+                {
+                    "date": 1740140919606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link className=\"flex itenm \">\r\n+            <Link className=\"flex items-center gap-3\">\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6 \" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n"
+                },
+                {
+                    "date": 1740140931699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link className=\"flex items-center gap-3\">\r\n+            <Link className=\"flex items-center gap-2\">\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={30} className=\"h-6 w-6 \" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n"
+                },
+                {
+                    "date": 1740140937580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\">\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront size={30} className=\"h-6 w-6 \" />\r\n+            <HiBuildingStorefront size={40} className=\"h-6 w-6 \" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740140944297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\">\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront size={40} className=\"h-6 w-6 \" />\r\n+            <HiBuildingStorefront size={40} className=\"\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740140958741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link className=\"flex items-center gap-2\">\r\n+            <Link className=\"flex items-center gap-2\" to>\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={40} className=\"\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n"
+                },
+                {
+                    "date": 1740140964359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link className=\"flex items-center gap-2\" to>\r\n+            <Link className=\"flex items-center gap-2\" to=\"/\">\r\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront size={40} className=\"\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n"
+                },
+                {
+                    "date": 1740141002898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n function ShoppingHeader() {\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n-            <Link className=\"flex items-center gap-2\" to=\"/\">\r\n+            <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront size={40} className=\"\" />\r\n+            <HiBuildingStorefront  className=\"\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740141008203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront  className=\"\" />\r\n+            <HiBuildingStorefront  className=\"h8\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740141090873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,12 @@\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n             {/* <HousePlug/> */}\r\n-            <HiBuildingStorefront  className=\"h8\" />\r\n+            <HiBuildingStorefront  className=\"h-8 w-8\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n+            <sh\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740141099273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { HousePlug } from \"lucide-react\";\r\n+import { HousePlug, Sheet } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n \r\n \r\n@@ -11,9 +11,9 @@\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront  className=\"h-8 w-8\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n-            <sh\r\n+            <Sheet/>\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740141134459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { HousePlug, Sheet } from \"lucide-react\";\r\n+import { HousePlug, } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740141151636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { HousePlug, } from \"lucide-react\";\r\n+import { HousePlug } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n \r\n \r\n@@ -11,9 +11,9 @@\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront  className=\"h-8 w-8\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n-            <Sheet/>\r\n+            <Sheet\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740141167581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { HousePlug } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n+import { Sheet, SheetTrigger } from \"../ui/sheet\";\r\n \r\n \r\n function ShoppingHeader() {\r\n     return ( \r\n@@ -11,9 +12,11 @@\n             {/* <HousePlug/> */}\r\n             <HiBuildingStorefront  className=\"h-8 w-8\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n-            <Sheet\r\n+            <Sheet>\r\n+                <SheetTrigger\r\n+            </Sheet>\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740141178179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n             <HiBuildingStorefront  className=\"h-8 w-8\" />\r\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n-                <SheetTrigger\r\n+                <SheetTrigger asChild>\r\n+\r\n+                </SheetTrigger>\r\n             </Sheet>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740141281639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { HousePlug } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n import { Sheet, SheetTrigger } from \"../ui/sheet\";\r\n+import { Button } from \"../ui/button\";\r\n \r\n \r\n function ShoppingHeader() {\r\n     return ( \r\n@@ -14,9 +15,11 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-\r\n+                    <Button>\r\n+                        \r\n+                    </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740141289062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button>\r\n-                        \r\n+                        <span>To</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141297472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button>\r\n-                        <span>To</span>\r\n+                        <span>Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141305029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button>\r\n-                        <span>Toggle header menu</span>\r\n+                        <span className=\"\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141334503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-                    <Button>\r\n-                        <span className=\"\">Toggle header menu</span>\r\n+                    <Button >\r\n+                        <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141341099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-                    <Button >\r\n+                    <Button variant>\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141346929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-                    <Button variant>\r\n+                    <Button variant=\"outline\" className>\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141460620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-                    <Button variant=\"outline\" className>\r\n+                    <Button variant=\"outline\" className=\"lg:hidden\">\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141468271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-                    <Button variant=\"outline\" className=\"lg:hidden\">\r\n+                    <Button variant=\"outline\" className=\"lg:hidden\" size>\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141477157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             <span className=\"font-bold\">ShopXpress</span>\r\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n-                    <Button variant=\"outline\" className=\"lg:hidden\" size>\r\n+                    <Button variant=\"outline\" className=\"lg:hidden\" size=\"icon\">\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141488204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button variant=\"outline\" className=\"lg:hidden\" size=\"icon\">\r\n+                        \r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141496834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { HousePlug } from \"lucide-react\";\r\n+import { HousePlug, Menu } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n import { Sheet, SheetTrigger } from \"../ui/sheet\";\r\n import { Button } from \"../ui/button\";\r\n@@ -16,9 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button variant=\"outline\" className=\"lg:hidden\" size=\"icon\">\r\n-                        \r\n+                        <Menu  />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141510634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button variant=\"outline\" className=\"lg:hidden\" size=\"icon\">\r\n-                        <Menu  />\r\n+                        <Menu className=\"h-6 \" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141516890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </Link>\r\n             <Sheet>\r\n                 <SheetTrigger asChild>\r\n                     <Button variant=\"outline\" className=\"lg:hidden\" size=\"icon\">\r\n-                        <Menu className=\"h-6 \" />\r\n+                        <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n             </Sheet>\r\n"
+                },
+                {
+                    "date": 1740141572382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { HousePlug, Menu } from \"lucide-react\";\r\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n-import { Sheet, SheetTrigger } from \"../ui/sheet\";\r\n+import { Sheet, SheetContent, SheetTrigger } from \"../ui/sheet\";\r\n import { Button } from \"../ui/button\";\r\n \r\n \r\n function ShoppingHeader() {\r\n@@ -20,8 +20,9 @@\n                         <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n+                <SheetContent></SheetContent>\r\n             </Sheet>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740141584837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,11 @@\n                         <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n-                <SheetContent></SheetContent>\r\n+                <SheetContent side>\r\n+\r\n+                </SheetContent>\r\n             </Sheet>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740141592839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                         <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n-                <SheetContent side>\r\n+                <SheetContent side=\"left\" className=\"\">\r\n \r\n                 </SheetContent>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141598634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                         <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n-                <SheetContent side=\"left\" className=\"\">\r\n+                <SheetContent side=\"left\" className=\"w-full \">\r\n \r\n                 </SheetContent>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141604341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                         <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n-                <SheetContent side=\"left\" className=\"w-full \">\r\n+                <SheetContent side=\"left\" className=\"w-full max-w-s\">\r\n \r\n                 </SheetContent>\r\n             </Sheet>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740141609502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n                         <Menu className=\"h-6 w-6\" />\r\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n-                <SheetContent side=\"left\" className=\"w-full max-w-s\">\r\n-\r\n+                <SheetContent side=\"left\" className=\"w-full max-w-xs\">\r\n+                \r\n                 </SheetContent>\r\n             </Sheet>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740141621518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,14 @@\n                         <span className=\"sr-only\">Toggle header menu</span>\r\n                     </Button>\r\n                 </SheetTrigger>\r\n                 <SheetContent side=\"left\" className=\"w-full max-w-xs\">\r\n-                \r\n+\r\n                 </SheetContent>\r\n             </Sheet>\r\n+            <div>\r\n+                \r\n+            </div>\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740141629423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n                 <SheetContent side=\"left\" className=\"w-full max-w-xs\">\r\n \r\n                 </SheetContent>\r\n             </Sheet>\r\n-            <div>\r\n-                \r\n+            <div className=\"hidden \">\r\n+\r\n             </div>\r\n         </div>\r\n       </header>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740141634563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n                 <SheetContent side=\"left\" className=\"w-full max-w-xs\">\r\n \r\n                 </SheetContent>\r\n             </Sheet>\r\n-            <div className=\"hidden \">\r\n+            <div className=\"hidden lg:block\">\r\n \r\n             </div>\r\n         </div>\r\n       </header>\r\n"
+                },
+                {
+                    "date": 1740141679801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n import { Button } from \"../ui/button\";\r\n \r\n \r\n function ShoppingHeader() {\r\n+\r\n+    \r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n"
+                },
+                {
+                    "date": 1740141692401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n import { Link } from \"react-router-dom\";\r\n import { HiBuildingStorefront } from \"react-icons/hi2\";\r\n import { Sheet, SheetContent, SheetTrigger } from \"../ui/sheet\";\r\n import { Button } from \"../ui/button\";\r\n+import { useSelector } from \"react-redux\";\r\n \r\n \r\n function ShoppingHeader() {\r\n \r\n-    \r\n+    const {} = useSelector()\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n"
+                },
+                {
+                    "date": 1740141700145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n \r\n function ShoppingHeader() {\r\n \r\n-    const {} = useSelector()\r\n+    const {} = useSelector(state => state)\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n"
+                },
+                {
+                    "date": 1740141723691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n \r\n function ShoppingHeader() {\r\n \r\n-    const {} = useSelector(state => state)\r\n+    const {} = useSelector(state => state.isAuthenticated)\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n"
+                },
+                {
+                    "date": 1740141737234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n \r\n function ShoppingHeader() {\r\n \r\n-    const {} = useSelector(state => state.isAuthenticated)\r\n+    const {} = useSelector(state => state.auth)\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n"
+                },
+                {
+                    "date": 1740141763085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n \r\n \r\n function ShoppingHeader() {\r\n \r\n-    const {} = useSelector(state => state.auth)\r\n+    const {isAuthenticated} = useSelector(state => state.auth)\r\n+\r\n+\r\n     return ( \r\n       <header className=\"sticky top-0 z-40 w-full border-b bg-background\">\r\n         <div className=\"flex h-16 items-center justify-between px-4 md:px-6\">\r\n             <Link className=\"flex items-center gap-2\" to=\"/shop/home\">\r\n@@ -30,8 +32,10 @@\n             </Sheet>\r\n             <div className=\"hidden lg:block\">\r\n \r\n             </div>\r\n+\r\n+            {isAuthenticated }\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740141773091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n             <div className=\"hidden lg:block\">\r\n \r\n             </div>\r\n \r\n-            {isAuthenticated ? }\r\n+            {isAuthenticated ?}\r\n         </div>\r\n       </header>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740142491249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n function MenuItems(){\r\n \r\n     return <nav>\r\n         {\r\n-            shoppingViewHeaderMenuItems.map( menuitems => <Link>{menuitems</Link>)\r\n+            shoppingViewHeaderMenuItems.map( menuitems => <Link>{menuitems.</Link>)\r\n         }\r\n     </nav>\r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1740136614460,
+            "name": "Commit-0",
+            "content": "function ShoppingHeader() {\r\n    return ( \r\n      \r\n     );\r\n}\r\n\r\nexport default ShoppingHeader;"
+        }
+    ]
+}

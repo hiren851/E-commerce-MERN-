@@ -1,0 +1,386 @@
+{
+    "sourceFile": "client/src/components/auth/Layout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 92,
+            "patches": [
+                {
+                    "date": 1739522855886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739522861782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n \r\n \r\n \r\n+f\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522871275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n \r\n \r\n-f\n\\ No newline at end of file\n+function AuthLayout \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522878563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n \r\n \r\n \r\n-function AuthLayout \n\\ No newline at end of file\n+function AuthLayout (){\r\n+    return \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522885648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n \r\n \r\n \r\n function AuthLayout (){\r\n-    return \r\n+    return (\r\n+        <div>\r\n+            \r\n+        </div>\r\n+    )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522892212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n \r\n function AuthLayout (){\r\n     return (\r\n         <div>\r\n-            \r\n+\r\n         </div>\r\n     )\r\n\\ No newline at end of file\n-}\n+}\r\n+\r\n+export default \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522898225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \r\n function AuthLayout (){\r\n     return (\r\n         <div>\r\n-\r\n+            \r\n         </div>\r\n     )\r\n }\r\n \r\n\\ No newline at end of file\n-export default \n+export default AuthLayout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522907165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div>\r\n-            \r\n+        <div className=\"flex\">\r\n+\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739522914210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex\">\r\n+        <div className=\"flex min-\">\r\n \r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739522921404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-\">\r\n+        <div className=\"flex min-h-screen \">\r\n \r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739522939438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen \">\r\n-\r\n+        <div className=\"flex min-h-screen w-full\">\r\n+            <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739522945884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-full\">\r\n+        <div className=\"flex min-h-screen w-full bg\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739522968921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-full bg\">\r\n+        <div className=\"flex min-h-screen w-full bg-\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523144908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-full bg-\">\r\n+        <div className=\"flex min-h-screen w-full\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523150182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-full\">\r\n+        <div className=\"flex min-h-screen\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523173084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen\">\r\n+        <div className=\"flex min-h-screen w-\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523423698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-\">\r\n+        <div className=\"flex min-h-screen w-full bg-green\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523428840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-full bg-green\">\r\n+        <div className=\"flex min-h-screen w-full \">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523662583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"flex min-h-screen w-full \">\r\n+        <div className=\"bg\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523669046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"bg\">\r\n+        <div className=\"bg-dark\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523727418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"bg-dark\">\r\n+        <div className=\"bg-sky-500\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739523981231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"bg-sky-500\">\r\n+        <div className=\"back\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739524159251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"back\">\r\n+        <div className=\"48 96.6% 76.7%\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739524191905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"48 96.6% 76.7%\">\r\n+        <div className=\"lime-600\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739524223578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AuthLayout (){\r\n     return (\r\n-        <div className=\"lime-600\">\r\n+        <div className=\"\">\r\n             <p>Hello</p>\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1739524625787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n function AuthLayout (){\r\n     return (\r\n         <div className=\"\">\r\n             <p>Hello</p>\r\n+            <h1 class=\"text-3xl font-bold underline\">\r\n+    Hello world!\r\n+  </h1>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739524641307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,10 @@\n-\r\n-\r\n-\r\n-function AuthLayout (){\r\n-    return (\r\n-        <div className=\"\">\r\n-            <p>Hello</p>\r\n-            <h1 class=\"text-3xl font-bold underline\">\r\n-    Hello world!\r\n-  </h1>\r\n-        </div>\r\n-    )\r\n+function AuthLayout() {\r\n+  return (\r\n+    <div className=\"\">\r\n\\ No newline at end of file\n+      <p>Hello</p>\r\n+      <h1 class=\"text-3xl font-bold underline\" >Hello world!</h1>\r\n+    </div>\r\n+  );\r\n }\r\n \r\n-export default AuthLayout;\n+export default AuthLayout;\r\n"
+                },
+                {
+                    "date": 1739524647962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n       <p>Hello</p>\r\n-      <h1 class=\"text-3xl font-bold underline\" >Hello world!</h1>\r\n+      <h1 class=\"text-3xl font-bold underline bg-\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AuthLayout;\n+export default AuthLayout;\r\n"
+                },
+                {
+                    "date": 1739524674566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n     </div>\r\n   );\r\n }\r\n \r\n-export default AuthLayout;\n\\ No newline at end of file\n+export default AuthLayout;\r\n"
+                },
+                {
+                    "date": 1739524732058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n       <p>Hello</p>\r\n-      <h1 class=\"text-3xl font-bold underline bg-\" >Hello world!</h1>\r\n+      <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739524742580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p>Hello</p>\r\n+      <p >Hello</p>\r\n       <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739524754905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p >Hello</p>\r\n+      <p className=\"text\">Hello</p>\r\n       <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739524760070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p className=\"text\">Hello</p>\r\n+      <p className=\"text-gray-700\">Hello</p>\r\n       <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739524863397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p className=\"text-gray-700\">Hello</p>\r\n+      <p className=\"tex\">Hello</p>\r\n       <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739524967490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p className=\"tex\">Hello</p>\r\n+      <p className=\"text-\">Hello</p>\r\n       <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739524972691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p className=\"text-\">Hello</p>\r\n+      <p className=\"text-amber-400\">Hello</p>\r\n       <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739525501439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"\">\r\n-      <p className=\"text-amber-400\">Hello</p>\r\n-      <h1 className=\"text-3xl font-bold underline bg-sky-700\" >Hello world!</h1>\r\n+      \r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526073175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function AuthLayout() {\r\n   return (\r\n-    <div className=\"\">\r\n+    <div className=\"flex \">\r\n       \r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739526082530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function AuthLayout() {\r\n   return (\r\n-    <div className=\"flex \">\r\n+    <div className=\"flex min-h-screen \">\r\n       \r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739526155021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n-    <div className=\"flex min-h-screen \">\r\n-      \r\n+    <div className=\"flex min-h-screen w-full\">\r\n+        <div></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526162724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div></div>\r\n+        <div className=\"hidden \"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526168178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden \"></div>\r\n+        <div className=\"hidden lg:flex \"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526173567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex \"></div>\r\n+        <div className=\"hidden lg:flex items-center \"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526178986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center \"></div>\r\n+        <div className=\"hidden lg:flex items-center justify-center\"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526243117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center\"></div>\r\n+        <div className=\"hidden lg:flex items-center justify-center \"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526249252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center \"></div>\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-balck w-1\"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526255787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg-balck w-1\"></div>\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\"></div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526262327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\"></div>\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n+        </div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526290645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n+            <div></div>\r\n         </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739526300825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div></div>\r\n+            <div className=\"max-w-d\">\r\n+\r\n+            </div>\r\n         </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739526306810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div className=\"max-w-d\">\r\n+            <div className=\"max-w-md\">\r\n \r\n             </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739526313180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div className=\"max-w-md\">\r\n+            <div className=\"max-w-md space\">\r\n \r\n             </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739526319831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div className=\"max-w-md space\">\r\n+            <div className=\"max-w-md space-y-6 \">\r\n \r\n             </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739526333297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div className=\"max-w-md space-y-6 \">\r\n+            <div className=\"max-w-md space-y-6 text-center text-primarily\">\r\n \r\n             </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739526339074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div className=\"max-w-md space-y-6 text-center text-primarily\">\r\n+            <div className=\"max-w-md space-y-6 text-center text-primar\">\r\n \r\n             </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739526346739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n-            <div className=\"max-w-md space-y-6 text-center text-primar\">\r\n+            <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n \r\n             </div>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739526354321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-\r\n+                \r\n             </div>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526364451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                \r\n+                <h1>Welcome to E </h1>\r\n             </div>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526369594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1>Welcome to E </h1>\r\n+                <h1>Welcome to E -Commerce </h1>\r\n             </div>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526375890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1>Welcome to E -Commerce </h1>\r\n+                <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526397330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n+        '<div>\r\n+            \r\n+        </div>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739526402439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        '<div>\r\n+        <div>\r\n             \r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526409736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { Outlet } from \"react-router-dom\";\r\n+\r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n@@ -6,9 +8,9 @@\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div>\r\n-            \r\n+            <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1739526422334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div>\r\n+        <div className=\"flex flex-1 \">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526427569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 \">\r\n+        <div className=\"flex flex-1 items-cenetr *:\">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526436510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-cenetr *:\">\r\n+        <div className=\"flex flex-1 items-center *:\">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526448036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center *:\">\r\n+        <div className=\"flex flex-1 items-center justify-cente\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526454363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-cente\r\n+        <div className=\"flex flex-1 items-center justify-ceny00\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526461319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-ceny00\r\n+        <div className=\"flex flex-1 items-center justify-center \">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526471219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-center \">\r\n+        <div className=\"flex flex-1 items-center justify-center bg-bac\">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526483210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-center bg-bac\">\r\n+        <div className=\"flex flex-1 items-center justify-center bg-background \">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526494321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-center bg-background \">\r\n+        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 \">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526500166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 \">\r\n+        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px\">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526510135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px\">\r\n+        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n         </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739526991758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg-balck w-1/2 px-12\">\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-bla w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739526998890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg-bla w-1/2 px-12\">\r\n+        <div className=\"hidden lg:flex items-center justify-center back w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527003940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center back w-1/2 px-12\">\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-gre w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527013118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg-gre w-1/2 px-12\">\r\n+        <div className=\"hidden lg:flex items-center justify-center bg- w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527019722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg- w-1/2 px-12\">\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527029218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n-            <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n+            <div className=\"max-w-md space-y-6 text-center text-primary-foreground \">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n"
+                },
+                {
+                    "date": 1739527034425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n-            <div className=\"max-w-md space-y-6 text-center text-primary-foreground \">\r\n+            <div className=\"max-w-md space-y-6 text-center text-primary-foreground text-white\">\r\n                 <h1>Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n"
+                },
+                {
+                    "date": 1739527067493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,19 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-        <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n-            <div className=\"max-w-md space-y-6 text-center text-primary-foreground text-white\">\r\n-                <h1>Welcome to E -Commerce Shopping </h1>\r\n-            </div>\r\n+      <div className=\"hidden lg:flex items-center justify-center bg-black w-1/2 px-12\">\r\n+        <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n+          <h1 className=\"text-4xl font-extrabold tracking-tight\">\r\n+            Welcome to ECommerce Shopping\r\n+          </h1>\r\n         </div>\r\n-        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n-            <Outlet/>\r\n-        </div>\r\n+      </div>\r\n+      <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8\">\r\n+        <Outlet />\r\n+      </div>\r\n     </div>\r\n   );\r\n }\r\n \r\n-export default AuthLayout;\r\n+export default AuthLayout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739527086836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n       <div className=\"hidden lg:flex items-center justify-center bg-black w-1/2 px-12\">\r\n         <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-          <h1 className=\"text-4xl font-extrabold tracking-tight\">\r\n+          <h1 className=\"text-4xl font-extrabold tracking-tight \">\r\n             Welcome to ECommerce Shopping\r\n           </h1>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1739527163914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n       <div className=\"hidden lg:flex items-center justify-center bg-black w-1/2 px-12\">\r\n         <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-          <h1 className=\"text-4xl font-extrabold tracking-tight \">\r\n+          <h1 className=\"text-4xl font-extrabold tracking-tight text-white\">\r\n             Welcome to ECommerce Shopping\r\n           </h1>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1739527186380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,17 @@\n \r\n function AuthLayout() {\r\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n-      <div className=\"hidden lg:flex items-center justify-center bg-black w-1/2 px-12\">\r\n-        <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-          <h1 className=\"text-4xl font-extrabold tracking-tight text-white\">\r\n-            Welcome to ECommerce Shopping\r\n-          </h1>\r\n+        <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n+            <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n+                <h1>Welcome to E -Commerce Shopping </h1>\r\n+            </div>\r\n         </div>\r\n-      </div>\r\n-      <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8\">\r\n-        <Outlet />\r\n-      </div>\r\n+        <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n\\ No newline at end of file\n+            <Outlet/>\r\n+        </div>\r\n     </div>\r\n   );\r\n }\r\n \r\n-export default AuthLayout;\n+export default AuthLayout;\r\n"
+                },
+                {
+                    "date": 1739527201745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1>Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"\">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n@@ -14,5 +14,5 @@\n     </div>\r\n   );\r\n }\r\n \r\n-export default AuthLayout;\n\\ No newline at end of file\n+export default AuthLayout;\r\n"
+                },
+                {
+                    "date": 1739527207567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"\">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl \">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                },
+                {
+                    "date": 1739527215150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"text-4xl \">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl font-extra\">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                },
+                {
+                    "date": 1739527225083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"text-4xl font-extra\">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl font\">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                },
+                {
+                    "date": 1739527233935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"text-4xl font\">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl font-extrabold tracking\">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                },
+                {
+                    "date": 1739527256561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"text-4xl font-extrabold tracking\">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl font-extrabold tracking-tight\">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                },
+                {
+                    "date": 1739527266243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"text-4xl font-extrabold tracking-tight\">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl font-extrabold tracking-tight text\">Welcome to E -Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                },
+                {
+                    "date": 1739527275775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className=\"flex min-h-screen w-full\">\r\n         <div className=\"hidden lg:flex items-center justify-center bg-black  w-1/2 px-12\">\r\n             <div className=\"max-w-md space-y-6 text-center text-primary-foreground\">\r\n-                <h1 className=\"text-4xl font-extrabold tracking-tight text\">Welcome to E -Commerce Shopping </h1>\r\n+                <h1 className=\"text-4xl font-extrabold tracking-tight text-white\">Welcome to E-Commerce Shopping </h1>\r\n             </div>\r\n         </div>\r\n         <div className=\"flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg-px-8\">\r\n             <Outlet/>\r\n"
+                }
+            ],
+            "date": 1739522855886,
+            "name": "Commit-0",
+            "content": "\r\n\r\n\r\n"
+        }
+    ]
+}

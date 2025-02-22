@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Layout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739531439841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739531439841,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport { Outlet } from 'react-router-dom'\r\nimport ShoppingHeader from './Header'\r\n\r\nconst ShoppingLayout = () => {\r\n  return (\r\n    <div className='flex flex-col bg-white overflow-hidden'>\r\n        <ShoppingHeader/>\r\n        <main className='flex flex-col w-full'>\r\n            <Outlet/>\r\n        </main>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default ShoppingLayout"
+        }
+    ]
+}

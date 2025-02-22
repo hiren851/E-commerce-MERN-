@@ -1,0 +1,238 @@
+{
+    "sourceFile": "server/controllers/auth-controllers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 55,
+            "patches": [
+                {
+                    "date": 1739854682923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739854688784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-//\n\\ No newline at end of file\n+\r\n+\r\n+//register\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1739854695506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,4 +2,5 @@\n \r\n //register\r\n \r\n \r\n+const register \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854706762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n \r\n //register\r\n \r\n \r\n-const register \n\\ No newline at end of file\n+const register =async()=>{\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854711901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \r\n //register\r\n \r\n \r\n-const register =async()=>{\r\n+const register =async(req)=>{\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854721265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \r\n //register\r\n \r\n \r\n-const register =async(req)=>{\r\n-\r\n+const register =async(req,res)=>{\r\n+    try\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854727287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,8 @@\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n-    try\r\n+    try{\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854732420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,9 @@\n \r\n \r\n const register =async(req,res)=>{\r\n     try{\r\n+\r\n+    }catch{\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854737831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n const register =async(req,res)=>{\r\n     try{\r\n \r\n-    }catch{\r\n-        \r\n+    }catch(){\r\n+\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854743807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n \r\n const register =async(req,res)=>{\r\n     try{\r\n+        \r\n+    }catch(e){\r\n \r\n-    }catch(){\r\n-\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854752044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n \r\n const register =async(req,res)=>{\r\n     try{\r\n-        \r\n+\r\n     }catch(e){\r\n-\r\n+        console.log(first)\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854757741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n const register =async(req,res)=>{\r\n     try{\r\n \r\n     }catch(e){\r\n-        console.log(first)\r\n+        console.log(e);\r\n+        res.\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854766160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n-        res.\r\n+        res.status()\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854773808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n-        res.status()\r\n+        res.status(500).json({})\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854781420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,9 @@\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n-        res.status(500).json({})\r\n+        res.status(500).json({\r\n+            success\r\n+        })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854787652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \r\n     }catch(e){\r\n         console.log(e);\r\n         res.status(500).json({\r\n-            success\r\n+            success : false\r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854805013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n \r\n     }catch(e){\r\n         console.log(e);\r\n         res.status(500).json({\r\n-            success : false\r\n+            success : false,\r\n+            message : \"Some error occured\"\r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739854842515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n+    \r\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1739854850371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n-    \r\n+    const {userName}\r\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1739854857181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n-    const {userName}\r\n+    const {userName,email}\r\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1739854862503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n-    const {userName,email}\r\n+    const {userName,email,oassword} = \r\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1739854869568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n-    const {userName,email,oassword} = \r\n+    const {userName,email,oassword} = req.body\r\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1739854948329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n+const bycrypt = \r\n \r\n-\r\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n-    const {userName,email,oassword} = req.body\r\n+    const {userName,email,oassword} = req.body;\r\n     try{\r\n \r\n     }catch(e){\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1739854955803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const bycrypt = \r\n+const bycrypt = require('');\r\n \r\n //register\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739854962290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-const bycrypt = require('');\r\n+const bycrypt = require('bcryptjs');\r\n+const \r\n \r\n //register\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739854970861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const bycrypt = require('bcryptjs');\r\n-const \r\n+const jwt =  require('')\r\n \r\n //register\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739854976424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const bycrypt = require('bcryptjs');\r\n-const jwt =  require('')\r\n+const jwt =  require('jsonwebtoken');\r\n \r\n+\r\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1739854982472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const bycrypt = require('bcryptjs');\r\n const jwt =  require('jsonwebtoken');\r\n+const User = \r\n \r\n-\r\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1739854987876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const bycrypt = require('bcryptjs');\r\n const jwt =  require('jsonwebtoken');\r\n-const User = \r\n+const User =  require('')\r\n \r\n //register\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739854992936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const bycrypt = require('bcryptjs');\r\n const jwt =  require('jsonwebtoken');\r\n-const User =  require('')\r\n+const User =  require('../models')\r\n \r\n //register\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739854998749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n const bycrypt = require('bcryptjs');\r\n const jwt =  require('jsonwebtoken');\r\n-const User =  require('../models')\r\n+const User =  require('../models/User');\r\n \r\n+\r\n+\r\n //register\r\n \r\n \r\n const register =async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1739855006472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,9 @@\n             success : false,\r\n             message : \"Some error occured\"\r\n         })\r\n     }\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+//login \r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1739855012501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,4 +22,5 @@\n \r\n //login \r\n \r\n \r\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739855023709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,7 @@\n \r\n //login \r\n \r\n \r\n-const \n\\ No newline at end of file\n+const login async =()=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739855031245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,7 @@\n \r\n //login \r\n \r\n \r\n-const login async =()=>{\r\n-    \r\n+const login  =()=>{\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739855041657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,17 @@\n \r\n //login \r\n \r\n \r\n-const login  =()=>{\r\n+const login  = async()=>{\r\n \r\n+    try{\r\n+\r\n+    }catch(e){\r\n+        console.log(e);\r\n+        res.status(500).json({\r\n+            success : false,\r\n+            message : \"Some error occured\"\r\n+        })\r\n+    }\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739855138764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,38 +1,31 @@\n-const bycrypt = require('bcryptjs');\r\n-const jwt =  require('jsonwebtoken');\r\n-const User =  require('../models/User');\r\n+const bycrypt = require(\"bcryptjs\");\r\n+const jwt = require(\"jsonwebtoken\");\r\n+const User = require(\"../models/User\");\r\n \r\n-\r\n-\r\n //register\r\n \r\n+const register = async (req, res) => {\r\n+  const { userName, email, oassword } = req.body;\r\n+  try {\r\n+    \r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Some error occured\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-const register =async(req,res)=>{\r\n-    const {userName,email,oassword} = req.body;\r\n-    try{\r\n+//login\r\n \r\n-    }catch(e){\r\n-        console.log(e);\r\n-        res.status(500).json({\r\n-            success : false,\r\n-            message : \"Some error occured\"\r\n-        })\r\n-    }\r\n-}\r\n-\r\n\\ No newline at end of file\n-//login \r\n-\r\n-\r\n-const login  = async()=>{\r\n-\r\n-    try{\r\n-\r\n-    }catch(e){\r\n-        console.log(e);\r\n-        res.status(500).json({\r\n-            success : false,\r\n-            message : \"Some error occured\"\r\n-        })\r\n-    }\r\n-\r\n-}\n+const login = async () => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Some error occured\",\r\n+    });\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1739855147169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const register = async (req, res) => {\r\n   const { userName, email, oassword } = req.body;\r\n   try {\r\n-    \r\n+    const hashPassword \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855157334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const register = async (req, res) => {\r\n   const { userName, email, oassword } = req.body;\r\n   try {\r\n-    const hashPassword \r\n+    const hashPassword  = await bycrypt.\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855164114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const register = async (req, res) => {\r\n   const { userName, email, oassword } = req.body;\r\n   try {\r\n-    const hashPassword  = await bycrypt.\r\n+    const hashPassword  = await bycrypt.hash(pass)\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855177386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n \r\n //register\r\n \r\n const register = async (req, res) => {\r\n-  const { userName, email, oassword } = req.body;\r\n+  const { userName, email, passwordassword } = req.body;\r\n   try {\r\n-    const hashPassword  = await bycrypt.hash(pass)\r\n+    const hashPassword  = await bycrypt.hash(password,12);\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855184888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,12 @@\n \r\n //register\r\n \r\n const register = async (req, res) => {\r\n-  const { userName, email, passwordassword } = req.body;\r\n+  const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n+    \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855190922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const register = async (req, res) => {\r\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n-    \r\n+    const neew\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855198465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const register = async (req, res) => {\r\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n-    const neew\r\n+    const newUser = new User\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855205672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n const register = async (req, res) => {\r\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n-    const newUser = new User\r\n+    const newUser = new User({\r\n+        userNAMe\r\n+    })\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855212164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n     const newUser = new User({\r\n-        userNAMe\r\n+        userName,email,hashPassword\r\n     })\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1739855219428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n     const newUser = new User({\r\n-        userName,email,hashPassword\r\n+        userName,email,password:hash\r\n     })\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1739855225536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,9 @@\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n     const newUser = new User({\r\n-        userName,email,password:hash\r\n-    })\r\n+        userName,email,password:hashPasswor    })\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855237958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n const register = async (req, res) => {\r\n   const { userName, email, password } = req.body;\r\n   try {\r\n     const hashPassword  = await bycrypt.hash(password,12);\r\n-    const newUser = new User({\r\n-        userName,email,password:hashPasswor    })\r\n+    const newUser = new User({00\r\n+        userName,email,password:hashPassword })\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855244796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,14 @@\n \r\n const register = async (req, res) => {\r\n   const { userName, email, password } = req.body;\r\n   try {\r\n-    const hashPassword  = await bycrypt.hash(password,12);\r\n-    const newUser = new User({00\r\n-        userName,email,password:hashPassword })\r\n+    const hashPassword = await bycrypt.hash(password, 12);\r\n+    const newUser = new User({\r\n+      userName,\r\n+      email,\r\n+      password: hashPassword,\r\n+    });\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855251952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n       userName,\r\n       email,\r\n       password: hashPassword,\r\n     });\r\n+\r\n+    \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855262026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       email,\r\n       password: hashPassword,\r\n     });\r\n \r\n-    \r\n+    await newUser \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855267776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       email,\r\n       password: hashPassword,\r\n     });\r\n \r\n-    await newUser \r\n+    await newUser.save()\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855275102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n       email,\r\n       password: hashPassword,\r\n     });\r\n \r\n-    await newUser.save()\r\n+    await newUser.save();\r\n+    res.\r\n+\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1739855281207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       password: hashPassword,\r\n     });\r\n \r\n     await newUser.save();\r\n-    res.status\r\n+    res.status()\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1739855402751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,5 @@\n \r\n \r\n //auth middleware \r\n \r\n-module\n\\ No newline at end of file\n+module.exports()\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739854682923,
+            "name": "Commit-0",
+            "content": "//"
+        }
+    ]
+}

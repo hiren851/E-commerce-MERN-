@@ -1,0 +1,114 @@
+{
+    "sourceFile": "client/src/Pages/auth/Register.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1739526802791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739814443103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n const Register = () => {\r\n   return (\r\n-    <div>Register</div>\r\n+    <div>\r\n+      \r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Register\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739814458081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n \r\n const Register = () => {\r\n   return (\r\n-    <div>\r\n-      \r\n+    <div >\r\n+\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739814464690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Register = () => {\r\n   return (\r\n-    <div >\r\n+    <div className='mx-auto '>\r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814471199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Register = () => {\r\n   return (\r\n-    <div className='mx-auto '>\r\n+    <div className='mx-auto w-full '>\r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814480870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Register = () => {\r\n   return (\r\n-    <div className='mx-auto w-full '>\r\n+    <div className='mx-auto w-full max-w-md '>\r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814488067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Register = () => {\r\n   return (\r\n-    <div className='mx-auto w-full max-w-md '>\r\n+    <div className='mx-auto w-full max-w-md space-y-6'>\r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814494693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n-\r\n+        \r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739814506522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n-        \r\n+        <div></div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739814512562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,17 @@\n \r\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n-        <div></div>\r\n+        <div useCallback(\r\n+          () => {\r\n+            first\r\n+          },\r\n+          [second],\r\n+        )\r\n+        >\r\n+          <h1></h1>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739814521874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,9 @@\n \r\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n-        <div useCallback(\r\n-          () => {\r\n-            first\r\n-          },\r\n-          [second],\r\n-        )\r\n-        >\r\n+        <div className='text-center'>\r\n           <h1></h1>\r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1739814533853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1></h1>\r\n+          <h1>Sign </h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814564240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1>Sign </h1>\r\n+          <h1></h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814569955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1></h1>\r\n+          <h1 className=''></h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814579238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className=''></h1>\r\n+          <h1 className='text-3xl font-bold '></h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814585815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className='text-3xl font-bold '></h1>\r\n+          <h1 className='text-3xl font-bold tracking-tight '></h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814592364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className='text-3xl font-bold tracking-tight '></h1>\r\n+          <h1 className='text-3xl font-bold tracking-tight text-foreground'></h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814610318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className='text-3xl font-bold tracking-tight text-foreground'></h1>\r\n+          <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814621485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n+          p\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814648618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n-          p\r\n+          <p>\r\n+          \r\n+          </p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814657740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,9 @@\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n-          <p>\r\n-          \r\n-          </p>\r\n+          <p>Already have an acco</p>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814667128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n-          <p>Already have an acco</p>\r\n+          <p>Already have an account</p>\r\n+          <Link\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814678510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import React from 'react'\r\n+import { Link } from 'react-router-dom'\r\n \r\n const Register = () => {\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n           <p>Already have an account</p>\r\n-          <Link\r\n+          <Link></Link>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739814684202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n           <p>Already have an account</p>\r\n-          <Link to=\"\"></Link>\r\n+          <Link to=\"/\"></Link>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1739858483645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n const Register = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialData);\r\n \r\n-  const dispatch = useDispatch()\r\n+  const dispatch = useDispatch();\r\n+  \r\n   function onSubmit (){}\r\n   console.log(formData)\r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                }
+            ],
+            "date": 1739526802791,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Register = () => {\r\n  return (\r\n    <div>Register</div>\r\n  )\r\n}\r\n\r\nexport default Register"
+        }
+    ]
+}

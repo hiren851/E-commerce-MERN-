@@ -1,0 +1,42 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Listing.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1739531657775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739531664743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function ShoppingHome() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531673643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function ShoppingHome() {\r\n-    return (  );\r\n+    return ( \r\n+        <div></div>\r\n+     );\r\n }\r\n \r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531678843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHome() {\r\n     return ( \r\n-        <div></div>\r\n+        <div>ShoppingHome</div>\r\n      );\r\n }\r\n \r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531918310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-function ShoppingHome() {\r\n+function Shop() {\r\n     return ( \r\n-        <div>ShoppingHome</div>\r\n+        <div>Shopping Home</div>\r\n      );\r\n }\r\n \r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531923359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function Shop() {\r\n+function Shopping Listing() {\r\n     return ( \r\n         <div>Shopping Home</div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1739531932749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-function Shopping Listing() {\r\n+function ShoppingListing() {\r\n     return ( \r\n         <div>Shopping Home</div>\r\n      );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ShoppingHome;\n+export default ShoppingListing;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739531657775,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

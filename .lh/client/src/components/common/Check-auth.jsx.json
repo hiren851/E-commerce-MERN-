@@ -1,0 +1,182 @@
+{
+    "sourceFile": "client/src/components/common/Check-auth.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 41,
+            "patches": [
+                {
+                    "date": 1739532582461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739532598381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +0,0 @@\n-import React from 'react'\r\n-\r\n-const Check-auth = () => {\r\n-  return (\r\n-    <div>Check-auth</div>\r\n-  )\r\n-}\r\n-\r\n-export default Check-auth\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739532603667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+function Check() {\r\n+    return (  );\r\n+}\r\n+\r\n+export default Check;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739532615283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function Check() {\r\n+function CheckAuth() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default Check;\n+export default CheckAuth;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739532621418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n function CheckAuth() {\r\n-    return (  );\r\n+    return ( \r\n+        <div>\r\n+            \r\n+        </div>\r\n+     );\r\n }\r\n \r\n export default CheckAuth;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739532638055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n function CheckAuth() {\r\n+    \r\n     return ( \r\n         <div>\r\n-            \r\n+\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739532653254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n function CheckAuth() {\r\n-    \r\n+    const location = useLoaction\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739532659114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n+import { useLocation } from \"react-router-dom\";\r\n+\r\n function CheckAuth() {\r\n-    const location = useLoaction\r\n+    const location = useLocation\r\n+\r\n+    \r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739532672099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n-function CheckAuth() {\r\n+function CheckAuth({isAuthenticated}) {\r\n     const location = useLocation\r\n \r\n-    \r\n+\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739532679534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n-function CheckAuth({isAuthenticated}) {\r\n+function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n+    \r\n \r\n-\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739532689903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n-    \r\n+    if(!isAuthenticated)\r\n \r\n     return ( \r\n         <div>\r\n \r\n"
+                },
+                {
+                    "date": 1739532700025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n-    if(!isAuthenticated)\r\n+    if(!isAuthenticated && location.pathname !== '/login'){\r\n \r\n     return ( \r\n         <div>\r\n \r\n"
+                },
+                {
+                    "date": 1739532711102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n-    if(!isAuthenticated && location.pathname !== '/login'){\r\n+    if(!isAuthenticated && )\r\n \r\n     return ( \r\n         <div>\r\n \r\n"
+                },
+                {
+                    "date": 1739532716800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n-    if(!isAuthenticated && )\r\n+    if(!isAuthenticated && !())\r\n \r\n     return ( \r\n         <div>\r\n \r\n"
+                },
+                {
+                    "date": 1739532724545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { useLocation } from \"react-router-dom\";\r\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n-    if(!isAuthenticated && !())\r\n+    if(!isAuthenticated && !(\r\n+        location.path\r\n+    ))\r\n \r\n     return ( \r\n         <div>\r\n \r\n"
+                },
+                {
+                    "date": 1739532731655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n     if(!isAuthenticated && !(\r\n-        location.path\r\n+        location.pathname.includes\r\n     ))\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739532736765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n     if(!isAuthenticated && !(\r\n-        location.pathname.includes\r\n+        location.pathname.includes(\"\")\r\n     ))\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739532745425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n     if(!isAuthenticated && !(\r\n-        location.pathname.includes(\"\")\r\n+        location.pathname.includes(\"/login\")||\r\n+        \r\n     ))\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739532753179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,12 @@\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n     if(!isAuthenticated && !(\r\n         location.pathname.includes(\"/login\")||\r\n+        location.pathname.includes(\"/register\") \r\n+    )){\r\n         \r\n-    ))\r\n+    }\r\n \r\n     return ( \r\n         <div>\r\n \r\n"
+                },
+                {
+                    "date": 1739532763047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useLocation } from \"react-router-dom\";\r\n+import { Navigate, useLocation } from \"react-router-dom\";\r\n \r\n function CheckAuth({isAuthenticated, user}) {\r\n     const location = useLocation\r\n     if(!isAuthenticated && !(\r\n"
+                },
+                {
+                    "date": 1739532769447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     if(!isAuthenticated && !(\r\n         location.pathname.includes(\"/login\")||\r\n         location.pathname.includes(\"/register\") \r\n     )){\r\n-        \r\n+        return <Navigate  to/>\r\n     }\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739532775627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     if(!isAuthenticated && !(\r\n         location.pathname.includes(\"/login\")||\r\n         location.pathname.includes(\"/register\") \r\n     )){\r\n-        return <Navigate  to/>\r\n+        return <Navigate  to={auth/login}/>\r\n     }\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739534822733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     if(!isAuthenticated && !(\r\n         location.pathname.includes(\"/login\")||\r\n         location.pathname.includes(\"/register\") \r\n     )){\r\n-        return <Navigate  to={auth/login}/>\r\n+        return <Navigate  to={}/>\r\n     }\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739534828512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     if(!isAuthenticated && !(\r\n         location.pathname.includes(\"/login\")||\r\n         location.pathname.includes(\"/register\") \r\n     )){\r\n-        return <Navigate  to={}/>\r\n+        return <Navigate  to=\"\"/>\r\n     }\r\n \r\n     return ( \r\n         <div>\r\n"
+                },
+                {
+                    "date": 1739536728345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n     if(!isAuthenticated && !(\r\n         location.pathname.includes(\"/login\")||\r\n         location.pathname.includes(\"/register\") \r\n     )){\r\n-        return <Navigate  to=\"\"/>\r\n+        return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-\r\n+    \r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536734572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    \r\n+    if(!is)\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536740315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(!is)\r\n+    if(isAuthenticated )\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536776241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated )\r\n+    if(isAuthenticated && ())\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536804337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && ())\r\n+    if(isAuthenticated && (location.))\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536811659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && (location.))\r\n+    if(isAuthenticated && (location.pathname.includes))\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536823590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && (location.pathname.includes))\r\n+    if(isAuthenticated && (location.pathname.includes(\"/login\") || ))\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536832034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && (location.pathname.includes(\"/login\") || ))\r\n+    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname))\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536837085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname))\r\n+    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname.includes()))\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536842271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname.includes()))\r\n+    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname.includes(\"register\")))\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536854652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n         location.pathname.includes(\"/register\") \r\n     )){\r\n         return <Navigate  to=\"/auth/login\"/>\r\n     }\r\n-    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname.includes(\"register\")))\r\n+    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname.includes(\"register\"))){\r\n+        \r\n+    }\r\n     return ( \r\n         <div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739536860291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,24 @@\n import { Navigate, useLocation } from \"react-router-dom\";\r\n \r\n-function CheckAuth({isAuthenticated, user}) {\r\n-    const location = useLocation\r\n-    if(!isAuthenticated && !(\r\n-        location.pathname.includes(\"/login\")||\r\n-        location.pathname.includes(\"/register\") \r\n-    )){\r\n-        return <Navigate  to=\"/auth/login\"/>\r\n-    }\r\n-    if(isAuthenticated && (location.pathname.includes(\"/login\") || location.pathname.includes(\"register\"))){\r\n-        \r\n-    }\r\n-    return ( \r\n-        <div>\r\n-\r\n-        </div>\r\n-     );\r\n+function CheckAuth({ isAuthenticated, user }) {\r\n+  const location = useLocation;\r\n+  if (\r\n\\ No newline at end of file\n+    !isAuthenticated &&\r\n+    !(\r\n+      location.pathname.includes(\"/login\") ||\r\n+      location.pathname.includes(\"/register\")\r\n+    )\r\n+  ) {\r\n+    return <Navigate to=\"/auth/login\" />;\r\n+  }\r\n+  if (\r\n+    isAuthenticated &&\r\n+    (location.pathname.includes(\"/login\") ||\r\n+      location.pathname.includes(\"register\"))\r\n+  ) {\r\n+    \r\n+  }\r\n+  return <div></div>;\r\n }\r\n \r\n-export default CheckAuth;\n+export default CheckAuth;\r\n"
+                },
+                {
+                    "date": 1739536879920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     isAuthenticated &&\r\n     (location.pathname.includes(\"/login\") ||\r\n       location.pathname.includes(\"register\"))\r\n   ) {\r\n-    \r\n+    if()\r\n   }\r\n   return <div></div>;\r\n }\r\n \r\n\\ No newline at end of file\n-export default CheckAuth;\n+export default CheckAuth;\r\n"
+                },
+                {
+                    "date": 1739536907584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     isAuthenticated &&\r\n     (location.pathname.includes(\"/login\") ||\r\n       location.pathname.includes(\"register\"))\r\n   ) {\r\n-    if()\r\n+    if(user)\r\n   }\r\n   return <div></div>;\r\n }\r\n \r\n\\ No newline at end of file\n-export default CheckAuth;\n+export default CheckAuth;\r\n"
+                },
+                {
+                    "date": 1739536915006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     isAuthenticated &&\r\n     (location.pathname.includes(\"/login\") ||\r\n       location.pathname.includes(\"register\"))\r\n   ) {\r\n-    if(user)\r\n+    if(user?.role === admin)\r\n   }\r\n   return <div></div>;\r\n }\r\n \r\n\\ No newline at end of file\n-export default CheckAuth;\n+export default CheckAuth;\r\n"
+                },
+                {
+                    "date": 1739536920190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     isAuthenticated &&\r\n     (location.pathname.includes(\"/login\") ||\r\n       location.pathname.includes(\"register\"))\r\n   ) {\r\n-    if(user?.role === admin)\r\n+    if(user?.role === \"admin\")\r\n   }\r\n   return <div></div>;\r\n }\r\n \r\n\\ No newline at end of file\n-export default CheckAuth;\n+export default CheckAuth;\r\n"
+                },
+                {
+                    "date": 1739536927961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     (location.pathname.includes(\"/login\") ||\r\n       location.pathname.includes(\"register\"))\r\n   ) {\r\n     if(user?.role === \"admin\"){\r\n-        reu\r\n+        re\r\n     }\r\n   }\r\n   return <div></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1739537623341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   ) {\r\n     if(user?.role === \"admin\"){\r\n         return <Navigate  to=\"/admin/dashboard\"/>\r\n     }else{\r\n-        return <Navigate  to=\"/shop\"/>\r\n+        return <Navigate  to=\"/shop/home\"/>\r\n     }\r\n   }\r\n   return <div></div>;\r\n }\r\n"
+                }
+            ],
+            "date": 1739532582461,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Check-auth = () => {\r\n  return (\r\n    <div>Check-auth</div>\r\n  )\r\n}\r\n\r\nexport default Check-auth"
+        }
+    ]
+}

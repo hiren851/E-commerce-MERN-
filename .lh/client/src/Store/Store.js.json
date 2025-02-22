@@ -1,0 +1,94 @@
+{
+    "sourceFile": "client/src/Store/Store.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1739522384046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739522391111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-const \n\\ No newline at end of file\n+const store = config\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522396957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n+const { configureStore } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n\\ No newline at end of file\n-const store = config\n+const store = configureStore({})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522402347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n const { configureStore } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n-const store = configureStore({})\n\\ No newline at end of file\n+const store = configureStore({\r\n+    reducer : \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522407912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n const { configureStore } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n const store = configureStore({\r\n-    reducer : \r\n+    reducer : {\r\n+        auth\r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522422357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-const { configureStore } = require(\"@reduxjs/toolkit\");\r\n+import  { configureStore } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n-        auth\r\n+        auth: \r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522432943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import  { configureStore } = require(\"@reduxjs/toolkit\");\r\n+import  { configureStore }  ;\r\n \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n"
+                },
+                {
+                    "date": 1739522438356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import  { configureStore }  ;\r\n+import  { configureStore }  from \"\";\r\n \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n"
+                },
+                {
+                    "date": 1739522446877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import  { configureStore }  from \"\";\r\n+import  { configureStore }  from \"@reduxjs/toolkit\";\r\n \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n"
+                },
+                {
+                    "date": 1739522459808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n+import \r\n \r\n-\r\n const store = configureStore({\r\n     reducer : {\r\n         auth: \r\n     }\r\n"
+                },
+                {
+                    "date": 1739522465254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n-import \r\n+import autthReducer \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: \r\n"
+                },
+                {
+                    "date": 1739522470593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n-import autthReducer \r\n+import authReducer  \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: \r\n"
+                },
+                {
+                    "date": 1739522478091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n-import authReducer  \r\n+import authReducer   from \"./\"\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: \r\n"
+                },
+                {
+                    "date": 1739522485368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n-import authReducer   from \"./\"\r\n+import authReducer   from \"./auth-slice\"\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n-        auth: \r\n+        auth: auth\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739522492242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,9 @@\n import authReducer   from \"./auth-slice\"\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n-        auth: auth\r\n+        auth: authReducer\r\n     }\r\n\\ No newline at end of file\n-})\n+})\r\n+\r\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740050298864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n+import \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer\r\n     }\r\n })\r\n \r\n\\ No newline at end of file\n-export \n+export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740050307135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n-import \r\n+import adminProductSLice = \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer\r\n"
+                },
+                {
+                    "date": 1740050321620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n-import adminProductSLice = \r\n+import adminProductSLice  from \r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer\r\n"
+                },
+                {
+                    "date": 1740050336858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n-import adminProductSLice  from \r\n+import adminProductSLice  from './admin/products-slice'\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n-        auth: authReducer\r\n+        auth: authReducer,\r\n+        admin\r\n     }\r\n })\r\n \r\n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740050342255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n-        admin\r\n+        adminProducts : \r\n     }\r\n })\r\n \r\n export default store;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739522384046,
+            "name": "Commit-0",
+            "content": "\r\n\r\nconst "
+        }
+    ]
+}

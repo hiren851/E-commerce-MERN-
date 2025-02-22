@@ -1,0 +1,134 @@
+{
+    "sourceFile": "client/src/Pages/auth/Login.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1739526798317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739815428720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,35 @@\n-import React from 'react'\r\n+import CommonForm from '@/components/common/Form';\r\n+import { registerFormControls } from '@/config';\r\n+import React, { useState } from 'react'\r\n+import { Link } from 'react-router-dom'\r\n \r\n-const Login = () => {\r\n+\r\n+const initialData = {\r\n\\ No newline at end of file\n+  userName : '',\r\n+  email : '',\r\n+  password : ''\r\n+}\r\n+const Register = () => {\r\n+\r\n+  const [formData , setFormaData] = useState(initialData);\r\n+  function onSubmit (){}\r\n+\r\n   return (\r\n-    <div>Login</div>\r\n+    <div className='mx-auto w-full max-w-md space-y-6'>\r\n+        <div className='text-center'>\r\n+          <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n+          <p className='mt-2'>Already have an account</p>\r\n+          <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Login</Link>\r\n+        </div>\r\n+        <CommonForm \r\n+        formControls={registerFormControls}\r\n+        buttonText={\"Sign Up\"}\r\n+        formData={formData}\r\n+        setFormData={setFormaData}\r\n+        onSubmit={onSubmit}\r\n+        />\r\n+    </div>\r\n   )\r\n }\r\n \r\n-export default Login\n+export default Register\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739815437646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   userName : '',\r\n   email : '',\r\n   password : ''\r\n }\r\n-const Register = () => {\r\n+const Login = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialData);\r\n   function onSubmit (){}\r\n \r\n"
+                },
+                {
+                    "date": 1739815443193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default Register\n\\ No newline at end of file\n+export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739815497645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n import { Link } from 'react-router-dom'\r\n \r\n \r\n const initialData = {\r\n-  userName : '',\r\n   email : '',\r\n   password : ''\r\n }\r\n const Login = () => {\r\n"
+                },
+                {
+                    "date": 1739815508198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className='text-3xl font-bold tracking-tight text-foreground'>Create new account </h1>\r\n+          <h1 className='text-3xl font-bold tracking-tight text-foreground'></h1>\r\n           <p className='mt-2'>Already have an account</p>\r\n           <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Login</Link>\r\n         </div>\r\n         <CommonForm \r\n"
+                },
+                {
+                    "date": 1739815521794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className='text-3xl font-bold tracking-tight text-foreground'></h1>\r\n+          <h1 className='text-3xl font-bold tracking-tight text-foreground'>Sign in your </h1>\r\n           <p className='mt-2'>Already have an account</p>\r\n           <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Login</Link>\r\n         </div>\r\n         <CommonForm \r\n"
+                },
+                {
+                    "date": 1739815530036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n-          <h1 className='text-3xl font-bold tracking-tight text-foreground'>Sign in your </h1>\r\n-          <p className='mt-2'>Already have an account</p>\r\n+          <h1 className='text-3xl font-bold tracking-tight text-foreground'>Sign in your account</h1>\r\n+          <p className='mt-2'></p>\r\n           <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Login</Link>\r\n         </div>\r\n         <CommonForm \r\n         formControls={registerFormControls}\r\n"
+                },
+                {
+                    "date": 1739815539071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Sign in your account</h1>\r\n-          <p className='mt-2'></p>\r\n+          <p className='mt-2'>Don't have an account</p>\r\n           <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Login</Link>\r\n         </div>\r\n         <CommonForm \r\n         formControls={registerFormControls}\r\n"
+                },
+                {
+                    "date": 1739815546041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Sign in your account</h1>\r\n           <p className='mt-2'>Don't have an account</p>\r\n-          <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Login</Link>\r\n+          <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Register</Link>\r\n         </div>\r\n         <CommonForm \r\n         formControls={registerFormControls}\r\n         buttonText={\"Sign Up\"}\r\n"
+                },
+                {
+                    "date": 1739815552905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import CommonForm from '@/components/common/Form';\r\n-import { registerFormControls } from '@/config';\r\n+import { loginFormControls, registerFormControls } from '@/config';\r\n import React, { useState } from 'react'\r\n import { Link } from 'react-router-dom'\r\n \r\n \r\n@@ -20,9 +20,9 @@\n           <p className='mt-2'>Don't have an account</p>\r\n           <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Register</Link>\r\n         </div>\r\n         <CommonForm \r\n-        formControls={registerFormControls}\r\n+        formControls={loginFormControls}\r\n         buttonText={\"Sign Up\"}\r\n         formData={formData}\r\n         setFormData={setFormaData}\r\n         onSubmit={onSubmit}\r\n"
+                },
+                {
+                    "date": 1739815559566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import CommonForm from '@/components/common/Form';\r\n-import { loginFormControls, registerFormControls } from '@/config';\r\n+import { loginFormControls } from '@/config';\r\n import React, { useState } from 'react'\r\n import { Link } from 'react-router-dom'\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1739815579903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n           <h1 className='text-3xl font-bold tracking-tight text-foreground'>Sign in your account</h1>\r\n           <p className='mt-2'>Don't have an account</p>\r\n-          <Link to=\"/auth/login\" className='font-medium text-primary hover:underline'>Register</Link>\r\n+          <Link to=\"/auth/register\" className='font-medium text-primary hover:underline'>Register</Link>\r\n         </div>\r\n         <CommonForm \r\n         formControls={loginFormControls}\r\n         buttonText={\"Sign Up\"}\r\n"
+                },
+                {
+                    "date": 1739815592965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n           <Link to=\"/auth/register\" className='font-medium text-primary hover:underline'>Register</Link>\r\n         </div>\r\n         <CommonForm \r\n         formControls={loginFormControls}\r\n-        buttonText={\"Sign Up\"}\r\n+        buttonText={\"Sign In\"}\r\n         formData={formData}\r\n         setFormData={setFormaData}\r\n         onSubmit={onSubmit}\r\n         />\r\n"
+                },
+                {
+                    "date": 1739874449041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import React, { useState } from 'react'\r\n import { Link } from 'react-router-dom'\r\n \r\n \r\n-const initialData = {\r\n+const initis = {\r\n   email : '',\r\n   password : ''\r\n }\r\n const Login = () => {\r\n"
+                },
+                {
+                    "date": 1739874457515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,15 @@\n import React, { useState } from 'react'\r\n import { Link } from 'react-router-dom'\r\n \r\n \r\n-const initis = {\r\n+const initialState = {\r\n   email : '',\r\n   password : ''\r\n }\r\n const Login = () => {\r\n \r\n-  const [formData , setFormaData] = useState(initialData);\r\n+  const [formData , setFormaData] = useState(initialState);\r\n   function onSubmit (){}\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739874467121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\r\n const Login = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialState);\r\n-  function onSubmit (){}\r\n+  function onSubmit (e){}\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n"
+                },
+                {
+                    "date": 1739874474935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n }\r\n const Login = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialState);\r\n-  function onSubmit (e){}\r\n+  function onSubmit (e){\r\n+    e.preventDefa\r\n+  }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n         <div className='text-center'>\r\n"
+                },
+                {
+                    "date": 1739874497341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,11 @@\n }\r\n const Login = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialState);\r\n+  \r\n   function onSubmit (e){\r\n-    e.preventDefa\r\n+    e.preventDefault();\r\n   }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739874503615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\r\n const Login = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialState);\r\n-  \r\n+  const dispatch = \r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1739874509507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import CommonForm from '@/components/common/Form';\r\n import { loginFormControls } from '@/config';\r\n import React, { useState } from 'react'\r\n+import { useDispatch } from 'react-redux';\r\n import { Link } from 'react-router-dom'\r\n \r\n \r\n const initialState = {\r\n@@ -10,9 +11,9 @@\n }\r\n const Login = () => {\r\n \r\n   const [formData , setFormaData] = useState(initialState);\r\n-  const dispatch = \r\n+  const dispatch = useDispatch();\r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1739874581813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n   const [formData , setFormaData] = useState(initialState);\r\n   const dispatch = useDispatch();\r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n+\r\n+    dispatch\r\n   }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739874594468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import CommonForm from '@/components/common/Form';\r\n import { loginFormControls } from '@/config';\r\n+import { loginUser } from '@/Store/auth-slice';\r\n import React, { useState } from 'react'\r\n import { useDispatch } from 'react-redux';\r\n import { Link } from 'react-router-dom'\r\n \r\n@@ -15,9 +16,9 @@\n   const dispatch = useDispatch();\r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n \r\n-    dispatch\r\n+    dispatch(loginUser(formData))\r\n   }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739874601402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   const dispatch = useDispatch();\r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n \r\n-    dispatch(loginUser(formData))\r\n+    dispatch(loginUser(formData)).then()\r\n   }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739874607336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   const dispatch = useDispatch();\r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n \r\n-    dispatch(loginUser(formData)).then()\r\n+    dispatch(loginUser(formData)).then((data)=> )\r\n   }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739874612555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n   const dispatch = useDispatch();\r\n   function onSubmit (e){\r\n     e.preventDefault();\r\n \r\n-    dispatch(loginUser(formData)).then((data)=> )\r\n+    dispatch(loginUser(formData)).then((data)=> {\r\n+      \r\n+    })\r\n   }\r\n \r\n   return (\r\n     <div className='mx-auto w-full max-w-md space-y-6'>\r\n"
+                },
+                {
+                    "date": 1739879024484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     e.preventDefault();\r\n \r\n     dispatch(loginUser(formData)).then((data)=> {\r\n       \r\n+      console.log(data);\r\n     })\r\n   }\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1739879030436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   function onSubmit (e){\r\n     e.preventDefault();\r\n \r\n     dispatch(loginUser(formData)).then((data)=> {\r\n-      \r\n+      if(data?.)\r\n       console.log(data);\r\n     })\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1739879037407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   function onSubmit (e){\r\n     e.preventDefault();\r\n \r\n     dispatch(loginUser(formData)).then((data)=> {\r\n-      if(data?.payload)\r\n+      if(data?.payload?.)\r\n       console.log(data);\r\n     })\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1739879098435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     e.preventDefault();\r\n \r\n     dispatch(loginUser(formData)).then((data)=> {\r\n       if(data?.payload?.success){\r\n-        toast\r\n+        toast()\r\n       }\r\n       console.log(data);\r\n     })\r\n   }\r\n"
+                }
+            ],
+            "date": 1739526798317,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Login = () => {\r\n  return (\r\n    <div>Login</div>\r\n  )\r\n}\r\n\r\nexport default Login"
+        }
+    ]
+}

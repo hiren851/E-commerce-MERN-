@@ -1,0 +1,54 @@
+{
+    "sourceFile": "client/src/main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1739517671890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739517677179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n import './index.css'\n import App from './App.jsx'\n \n createRoot(document.getElementById('root')).render(\n-  <StrictMode>\n+\n     <App />\n-,\n+\n )\n"
+                },
+                {
+                    "date": 1739517682648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import { StrictMode } from 'react'\n import { createRoot } from 'react-dom/client'\n import './index.css'\n import App from './App.jsx'\n+import { BrowserRouter } from 'react-router-dom'\n \n createRoot(document.getElementById('root')).render(\n-\n+  <BrowserRouter\n     <App />\n \n )\n"
+                },
+                {
+                    "date": 1739517691708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n import App from './App.jsx'\n import { BrowserRouter } from 'react-router-dom'\n \n createRoot(document.getElementById('root')).render(\n-  <BrowserRouter\n-    <App />\n+  <BrowserRouter>\n+  \n+  <App />\n+  </BrowserRouter>\n \n )\n"
+                },
+                {
+                    "date": 1739522531441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n-import { StrictMode } from 'react'\n-import { createRoot } from 'react-dom/client'\n-import './index.css'\n-import App from './App.jsx'\n-import { BrowserRouter } from 'react-router-dom'\n+import { StrictMode } from \"react\";\n+import { createRoot } from \"react-dom/client\";\n+import \"./index.css\";\n+import App from \"./App.jsx\";\n+import { BrowserRouter } from \"react-router-dom\";\n \n-createRoot(document.getElementById('root')).render(\n+createRoot(document.getElementById(\"root\")).render(\n   <BrowserRouter>\n   \n-  <App />\n+    <App />\n   </BrowserRouter>\n-\n-)\n+);\n"
+                },
+                {
+                    "date": 1739522541563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,14 @@\n import { createRoot } from \"react-dom/client\";\n import \"./index.css\";\n import App from \"./App.jsx\";\n import { BrowserRouter } from \"react-router-dom\";\n+import { Provider } from \"react-redux\";\n \n createRoot(document.getElementById(\"root\")).render(\n   <BrowserRouter>\n-  \n+  <Provider>\n+    \n+  </Provider>\n     <App />\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1739522546880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n import { Provider } from \"react-redux\";\n \n createRoot(document.getElementById(\"root\")).render(\n   <BrowserRouter>\n-  <Provider>\n-    \n-  </Provider>\n-    <App />\n+    <Provider>\n+      <App />\n+    </Provider>\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1739522553041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,13 @@\n import \"./index.css\";\n import App from \"./App.jsx\";\n import { BrowserRouter } from \"react-router-dom\";\n import { Provider } from \"react-redux\";\n+import store from \"./Store/Store\";\n \n createRoot(document.getElementById(\"root\")).render(\n   <BrowserRouter>\n-    <Provider>\n+    <Provider store={store}>\n       <App />\n     </Provider>\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1739868668000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n createRoot(document.getElementById(\"root\")).render(\n   <BrowserRouter>\n     <Provider store={store}>\n       <App />\n+      <Toaster />\n+\n     </Provider>\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1739868865662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n createRoot(document.getElementById(\"root\")).render(\n   <BrowserRouter>\n     <Provider store={store}>\n       <App />\n-      <Toaster />\n-\n+      <Toaster\n     </Provider>\n   </BrowserRouter>\n );\n"
+                }
+            ],
+            "date": 1739517671890,
+            "name": "Commit-0",
+            "content": "import { StrictMode } from 'react'\nimport { createRoot } from 'react-dom/client'\nimport './index.css'\nimport App from './App.jsx'\n\ncreateRoot(document.getElementById('root')).render(\n  <StrictMode>\n    <App />\n,\n)\n"
+        }
+    ]
+}

@@ -1,0 +1,534 @@
+{
+    "sourceFile": "server/controllers/admin/products-controllers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 129,
+            "patches": [
+                {
+                    "date": 1740042716960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740042722452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n         })\r\n     }\r\n }\r\n \r\n+//add new \r\n \r\n-\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042727919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,10 @@\n         })\r\n     }\r\n }\r\n \r\n-//add new \r\n+//add new product\r\n \r\n+\r\n+//\r\n+\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042735310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,8 @@\n \r\n //add new product\r\n \r\n \r\n-//\r\n+//fetch all products\r\n \r\n+\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042746369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,10 @@\n \r\n //fetch all products\r\n \r\n \r\n+//edit products\r\n+\r\n+\r\n+//\r\n+\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042754219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,10 @@\n \r\n //edit products\r\n \r\n \r\n-//\r\n+//delete products\r\n \r\n+\r\n+\r\n+\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042773608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n \r\n //add new product\r\n \r\n \r\n+\r\n+\r\n //fetch all products\r\n \r\n \r\n //edit products\r\n"
+                },
+                {
+                    "date": 1740042782621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n \r\n //add new product\r\n \r\n \r\n+const addProducts async\r\n \r\n-\r\n //fetch all products\r\n \r\n \r\n //edit products\r\n"
+                },
+                {
+                    "date": 1740042788436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \r\n //add new product\r\n \r\n \r\n-const addProducts async\r\n+const addProducts =()\r\n \r\n //fetch all products\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740042797653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n \r\n //add new product\r\n \r\n \r\n-const addProducts =()\r\n+const addProducts =asyc()=>{\r\n \r\n+}\r\n+\r\n //fetch all products\r\n \r\n \r\n //edit products\r\n"
+                },
+                {
+                    "date": 1740042805231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n \r\n //add new product\r\n \r\n \r\n-const addProducts =asyc()=>{\r\n-\r\n+const addProducts =async(req,res)=>{\r\n+    \r\n }\r\n \r\n //fetch all products\r\n \r\n"
+                },
+                {
+                    "date": 1740042817665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,13 @@\n //add new product\r\n \r\n \r\n const addProducts =async(req,res)=>{\r\n-    \r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        clg\r\n+    }\r\n }\r\n \r\n //fetch all products\r\n \r\n"
+                },
+                {
+                    "date": 1740042823525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,10 @@\n const addProducts =async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n-        clg\r\n+        console.log(error)\r\n+        \r\n     }\r\n }\r\n \r\n //fetch all products\r\n"
+                },
+                {
+                    "date": 1740042830419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error)\r\n-        \r\n+        res.sta\r\n     }\r\n }\r\n \r\n //fetch all products\r\n"
+                },
+                {
+                    "date": 1740042836510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error)\r\n-        res.sta\r\n+        res.status(500)\r\n     }\r\n }\r\n \r\n //fetch all products\r\n"
+                },
+                {
+                    "date": 1740042842784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,11 @@\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error)\r\n-        res.status(500)\r\n+        res.status(500).json({\r\n+            \r\n+        })\r\n     }\r\n }\r\n \r\n //fetch all products\r\n"
+                },
+                {
+                    "date": 1740042849119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         \r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n-            \r\n+            success : false ,\r\n         })\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740042854824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n+            message : \r\n         })\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740042862196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n-            message : \r\n+            message : \"Error Occured\"\r\n         })\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740042894006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,15 +31,17 @@\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n             message : \"Error Occured\"\r\n-        })\r\n+        });\r\n     }\r\n }\r\n \r\n //fetch all products\r\n \r\n+const \r\n \r\n+\r\n //edit products\r\n \r\n \r\n //delete products\r\n"
+                },
+                {
+                    "date": 1740042904071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\r\n \r\n //fetch all products\r\n \r\n-const \r\n+const fetchAllProducts =(req,r\r\n \r\n \r\n //edit products\r\n \r\n"
+                },
+                {
+                    "date": 1740042911524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,11 @@\n }\r\n \r\n //fetch all products\r\n \r\n-const fetchAllProducts =(req,r\r\n+const fetchAllProducts =(req,res)=>{\r\n+    \r\n+}\r\n \r\n \r\n //edit products\r\n \r\n"
+                },
+                {
+                    "date": 1740042923081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,15 +38,25 @@\n \r\n //fetch all products\r\n \r\n const fetchAllProducts =(req,res)=>{\r\n-    \r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        console.log(error)\r\n+        res.status(500).json({\r\n+            success : false ,\r\n+            message : \"Error Occured\"\r\n+        });\r\n+    }\r\n }\r\n \r\n \r\n //edit products\r\n \r\n+const \r\n \r\n+\r\n //delete products\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740042930609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n \r\n \r\n //edit products\r\n \r\n-const \r\n+const editProducts\r\n \r\n \r\n //delete products\r\n \r\n"
+                },
+                {
+                    "date": 1740042939483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,11 @@\n \r\n \r\n //edit products\r\n \r\n-const editProducts\r\n+const editProducts=(req,res)=>{\r\n+    \r\n+}\r\n \r\n \r\n //delete products\r\n \r\n"
+                },
+                {
+                    "date": 1740042953357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,14 +53,23 @@\n \r\n //edit products\r\n \r\n const editProducts=(req,res)=>{\r\n-    \r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        console.log(error)\r\n+        res.status(500).json({\r\n+            success : false ,\r\n+            message : \"Error Occured\"\r\n+        });\r\n+    }\r\n }\r\n \r\n \r\n //delete products\r\n \r\n \r\n \r\n \r\n+\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042958902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,19 @@\n \r\n \r\n //delete products\r\n \r\n+const deleteProducts=(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        console.log(error)\r\n+        res.status(500).json({\r\n+            success : false ,\r\n+            message : \"Error Occured\"\r\n+        });\r\n+    }\r\n+}\r\n \r\n \r\n \r\n-\r\n module.exports = {handleImageUpload}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042964606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,5 @@\n }\r\n \r\n \r\n \r\n-module.exports = {handleImageUpload}\n\\ No newline at end of file\n+module.exports = {handleImageUpload,addProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042973823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,5 @@\n }\r\n \r\n \r\n \r\n-module.exports = {handleImageUpload,addProducts}\n\\ No newline at end of file\n+module.exports = {handleImageUpload,addProducts,fetch}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740042999940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,5 @@\n }\r\n \r\n \r\n \r\n-module.exports = {handleImageUpload,addProducts,fetch}\n\\ No newline at end of file\n+module.exports = {handleImageUpload,addProducts,fetchAllProducts,editProducts,}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740043276635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \r\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n-        \r\n+        const new\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n@@ -81,5 +81,5 @@\n }\r\n \r\n \r\n \r\n-module.exports = {handleImageUpload,addProducts,fetchAllProducts,editProducts,}\n\\ No newline at end of file\n+module.exports = {handleImageUpload,addProducts,fetchAllProducts,editProducts,deleteProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740043282234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \r\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n-        const new\r\n+        const newlyCreatedPro\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043290385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \r\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n-        const newlyCreatedPro\r\n+        const newlyCreatedProducts \r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043297104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \r\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n-        const newlyCreatedProducts \r\n+        const newlyCreatedProducts =  new Products(req.body);\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043302893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const { imageUploadUtils } = require(\"../../helpers/cloudinary\");\r\n+const Products = require(\"../../models/Products\");\r\n \r\n \r\n const handleImageUpload = async (req,res)=>{\r\n     try {\r\n@@ -25,9 +26,9 @@\n \r\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n-        const newlyCreatedProducts =  new Products(req.body);\r\n+        const newlyCreatedProducts =  new Products()\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043379962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n \r\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n-        const newlyCreatedProducts =  new Products()\r\n+        const newlyCreatedProducts =  new Products({\r\n+            image\r\n+        })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043391254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n         const newlyCreatedProducts =  new Products({\r\n-            image\r\n+            image,title,description,\r\n         })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043403013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n         const newlyCreatedProducts =  new Products({\r\n-            image,title,description,\r\n+            image,title,description,category,\r\n         })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043412774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n         const newlyCreatedProducts =  new Products({\r\n-            image,title,description,category,\r\n+            image,title,description,category,brand,price,salePr\r\n         })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043418964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \r\n const addProducts =async(req,res)=>{\r\n     try {\r\n         const newlyCreatedProducts =  new Products({\r\n-            image,title,description,category,brand,price,salePr\r\n+            image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043438665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,10 @@\n     try {\r\n         const newlyCreatedProducts =  new Products({\r\n             image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n+\r\n+     \r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043448083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n         const newlyCreatedProducts =  new Products({\r\n             image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n \r\n-     \r\n+     await neww=ly\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043455091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n         const newlyCreatedProducts =  new Products({\r\n             image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n \r\n-     await neww=ly\r\n+     await newlyCreatedProducts.save()\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043460252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n         const newlyCreatedProducts =  new Products({\r\n             image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n \r\n-     await newlyCreatedProducts.save()\r\n+     await newlyCreatedProducts.save();\r\n+     res.\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043467240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n             image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n \r\n      await newlyCreatedProducts.save();\r\n-     res.\r\n+     res.status(201)\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043474675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,11 @@\n             image,title,description,category,brand,price,salePrice,totalStock\r\n         })\r\n \r\n      await newlyCreatedProducts.save();\r\n-     res.status(201)\r\n+     res.status(201).json({\r\n+        status\r\n+     })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043479963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         })\r\n \r\n      await newlyCreatedProducts.save();\r\n      res.status(201).json({\r\n-        status\r\n+        s\r\n      })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043486800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,10 @@\n         })\r\n \r\n      await newlyCreatedProducts.save();\r\n      res.status(201).json({\r\n-        s\r\n+        success: true,\r\n+        \r\n      })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043492886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \r\n      await newlyCreatedProducts.save();\r\n      res.status(201).json({\r\n         success: true,\r\n-        \r\n+        data: newlyCreatedProducts\r\n      })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740043568338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n //fetch all products\r\n \r\n const fetchAllProducts =(req,res)=>{\r\n     try {\r\n-        \r\n+        const listOfProducts \r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043577049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n //fetch all products\r\n \r\n const fetchAllProducts =(req,res)=>{\r\n     try {\r\n-        const listOfProducts \r\n+        const listOfProducts = await\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043591797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n //fetch all products\r\n \r\n const fetchAllProducts =(req,res)=>{\r\n     try {\r\n-        const listOfProducts = await\r\n+        const listOfProducts = await Products.\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043597821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n //fetch all products\r\n \r\n const fetchAllProducts =(req,res)=>{\r\n     try {\r\n-        const listOfProducts = await Products.\r\n+        const listOfProducts = await Products.find\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043603814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n //fetch all products\r\n \r\n const fetchAllProducts =(req,res)=>{\r\n     try {\r\n-        const listOfProducts = await Products.find\r\n+        const listOfProducts = await Products.find({});\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043616681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n }\r\n \r\n //fetch all products\r\n \r\n-const fetchAllProducts =(req,res)=>{\r\n+const fetchAllProducts =asyb(req,res)=>{\r\n     try {\r\n         const listOfProducts = await Products.find({});\r\n     } catch (error) {\r\n         console.log(error)\r\n"
+                },
+                {
+                    "date": 1740043732299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,11 +46,12 @@\n }\r\n \r\n //fetch all products\r\n \r\n-const fetchAllProducts =asyb(req,res)=>{\r\n+const fetchAllProducts =async(req,res)=>{\r\n     try {\r\n         const listOfProducts = await Products.find({});\r\n+        res.\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043737565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n \r\n const fetchAllProducts =async(req,res)=>{\r\n     try {\r\n         const listOfProducts = await Products.find({});\r\n-        res.\r\n+        res.status(200)\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043747149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,11 @@\n \r\n const fetchAllProducts =async(req,res)=>{\r\n     try {\r\n         const listOfProducts = await Products.find({});\r\n-        res.status(200)\r\n+        res.status(200).json({\r\n+            success: true,\r\n+        })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740043755289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n     try {\r\n         const listOfProducts = await Products.find({});\r\n         res.status(200).json({\r\n             success: true,\r\n+            data: listOfProducts\r\n         })\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740044373060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n //edit products\r\n \r\n const editProducts=(req,res)=>{\r\n     try {\r\n-        \r\n+        const {id} = \r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740044378531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n //edit products\r\n \r\n const editProducts=(req,res)=>{\r\n     try {\r\n-        const {id} = \r\n+        const {id} = req.params\r\n     } catch (error) {\r\n         console.log(error)\r\n         res.status(500).json({\r\n             success : false ,\r\n"
+                },
+                {
+                    "date": 1740044428461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,98 +1,103 @@\n const { imageUploadUtils } = require(\"../../helpers/cloudinary\");\r\n const Products = require(\"../../models/Products\");\r\n \r\n+const handleImageUpload = async (req, res) => {\r\n+  try {\r\n+    const b64 = Buffer.from(req.file.buffer).toString(\"base64\");\r\n+    const url = \"data:\" + req.file.mimetype + \";base64,\" + b64;\r\n+    const result = await imageUploadUtils(url);\r\n \r\n-const handleImageUpload = async (req,res)=>{\r\n-    try {\r\n-        const b64 = Buffer.from(req.file.buffer).toString('base64');\r\n-        const url = \"data:\" + req.file.mimetype + \";base64,\" + b64;\r\n-        const result = await imageUploadUtils(url);\r\n+    res.json({\r\n+      success: true,\r\n+      result,\r\n+    });\r\n+  } catch (error) {\r\n+    console.log(error);\r\n+    res.json({\r\n+      success: false,\r\n+      message: \"Error Occured\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-        res.json({\r\n-            success: true,\r\n-            result\r\n-        })\r\n-\r\n-    } catch (error) {\r\n-        console.log(error)\r\n-        res.json({\r\n-            success : false,\r\n-            message : \"Error Occured\",\r\n-        })\r\n-    }\r\n-}\r\n-\r\n //add new product\r\n \r\n+const addProducts = async (req, res) => {\r\n+  try {\r\n+    const newlyCreatedProducts = new Products({\r\n+      image,\r\n+      title,\r\n+      description,\r\n+      category,\r\n+      brand,\r\n+      price,\r\n+      salePrice,\r\n+      totalStock,\r\n+    });\r\n \r\n-const addProducts =async(req,res)=>{\r\n-    try {\r\n-        const newlyCreatedProducts =  new Products({\r\n-            image,title,description,category,brand,price,salePrice,totalStock\r\n-        })\r\n+    await newlyCreatedProducts.save();\r\n+    res.status(201).json({\r\n+      success: true,\r\n+      data: newlyCreatedProducts,\r\n+    });\r\n+  } catch (error) {\r\n+    console.log(error);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error Occured\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-     await newlyCreatedProducts.save();\r\n-     res.status(201).json({\r\n-        success: true,\r\n-        data: newlyCreatedProducts\r\n-     })\r\n-    } catch (error) {\r\n-        console.log(error)\r\n-        res.status(500).json({\r\n-            success : false ,\r\n-            message : \"Error Occured\"\r\n-        });\r\n-    }\r\n-}\r\n-\r\n //fetch all products\r\n \r\n-const fetchAllProducts =async(req,res)=>{\r\n-    try {\r\n-        const listOfProducts = await Products.find({});\r\n-        res.status(200).json({\r\n-            success: true,\r\n-            data: listOfProducts\r\n-        })\r\n\\ No newline at end of file\n-    } catch (error) {\r\n-        console.log(error)\r\n-        res.status(500).json({\r\n-            success : false ,\r\n-            message : \"Error Occured\"\r\n-        });\r\n-    }\r\n-}\r\n+const fetchAllProducts = async (req, res) => {\r\n+  try {\r\n+    const listOfProducts = await Products.find({});\r\n+    res.status(200).json({\r\n+      success: true,\r\n+      data: listOfProducts,\r\n+    });\r\n+  } catch (error) {\r\n+    console.log(error);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error Occured\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-\r\n //edit products\r\n \r\n-const editProducts=(req,res)=>{\r\n-    try {\r\n-        const {id} = req.params\r\n-    } catch (error) {\r\n-        console.log(error)\r\n-        res.status(500).json({\r\n-            success : false ,\r\n-            message : \"Error Occured\"\r\n-        });\r\n-    }\r\n-}\r\n+const editProducts = (req, res) => {\r\n+  try {\r\n+    const { id } = req.params;\r\n+  } catch (error) {\r\n+    console.log(error);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error Occured\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-\r\n //delete products\r\n \r\n-const deleteProducts=(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (error) {\r\n-        console.log(error)\r\n-        res.status(500).json({\r\n-            success : false ,\r\n-            message : \"Error Occured\"\r\n-        });\r\n-    }\r\n-}\r\n+const deleteProducts = (req, res) => {\r\n+  try {\r\n+  } catch (error) {\r\n+    console.log(error);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error Occured\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-\r\n-\r\n-module.exports = {handleImageUpload,addProducts,fetchAllProducts,editProducts,deleteProducts}\n+module.exports = {\r\n+  handleImageUpload,\r\n+  addProducts,\r\n+  fetchAllProducts,\r\n+  editProducts,\r\n+  deleteProducts,\r\n+};\r\n"
+                },
+                {
+                    "date": 1740044476641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n //add new product\r\n \r\n const addProducts = async (req, res) => {\r\n   try {\r\n+    const \r\n     const newlyCreatedProducts = new Products({\r\n       image,\r\n       title,\r\n       description,\r\n"
+                },
+                {
+                    "date": 1740044482601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n //add new product\r\n \r\n const addProducts = async (req, res) => {\r\n   try {\r\n-    const \r\n+    const {} = \r\n     const newlyCreatedProducts = new Products({\r\n       image,\r\n       title,\r\n       description,\r\n"
+                },
+                {
+                    "date": 1740044490659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n //add new product\r\n \r\n const addProducts = async (req, res) => {\r\n   try {\r\n-    const {} = \r\n+    const {} = req.body;\r\n     const newlyCreatedProducts = new Products({\r\n       image,\r\n       title,\r\n       description,\r\n"
+                },
+                {
+                    "date": 1740044497518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,11 @@\n //add new product\r\n \r\n const addProducts = async (req, res) => {\r\n   try {\r\n-    const {} = req.body;\r\n+    const {\r\n+        \r\n+    } = req.body;\r\n     const newlyCreatedProducts = new Products({\r\n       image,\r\n       title,\r\n       description,\r\n"
+                },
+                {
+                    "date": 1740044548442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,16 @@\n \r\n const addProducts = async (req, res) => {\r\n   try {\r\n     const {\r\n-        \r\n+        image,\r\n+        title,\r\n+        description,\r\n+        category,\r\n+        brand,\r\n+        price,\r\n+        salePrice,\r\n+        totalStock,\r\n     } = req.body;\r\n     const newlyCreatedProducts = new Products({\r\n       image,\r\n       title,\r\n"
+                },
+                {
+                    "date": 1740044583254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,16 @@\n \r\n const addProducts = async (req, res) => {\r\n   try {\r\n     const {\r\n-        image,\r\n-        title,\r\n-        description,\r\n-        category,\r\n-        brand,\r\n-        price,\r\n-        salePrice,\r\n-        totalStock,\r\n+      image,\r\n+      title,\r\n+      description,\r\n+      category,\r\n+      brand,\r\n+      price,\r\n+      salePrice,\r\n+      totalStock,\r\n     } = req.body;\r\n     const newlyCreatedProducts = new Products({\r\n       image,\r\n       title,\r\n@@ -62,8 +62,18 @@\n //fetch all products\r\n \r\n const fetchAllProducts = async (req, res) => {\r\n   try {\r\n+    const {\r\n+        image,\r\n+        title,\r\n+        description,\r\n+        category,\r\n+        brand,\r\n+        price,\r\n+        salePrice,\r\n+        totalStock,\r\n+      } = req.body;\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044599002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,10 @@\n         price,\r\n         salePrice,\r\n         totalStock,\r\n       } = req.body;\r\n+\r\n+      const findProduct \r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044607031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n         salePrice,\r\n         totalStock,\r\n       } = req.body;\r\n \r\n-      const findProduct \r\n+      const findProduct await  \r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044617090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n         salePrice,\r\n         totalStock,\r\n       } = req.body;\r\n \r\n-      const findProduct await  \r\n+      const findProduct  = await \r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044626689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n         salePrice,\r\n         totalStock,\r\n       } = req.body;\r\n \r\n-      const findProduct  = await \r\n+      const findProduct  = await Products.findById()\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044638467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,10 @@\n         salePrice,\r\n         totalStock,\r\n       } = req.body;\r\n \r\n-      const findProduct  = await Products.findById()\r\n+      const findProduct  = await Products.findById(id);\r\n+      if(!find)\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044645108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n         totalStock,\r\n       } = req.body;\r\n \r\n       const findProduct  = await Products.findById(id);\r\n-      if(!find)\r\n+      if(!findProduct) return \r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044675093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n         totalStock,\r\n       } = req.body;\r\n \r\n       const findProduct  = await Products.findById(id);\r\n-      if(!findProduct) return \r\n+      if(!findProduct) return res\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044681918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,12 @@\n         totalStock,\r\n       } = req.body;\r\n \r\n       const findProduct  = await Products.findById(id);\r\n-      if(!findProduct) return res\r\n+      if(!findProduct) return res.json({\r\n+        success: false,\r\n+        \r\n+      })\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044691543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n \r\n       const findProduct  = await Products.findById(id);\r\n       if(!findProduct) return res.json({\r\n         success: false,\r\n-        \r\n+        data\r\n       })\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n"
+                },
+                {
+                    "date": 1740044705618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n \r\n       const findProduct  = await Products.findById(id);\r\n       if(!findProduct) return res.json({\r\n         success: false,\r\n-        data\r\n+        message : \r\n       })\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n"
+                },
+                {
+                    "date": 1740044711566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n \r\n       const findProduct  = await Products.findById(id);\r\n       if(!findProduct) return res.json({\r\n         success: false,\r\n-        message : \r\n+        message : \"Product not found\"\r\n       })\r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n"
+                },
+                {
+                    "date": 1740044756867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,11 @@\n       const findProduct  = await Products.findById(id);\r\n       if(!findProduct) return res.json({\r\n         success: false,\r\n         message : \"Product not found\"\r\n-      })\r\n+      });\r\n+\r\n+      \r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044769683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,26 +62,9 @@\n //fetch all products\r\n \r\n const fetchAllProducts = async (req, res) => {\r\n   try {\r\n-    const {\r\n-        image,\r\n-        title,\r\n-        description,\r\n-        category,\r\n-        brand,\r\n-        price,\r\n-        salePrice,\r\n-        totalStock,\r\n-      } = req.body;\r\n-\r\n-      const findProduct  = await Products.findById(id);\r\n-      if(!findProduct) return res.json({\r\n-        success: false,\r\n-        message : \"Product not found\"\r\n-      });\r\n-\r\n-      \r\n+   \r\n     const listOfProducts = await Products.find({});\r\n     res.status(200).json({\r\n       success: true,\r\n       data: listOfProducts,\r\n"
+                },
+                {
+                    "date": 1740044775359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,8 +82,26 @@\n \r\n const editProducts = (req, res) => {\r\n   try {\r\n     const { id } = req.params;\r\n+    const {\r\n+        image,\r\n+        title,\r\n+        description,\r\n+        category,\r\n+        brand,\r\n+        price,\r\n+        salePrice,\r\n+        totalStock,\r\n+      } = req.body;\r\n+\r\n+      const findProduct  = await Products.findById(id);\r\n+      if(!findProduct) return res.json({\r\n+        success: false,\r\n+        message : \"Product not found\"\r\n+      });\r\n+\r\n+      \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740044783637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n };\r\n \r\n //edit products\r\n \r\n-const editProducts = (req, res) => {\r\n+const editProducts = async(req, res) => {\r\n   try {\r\n     const { id } = req.params;\r\n     const {\r\n         image,\r\n"
+                },
+                {
+                    "date": 1740044792543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,8 +100,9 @@\n         message : \"Product not found\"\r\n       });\r\n \r\n       \r\n+      \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740044804975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,10 +99,10 @@\n         success: false,\r\n         message : \"Product not found\"\r\n       });\r\n \r\n+      findProduct.title = t\r\n       \r\n-      \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740044810197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,9 +99,9 @@\n         success: false,\r\n         message : \"Product not found\"\r\n       });\r\n \r\n-      findProduct.title = t\r\n+      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740044820783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,8 +100,9 @@\n         message : \"Product not found\"\r\n       });\r\n \r\n       findProduct.title = title || findProduct.title;\r\n+      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740044828318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,8 +101,13 @@\n       });\r\n \r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n+      findProduct.title = title || findProduct.title;\r\n+      findProduct.title = title || findProduct.title;\r\n+      findProduct.title = title || findProduct.title;\r\n+      findProduct.title = title || findProduct.title;\r\n+      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740044837174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,8 +100,9 @@\n         message : \"Product not found\"\r\n       });\r\n \r\n       findProduct.title = title || findProduct.title;\r\n+      findProduct.desc = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n"
+                },
+                {
+                    "date": 1740044936082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n         message : \"Product not found\"\r\n       });\r\n \r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.desc = title || findProduct.title;\r\n+      findProduct.description = description || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n"
+                },
+                {
+                    "date": 1740045042765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,15 +100,15 @@\n         message : \"Product not found\"\r\n       });\r\n \r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.description = description || findProduct.title;\r\n+      findProduct.description = description || findProduct.description;\r\n+      findProduct.category = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045048080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n       });\r\n \r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n-      findProduct.category = title || findProduct.title;\r\n+      findProduct.category = category || findProduct.category;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n"
+                },
+                {
+                    "date": 1740045055421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,13 +102,13 @@\n \r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n+      findProduct.brand = brand || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045063912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,13 +102,13 @@\n \r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n-      findProduct.brand = brand || findProduct.title;\r\n+      findProduct.brand = brand || findProduct.brand;\r\n+      findProduct.price = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045069754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n-      findProduct.price = title || findProduct.title;\r\n+      findProduct.price = price || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       \r\n"
+                },
+                {
+                    "date": 1740045078486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,12 +103,12 @@\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n-      findProduct.price = price || findProduct.title;\r\n+      findProduct.price = price || findProduct.price;\r\n+      findProduct.salePrice = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045086658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n       findProduct.price = price || findProduct.price;\r\n-      findProduct.salePrice = title || findProduct.title;\r\n+      findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.title = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740045108544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,10 +105,10 @@\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n       findProduct.price = price || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n+      findProduct.totalStock = title || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n-      findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045114626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,9 @@\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n       findProduct.price = price || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n-      findProduct.totalStock = title || findProduct.title;\r\n+      findProduct.totalStock = totalStock || findProduct.title;\r\n       findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n"
+                },
+                {
+                    "date": 1740045119749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,9 @@\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n       findProduct.price = price || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n-      findProduct.totalStock = totalStock || findProduct.title;\r\n+      findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.title = title || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n"
+                },
+                {
+                    "date": 1740045127422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,9 +106,9 @@\n       findProduct.brand = brand || findProduct.brand;\r\n       findProduct.price = price || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n-      findProduct.title = title || findProduct.title;\r\n+      findProduct.image = image || findProduct.title;\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045247488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,9 +106,11 @@\n       findProduct.brand = brand || findProduct.brand;\r\n       findProduct.price = price || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n-      findProduct.image = image || findProduct.title;\r\n+      findProduct.image = image || findProduct.image;\r\n+\r\n+      await \r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045260142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,9 +108,10 @@\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n-      await \r\n+      await findProduct.save();\r\n+      res.\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045267613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n       await findProduct.save();\r\n-      res.\r\n+      res.status\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045301744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,11 @@\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n       await findProduct.save();\r\n-      res.status\r\n+      res.status(200).json({\r\n+        \r\n+      })\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045307521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n       findProduct.image = image || findProduct.image;\r\n \r\n       await findProduct.save();\r\n       res.status(200).json({\r\n-        \r\n+        success: false\r\n       })\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n"
+                },
+                {
+                    "date": 1740045316770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n       findProduct.image = image || findProduct.image;\r\n \r\n       await findProduct.save();\r\n       res.status(200).json({\r\n-        success: false\r\n+        success: true,\r\n       })\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n"
+                },
+                {
+                    "date": 1740045321803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,8 +111,9 @@\n \r\n       await findProduct.save();\r\n       res.status(200).json({\r\n         success: true,\r\n+        data: \r\n       })\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n"
+                },
+                {
+                    "date": 1740045437842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,9 +111,9 @@\n \r\n       await findProduct.save();\r\n       res.status(200).json({\r\n         success: true,\r\n-        data: \r\n+        data: findProduct,\r\n       })\r\n       \r\n   } catch (error) {\r\n     console.log(error);\r\n@@ -127,8 +127,10 @@\n //delete products\r\n \r\n const deleteProducts = (req, res) => {\r\n   try {\r\n+\r\n+    const {id} = req\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045448613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,9 +128,10 @@\n \r\n const deleteProducts = (req, res) => {\r\n   try {\r\n \r\n-    const {id} = req\r\n+    const {id} = req.params;\r\n+    const product = \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045454789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,9 +129,9 @@\n const deleteProducts = (req, res) => {\r\n   try {\r\n \r\n     const {id} = req.params;\r\n-    const product = \r\n+    const product = awai\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045461256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,9 +129,9 @@\n const deleteProducts = (req, res) => {\r\n   try {\r\n \r\n     const {id} = req.params;\r\n-    const product = awai\r\n+    const product = await Product\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045466615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,9 +129,10 @@\n const deleteProducts = (req, res) => {\r\n   try {\r\n \r\n     const {id} = req.params;\r\n-    const product = await Product\r\n+    const product = await Products.findByIdAndDelete(id);\r\n+    \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045482345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n };\r\n \r\n //delete products\r\n \r\n-const deleteProducts = (req, res) => {\r\n+const deleteProducts = async(req, res) => {\r\n   try {\r\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n"
+                },
+                {
+                    "date": 1740045491185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,9 +130,10 @@\n   try {\r\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n-    \r\n+\r\n+    if(!product)\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045496877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n \r\n-    if(!product)\r\n+    if(!product) return res.\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045504648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n \r\n-    if(!product) return res.\r\n+    if(!product) return res.status(2)\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045511106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n \r\n-    if(!product) return res.status(2)\r\n+    if(!product) return res.status(2404)\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045516500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n \r\n-    if(!product) return res.status(2404)\r\n+    if(!product) return res.status(404)\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045523274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n \r\n-    if(!product) return res.status(404)\r\n+    if(!product) return res.status(404).json({})\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045552632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,12 @@\n \r\n     const {id} = req.params;\r\n     const product = await Products.findByIdAndDelete(id);\r\n \r\n-    if(!product) return res.status(404).json({})\r\n+    if(!product) return res.status(404).json({\r\n+        success: false,\r\n+        message : 'Product not found'\r\n+    })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045581664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,8 +135,10 @@\n     if(!product) return res.status(404).json({\r\n         success: false,\r\n         message : 'Product not found'\r\n     })\r\n+\r\n+    res.\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045595666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,9 +136,9 @@\n         success: false,\r\n         message : 'Product not found'\r\n     })\r\n \r\n-    res.\r\n+    res.status(200)\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045602553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,9 +136,12 @@\n         success: false,\r\n         message : 'Product not found'\r\n     })\r\n \r\n-    res.status(200)\r\n+    res.status(200).json({\r\n+        success: true,\r\n+        \r\n+    })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740045608950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n     })\r\n \r\n     res.status(200).json({\r\n         success: true,\r\n-        \r\n+        message : \"\"\r\n     })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740045619919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n     })\r\n \r\n     res.status(200).json({\r\n         success: true,\r\n-        message : \"\"\r\n+        message : \"Product deleted success\"\r\n     })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740132408638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n-      findProduct.price = price || findProduct.price;\r\n+      findProduct.price =   || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n@@ -138,9 +138,9 @@\n     })\r\n \r\n     res.status(200).json({\r\n         success: true,\r\n-        message : \"Product deleted success\"\r\n+        message : \"Product deleted successfully\"\r\n     })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740132419335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n-      findProduct.price =   || findProduct.price;\r\n+      findProduct.price =  price == \"\" : 0  || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n"
+                },
+                {
+                    "date": 1740132424928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n-      findProduct.price =  price == \"\" : 0  || findProduct.price;\r\n+      findProduct.price =  price == \"\" ? 0 :  || findProduct.price;\r\n       findProduct.salePrice = salePrice || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n"
+                },
+                {
+                    "date": 1740132434857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,10 +103,10 @@\n       findProduct.title = title || findProduct.title;\r\n       findProduct.description = description || findProduct.description;\r\n       findProduct.category = category || findProduct.category;\r\n       findProduct.brand = brand || findProduct.brand;\r\n-      findProduct.price =  price == \"\" ? 0 :  || findProduct.price;\r\n-      findProduct.salePrice = salePrice || findProduct.salePrice;\r\n+      findProduct.price =  price == \"\" ? 0 : price || findProduct.price;\r\n+      findProduct.salePrice = salePrice  || findProduct.salePrice;\r\n       findProduct.totalStock = totalStock || findProduct.totalStock;\r\n       findProduct.image = image || findProduct.image;\r\n \r\n       await findProduct.save();\r\n"
+                }
+            ],
+            "date": 1740042716960,
+            "name": "Commit-0",
+            "content": "const { imageUploadUtils } = require(\"../../helpers/cloudinary\");\r\n\r\n\r\nconst handleImageUpload = async (req,res)=>{\r\n    try {\r\n        const b64 = Buffer.from(req.file.buffer).toString('base64');\r\n        const url = \"data:\" + req.file.mimetype + \";base64,\" + b64;\r\n        const result = await imageUploadUtils(url);\r\n\r\n        res.json({\r\n            success: true,\r\n            result\r\n        })\r\n\r\n    } catch (error) {\r\n        console.log(error)\r\n        res.json({\r\n            success : false,\r\n            message : \"Error Occured\",\r\n        })\r\n    }\r\n}\r\n\r\n\r\n\r\nmodule.exports = {handleImageUpload}"
+        }
+    ]
+}

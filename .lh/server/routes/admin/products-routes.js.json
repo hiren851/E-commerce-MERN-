@@ -1,0 +1,74 @@
+{
+    "sourceFile": "server/routes/admin/products-routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1740045745532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740045751786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\r\n \r\n \r\n-const {handleImageUpload,addProducts,} = require('../../controllers/admin/products-controllers');\r\n+const {handleImageUpload,addProducts,fetchAllProducts,editProducts} = require('../../controllers/admin/products-controllers');\r\n \r\n const {upload} = require('../../helpers/cloudinary')\r\n \r\n const router = express.Router();\r\n"
+                },
+                {
+                    "date": 1740045791035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n const express = require('express');\r\n \r\n \r\n-const {handleImageUpload,addProducts,fetchAllProducts,editProducts} = require('../../controllers/admin/products-controllers');\r\n+const {handleImageUpload,addProducts,fetchAllProducts,editProducts,deleteProducts} = require('../../controllers/admin/products-controllers');\r\n \r\n const {upload} = require('../../helpers/cloudinary')\r\n \r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n \r\n \r\n+\r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045797443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n+router.post\r\n \r\n \r\n-\r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045811092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n-router.post\r\n+router.post(\"add\")\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045819153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n-router.post(\"add\")\r\n+router.post(\"/add\",)\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045853143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n-router.post(\"/add\",)\r\n+router.post(\"/add\", add)\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045858336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n-router.post(\"/add\", add)\r\n+router.post(\"/add\", addProducts);\r\n+router\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045865554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n-router\r\n+router.get(\"/get\", fetchAllProducts);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045874443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,8 @@\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n+router\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045879969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n-router\r\n+router.put\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045890536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n-router.put\r\n+router.put()\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045901067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n-router.put()\r\n+router.put('/edit/:id')\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045915653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n-router.put('/edit/:id')\r\n+router.put('/edit/:id', editProducts)\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740045921349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,8 @@\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n router.put('/edit/:id', editProducts)\r\n+router.delete('/delete/:id', deleteProducts)\r\n \r\n \r\n module.exports = router;\r\n"
+                }
+            ],
+            "date": 1740045745532,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\n\r\n\r\nconst {handleImageUpload,addProducts,} = require('../../controllers/admin/products-controllers');\r\n\r\nconst {upload} = require('../../helpers/cloudinary')\r\n\r\nconst router = express.Router();\r\n\r\nrouter.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n\r\n\r\nmodule.exports = router;\r\n"
+        }
+    ]
+}

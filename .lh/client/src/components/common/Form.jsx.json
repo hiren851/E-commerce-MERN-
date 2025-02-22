@@ -1,0 +1,134 @@
+{
+    "sourceFile": "client/src/components/common/Form.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1739810973173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739810981713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-function () {\r\n-    return (  );\r\n+function CommonForm() {\r\n+    return ( \r\n+        \r\n\\ No newline at end of file\n+     );\r\n }\r\n \r\n-export default ;\n+export default CommonForm;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739810988621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function CommonForm() {\r\n     return ( \r\n-        \r\n+        form\r\n      );\r\n }\r\n \r\n export default CommonForm;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739811000553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function CommonForm() {\r\n     return ( \r\n-        form\r\n+        <form action=\"\">\r\n+            \r\n+        </form>\r\n      );\r\n }\r\n \r\n export default CommonForm;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739811261214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-function CommonForm() {\r\n+function CommonForm({}) {\r\n     return ( \r\n         <form action=\"\">\r\n-            \r\n+\r\n         </form>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739811312153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function CommonForm({}) {\r\n     return ( \r\n         <form action=\"\">\r\n-\r\n+            <div></div>\r\n         </form>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739811318082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function CommonForm({}) {\r\n     return ( \r\n         <form action=\"\">\r\n-            <div></div>\r\n+            <div className=\"flex \"></div>\r\n         </form>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739811324809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function CommonForm({}) {\r\n     return ( \r\n         <form action=\"\">\r\n-            <div className=\"flex \"></div>\r\n+            <div className=\"flex flex-col ga\"></div>\r\n         </form>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739811338479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-function CommonForm({}) {\r\n+function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n-            <div className=\"flex flex-col ga\"></div>\r\n+            <div className=\"flex flex-col gap-3\"></div>\r\n         </form>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739811353866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n-            <div className=\"flex flex-col gap-3\"></div>\r\n+            <div className=\"flex flex-col gap-3\">\r\n+                {}\r\n+            </div>\r\n         </form>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739811360956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {}\r\n+                {formControls.map(())\r\n+\r\n+                }\r\n             </div>\r\n         </form>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1739811380871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map(())\r\n+                {formControls.map((controlItem))\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811386502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem))\r\n+                {formControls.map((controlItem)=> ())\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811392459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> ())\r\n+                {formControls.map((controlItem)=> (<div>))\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811406775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> (<div>))\r\n+                {formControls.map((controlItem)=> <div></div> )\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811421326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> <div></div> )\r\n+                {formControls.map((controlItem)=> <div key> </div> )\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811431858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> <div key> </div> )\r\n+                {formControls.map((controlItem)=> <div  key={controlItem}> </div> )\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811452539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> <div  key={controlItem}> </div> )\r\n+                {formControls.map((controlItem)=> <div  key={controlItem.name}>\r\n+                    \r\n+                     </div> )\r\n \r\n                 }\r\n             </div>\r\n         </form>\r\n"
+                },
+                {
+                    "date": 1739811461822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> <div  key={controlItem.name}>\r\n+                {formControls.map((controlItem)=> <div className=\"w-full gap\"  key={controlItem.name}>\r\n                     \r\n                      </div> )\r\n \r\n                 }\r\n"
+                },
+                {
+                    "date": 1739811470238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function CommonForm({formControls}) {\r\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n-                {formControls.map((controlItem)=> <div className=\"w-full gap\"  key={controlItem.name}>\r\n+                {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n                     \r\n                      </div> )\r\n \r\n                 }\r\n"
+                },
+                {
+                    "date": 1739811494234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    \r\n+                    Label\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811502020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    Label\r\n+                    <Label>{</Label>\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811509616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    <Label>{</Label>\r\n+                    <Label>{controlItem}</Label>\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811517558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    <Label>{controlItem}</Label>\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811522914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n+                    <la\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811531212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    <la\r\n+                    <Label\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811541943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    <Label\r\n+                    <babel></babel>\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811553806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    <babel></babel>\r\n+                    <label>\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739811562499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <form action=\"\">\r\n             <div className=\"flex flex-col gap-3\">\r\n                 {formControls.map((controlItem)=> <div className=\"grid w-full gap-1.5 \"  key={controlItem.name}>\r\n-                    <label htmlFor=\"\"></label>\r\n+                    <label></label>\r\n                      </div> )\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1739812092268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         switch (getControlItem.componentType) {\r\n             case \"input\":\r\n                 element= <Input \r\n                     name={getControlItem.name}\r\n-                    place\r\n+                    placeholder = \r\n                 />\r\n                 break;\r\n         \r\n             default:\r\n"
+                }
+            ],
+            "date": 1739810973173,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

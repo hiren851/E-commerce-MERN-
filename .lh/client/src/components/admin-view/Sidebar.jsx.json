@@ -1,0 +1,42 @@
+{
+    "sourceFile": "client/src/components/admin-view/Sidebar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1739529169108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739529644255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-r\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const Sidebar = () => {\r\n+  return (\r\n+    <div>Sidebar</div>\r\n+  )\r\n+}\r\n+\r\n+export default Sidebar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739529649583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Sidebar = () => {\r\n+const Admin = () => {\r\n   return (\r\n-    <div>Sidebar</div>\r\n+    <div>Admin</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Sidebar\n+export default Admin\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740117953952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,81 @@\n-import React from 'react'\r\n+import React, { Fragment } from \"react\";\r\n+import { MonitorCog, ShoppingBag, Tag } from \"lucide-react\";\r\n+import { LayoutDashboard } from \"lucide-react\";\r\n+import { useNavigate } from \"react-router-dom\";\r\n+import { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\n \r\n-const Admin = () => {\r\n+export const adminSidebarMenuItems = [\r\n\\ No newline at end of file\n+  {\r\n+    id: \"dashboard\",\r\n+    label: \"Dashboard\",\r\n+    path: \"/admin/dashboard\",\r\n+    icon: <LayoutDashboard />,\r\n+  },\r\n+  {\r\n+    id: \"products\",\r\n+    label: \"Products\",\r\n+    path: \"/admin/products\",\r\n+    icon: <Tag />,\r\n+  },\r\n+  {\r\n+    id: \"orders\",\r\n+    label: \"Orders\",\r\n+    path: \"/admin/orders\",\r\n+    icon: <ShoppingBag />,\r\n+  },\r\n+];\r\n+\r\n+function MenuItems({ setOpen }) {\r\n+  const navigate = useNavigate();\r\n+\r\n   return (\r\n-    <div>Admin</div>\r\n-  )\r\n+    <nav className=\"mt-8 flex flex-col  gap-2\">\r\n+      {adminSidebarMenuItems.map((menuItem) => (\r\n+        <div\r\n+          key={menuItem.id}\r\n+          onClick={() =>{ navigate(menuItem.path)\r\n+            setOpen ? setOpen(false) : null}\r\n+          }\r\n+          className=\"flex cursor-pointer text-xl items-center gap-2 rounded-md px-3 py-2 font-bold hover:bg-gray-200 hover:text-black\"\r\n+        >\r\n+          {menuItem.icon}\r\n+          <span>{menuItem.label}</span>\r\n+        </div>\r\n+      ))}\r\n+    </nav>\r\n+  );\r\n }\r\n \r\n-export default Admin\n+const AdminSideBar = ({ open, setOpen }) => {\r\n+  const navigate = useNavigate();\r\n+\r\n+  return (\r\n+    <Fragment >\r\n+      <Sheet open={open} onOpenChange={setOpen} className=\"w-64\">\r\n+        <SheetContent side=\"left\" className=\"w-64 \">\r\n+          <div className=\"flex flex-col h-full\">\r\n+            <SheetHeader className=\"border-b\">\r\n+              <SheetTitle className=\"flex gap-2 mt-5 mb-5\">\r\n+                <MonitorCog size={30} strokeWidth={3} className=\"\" />\r\n+                <span>Admin Panel</span>\r\n+              </SheetTitle>\r\n+            </SheetHeader>\r\n+            <MenuItems setOpen={setOpen} />\r\n+          </div>\r\n+        </SheetContent>\r\n+      </Sheet>\r\n+      <aside className=\"hidden w-64 flex-col border-r  p-6 lg:flex bg-lime-500 \">\r\n+        <div\r\n+          className=\"flex cursor-pointer items-center gap-2 \"\r\n+          onClick={() => navigate(\"/admin/dashboard\")}\r\n+        >\r\n+          <MonitorCog size={30} strokeWidth={3} className=\"\" />\r\n+          <h1 className=\"text-2xl font-extrabold\">Admin Panel</h1>\r\n+        </div>\r\n+        <MenuItems />\r\n+      </aside>\r\n+    </Fragment>\r\n+  );\r\n+};\r\n+\r\n+export default AdminSideBar;\r\n"
+                },
+                {
+                    "date": 1740117961875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n \r\n   return (\r\n     <Fragment >\r\n       <Sheet open={open} onOpenChange={setOpen} className=\"w-64\">\r\n-        <SheetContent side=\"left\" className=\"w-64 \">\r\n+        <SheetContent side=\"left\" className=\"w-64\">\r\n           <div className=\"flex flex-col h-full\">\r\n             <SheetHeader className=\"border-b\">\r\n               <SheetTitle className=\"flex gap-2 mt-5 mb-5\">\r\n                 <MonitorCog size={30} strokeWidth={3} className=\"\" />\r\n@@ -77,5 +77,5 @@\n     </Fragment>\r\n   );\r\n };\r\n \r\n-export default AdminSideBar;\n\\ No newline at end of file\n+export default AdminSideBar;\r\n"
+                },
+                {
+                    "date": 1740117979673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n             <MenuItems setOpen={setOpen} />\r\n           </div>\r\n         </SheetContent>\r\n       </Sheet>\r\n-      <aside className=\"hidden w-64 flex-col border-r  p-6 lg:flex bg-lime-500 \">\r\n+      <aside className=\"hidden w-64 flex-col border-r  p-6 lg:flex \">\r\n         <div\r\n           className=\"flex cursor-pointer items-center gap-2 \"\r\n           onClick={() => navigate(\"/admin/dashboard\")}\r\n         >\r\n"
+                },
+                {
+                    "date": 1740118050495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n             <MenuItems setOpen={setOpen} />\r\n           </div>\r\n         </SheetContent>\r\n       </Sheet>\r\n-      <aside className=\"hidden w-64 flex-col border-r  p-6 lg:flex \">\r\n+      <aside className=\"hidden w-64 flex-col border-r  p-6 lg:flex bg-lime-500 \">\r\n         <div\r\n           className=\"flex cursor-pointer items-center gap-2 \"\r\n           onClick={() => navigate(\"/admin/dashboard\")}\r\n         >\r\n"
+                }
+            ],
+            "date": 1739529169108,
+            "name": "Commit-0",
+            "content": "r"
+        }
+    ]
+}

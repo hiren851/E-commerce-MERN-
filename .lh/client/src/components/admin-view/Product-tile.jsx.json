@@ -1,0 +1,394 @@
+{
+    "sourceFile": "client/src/components/admin-view/Product-tile.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 94,
+            "patches": [
+                {
+                    "date": 1740116644750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740116651136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n \r\n \r\n-ffc\n\\ No newline at end of file\n+function AdminProductTile() {\r\n+    return (  );\r\n+}\r\n+\r\n+export default AdminProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740116657609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n \r\n \r\n function AdminProductTile() {\r\n-    return (  );\r\n+    return ( \r\n+        \r\n+     );\r\n }\r\n \r\n export default AdminProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740116684184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n \r\n function AdminProductTile() {\r\n     return ( \r\n-        \r\n+        <Card\r\n      );\r\n }\r\n \r\n export default AdminProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740116690552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,16 @@\n+import { Card } from \"../ui/card\";\r\n \r\n \r\n function AdminProductTile() {\r\n     return ( \r\n-        <Card\r\n+        <Card>\r\n+            <div>\r\n+                <div>\r\n+                    \r\n+                </div>\r\n+            </div>\r\n+        </Card>\r\n      );\r\n }\r\n \r\n export default AdminProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740116701178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n function AdminProductTile() {\r\n     return ( \r\n         <Card>\r\n             <div>\r\n-                <div>\r\n-                    \r\n+                <div className=\"relative\">\r\n+\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116712433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     return ( \r\n         <Card>\r\n             <div>\r\n                 <div className=\"relative\">\r\n-\r\n+                    <img/>\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116718780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { Card } from \"../ui/card\";\r\n \r\n \r\n-function AdminProductTile() {\r\n+function AdminProductTile({}) {\r\n     return ( \r\n         <Card>\r\n             <div>\r\n                 <div className=\"relative\">\r\n-                    <img/>\r\n+                    <img src=\"\"/>\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116724850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { Card } from \"../ui/card\";\r\n \r\n \r\n-function AdminProductTile({}) {\r\n+function AdminProductTile({product}) {\r\n     return ( \r\n         <Card>\r\n             <div>\r\n                 <div className=\"relative\">\r\n-                    <img src=\"\"/>\r\n+                    <img src=/>\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116742563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AdminProductTile({product}) {\r\n     return ( \r\n-        <Card>\r\n+        <Card className=\"\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n                     <img src=/>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1740116753578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function AdminProductTile({product}) {\r\n     return ( \r\n-        <Card className=\"\">\r\n+        <Card className=\"w-full max-w-sm \">\r\n             <div>\r\n                 <div className=\"relative\">\r\n                     <img src=/>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1740116765890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \r\n \r\n function AdminProductTile({product}) {\r\n     return ( \r\n-        <Card className=\"w-full max-w-sm \">\r\n+        <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n-                    <img src=/>\r\n+                    <img src={/>\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116771998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     return ( \r\n         <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n-                    <img src={/>\r\n+                    <img src={product?.}/>\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116778640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     return ( \r\n         <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n-                    <img src={product?.}/>\r\n+                    <img src={product?.image}/>\r\n+                    \r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740116786422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,15 @@\n import { Card } from \"../ui/card\";\r\n \r\n-\r\n-function AdminProductTile({product}) {\r\n-    return ( \r\n-        <Card className=\"w-full max-w-sm mx-auto\">\r\n-            <div>\r\n-                <div className=\"relative\">\r\n-                    <img src={product?.image}/>\r\n-                    \r\n-                </div>\r\n-            </div>\r\n-        </Card>\r\n-     );\r\n+function AdminProductTile({ product }) {\r\n+  return (\r\n+    <Card className=\"w-full max-w-sm mx-auto\">\r\n\\ No newline at end of file\n+      <div>\r\n+        <div className=\"relative\">\r\n+          <img src={product?.image} alt=\"\"/>\r\n+        </div>\r\n+      </div>\r\n+    </Card>\r\n+  );\r\n }\r\n \r\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116792826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n-          <img src={product?.image} alt=\"\"/>\r\n+          <img src={product?.image} alt={product?.}/>\r\n         </div>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116810250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n-          <img src={product?.image} alt={product?.}/>\r\n+          <img src={product?.image} alt={product?.title} className=\"\"/>\r\n         </div>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116816923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n-          <img src={product?.image} alt={product?.title} className=\"\"/>\r\n+          <img src={product?.image} alt={product?.title} className=\"w-full h-[\"/>\r\n         </div>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116830255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n-          <img src={product?.image} alt={product?.title} className=\"w-full h-[\"/>\r\n+          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover \"/>\r\n         </div>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116840304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n-          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover \"/>\r\n+          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t\"/>\r\n         </div>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116858365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,13 @@\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n-          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t\"/>\r\n+          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n       </div>\r\n+      \r\n     </Card>\r\n   );\r\n }\r\n\\ No newline at end of file\n \r\n-export default AdminProductTile;\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116867137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n       </div>\r\n-      \r\n     </Card>\r\n   );\r\n }\r\n \r\n-export default AdminProductTile;\n\\ No newline at end of file\n+export default AdminProductTile;\r\n"
+                },
+                {
+                    "date": 1740116873817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n       <div>\r\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n+        <CardCo\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740116890547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n-import { Card } from \"../ui/card\";\r\n+import { Card, CardContent } from \"../ui/card\";\r\n \r\n function AdminProductTile({ product }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n-        <CardCo\r\n+        <CardContent>\r\n+            <h2></h2>\r\n+        </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740116895661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2></h2>\r\n+            <h2>{product}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740116977148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2>{product}</h2>\r\n+            <h2 className=\"\">{product?.title}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740116985094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"\">{product?.title}</h2>\r\n+            <h2 className=\"text\">{product?.title}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740116993395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"text\">{product?.title}</h2>\r\n+            <h2 className=\"text-xl font-bold \">{product?.title}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740117026306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"text-xl font-bold \">{product?.title}</h2>\r\n+            <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n+            \r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740117033090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,13 @@\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n-            \r\n+            <div>\r\n+                <span></span>\r\n+                <span></span>\r\n+                <span></span>\r\n+            </div>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740117124026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,10 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n+                <span>${</span>\r\n                 <span></span>\r\n-                <span></span>\r\n-                <span></span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740117129764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span>${</span>\r\n+                <span>${product?.}</span>\r\n                 <span></span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117139883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span>${product?.}</span>\r\n+                <span>${product?.price}</span>\r\n                 <span></span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117145625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n                 <span>${product?.price}</span>\r\n-                <span></span>\r\n+                <span>${}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740117154483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n                 <span>${product?.price}</span>\r\n-                <span>${}</span>\r\n+                <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740117170053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span>${product?.price}</span>\r\n+                <span className=\"\">${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117186065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className=\"\">${product?.price}</span>\r\n+                <span className=`{product}`>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117193879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className=`{product}`>${product?.price}</span>\r\n+                <span className=`{product?.salePrice > 0 }`>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117209309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className=`{product?.salePrice > 0 }`>${product?.price}</span>\r\n+                <span className=`{product?.salePrice > 0 \"\"}`>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117223354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className=`{product?.salePrice > 0 \"\"}`>${product?.price}</span>\r\n+                <span className=>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117229258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className=>${product?.price}</span>\r\n+                <span className={``}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117238664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={``}>${product?.price}</span>\r\n+                <span className={`${product?.}`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117245537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.}`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 }`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117252240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 }`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"\"}`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117259381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 ? \"\"}`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\"}`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117265301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\"}`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} `}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117271213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} `}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117277773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg d=font`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117285768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg d=font`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text`}>${product?.price}</span>\r\n                 <span>${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117304650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text`}>${product?.price}</span>\r\n-                <span>${product?.salePrice}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n+                <span className=\"\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740117316410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n             <div>\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n-                <span className=\"\">${product?.salePrice}</span>\r\n+                <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740117338253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n+        \r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740117351660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-import { Card, CardContent } from \"../ui/card\";\r\n+import { Button } from \"../ui/button\";\r\n+import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n \r\n function AdminProductTile({ product }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n@@ -13,9 +14,11 @@\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n-        \r\n+        <CardFooter>\r\n+            <Button>Edit</Button>\r\n+        </CardFooter>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740117362025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n             </div>\r\n         </CardContent>\r\n         <CardFooter>\r\n             <Button>Edit</Button>\r\n+            <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740117372640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n-        <CardFooter>\r\n+        <CardFooter className=\"flex jus\">\r\n             <Button>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117377899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n-        <CardFooter className=\"flex jus\">\r\n+        <CardFooter className=\"flex justify-between align\">\r\n             <Button>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117388306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n-        <CardFooter className=\"flex justify-between align\">\r\n+        <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740117889092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n-            <div>\r\n+            <div className=\"flex \">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n"
+                },
+                {
+                    "date": 1740118368982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"text-xl font-bold mb-2\">{product?.title}</h2>\r\n-            <div className=\"flex \">\r\n+            <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n+            <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                 <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n             </div>\r\n         </CardContent>\r\n"
+                },
+                {
+                    "date": 1740118400364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n-                <span className=\"text-lg font-bold\">${product?.salePrice}</span>\r\n+               \r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n"
+                },
+                {
+                    "date": 1740118407146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n-               \r\n+               {product}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n"
+                },
+                {
+                    "date": 1740118413694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n-               {product}\r\n+               {product?.salePrice > 0 }\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n"
+                },
+                {
+                    "date": 1740118421803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n-               {product?.salePrice > 0 }\r\n+               {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span>}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n"
+                },
+                {
+                    "date": 1740118427796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n-               {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span>}\r\n+               {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n"
+                },
+                {
+                    "date": 1740118493571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"text-xl font-bold mb-4\">{product?.title}</h2>\r\n+            <h2 className=\"text-xl font-bold mb-\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740118499711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"text-xl font-bold mb-\">{product?.title}</h2>\r\n+            <h2 className=\"text-xl font-bold m\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740118507175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         <div className=\"relative\">\r\n           <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\r\n         </div>\r\n         <CardContent>\r\n-            <h2 className=\"text-xl font-bold m\">{product?.title}</h2>\r\n+            <h2 className=\"text-xl font-bold mt-2  mb-2\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740118525206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mt-2  mb-2\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>${product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>{product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n"
+                },
+                {
+                    "date": 1740118530505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mt-2  mb-2\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>{product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>₹{product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n"
+                },
+                {
+                    "date": 1740118539454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mt-2  mb-2\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n                 <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>₹{product?.price}</span>\r\n-               {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">${product?.salePrice}</span> : null}\r\n+               {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button>Edit</Button>\r\n"
+                },
+                {
+                    "date": 1740118722154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mt-2  mb-2\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : null} text-lg font-semibold text-primary`}>₹{product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : \"\"} text-lg font-semibold text-primary`}>₹{product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n"
+                },
+                {
+                    "date": 1740120068168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n \r\n-function AdminProductTile({ product }) {\r\n+function AdminProductTile({ product,fromData , setOp }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n@@ -10,9 +10,9 @@\n         </div>\r\n         <CardContent>\r\n             <h2 className=\"text-xl font-bold mt-2  mb-2\">{product?.title}</h2>\r\n             <div className=\"flex justify-between\">\r\n-                <span className={`${product?.salePrice > 0 ? \"line-through\" : \"\"} text-lg font-semibold text-primary`}>₹{product?.price}</span>\r\n+                <span className={`${product?.salePrice > 0 ? \"line-through\" : \" \"} text-lg font-semibold text-primary`}>₹{product?.price}</span>\r\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n"
+                },
+                {
+                    "date": 1740120077417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n \r\n-function AdminProductTile({ product,fromData , setOp }) {\r\n+function AdminProductTile({ product,fromData , setCurrentEditingId }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n"
+                },
+                {
+                    "date": 1740120085340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n \r\n-function AdminProductTile({ product,fromData , setCurrentEditingId }) {\r\n+function AdminProductTile({ product,fromData , setCurrentEditingId ,setOpenCreateProductsDialog }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n"
+                },
+                {
+                    "date": 1740120105120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n-            <Button>Edit</Button>\r\n+            <Button onCl>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740120111010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n-            <Button onCl>Edit</Button>\r\n+            <Button onClick =>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740120149559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n-            <Button onClick =>Edit</Button>\r\n+            <Button onClick=>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740120155586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n                {product?.salePrice > 0  ? <span className=\"text-lg font-bold\">₹{product?.salePrice}</span> : null}\r\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n-            <Button onClick=>Edit</Button>\r\n+            <Button onClick={()=>{\r\n+                \r\n+            }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740120160839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n-                \r\n+                setOpenCreateProductsDialog\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120168233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n-                setOpenCreateProductsDialog\r\n+                setOpenCreateProductsDialog(false)\r\n+                set\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120174401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(false)\r\n-                set\r\n+                setCurrentEditingId(product?.)\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120180500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(false)\r\n-                setCurrentEditingId(product?.)\r\n+                setCurrentEditingId(product?._id)\r\n+                setFo\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120187807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(false)\r\n                 setCurrentEditingId(product?._id)\r\n-                setFo\r\n+                \r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120195088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n \r\n-function AdminProductTile({ product,fromData , setCurrentEditingId ,setOpenCreateProductsDialog }) {\r\n+function AdminProductTile({ product,setFormData , setCurrentEditingId ,setOpenCreateProductsDialog }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n"
+                },
+                {
+                    "date": 1740120209340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(false)\r\n                 setCurrentEditingId(product?._id)\r\n-                \r\n+                setFormData\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120216124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(false)\r\n                 setCurrentEditingId(product?._id)\r\n-                setFormData\r\n+                setFormData()\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740120401604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n             </div>\r\n         </CardContent>\r\n         <CardFooter className=\"flex justify-between items-center\">\r\n             <Button onClick={()=>{\r\n-                setOpenCreateProductsDialog(false)\r\n+                setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n-                setFormData()\r\n+                setFormData(product)\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740126902323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n+                set\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740126908577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n-                set\r\n+                setFormData()\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740126923068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n             <Button onClick={()=>{\r\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n-                setFormData()\r\n             }}>Edit</Button>\r\n             <Button>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740133722524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n \r\n-function AdminProductTile({ product,setFormData , setCurrentEditingId ,setOpenCreateProductsDialog }) {\r\n+function AdminProductTile({ product,setFormData , setCurrentEditingId ,setOpenCreateProductsDialog ,handleDelete }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n       <div>\r\n         <div className=\"relative\">\r\n"
+                },
+                {
+                    "date": 1740133738669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n             }}>Edit</Button>\r\n-            <Button>Delete</Button>\r\n+            <Button onClick=>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740133751228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n             }}>Edit</Button>\r\n-            <Button onClick=>Delete</Button>\r\n+            <Button onClick={()}>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740133756740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n             }}>Edit</Button>\r\n-            <Button onClick={()}>Delete</Button>\r\n+            <Button onClick={()=>handleDelete()}>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740133763120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 setOpenCreateProductsDialog(true)\r\n                 setCurrentEditingId(product?._id)\r\n                 setFormData(product)\r\n             }}>Edit</Button>\r\n-            <Button onClick={()=>handleDelete()}>Delete</Button>\r\n+            <Button onClick={()=>handleDelete(product?)}>Delete</Button>\r\n         </CardFooter>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                }
+            ],
+            "date": 1740116644750,
+            "name": "Commit-0",
+            "content": "\r\n\r\nffc"
+        }
+    ]
+}

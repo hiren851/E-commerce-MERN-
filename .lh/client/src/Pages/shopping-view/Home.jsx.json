@@ -1,0 +1,30 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1739531609694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739531778838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-fface\n\\ No newline at end of file\n+function () {\r\n+    return (  );\r\n+}\r\n+\r\n+export default ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531786012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function ShoppingHome() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531794751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function ShoppingHome() {\r\n-    return (  );\r\n+    return ( \r\n+        <div>Shopping View </div>\r\n+     );\r\n }\r\n \r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739531609694,
+            "name": "Commit-0",
+            "content": "fface"
+        }
+    ]
+}

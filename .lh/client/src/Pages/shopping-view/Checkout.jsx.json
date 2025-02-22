@@ -1,0 +1,30 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Checkout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1739531748074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739531754754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function Shopping() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default Shopping;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531763988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-function Shopping() {\r\n-    return (  );\r\n+function ShoppingCheckout() {\r\n+    return ( \r\n+        \r\n\\ No newline at end of file\n+     );\r\n }\r\n \r\n-export default Shopping;\n+export default ShoppingCheckout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531771011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function ShoppingCheckout() {\r\n     return ( \r\n-        \r\n+        <div>\r\n+            Shopping View Ce\r\n+        </div>\r\n      );\r\n }\r\n \r\n export default ShoppingCheckout;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739531748074,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

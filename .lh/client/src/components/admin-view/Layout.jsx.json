@@ -1,0 +1,122 @@
+{
+    "sourceFile": "client/src/components/admin-view/Layout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1739527655773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739527661222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-function () {\r\n+function AdminLay() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default AdminLay;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739527679246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n \r\n-function AdminLay() {\r\n-    return (  );\r\n+function AdminLayout() {\r\n+    return ( \r\n+        <\r\n\\ No newline at end of file\n+     );\r\n }\r\n \r\n-export default AdminLay;\n+export default AdminLayout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739527687886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n-        <\r\n+        <div>\r\n+            \r\n+        </div>\r\n      );\r\n }\r\n \r\n export default AdminLayout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739527696346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n-        <div>\r\n-            \r\n+        <div className=\"flex \"> \r\n+\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739527707687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n-        <div className=\"flex \"> \r\n+        <div className=\"flex min-h-screen \"> \r\n \r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1739527716063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n-        <div className=\"flex min-h-screen \"> \r\n+        <div className=\"flex min-h-screen w-full    \"> \r\n \r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1739527729050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n-        <div className=\"flex min-h-screen w-full    \"> \r\n-\r\n+        <div className=\"flex min-h-screen w-full\"> \r\n+                <div></div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739527740006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,14 @@\n+import { Outlet } from \"react-router-dom\";\r\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-                <div></div>\r\n+                <div>\r\n+                    <main>\r\n+                        <Outlet/>\r\n+                    </main>\r\n+                </div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739527755572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-                <div>\r\n+                <div className=\"flex flex-1 \">\r\n                     <main>\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1739527770659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-                <div className=\"flex flex-1 \">\r\n-                    <main>\r\n+                <div className=\"flex flex-1 flex-col\">\r\n+                    <main className=\"\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527781512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <main className=\"\">\r\n+                    <main className=\"flex flex-1 \">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527790619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <main className=\"flex flex-1 \">\r\n+                    <main className=\"flex flex-1 bg-muted\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527795806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <main className=\"flex flex-1 bg-muted\">\r\n+                    <main className=\"flex flex-1 bg-muted/40 \">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527803428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <main className=\"flex flex-1 bg-muted/40 \">\r\n+                    <main className=\"flex flex-1 bg-muted/40 p-4 md:\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739527808733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <main className=\"flex flex-1 bg-muted/40 p-4 md:\">\r\n+                    <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739529628537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n+        <Admin\r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n"
+                },
+                {
+                    "date": 1739529636327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-        <Admin\r\n+        \r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n"
+                },
+                {
+                    "date": 1739529952544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-        \r\n+            \r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n"
+                },
+                {
+                    "date": 1739529959015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-            \r\n+            <AdminSide\r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n"
+                },
+                {
+                    "date": 1739529971237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import { Outlet } from \"react-router-dom\";\r\n+import AdminSideBar from \"./Sidebar\";\r\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n-            <AdminSide\r\n+            <AdminSideBar/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n+                    <Admin\r\n                     <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1739530534344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { Outlet } from \"react-router-dom\";\r\n import AdminSideBar from \"./Sidebar\";\r\n+import AdminHeader from \"./Header\";\r\n \r\n function AdminLayout() {\r\n     return ( \r\n         <div className=\"flex min-h-screen w-full\"> \r\n             <AdminSideBar/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <Admin\r\n-                    <main className=\"flex flex-1 bg-muted/40 p-4 md:p-6\">\r\n+                    <AdminHeader/>\r\n+                    <main className=\"flex flex-1  p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1739530642945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <div className=\"flex min-h-screen w-full\"> \r\n             <AdminSideBar/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <AdminHeader/>\r\n-                    <main className=\"flex flex-1  p-4 md:p-6\">\r\n+                    <main className=\"flex flex-1 bg- p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740117867928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,20 @@\n import { Outlet } from \"react-router-dom\";\r\n import AdminSideBar from \"./Sidebar\";\r\n import AdminHeader from \"./Header\";\r\n+import { useState } from \"react\";\r\n \r\n function AdminLayout() {\r\n+\r\n+    const [openSidebar , setOpenSidebar] = useState(false);\r\n+\r\n+\r\n     return ( \r\n-        <div className=\"flex min-h-screen w-full\"> \r\n-            <AdminSideBar/>\r\n+        <div className=\"flex min-h-screen w-full text-emerald-900\"> \r\n+            <AdminSideBar open={openSidebar} setOpen={setOpenSidebar} className=\"\"/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n-                    <AdminHeader/>\r\n-                    <main className=\"flex flex-1 bg- p-4 md:p-6\">\r\n+                    <AdminHeader setOpenSidebar={setOpenSidebar} />\r\n+                    <main className=\"flex flex-1 flex-col bg-amber-100 p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740117937587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     const [openSidebar , setOpenSidebar] = useState(false);\r\n \r\n \r\n     return ( \r\n-        <div className=\"flex min-h-screen w-full text-emerald-900\"> \r\n+        <div className=\"flex min-h-screen w-full \"> \r\n             <AdminSideBar open={openSidebar} setOpen={setOpenSidebar} className=\"\"/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <AdminHeader setOpenSidebar={setOpenSidebar} />\r\n                     <main className=\"flex flex-1 flex-col bg-amber-100 p-4 md:p-6\">\r\n"
+                },
+                {
+                    "date": 1740118012754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,13 @@\n     const [openSidebar , setOpenSidebar] = useState(false);\r\n \r\n \r\n     return ( \r\n-        <div className=\"flex min-h-screen w-full \"> \r\n+        <div className=\"flex min-h-screen w-full text-emerald-900\"> \r\n             <AdminSideBar open={openSidebar} setOpen={setOpenSidebar} className=\"\"/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <AdminHeader setOpenSidebar={setOpenSidebar} />\r\n-                    <main className=\"flex flex-1 flex-col bg-amber-100 p-4 md:p-6\">\r\n+                    <main className=\"flex flex-1 flex-col bg- p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740118023465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <div className=\"flex min-h-screen w-full text-emerald-900\"> \r\n             <AdminSideBar open={openSidebar} setOpen={setOpenSidebar} className=\"\"/>\r\n                 <div className=\"flex flex-1 flex-col\">\r\n                     <AdminHeader setOpenSidebar={setOpenSidebar} />\r\n-                    <main className=\"flex flex-1 flex-col bg- p-4 md:p-6\">\r\n+                    <main className=\"flex flex-1 flex-col bg-muted p-4 md:p-6\">\r\n                         <Outlet/>\r\n                     </main>\r\n                 </div>\r\n         </div>\r\n"
+                }
+            ],
+            "date": 1739527655773,
+            "name": "Commit-0",
+            "content": "\r\nfunction () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

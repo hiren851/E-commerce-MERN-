@@ -1,0 +1,370 @@
+{
+    "sourceFile": "client/src/components/admin-view/Image-upload.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 88,
+            "patches": [
+                {
+                    "date": 1740028529006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740028534378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,11 @@\n         inputRef.current.value = \"\"\r\n     }\r\n   }\r\n \r\n-useEffect()\r\n+useEffect(()=>{\r\n+  \r\n+})\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n"
+                },
+                {
+                    "date": 1740028541802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   }\r\n \r\n useEffect(()=>{\r\n   \r\n-})\r\n+},[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n"
+                },
+                {
+                    "date": 1740028565505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n+  if\r\n   \r\n },[imageFile])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1740028574766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n-  if\r\n-  \r\n+  if(!imageFile == )\r\n },[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n"
+                },
+                {
+                    "date": 1740028583723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n-  if(!imageFile == )\r\n+  if(imageFile == null )\r\n },[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n"
+                },
+                {
+                    "date": 1740028591557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n-  if(imageFile == null )\r\n+  if(imageFile !== null ) up\r\n },[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n"
+                },
+                {
+                    "date": 1740028598577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n-  if(imageFile !== null ) up\r\n+  if(imageFile !== null ) uploadImagetoCloudinary\r\n },[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n"
+                },
+                {
+                    "date": 1740028609268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n-  if(imageFile !== null ) uploadImagetoCloudinary\r\n+  if(imageFile !== null ) uploadImageToCloudinary\r\n },[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n"
+                },
+                {
+                    "date": 1740028614660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     }\r\n   }\r\n \r\n useEffect(()=>{\r\n-  if(imageFile !== null ) uploadImageToCloudinary\r\n+  if(imageFile !== null ) uploadImageToCloudinary()\r\n },[imageFile])\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n"
+                },
+                {
+                    "date": 1740028625344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,10 @@\n         inputRef.current.value = \"\"\r\n     }\r\n   }\r\n \r\n+  asyc\r\n+\r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n },[imageFile])\r\n \r\n"
+                },
+                {
+                    "date": 1740028632963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         inputRef.current.value = \"\"\r\n     }\r\n   }\r\n \r\n-  asyc\r\n+  async function uploadImageToCloudinary()\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n },[imageFile])\r\n"
+                },
+                {
+                    "date": 1740028654219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,11 @@\n         inputRef.current.value = \"\"\r\n     }\r\n   }\r\n \r\n-  async function uploadImageToCloudinary()\r\n+  async function uploadImageToCloudinary(){\r\n+    const data = new Form\r\n+  }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n },[imageFile])\r\n"
+                },
+                {
+                    "date": 1740028659292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     }\r\n   }\r\n \r\n   async function uploadImageToCloudinary(){\r\n-    const data = new Form\r\n+    const data = new FormData()\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028670350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n     }\r\n   }\r\n \r\n   async function uploadImageToCloudinary(){\r\n-    const data = new FormData()\r\n+    const data = new FormData();\r\n+    data.append\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028676609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   }\r\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n-    data.append\r\n+    data.append('my')\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028685365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   }\r\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n-    data.append('my')\r\n+    data.append('my_file',imageFile)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028706865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n+    const \r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028715492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const \r\n+    const response = \r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028724957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { Input } from \"../ui/input\";\r\n import { Label } from \"../ui/label\";\r\n import { FileIcon, UploadCloudIcon, XIcon } from \"lucide-react\";\r\n import { Button } from \"../ui/button\";\r\n+import axios from \"axios\";\r\n \r\n function ProductImageUpload({\r\n   imageFile,\r\n   setImageFile,\r\n@@ -39,9 +40,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = \r\n+    const response = await axios\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028731783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = await axios\r\n+    const response = await axios.post('')\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028770580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = await axios.post('')\r\n+    const response = await axios.post('http://localhost:7000/api/auth/check-auth')\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028780517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = await axios.post('http://localhost:7000/api/auth/check-auth')\r\n+    const response = await axios.post('http://localhost:7000/api/admin')\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028812518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = await axios.post('http://localhost:7000/api/admin')\r\n+    const response = await axios.post('http://localhost:7000/api/admin/products/upload')\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028832382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,10 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = await axios.post('http://localhost:7000/api/admin/products/upload')\r\n+    const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n+    \r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028846316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n-    \r\n+    if\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028851695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n-    if\r\n+    if(response) set\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028857118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n-    if(response) set\r\n+    if(response) setUploadedImageURL(response.data.url)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028866049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,10 @@\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n-    if(response) setUploadedImageURL(response.data.url)\r\n+    console.log(first)\r\n+    if(response) setUploadedImageURL(response.data)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740028879102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n-    console.log(first)\r\n+    console.log(response.data)\r\n     if(response) setUploadedImageURL(response.data)\r\n   }\r\n \r\n useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1740028884518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n   async function uploadImageToCloudinary(){\r\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n-    const response = await axios.post('http://localhost:7000/api/admin/products/upload-image')\r\n+    const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n     console.log(response.data)\r\n     if(response) setUploadedImageURL(response.data)\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740029480196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n     console.log(response.data)\r\n-    if(response) setUploadedImageURL(response.data)\r\n+    if(response?.) setUploadedImageURL(response.data)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740029487553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n     console.log(response.data)\r\n-    if(response?.) setUploadedImageURL(response.data)\r\n+    if(response?.data?.success) setUploadedImageURL(response.data)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740029493377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n     console.log(response.data)\r\n-    if(response?.data?.success) setUploadedImageURL(response.data)\r\n+    if(response?.data?.success) setUploadedImageURL(response.data/)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740029502447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n     console.log(response.data)\r\n-    if(response?.data?.success) setUploadedImageURL(response.data/)\r\n+    if(response?.data?.success) setUploadedImageURL(response.data.res)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740029508725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     const data = new FormData();\r\n     data.append('my_file',imageFile)\r\n     const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n     console.log(response.data)\r\n-    if(response?.data?.success) setUploadedImageURL(response.data.res)\r\n+    if(response?.data?.success) setUploadedImageURL(response.data.result.url)\r\n   }\r\n \r\n useEffect(()=>{\r\n   if(imageFile !== null ) uploadImageToCloudinary()\r\n"
+                },
+                {
+                    "date": 1740051029871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n+  image\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n     console.log(e.target.files);\r\n"
+                },
+                {
+                    "date": 1740051036531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  image\r\n+  \r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n     console.log(e.target.files);\r\n"
+                },
+                {
+                    "date": 1740051057776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  \r\n+  ImageLoadindState\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n     console.log(e.target.files);\r\n"
+                },
+                {
+                    "date": 1740051067119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  ImageLoadindState\r\n+  ImageLoadindState,\r\n+  setImageLoadingState\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n     console.log(e.target.files);\r\n"
+                },
+                {
+                    "date": 1740051160902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) : (\r\n+        )  : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740051169269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        )  : (\r\n+        ) imageLoadingState ?  : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740051174912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,11 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) imageLoadingState ?  : (\r\n+        ) imageLoadingState ? (\r\n+          \r\n+        ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740051180858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { Label } from \"../ui/label\";\r\n import { FileIcon, UploadCloudIcon, XIcon } from \"lucide-react\";\r\n import { Button } from \"../ui/button\";\r\n import axios from \"axios\";\r\n+import { Skeleton } from \"../ui/skeleton\";\r\n \r\n function ProductImageUpload({\r\n   imageFile,\r\n   setImageFile,\r\n@@ -70,9 +71,9 @@\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n         ) imageLoadingState ? (\r\n-          \r\n+          <Skeleton\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n"
+                },
+                {
+                    "date": 1740051194280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,10 +70,10 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) imageLoadingState ? (\r\n-          <Skeleton\r\n+        ) : imageLoadingState ? (\r\n+          <Skeleton/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n"
+                },
+                {
+                    "date": 1740051199940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) : imageLoadingState ? (\r\n+        ) : ImageLoadindState ? (\r\n           <Skeleton/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n"
+                },
+                {
+                    "date": 1740051211380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  ImageLoadindState,\r\n+  ImageLoadingState,\r\n   setImageLoadingState\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n"
+                },
+                {
+                    "date": 1740051221207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) : ImageLoadindState ? (\r\n+        ) : ImageLoadingState ? (\r\n           <Skeleton/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n"
+                },
+                {
+                    "date": 1740051229350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n         ) : ImageLoadingState ? (\r\n-          <Skeleton/>\r\n+          <Skeleton className=\"/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n"
+                },
+                {
+                    "date": 1740051235127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n         ) : ImageLoadingState ? (\r\n-          <Skeleton className=\"/>\r\n+          <Skeleton className=\"h\"/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n"
+                },
+                {
+                    "date": 1740051246495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n         ) : ImageLoadingState ? (\r\n-          <Skeleton className=\"h\"/>\r\n+          <Skeleton className=\"h-10 bg\"/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n"
+                },
+                {
+                    "date": 1740052093226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,10 @@\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n         ) : ImageLoadingState ? (\r\n-          <Skeleton className=\"h-10 bg\"/>\r\n+          console.log(first)\r\n+          <Skeleton className=\"h-10 bg-gray-200\"/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n                 <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n"
+                },
+                {
+                    "date": 1740052106169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n         ) : ImageLoadingState ? (\r\n-          console.log(first)\r\n+          console.log(ImageLoadingState),\r\n           <Skeleton className=\"h-10 bg-gray-200\"/>\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n"
+                },
+                {
+                    "date": 1740121030553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  ImageLoadingState,\r\n+  ImageLoadingState,ise\r\n   setImageLoadingState\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n"
+                },
+                {
+                    "date": 1740121036333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  ImageLoadingState,ise\r\n+  ImageLoadingState,isEditMode,\r\n   setImageLoadingState\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n"
+                },
+                {
+                    "date": 1740121052288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,9 @@\n           type=\"file\"\r\n           id=\"image-upload\"\r\n           ref={inputRef}\r\n           onChange={handleImageFileChange} className=\"hidden\"\r\n+          disa\r\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n"
+                },
+                {
+                    "date": 1740121058468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n           type=\"file\"\r\n           id=\"image-upload\"\r\n           ref={inputRef}\r\n           onChange={handleImageFileChange} className=\"hidden\"\r\n-          disa\r\n+          disabled={isEditMode}\r\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n"
+                },
+                {
+                    "date": 1740121171129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className=\"flex flex-col items-center justify-center h-32 cursor-pointer\"\r\n+            className=`\"flex flex-col items-center justify-center h-32 cursor-pointer\"`\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121176234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className=`\"flex flex-col items-center justify-center h-32 cursor-pointer\"`\r\n+            className=`\"flex flex-col items-center justify-center h-32 cursor-pointer`\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121191820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className=`\"flex flex-col items-center justify-center h-32 cursor-pointer`\r\n+            className=`{flex flex-col items-center justify-center h-32 cursor-pointer}`\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121200543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className=`{flex flex-col items-center justify-center h-32 cursor-pointer}`\r\n+            className=`{flex flex-col items-center justify-center h-32 cursor-pointer}`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121205683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className=`{flex flex-col items-center justify-center h-32 cursor-pointer}`}\r\n+            className={`{flex flex-col items-center justify-center h-32 cursor-pointer}`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121217317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={`{flex flex-col items-center justify-center h-32 cursor-pointer}`}\r\n+            className={`{flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121223347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={`{flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+            className={`${} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121240443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={`${} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+            className={`${isEditMode ?} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121246884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={`${isEditMode ?} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+            className={`${isEditMode ? } flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121252325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={`${isEditMode ? } flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+            className={`${isEditMode ? 'curso'} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121258477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={`${isEditMode ? 'curso'} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+            className={`${isEditMode ? 'cursor-not-allowed' : \" \"} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n"
+                },
+                {
+                    "date": 1740121291970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,95 @@\n+import { useEffect, useRef } from \"react\";\r\n+import { Input } from \"../ui/input\";\r\n+import { Label } from \"../ui/label\";\r\n+import { FileIcon, UploadCloudIcon, XIcon } from \"lucide-react\";\r\n+import { Button } from \"../ui/button\";\r\n+import axios from \"axios\";\r\n+import { Skeleton } from \"../ui/skeleton\";\r\n+\r\n+function ProductImageUpload({\r\n+  imageFile,\r\n+  setImageFile,\r\n+  uploadedImageURL,\r\n+  setUploadedImageURL,\r\n+  ImageLoadingState,isEditMode,\r\n+  setImageLoadingState\r\n+}) {\r\n+  const inputRef = useRef();\r\n+  function handleImageFileChange(e) {\r\n+    console.log(e.target.files);\r\n+    const selectedFile = e.target.files?.[0];\r\n+    if (selectedFile) setImageFile(selectedFile);\r\n+  }\r\n+\r\n+\r\n+  function handleDragOver(e){\r\n+    e.preventDefault();\r\n+\r\n+\r\n+  }\r\n+\r\n+  function handleDrop (e){\r\n+    e.preventDefault();\r\n+    const droppedFile = e.dataTransfer.files?.[0]\r\n+    if(droppedFile ) setImageFile(droppedFile)\r\n+  }\r\n+\r\n+  function handleRemoveImage(){\r\n+    setImageFile(null);\r\n+    if(inputRef.current){\r\n+        inputRef.current.value = \"\"\r\n+    }\r\n+  }\r\n+\r\n+  async function uploadImageToCloudinary(){\r\n+    const data = new FormData();\r\n+    data.append('my_file',imageFile)\r\n+    const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n+    console.log(response.data)\r\n+    if(response?.data?.success) setUploadedImageURL(response.data.result.url)\r\n+  }\r\n+\r\n+useEffect(()=>{\r\n+  if(imageFile !== null ) uploadImageToCloudinary()\r\n+},[imageFile])\r\n+\r\n+  return (\r\n+    <div className=\"w-full max-w-md mx-auto mt-4\">\r\n+      <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n+      <div className=\"border-2 border-dashed rounded-lg p-4\" onDragOver={handleDragOver} onDrop={handleDrop}>\r\n+        <Input\r\n+          type=\"file\"\r\n+          id=\"image-upload\"\r\n+          ref={inputRef}\r\n+          onChange={handleImageFileChange} className=\"hidden\"\r\n+          disabled={isEditMode}\r\n+        />\r\n+        {!imageFile ? (\r\n+          <Label\r\n+            htmlFor=\"image-upload\"\r\n+            className={` flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+          >\r\n+            <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n+            <span>Drag & drop or click to upload image</span>\r\n+          </Label>\r\n+        ) : ImageLoadingState ? (\r\n+          console.log(ImageLoadingState),\r\n+          <Skeleton className=\"h-10 bg-gray-200\"/>\r\n+        ) : (\r\n+          <div className=\"flex items-center justify-between\">\r\n+            <div className=\"flex items-center\">\r\n+                <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n+            </div>\r\n+            <p className=\"text-sm font-medium\">{imageFile.name}</p>\r\n+            <Button variant=\"ghost\" size=\"icon\" className=\"text-muted-foreground hover:text-foreground\" onClick={handleRemoveImage}>\r\n+                <XIcon className=\"w-4 h-4\"/>\r\n+                <span className=\"sr-only\">Remove file</span>\r\n+            </Button>\r\n+          </div>\r\n+        )}\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default ProductImageUpload;\r\n"
+                },
+                {
+                    "date": 1740121331923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,8 @@\n             className={` flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n             <span>Drag & drop or click to upload image</span>\r\n-          </Label>\r\n         ) : ImageLoadingState ? (\r\n           console.log(ImageLoadingState),\r\n           <Skeleton className=\"h-10 bg-gray-200\"/>\r\n         ) : (\r\n@@ -92,99 +91,4 @@\n   );\r\n }\r\n \r\n export default ProductImageUpload;\r\n-import { useEffect, useRef } from \"react\";\r\n-import { Input } from \"../ui/input\";\r\n-import { Label } from \"../ui/label\";\r\n-import { FileIcon, UploadCloudIcon, XIcon } from \"lucide-react\";\r\n-import { Button } from \"../ui/button\";\r\n-import axios from \"axios\";\r\n-import { Skeleton } from \"../ui/skeleton\";\r\n-\r\n-function ProductImageUpload({\r\n-  imageFile,\r\n-  setImageFile,\r\n-  uploadedImageURL,\r\n-  setUploadedImageURL,\r\n-  ImageLoadingState,isEditMode,\r\n-  setImageLoadingState\r\n-}) {\r\n-  const inputRef = useRef();\r\n-  function handleImageFileChange(e) {\r\n-    console.log(e.target.files);\r\n-    const selectedFile = e.target.files?.[0];\r\n-    if (selectedFile) setImageFile(selectedFile);\r\n-  }\r\n-\r\n-\r\n-  function handleDragOver(e){\r\n-    e.preventDefault();\r\n-\r\n-\r\n-  }\r\n-\r\n-  function handleDrop (e){\r\n-    e.preventDefault();\r\n-    const droppedFile = e.dataTransfer.files?.[0]\r\n-    if(droppedFile ) setImageFile(droppedFile)\r\n-  }\r\n-\r\n-  function handleRemoveImage(){\r\n-    setImageFile(null);\r\n-    if(inputRef.current){\r\n-        inputRef.current.value = \"\"\r\n-    }\r\n-  }\r\n-\r\n-  async function uploadImageToCloudinary(){\r\n-    const data = new FormData();\r\n-    data.append('my_file',imageFile)\r\n-    const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n-    console.log(response.data)\r\n-    if(response?.data?.success) setUploadedImageURL(response.data.result.url)\r\n-  }\r\n-\r\n-useEffect(()=>{\r\n-  if(imageFile !== null ) uploadImageToCloudinary()\r\n-},[imageFile])\r\n-\r\n-  return (\r\n-    <div className=\"w-full max-w-md mx-auto mt-4\">\r\n-      <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n-      <div className=\"border-2 border-dashed rounded-lg p-4\" onDragOver={handleDragOver} onDrop={handleDrop}>\r\n-        <Input\r\n-          type=\"file\"\r\n-          id=\"image-upload\"\r\n-          ref={inputRef}\r\n-          onChange={handleImageFileChange} className=\"hidden\"\r\n-          disabled={isEditMode}\r\n-        />\r\n-        {!imageFile ? (\r\n-          <Label\r\n-            htmlFor=\"image-upload\"\r\n-            className={`${isEditMode ? 'cursor-not-allowed' : \" \"} flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n-          >\r\n-            <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n-            <span>Drag & drop or click to upload image</span>\r\n-          </Label>\r\n-        ) : ImageLoadingState ? (\r\n-          console.log(ImageLoadingState),\r\n-          <Skeleton className=\"h-10 bg-gray-200\"/>\r\n-        ) : (\r\n-          <div className=\"flex items-center justify-between\">\r\n-            <div className=\"flex items-center\">\r\n-                <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n-            </div>\r\n-            <p className=\"text-sm font-medium\">{imageFile.name}</p>\r\n-            <Button variant=\"ghost\" size=\"icon\" className=\"text-muted-foreground hover:text-foreground\" onClick={handleRemoveImage}>\r\n-                <XIcon className=\"w-4 h-4\"/>\r\n-                <span className=\"sr-only\">Remove file</span>\r\n-            </Button>\r\n-          </div>\r\n-        )}\r\n-      </div>\r\n-    </div>\r\n-  );\r\n-}\r\n-\r\n-export default ProductImageUpload;\r\n"
+                },
+                {
+                    "date": 1740121370382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,80 +10,94 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  ImageLoadingState,isEditMode,\r\n-  setImageLoadingState\r\n+  ImageLoadingState,\r\n+  isEditMode,\r\n+  setImageLoadingState,\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n     console.log(e.target.files);\r\n     const selectedFile = e.target.files?.[0];\r\n     if (selectedFile) setImageFile(selectedFile);\r\n   }\r\n \r\n-\r\n-  function handleDragOver(e){\r\n+  function handleDragOver(e) {\r\n     e.preventDefault();\r\n-\r\n-\r\n   }\r\n \r\n-  function handleDrop (e){\r\n+  function handleDrop(e) {\r\n     e.preventDefault();\r\n-    const droppedFile = e.dataTransfer.files?.[0]\r\n-    if(droppedFile ) setImageFile(droppedFile)\r\n+    const droppedFile = e.dataTransfer.files?.[0];\r\n+    if (droppedFile) setImageFile(droppedFile);\r\n   }\r\n \r\n-  function handleRemoveImage(){\r\n+  function handleRemoveImage() {\r\n     setImageFile(null);\r\n-    if(inputRef.current){\r\n-        inputRef.current.value = \"\"\r\n+    if (inputRef.current) {\r\n+      inputRef.current.value = \"\";\r\n     }\r\n   }\r\n \r\n-  async function uploadImageToCloudinary(){\r\n+  async function uploadImageToCloudinary() {\r\n     const data = new FormData();\r\n-    data.append('my_file',imageFile)\r\n-    const response = await axios.post('http://localhost:7000/api/admin/products/upload-image',data)\r\n-    console.log(response.data)\r\n-    if(response?.data?.success) setUploadedImageURL(response.data.result.url)\r\n+    data.append(\"my_file\", imageFile);\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/admin/products/upload-image\",\r\n+      data\r\n+    );\r\n+    console.log(response.data);\r\n+    if (response?.data?.success) setUploadedImageURL(response.data.result.url);\r\n   }\r\n \r\n-useEffect(()=>{\r\n-  if(imageFile !== null ) uploadImageToCloudinary()\r\n-},[imageFile])\r\n+  useEffect(() => {\r\n+    if (imageFile !== null) uploadImageToCloudinary();\r\n+  }, [imageFile]);\r\n \r\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n-      <div className=\"border-2 border-dashed rounded-lg p-4\" onDragOver={handleDragOver} onDrop={handleDrop}>\r\n+      <div\r\n+        className=\"border-2 border-dashed rounded-lg p-4\"\r\n+        onDragOver={handleDragOver}\r\n+        onDrop={handleDrop}\r\n+      >\r\n         <Input\r\n           type=\"file\"\r\n           id=\"image-upload\"\r\n           ref={inputRef}\r\n-          onChange={handleImageFileChange} className=\"hidden\"\r\n+          onChange={handleImageFileChange}\r\n+          className=\"hidden\"\r\n           disabled={isEditMode}\r\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n-            className={` flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n+            className={`${\r\n+              isEditMode ? \"cursor-not-allowed\" : \" \"\r\n+            } flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n-            <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n+            <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\" />\r\n             <span>Drag & drop or click to upload image</span>\r\n+          </Label>\r\n         ) : ImageLoadingState ? (\r\n-          console.log(ImageLoadingState),\r\n-          <Skeleton className=\"h-10 bg-gray-200\"/>\r\n+          (console.log(ImageLoadingState),\r\n+          (<Skeleton className=\"h-10 bg-gray-200\" />))\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n-                <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n+              <FileIcon className=\"w-8 h-8 text-primary mr-2\" />\r\n             </div>\r\n             <p className=\"text-sm font-medium\">{imageFile.name}</p>\r\n-            <Button variant=\"ghost\" size=\"icon\" className=\"text-muted-foreground hover:text-foreground\" onClick={handleRemoveImage}>\r\n-                <XIcon className=\"w-4 h-4\"/>\r\n-                <span className=\"sr-only\">Remove file</span>\r\n+            <Button\r\n+              variant=\"ghost\"\r\n+              size=\"icon\"\r\n+              className=\"text-muted-foreground hover:text-foreground\"\r\n+              onClick={handleRemoveImage}\r\n+            >\r\n+              <XIcon className=\"w-4 h-4\" />\r\n+              <span className=\"sr-only\">Remove file</span>\r\n             </Button>\r\n           </div>\r\n         )}\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1740121391610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n   ImageLoadingState,\r\n-  isEditMode,\r\n+  isEditedMode,\r\n   setImageLoadingState,\r\n }) {\r\n   const inputRef = useRef();\r\n   function handleImageFileChange(e) {\r\n"
+                },
+                {
+                    "date": 1740121402771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n           id=\"image-upload\"\r\n           ref={inputRef}\r\n           onChange={handleImageFileChange}\r\n           className=\"hidden\"\r\n-          disabled={isEditMode}\r\n+          disabled={isEditedMode}\r\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n"
+                },
+                {
+                    "date": 1740121444918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,15 +67,15 @@\n           id=\"image-upload\"\r\n           ref={inputRef}\r\n           onChange={handleImageFileChange}\r\n           className=\"hidden\"\r\n-          disabled={isEditedMode}\r\n+          disabled={isEdietdMode}\r\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n             className={`${\r\n-              isEditMode ? \"cursor-not-allowed\" : \" \"\r\n+              isEditedMode ? \"cursor-not-allowed\" : \" \"\r\n             } flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\" />\r\n             <span>Drag & drop or click to upload image</span>\r\n"
+                },
+                {
+                    "date": 1740121460607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n     const selectedFile = e.target.files?.[0];\r\n     if (selectedFile) setImageFile(selectedFile);\r\n   }\r\n \r\n+  console.log(first)\r\n+\r\n   function handleDragOver(e) {\r\n     e.preventDefault();\r\n   }\r\n \r\n@@ -67,9 +69,9 @@\n           id=\"image-upload\"\r\n           ref={inputRef}\r\n           onChange={handleImageFileChange}\r\n           className=\"hidden\"\r\n-          disabled={isEdietdMode}\r\n+          disabled={isEditedMode}\r\n         />\r\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n"
+                },
+                {
+                    "date": 1740121468912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     const selectedFile = e.target.files?.[0];\r\n     if (selectedFile) setImageFile(selectedFile);\r\n   }\r\n \r\n-  console.log(first)\r\n+  console.log(isEditedMode , editing)\r\n \r\n   function handleDragOver(e) {\r\n     e.preventDefault();\r\n   }\r\n"
+                },
+                {
+                    "date": 1740122455264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     const selectedFile = e.target.files?.[0];\r\n     if (selectedFile) setImageFile(selectedFile);\r\n   }\r\n \r\n-  console.log(isEditedMode , editing)\r\n+  console.log(isEditedMode , \"editing\")\r\n \r\n   function handleDragOver(e) {\r\n     e.preventDefault();\r\n   }\r\n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className=\"border-2 border-dashed rounded-lg p-4\"\r\n+        className={\"border-2 border-dashed rounded-lg p-4\"}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122461054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={\"border-2 border-dashed rounded-lg p-4\"}\r\n+        className={border-2 border-dashed rounded-lg p-4\"}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122467312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={border-2 border-dashed rounded-lg p-4\"}\r\n+        className={`border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122472570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={`border-2 border-dashed rounded-lg p-4`}\r\n+        className={` ${} border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122480522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={` ${} border-2 border-dashed rounded-lg p-4`}\r\n+        className={` ${isEditedMode} border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122488353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={` ${isEditedMode} border-2 border-dashed rounded-lg p-4`}\r\n+        className={` ${isEditedMode ? \"\"} border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122494733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={` ${isEditedMode ? \"\"} border-2 border-dashed rounded-lg p-4`}\r\n+        className={` ${isEditedMode ? \"opacity-50\" : \"\"} border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122833274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  ImageLoadingState,\r\n+  imageLoadingState,\r\n   isEditedMode,\r\n   setImageLoadingState,\r\n }) {\r\n   const inputRef = useRef();\r\n@@ -59,9 +59,9 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={` ${isEditedMode ? \"opacity-50\" : \"\"} border-2 border-dashed rounded-lg p-4`}\r\n+        className={` ${isEditedMode ? \"opacity-50\" : \" \"} border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n"
+                },
+                {
+                    "date": 1740122876299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,21 +10,19 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  imageLoadingState,\r\n+  imageLoadingState, // ✅ Fix: lowercase 'i'\r\n   isEditedMode,\r\n-  setImageLoadingState,\r\n+  setImageLoadingState, // ✅ Fix: ensuring correct usage\r\n }) {\r\n   const inputRef = useRef();\r\n+\r\n   function handleImageFileChange(e) {\r\n-    console.log(e.target.files);\r\n     const selectedFile = e.target.files?.[0];\r\n     if (selectedFile) setImageFile(selectedFile);\r\n   }\r\n \r\n-  console.log(isEditedMode , \"editing\")\r\n-\r\n   function handleDragOver(e) {\r\n     e.preventDefault();\r\n   }\r\n \r\n@@ -41,16 +39,29 @@\n     }\r\n   }\r\n \r\n   async function uploadImageToCloudinary() {\r\n+    if (!imageFile) return;\r\n+\r\n+    setImageLoadingState(true); // ✅ Fix: Start loading\r\n+\r\n     const data = new FormData();\r\n     data.append(\"my_file\", imageFile);\r\n-    const response = await axios.post(\r\n-      \"http://localhost:7000/api/admin/products/upload-image\",\r\n-      data\r\n-    );\r\n-    console.log(response.data);\r\n-    if (response?.data?.success) setUploadedImageURL(response.data.result.url);\r\n+\r\n+    try {\r\n+      const response = await axios.post(\r\n+        \"http://localhost:7000/api/admin/products/upload-image\",\r\n+        data\r\n+      );\r\n+\r\n+      if (response?.data?.success) {\r\n+        setUploadedImageURL(response.data.result.url);\r\n+      }\r\n+    } catch (error) {\r\n+      console.error(\"Upload failed:\", error);\r\n+    } finally {\r\n+      setImageLoadingState(false); // ✅ Fix: Stop loading\r\n+    }\r\n   }\r\n \r\n   useEffect(() => {\r\n     if (imageFile !== null) uploadImageToCloudinary();\r\n@@ -59,9 +70,11 @@\n   return (\r\n     <div className=\"w-full max-w-md mx-auto mt-4\">\r\n       <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n       <div\r\n-        className={` ${isEditedMode ? \"opacity-50\" : \" \"} border-2 border-dashed rounded-lg p-4`}\r\n+        className={` ${\r\n+          isEditedMode ? \"opacity-50\" : \"\"\r\n+        } border-2 border-dashed rounded-lg p-4`}\r\n         onDragOver={handleDragOver}\r\n         onDrop={handleDrop}\r\n       >\r\n         <Input\r\n@@ -75,17 +88,16 @@\n         {!imageFile ? (\r\n           <Label\r\n             htmlFor=\"image-upload\"\r\n             className={`${\r\n-              isEditedMode ? \"cursor-not-allowed\" : \" \"\r\n+              isEditedMode ? \"cursor-not-allowed\" : \"\"\r\n             } flex flex-col items-center justify-center h-32 cursor-pointer`}\r\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\" />\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) : ImageLoadingState ? (\r\n-          (console.log(ImageLoadingState),\r\n-          (<Skeleton className=\"h-10 bg-gray-200\" />))\r\n+        ) : imageLoadingState ? ( // ✅ Fix: Correct condition check\r\n+          <Skeleton className=\"h-10 bg-gray-200\" />\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n               <FileIcon className=\"w-8 h-8 text-primary mr-2\" />\r\n"
+                },
+                {
+                    "date": 1740122882683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n           >\r\n             <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\" />\r\n             <span>Drag & drop or click to upload image</span>\r\n           </Label>\r\n-        ) : imageLoadingState ? ( // ✅ Fix: Correct condition check\r\n+        ) : imageLoadingState ? ( \r\n           <Skeleton className=\"h-10 bg-gray-200\" />\r\n         ) : (\r\n           <div className=\"flex items-center justify-between\">\r\n             <div className=\"flex items-center\">\r\n"
+                },
+                {
+                    "date": 1740122889273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n       }\r\n     } catch (error) {\r\n       console.error(\"Upload failed:\", error);\r\n     } finally {\r\n-      setImageLoadingState(false); // ✅ Fix: Stop loading\r\n+      setImageLoadingState(false); \r\n     }\r\n   }\r\n \r\n   useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1740122896319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n \r\n   async function uploadImageToCloudinary() {\r\n     if (!imageFile) return;\r\n \r\n-    setImageLoadingState(true); // ✅ Fix: Start loading\r\n+    setImageLoadingState(true); \r\n \r\n     const data = new FormData();\r\n     data.append(\"my_file\", imageFile);\r\n \r\n"
+                },
+                {
+                    "date": 1740122904587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n   imageFile,\r\n   setImageFile,\r\n   uploadedImageURL,\r\n   setUploadedImageURL,\r\n-  imageLoadingState, // ✅ Fix: lowercase 'i'\r\n+  imageLoadingState, \r\n   isEditedMode,\r\n-  setImageLoadingState, // ✅ Fix: ensuring correct usage\r\n+  setImageLoadingState, \r\n }) {\r\n   const inputRef = useRef();\r\n \r\n   function handleImageFileChange(e) {\r\n"
+                }
+            ],
+            "date": 1740028529006,
+            "name": "Commit-0",
+            "content": "import { useEffect, useRef } from \"react\";\r\nimport { Input } from \"../ui/input\";\r\nimport { Label } from \"../ui/label\";\r\nimport { FileIcon, UploadCloudIcon, XIcon } from \"lucide-react\";\r\nimport { Button } from \"../ui/button\";\r\n\r\nfunction ProductImageUpload({\r\n  imageFile,\r\n  setImageFile,\r\n  uploadedImageURL,\r\n  setUploadedImageURL,\r\n}) {\r\n  const inputRef = useRef();\r\n  function handleImageFileChange(e) {\r\n    console.log(e.target.files);\r\n    const selectedFile = e.target.files?.[0];\r\n    if (selectedFile) setImageFile(selectedFile);\r\n  }\r\n\r\n\r\n  function handleDragOver(e){\r\n    e.preventDefault();\r\n\r\n\r\n  }\r\n\r\n  function handleDrop (e){\r\n    e.preventDefault();\r\n    const droppedFile = e.dataTransfer.files?.[0]\r\n    if(droppedFile ) setImageFile(droppedFile)\r\n  }\r\n\r\n  function handleRemoveImage(){\r\n    setImageFile(null);\r\n    if(inputRef.current){\r\n        inputRef.current.value = \"\"\r\n    }\r\n  }\r\n\r\nuseEffect()\r\n\r\n  return (\r\n    <div className=\"w-full max-w-md mx-auto mt-4\">\r\n      <Label className=\"text-lg font-semibold mb-2 block\">Upload Image</Label>\r\n      <div className=\"border-2 border-dashed rounded-lg p-4\" onDragOver={handleDragOver} onDrop={handleDrop}>\r\n        <Input\r\n          type=\"file\"\r\n          id=\"image-upload\"\r\n          ref={inputRef}\r\n          onChange={handleImageFileChange} className=\"hidden\"\r\n        />\r\n        {!imageFile ? (\r\n          <Label\r\n            htmlFor=\"image-upload\"\r\n            className=\"flex flex-col items-center justify-center h-32 cursor-pointer\"\r\n          >\r\n            <UploadCloudIcon className=\"w-10 h-10 text-muted-foreground mb-2\"/>\r\n            <span>Drag & drop or click to upload image</span>\r\n          </Label>\r\n        ) : (\r\n          <div className=\"flex items-center justify-between\">\r\n            <div className=\"flex items-center\">\r\n                <FileIcon className=\"w-8 h-8 text-primary mr-2\"/>\r\n            </div>\r\n            <p className=\"text-sm font-medium\">{imageFile.name}</p>\r\n            <Button variant=\"ghost\" size=\"icon\" className=\"text-muted-foreground hover:text-foreground\" onClick={handleRemoveImage}>\r\n                <XIcon className=\"w-4 h-4\"/>\r\n                <span className=\"sr-only\">Remove file</span>\r\n            </Button>\r\n          </div>\r\n        )}\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default ProductImageUpload;\r\n"
+        }
+    ]
+}

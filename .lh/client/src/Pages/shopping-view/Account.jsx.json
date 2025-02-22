@@ -1,0 +1,38 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Account.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1739531701517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739531716289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function ShoppingAccount() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default ShoppingAccount;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531722170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n function ShoppingAccount() {\r\n-    return (  );\r\n+    return (  ) ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default ShoppingAccount;\n+export default ShoppingAccount  ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531727214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function ShoppingAccount() {\r\n-    return (  ) ;\r\n+    return ( \r\n+        <div></div>\r\n+     ) ;\r\n }\r\n \r\n export default ShoppingAccount  ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531734724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingAccount() {\r\n     return ( \r\n-        <div></div>\r\n+        <div>Shopping view </div>\r\n      ) ;\r\n }\r\n \r\n export default ShoppingAccount  ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739531742580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingAccount() {\r\n     return ( \r\n-        <div>Shopping view </div>\r\n+        <div>Shopping view Account</div>\r\n      ) ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default ShoppingAccount  ;\n+export default ShoppingAccount;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739531701517,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

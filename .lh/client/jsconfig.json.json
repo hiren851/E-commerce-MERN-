@@ -1,0 +1,22 @@
+{
+    "sourceFile": "client/jsconfig.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1739516714173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739516734454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,6 @@\n {\r\n-    \"files\": [],\r\n-    \"references\": [\r\n-      {\r\n-        \"path\": \"./tsconfig.app.json\"\r\n-      },\r\n-      {\r\n-        \"path\": \"./tsconfig.node.json\"\r\n-      }\r\n-    ],\r\n+   \r\n     \"compilerOptions\": {\r\n       \"baseUrl\": \".\",\r\n       \"paths\": {\r\n         \"@/*\": [\"./src/*\"]\r\n"
+                }
+            ],
+            "date": 1739516714173,
+            "name": "Commit-0",
+            "content": "{\r\n    \"files\": [],\r\n    \"references\": [\r\n      {\r\n        \"path\": \"./tsconfig.app.json\"\r\n      },\r\n      {\r\n        \"path\": \"./tsconfig.node.json\"\r\n      }\r\n    ],\r\n    \"compilerOptions\": {\r\n      \"baseUrl\": \".\",\r\n      \"paths\": {\r\n        \"@/*\": [\"./src/*\"]\r\n      }\r\n    }\r\n  }\r\n  "
+        }
+    ]
+}

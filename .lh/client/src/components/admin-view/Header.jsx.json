@@ -1,0 +1,46 @@
+{
+    "sourceFile": "client/src/components/admin-view/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1739529167695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739529673307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Header = () => {\r\n+const AdminHeader = () => {\r\n   return (\r\n-    <div>Header</div>\r\n+    <div>AdminHeader</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Header\n+export default AdminHeader\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739529681753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n     <div>AdminHeader</div>\r\n   )\r\n }\r\n \r\n-export default AdminHeader\n\\ No newline at end of file\n+export default AdminHeader;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739529688331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-const AdminHeader = () => {\r\n+const AdminHeader =() => {\r\n   return (\r\n     <div>AdminHeader</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1740117998187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,26 @@\n import React from 'react'\r\n+import { Button } from '../ui/button';\r\n+import { AlignJustify } from 'lucide-react';\r\n+import { LogOut } from 'lucide-react';\r\n \r\n-const AdminHeader =() => {\r\n+\r\n+const AdminHeader =({setOpenSidebar})=> {\r\n   return (\r\n-    <div>AdminHeader</div>\r\n+    <div className=''>\r\n+      <header className='flex items-center justify-between px-4 py-3'>\r\n+      <Button onClick={()=> setOpenSidebar(true)} className=\"lg:hidden sm:block bg-black text-white\">\r\n+        <AlignJustify />\r\n+        <span className='sr-only'>Toggle Menu</span>\r\n+      </Button>\r\n+      <div className='flex flex-1 justify-end'>\r\n+        <Button className=\"inline-flex gap-2 items-center rounded-md px-4 py-2 text-sm font-medium shadow bg-emerald-600\">\r\n+        <LogOut  />\r\n+        Logout\r\n+        </Button>\r\n+      </div>\r\n+      </header>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default AdminHeader;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740118058214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n const AdminHeader =({setOpenSidebar})=> {\r\n   return (\r\n-    <div className=''>\r\n+    <div className='bg-lime-200'>\r\n       <header className='flex items-center justify-between px-4 py-3'>\r\n       <Button onClick={()=> setOpenSidebar(true)} className=\"lg:hidden sm:block bg-black text-white\">\r\n         <AlignJustify />\r\n         <span className='sr-only'>Toggle Menu</span>\r\n"
+                },
+                {
+                    "date": 1740118068140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n const AdminHeader =({setOpenSidebar})=> {\r\n   return (\r\n-    <div className='bg-lime-200'>\r\n+    <div className='>\r\n       <header className='flex items-center justify-between px-4 py-3'>\r\n       <Button onClick={()=> setOpenSidebar(true)} className=\"lg:hidden sm:block bg-black text-white\">\r\n         <AlignJustify />\r\n         <span className='sr-only'>Toggle Menu</span>\r\n"
+                },
+                {
+                    "date": 1740118074555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n const AdminHeader =({setOpenSidebar})=> {\r\n   return (\r\n-    <div className='bg-lime-20'>\r\n+    <div className='bg-lime-500'>\r\n       <header className='flex items-center justify-between px-4 py-3'>\r\n       <Button onClick={()=> setOpenSidebar(true)} className=\"lg:hidden sm:block bg-black text-white\">\r\n         <AlignJustify />\r\n         <span className='sr-only'>Toggle Menu</span>\r\n"
+                }
+            ],
+            "date": 1739529167695,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Header = () => {\r\n  return (\r\n    <div>Header</div>\r\n  )\r\n}\r\n\r\nexport default Header"
+        }
+    ]
+}
