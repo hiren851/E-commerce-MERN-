@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 90,
+            "activePatchIndex": 99,
             "patches": [
                 {
                     "date": 1739511971884,
@@ -368,6 +368,42 @@
                 {
                     "date": 1739861256985,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n-const authRouter = require(\"./\");\r\n+const authRouter = require(\"./routes/auth/auth-routes\");\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1740211649680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n const authRouter = require(\"./routes/auth/auth-routes\");\r\n+const adminProductsRouter = require('./routes/admin/products-routes')\r\n+cosnt \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n@@ -31,6 +33,7 @@\n \r\n app.use(cookieParser());\r\n app.use(express.json());\r\n app.use(\"/api/auth\", authRouter);\r\n+app.use(\"/api/admin/products\" , adminProductsRouter)\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1740211654867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n const authRouter = require(\"./routes/auth/auth-routes\");\r\n const adminProductsRouter = require('./routes/admin/products-routes')\r\n-cosnt \r\n+cosnt shopProducts\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1740211661749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n const authRouter = require(\"./routes/auth/auth-routes\");\r\n const adminProductsRouter = require('./routes/admin/products-routes')\r\n-cosnt shopProducts\r\n+cosnt shopProductsRouter = require\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1740211667119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n const authRouter = require(\"./routes/auth/auth-routes\");\r\n const adminProductsRouter = require('./routes/admin/products-routes')\r\n-cosnt shopProductsRouter = require\r\n+cosnt shopProductsRouter = require('./')\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1740211683617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n const authRouter = require(\"./routes/auth/auth-routes\");\r\n const adminProductsRouter = require('./routes/admin/products-routes')\r\n-cosnt shopProductsRouter = require('./')\r\n+cosnt shopProductsRouter = require('./routes/shop/products-routes')\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1740211690051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n const authRouter = require(\"./routes/auth/auth-routes\");\r\n const adminProductsRouter = require('./routes/admin/products-routes')\r\n-cosnt shopProductsRouter = require('./routes/shop/products-routes')\r\n+const shopProductsRouter = require('./routes/shop/products-routes')\r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1740211697125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,7 @@\n app.use(cookieParser());\r\n app.use(express.json());\r\n app.use(\"/api/auth\", authRouter);\r\n app.use(\"/api/admin/products\" , adminProductsRouter)\r\n+app.use\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1740211710919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,7 +34,7 @@\n app.use(cookieParser());\r\n app.use(express.json());\r\n app.use(\"/api/auth\", authRouter);\r\n app.use(\"/api/admin/products\" , adminProductsRouter)\r\n-app.use\r\n+app.use(\"/api/shop/products\")\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1740211716256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,7 +34,7 @@\n app.use(cookieParser());\r\n app.use(express.json());\r\n app.use(\"/api/auth\", authRouter);\r\n app.use(\"/api/admin/products\" , adminProductsRouter)\r\n-app.use(\"/api/shop/products\")\r\n+app.use(\"/api/shop/products\" , shopProductsRouter)\r\n \r\n app.listen(PORT, () => console.log(`Server is Now Running on Port ${PORT}`));\r\n"
                 }
             ],
             "date": 1739511971884,

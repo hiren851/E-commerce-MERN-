@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1739531657775,
@@ -32,6 +32,66 @@
                 {
                     "date": 1739531932749,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-function Shopping Listing() {\r\n+function ShoppingListing() {\r\n     return ( \r\n         <div>Shopping Home</div>\r\n      );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ShoppingHome;\n+export default ShoppingListing;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740208007759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-        <div>Shopping Home</div>\r\n+     \r\n      );\r\n }\r\n \r\n export default ShoppingListing;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740208022991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function ShoppingListing() {\r\n     return ( \r\n-     \r\n+     <div className=\"grid grid-col-\">\r\n+\r\n+     </div>\r\n      );\r\n }\r\n \r\n export default ShoppingListing;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740208028695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-col-\">\r\n+     <div className=\"grid grid-cols-1\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208036597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1\">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208042088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1 md:grid-cols\">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols-[300px\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208048856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1 md:grid-cols-[300px\">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols-[300px]_1fr\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208054141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1 md:grid-cols-[300px]_1fr\">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr]\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208063811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr]\">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 \">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208073914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 \">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208079432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingListing() {\r\n     return ( \r\n-     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p\">\r\n+     <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6\">\r\n \r\n      </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740208224005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingListing() {\r\n     return ( \r\n      <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6\">\r\n-\r\n+        \r\n      </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740208229785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n+import ProductFilter from \"@/components/shopping-view/Filter\";\r\n+\r\n function ShoppingListing() {\r\n     return ( \r\n      <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6\">\r\n-        \r\n+        <ProductFilter/>\r\n      </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740209175329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,11 @@\n function ShoppingListing() {\r\n     return ( \r\n      <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6\">\r\n         <ProductFilter/>\r\n+        <div className=\"bg-background \">\r\n+\r\n+        </div>\r\n      </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740209183962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function ShoppingListing() {\r\n     return ( \r\n      <div className=\"grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6\">\r\n         <ProductFilter/>\r\n-        <div className=\"bg-background w-full rounded\">\r\n+        <div className=\"bg-background w-full rounded-\">\r\n \r\n         </div>\r\n      </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740209289574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <ProductFilter/>\r\n         <div className=\"bg-background w-full rounded-lg shadow-sm\">\r\n             <div className=\"p-4 border-b flex items-center justify-between\">\r\n                 <h2 className=\"text-lg font-extrabold\">All products</h2>\r\n-                <div className=\"flex ietms\">\r\n+                <div className=\"flex items-center\">\r\n \r\n                 </div>\r\n             </div>\r\n         </div>\r\n"
                 }
             ],
             "date": 1739531657775,

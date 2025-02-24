@@ -1,0 +1,122 @@
+{
+    "sourceFile": "server/controllers/shop/product-controller.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1740211038596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740211092098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n \r\n \r\n+const getFiltere\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211099033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-const getFiltere\n\\ No newline at end of file\n+const getFilteredProducts=()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211106282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n \r\n \r\n-const getFilteredProducts=()\n\\ No newline at end of file\n+const getFilteredProducts=(req)=>{\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211112649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n \r\n \r\n-const getFilteredProducts=(req)=>{\r\n-\r\n-}\n\\ No newline at end of file\n+const getFilteredProducts=(req,res)=>{\r\n+    \r\n+}   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211118807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n \r\n \r\n const getFilteredProducts=(req,res)=>{\r\n-    \r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+            \r\n+    }\r\n }   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211128401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n-            \r\n+            console.log(error)\r\n+            res.st\r\n     }\r\n }   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211137658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n     try {\r\n         \r\n     } catch (error) {\r\n             console.log(error)\r\n-            res.st\r\n+            res.status(500).json\r\n     }\r\n }   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211147502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,10 @@\n     try {\r\n         \r\n     } catch (error) {\r\n             console.log(error)\r\n-            res.status(500).json\r\n+            res.status(500).json({\r\n+                success : false , \r\n+                messa\r\n+            })\r\n     }\r\n }   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211160812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n     } catch (error) {\r\n             console.log(error)\r\n             res.status(500).json({\r\n                 success : false , \r\n-                messa\r\n+                message : ' some error occured'\r\n             })\r\n     }\r\n }   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211185091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n \r\n-\r\n+const \r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n             console.log(error)\r\n             res.status(500).json({\r\n                 success : false , \r\n-                message : ' some error occured'\r\n+                message : ' some error occured!'\r\n             })\r\n     }\r\n }   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211192807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const \r\n+const product \r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740211198354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const product \r\n+const product requ\r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740211209134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const product requ\r\n+const Product require()\r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740211217661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const Product require()\r\n+const Product =  require('./')\r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740211224445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const Product =  require('./')\r\n+const Product =  require('../../')\r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740211231512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const Product =  require('../../')\r\n+const Product =  require('../../models/Products')\r\n const getFilteredProducts=(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1740211239926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,11 @@\n-\r\n-const Product =  require('../../models/Products')\r\n-const getFilteredProducts=(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (error) {\r\n-            console.log(error)\r\n-            res.status(500).json({\r\n-                success : false , \r\n-                message : ' some error occured!'\r\n-            })\r\n-    }\r\n-}   \n\\ No newline at end of file\n+const Product = require(\"../../models/Products\");\r\n+const getFilteredProducts = (req, res) => {\r\n+  try {\r\n+  } catch (error) {\r\n+    console.log(error);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \" some error occured!\",\r\n+    });\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1740211250401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const Product = require(\"../../models/Products\");\r\n const getFilteredProducts = (req, res) => {\r\n   try {\r\n+\r\n+    const product = \r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211257863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const Product = require(\"../../models/Products\");\r\n const getFilteredProducts = (req, res) => {\r\n   try {\r\n \r\n-    const product = \r\n+    const product = await Pro\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211268320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const Product = require(\"../../models/Products\");\r\n const getFilteredProducts = (req, res) => {\r\n   try {\r\n \r\n-    const product = await Pro\r\n+    const product = await Product.find({})\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211274874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n const Product = require(\"../../models/Products\");\r\n const getFilteredProducts = (req, res) => {\r\n   try {\r\n \r\n-    const product = await Product.find({})\r\n+    const product = asyc Product.find({}\r\n+        \r\n+    )\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211286723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const Product = require(\"../../models/Products\");\r\n const getFilteredProducts = (req, res) => {\r\n   try {\r\n \r\n-    const product = asyc Product.find({}\r\n+    const product = await Product.find({}\r\n         \r\n     )\r\n   } catch (error) {\r\n     console.log(error);\r\n"
+                },
+                {
+                    "date": 1740211312564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n const Product = require(\"../../models/Products\");\r\n-const getFilteredProducts = (req, res) => {\r\n+const getFilteredProducts =async (req, res) => {\r\n   try {\r\n \r\n-    const product = await Product.find({}\r\n-        \r\n-    )\r\n+    const product = await Product.find({})\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211317943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n const getFilteredProducts =async (req, res) => {\r\n   try {\r\n \r\n     const product = await Product.find({})\r\n+    res.\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211324793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const getFilteredProducts =async (req, res) => {\r\n   try {\r\n \r\n     const product = await Product.find({})\r\n-    res.\r\n+    res.status(200).json\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740211331010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,14 @@\n   try {\r\n \r\n     const product = await Product.find({})\r\n     res.status(200).json({\r\n-        success : \r\n+        success : t\r\n     })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n\\ No newline at end of file\n-      message: \" some error \n+      message: \" some error occured!\",\r\n+    });\r\n+  }\r\n+};\r\n"
+                }
+            ],
+            "date": 1740211038596,
+            "name": "Commit-0",
+            "content": "\r\n\r\n"
+        }
+    ]
+}

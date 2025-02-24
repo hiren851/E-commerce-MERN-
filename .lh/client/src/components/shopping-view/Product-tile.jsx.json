@@ -1,0 +1,194 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Product-tile.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 44,
+            "patches": [
+                {
+                    "date": 1740210006846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740210015126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function SHoppingProductTile() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210042526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function SHoppingProductTile() {\r\n+function SHoppingProductTile({}) {\r\n     return (  );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210053843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n-function SHoppingProductTile({}) {\r\n-    return (  );\r\n+import { Card } from \"../ui/card\";\r\n+\r\n+function SHoppingProductTile({product}) {\r\n+    return ( \r\n+        <Card></Card>\r\n+     );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210058989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Card } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({product}) {\r\n     return ( \r\n-        <Card></Card>\r\n+        <Card clas></Card>\r\n      );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210077160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Card } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({product}) {\r\n     return ( \r\n-        <Card clas></Card>\r\n+        <Card className=\"\"></Card>\r\n      );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210083000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Card } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({product}) {\r\n     return ( \r\n-        <Card className=\"\"></Card>\r\n+        <Card className=\"w-full \"></Card>\r\n      );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210089856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Card } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({product}) {\r\n     return ( \r\n-        <Card className=\"w-full \"></Card>\r\n+        <Card className=\"w-full max-w-sm \"></Card>\r\n      );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210100911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import { Card } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({product}) {\r\n     return ( \r\n-        <Card className=\"w-full max-w-sm \"></Card>\r\n+        <Card className=\"w-full max-w-sm mx-auto\">\r\n+            <div>\r\n+                \\\r\n+            </div>\r\n+        </Card>\r\n      );\r\n }\r\n \r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210108254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function SHoppingProductTile({product}) {\r\n     return ( \r\n         <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n-                \\\r\n+                <div className=\"relative\"></div>\r\n             </div>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740210117597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Card } from \"../ui/card\";\r\n+\r\n+function SHoppingProductTile({product}) {\r\n+    return ( \r\n+        <Card className=\"w-full max-w-sm mx-auto\">\r\n+            <div>\r\n+                <div className=\"relative\">\r\n+                    <img />\r\n+                </div>\r\n+            </div>\r\n+        </Card>\r\n+     );\r\n+}\r\n+\r\n+export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210123997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,25 +4,14 @@\n     return ( \r\n         <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n-                    <img />\r\n+                    <img \r\n+                    \r\n+                    />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n }\r\n \r\n-export default SHoppingProductTile;\n-import { Card } from \"../ui/card\";\r\n-\r\n-function SHoppingProductTile({product}) {\r\n-    return ( \r\n-        <Card className=\"w-full max-w-sm mx-auto\">\r\n-            <div>\r\n-                <div className=\"relative\"></div>\r\n-            </div>\r\n-        </Card>\r\n-     );\r\n-}\r\n-\r\n export default SHoppingProductTile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740210132549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n                     <img \r\n-                    \r\n+                    src={product?}\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210142028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n         <Card className=\"w-full max-w-sm mx-auto\">\r\n             <div>\r\n                 <div className=\"relative\">\r\n                     <img \r\n-                    src={product?}\r\n+                    src={product?.image}\r\n+                    alt={}\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210149018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n             <div>\r\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n-                    alt={}\r\n+                    alt={product?.title}\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210159692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n                     alt={product?.title}\r\n+                    className=\"w-full \"\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210164984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n                     alt={product?.title}\r\n-                    className=\"w-full \"\r\n+                    className=\"w-full h-[\"\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210171732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n                     alt={product?.title}\r\n-                    className=\"w-full h-[\"\r\n+                    className=\"w-full h-[300px] \"\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210177650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n                     alt={product?.title}\r\n-                    className=\"w-full h-[300px] \"\r\n+                    className=\"w-full h-[300px] objetc-cover \"\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210183347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n                     alt={product?.title}\r\n-                    className=\"w-full h-[300px] objetc-cover \"\r\n+                    className=\"w-full h-[300px] object-cover\"\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210191994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n                 <div className=\"relative\">\r\n                     <img \r\n                     src={product?.image}\r\n                     alt={product?.title}\r\n-                    className=\"w-full h-[300px] object-cover\"\r\n+                    className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210198232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n+                    {}\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740210203731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {}\r\n+                    {\r\n+                        \r\n+                    }\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740210210241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {\r\n-                        \r\n+                    {product.salePrice\r\n+\r\n                     }\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210216394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice\r\n+                    {product.salePrice > 0 ? \r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210233429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? \r\n+                    {product.salePrice > 0 ? <\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210245935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Badge } from \"../ui/badge\";\r\n import { Card } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({product}) {\r\n     return ( \r\n@@ -9,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <\r\n+                    {product.salePrice > 0 ? <Badge/> : \r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210255087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge/> : \r\n+                    {product.salePrice > 0 ? <Badge></Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210261138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge></Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge>sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210270590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge>sale</Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge className=\"absolute \">sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210277168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge className=\"absolute \">sale</Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 \">sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210285340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 \">sale</Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-600 \">sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210294751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-600 \">sale</Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-600 hover:\">sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210301007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-600 hover:\">sale</Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-600 hover:bg-red\">sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210308422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     src={product?.image}\r\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n-                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-600 hover:bg-red\">sale</Badge> : null\r\n+                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-500 hover:bg-red-600\">sale</Badge> : null\r\n \r\n                     }\r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740210314197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n                     alt={product?.title}\r\n                     className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n                     />\r\n                     {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-500 hover:bg-red-600\">sale</Badge> : null\r\n-\r\n+                    \r\n                     }\r\n                 </div>\r\n             </div>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740210332441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,26 @@\n import { Badge } from \"../ui/badge\";\r\n import { Card } from \"../ui/card\";\r\n \r\n-function SHoppingProductTile({product}) {\r\n-    return ( \r\n-        <Card className=\"w-full max-w-sm mx-auto\">\r\n-            <div>\r\n-                <div className=\"relative\">\r\n-                    <img \r\n-                    src={product?.image}\r\n-                    alt={product?.title}\r\n-                    className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n-                    />\r\n-                    {product.salePrice > 0 ? <Badge className=\"absolute top-2 left-2 bg-red-500 hover:bg-red-600\">sale</Badge> : null\r\n-                    \r\n-                    }\r\n-                </div>\r\n-            </div>\r\n-        </Card>\r\n-     );\r\n+function SHoppingProductTile({ product }) {\r\n+  return (\r\n+    <Card className=\"w-full max-w-sm mx-auto\">\r\n\\ No newline at end of file\n+      <div>\r\n+        <div className=\"relative\">\r\n+          <img\r\n+            src={product?.image}\r\n+            alt={product?.title}\r\n+            className=\"w-full h-[300px] object-cover rounded-t-lg\"\r\n+          />\r\n+          {product.salePrice > 0 ? (\r\n+            <Badge className=\"absolute top-2 left-2 bg-red-500 hover:bg-red-600\">\r\n+              sale\r\n+            </Badge>\r\n+          ) : null}\r\n+        </div>\r\n+        \r\n+      </div>\r\n+    </Card>\r\n+  );\r\n }\r\n \r\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210341450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Badge } from \"../ui/badge\";\r\n-import { Card } from \"../ui/card\";\r\n+import { Card, CardContent } from \"../ui/card\";\r\n \r\n function SHoppingProductTile({ product }) {\r\n   return (\r\n     <Card className=\"w-full max-w-sm mx-auto\">\r\n@@ -16,11 +16,13 @@\n               sale\r\n             </Badge>\r\n           ) : null}\r\n         </div>\r\n-        \r\n+        <CardContent>\r\n+            \r\n+        </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n\\ No newline at end of file\n }\r\n \r\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210349740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,13 @@\n               sale\r\n             </Badge>\r\n           ) : null}\r\n         </div>\r\n-        <CardContent>\r\n-            \r\n+        <CardContent className=\"p-4 \">\r\n+\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n\\ No newline at end of file\n \r\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210355464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n             </Badge>\r\n           ) : null}\r\n         </div>\r\n         <CardContent className=\"p-4 \">\r\n-\r\n+            <h2></h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210361144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n             </Badge>\r\n           ) : null}\r\n         </div>\r\n         <CardContent className=\"p-4 \">\r\n-            <h2></h2>\r\n+            <h2>{product.tile}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210370650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n             </Badge>\r\n           ) : null}\r\n         </div>\r\n         <CardContent className=\"p-4 \">\r\n-            <h2>{product.tile}</h2>\r\n+            <h2 className=\"text-\">{product.title}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210377044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n             </Badge>\r\n           ) : null}\r\n         </div>\r\n         <CardContent className=\"p-4 \">\r\n-            <h2 className=\"text-\">{product.title}</h2>\r\n+            <h2 className=\"text-xl font-bold \">{product.title}</h2>\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default SHoppingProductTile;\n+export default SHoppingProductTile;\r\n"
+                },
+                {
+                    "date": 1740210386478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n           ) : null}\r\n         </div>\r\n         <CardContent className=\"p-4 \">\r\n             <h2 className=\"text-xl font-bold mb-2\">{product.title}</h2>\r\n-            \r\n+            d\r\n         </CardContent>\r\n       </div>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740210438231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n           ) : null}\r\n         </div>\r\n         <CardContent className=\"p-4 \">\r\n             <h2 className=\"text-xl font-bold mb-2\">{product.title}</h2>\r\n-            <div className=\"flex justify-between items-cenetr\">\r\n+            <div className=\"flex justify-between items-cenet\">\r\n                 <span className=\"\">{product.category}</span>\r\n                 <span className=\"\">{product.category}</span>\r\n             </div>\r\n         </CardContent>\r\n"
+                }
+            ],
+            "date": 1740210006846,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

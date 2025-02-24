@@ -1,0 +1,54 @@
+{
+    "sourceFile": "server/routes/shop/products-routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1740211530923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740211541580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express');\r\n+\r\n+\r\n+const {} = require('../../controllers/admin/products-controllers');\r\n+\r\n+const {upload} = require('../../helpers/cloudinary')\r\n+\r\n+const router = express.Router();\r\n+\r\n+router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n+router.post(\"/add\", addProducts);\r\n+router.get(\"/get\", fetchAllProducts);\r\n+router.put('/edit/:id', editProducts)\r\n+router.delete('/delete/:id', deleteProducts)\r\n+\r\n+\r\n+module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740211547508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\r\n \r\n \r\n-const {} = require('../../controllers/admin/products-controllers');\r\n+const {} = require('../../controllers/shop/products-controllers');\r\n \r\n const {upload} = require('../../helpers/cloudinary')\r\n \r\n const router = express.Router();\r\n"
+                },
+                {
+                    "date": 1740211553690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\r\n \r\n \r\n-const {} = require('../../controllers/shop/products-controllers');\r\n+const {} = require('../../controllers/shop/product-controller');\r\n \r\n const {upload} = require('../../helpers/cloudinary')\r\n \r\n const router = express.Router();\r\n"
+                },
+                {
+                    "date": 1740211559330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\r\n \r\n \r\n-const {} = require('../../controllers/shop/product-controller');\r\n+const {getFilteredProducts} = require('../../controllers/shop/product-controller');\r\n \r\n const {upload} = require('../../helpers/cloudinary')\r\n \r\n const router = express.Router();\r\n"
+                },
+                {
+                    "date": 1740211565969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,8 @@\n \r\n \r\n const {getFilteredProducts} = require('../../controllers/shop/product-controller');\r\n \r\n-const {upload} = require('../../helpers/cloudinary')\r\n-\r\n const router = express.Router();\r\n \r\n router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n router.post(\"/add\", addProducts);\r\n"
+                },
+                {
+                    "date": 1740211575950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,8 @@\n \r\n const {getFilteredProducts} = require('../../controllers/shop/product-controller');\r\n \r\n const router = express.Router();\r\n-\r\n-router.post(\"/upload-image\" , upload.single(\"my_file\"),handleImageUpload)\r\n-router.post(\"/add\", addProducts);\r\n router.get(\"/get\", fetchAllProducts);\r\n router.put('/edit/:id', editProducts)\r\n router.delete('/delete/:id', deleteProducts)\r\n \r\n"
+                },
+                {
+                    "date": 1740211581692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \r\n const {getFilteredProducts} = require('../../controllers/shop/product-controller');\r\n \r\n const router = express.Router();\r\n+\r\n+\r\n router.get(\"/get\", fetchAllProducts);\r\n-router.put('/edit/:id', editProducts)\r\n-router.delete('/delete/:id', deleteProducts)\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740211587760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.get(\"/get\", fetchAllProducts);\r\n+router.get(\"/get\", getFilteredProducts);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740211593428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n-const express = require('express');\r\n+const express = require(\"express\");\r\n \r\n+const {\r\n+  getFilteredProducts,\r\n+} = require(\"../../controllers/shop/product-controller\");\r\n \r\n-const {getFilteredProducts} = require('../../controllers/shop/product-controller');\r\n-\r\n const router = express.Router();\r\n \r\n-\r\n router.get(\"/get\", getFilteredProducts);\r\n \r\n-\r\n module.exports = router;\r\n"
+                }
+            ],
+            "date": 1740211530923,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1739522384046,
@@ -84,6 +84,22 @@
                 {
                     "date": 1740050342255,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n-        admin\r\n+        adminProducts : \r\n     }\r\n })\r\n \r\n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212545692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n-        adminProducts : \r\n+        adminProducts : adminProductSLice\r\n     }\r\n })\r\n \r\n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212558416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n+import shopProductSLice  from './admin/products-slice'\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n"
+                },
+                {
+                    "date": 1740212568609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import shopProductSLice  from './admin/products-slice'\r\n+import shopProductSLice  from './'\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n"
+                },
+                {
+                    "date": 1740212580432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import shopProductSLice  from './'\r\n+import shopProductSLice  from './shop/product-slice'\r\n \r\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n-        adminProducts : adminProductSLice\r\n+        adminProducts : adminProductSLice,\r\n+        \r\n     }\r\n })\r\n \r\n export default store;\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1739522384046,

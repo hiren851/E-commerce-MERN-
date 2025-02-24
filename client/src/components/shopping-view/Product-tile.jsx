@@ -1,3 +1,4 @@
+import { brandOptionsMap, categoryOptionsMap } from "@/config";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter } from "../ui/card";
@@ -22,19 +23,27 @@ function SHoppingProductTile({ product }) {
           <h2 className="text-xl font-bold mb-2">{product.title}</h2>
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm text-muted-foreground">
-              {product.category}
+              {categoryOptionsMap[product.category]}
             </span>
             <span className="text-sm text-muted-foreground">
-              {product.brand}
+              {brandOptionsMap[product.brand]}
             </span>
           </div>
           <div className="flex justify-between">
-                <span className={`${product?.salePrice > 0 ? "line-through" : " "} text-lg font-semibold text-primary`}>₹{product?.price}</span>
-               {product?.salePrice > 0  ? <span className="text-lg font-bold">₹{product?.salePrice}</span> : null}
-            </div>
+            <span
+              className={`${
+                product?.salePrice > 0 ? "line-through" : " "
+              } text-lg font-semibold text-primary`}
+            >
+              ₹{product?.price}
+            </span>
+            {product?.salePrice > 0 ? (
+              <span className="text-lg font-bold">₹{product?.salePrice}</span>
+            ) : null}
+          </div>
         </CardContent>
         <CardFooter>
-            <Button className='w-full'>Add to cart</Button>
+          <Button className="w-full">Add to cart</Button>
         </CardFooter>
       </div>
     </Card>

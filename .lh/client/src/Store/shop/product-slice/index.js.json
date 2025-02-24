@@ -1,0 +1,306 @@
+{
+    "sourceFile": "client/src/Store/shop/product-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 72,
+            "patches": [
+                {
+                    "date": 1740211850037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740211865374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n \r\n \r\n+const shopPro\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211878782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-const shopPro\n\\ No newline at end of file\n+const shopProductsSlice  = createSLice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211887247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n+const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n\\ No newline at end of file\n-const shopProductsSlice  = createSLice\n+const shopProductsSlice  = createSlice({\r\n+    \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211893579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n const shopProductsSlice  = createSlice({\r\n-    \r\n+    name : ''\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211901083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n const shopProductsSlice  = createSlice({\r\n-    name : ''\r\n+    name : 'shop'\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211918004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n-const shopProductsSlice  = createSlice({\r\n-    name : 'shop'\r\n+const shoppingProductsSlice  = createSlice({\r\n+    name : 'shoppingProducts'\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211923765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n \r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts'\r\n+    \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211930899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n \r\n const shoppingProductsSlice  = createSlice({\r\n-    name : 'shoppingProducts'\r\n-    \r\n+    name : 'shoppingProducts',\r\n+    initialState : {\r\n+        \r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211942684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n-\r\n+const \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n-    initialState : {\r\n-        \r\n-    }\r\n+    initialState : \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211952595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n-const \r\n+const initialState = {\r\n+    \r\n+}\r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState : \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211959191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n-    \r\n+     isloa\r\n }\r\n+\r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState : \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740211969678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n-     isloa\r\n+     isLoading = false ,\r\n+     \r\n }\r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n"
+                },
+                {
+                    "date": 1740211977066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading = false ,\r\n-     \r\n+     produc\r\n }\r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n"
+                },
+                {
+                    "date": 1740211982523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading = false ,\r\n-     produc\r\n+     productList = []\r\n }\r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n"
+                },
+                {
+                    "date": 1740211989078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const { createSlice } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n-     isLoading = false ,\r\n-     productList = []\r\n+     isLoading : false ,\r\n+     productList : []\r\n }\r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n"
+                },
+                {
+                    "date": 1740211998008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n }\r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n-    initialState : \r\n+    initialState  \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212003705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n }\r\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n-    initialState  \r\n+    initialState ,\r\n+     \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212009414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n \r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState ,\r\n+    reducers : {},\r\n      \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212015616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n-     \r\n+    extraReducers :  \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212023022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n-    extraReducers :  \r\n+    extraReducers : (builder) \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212097983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,18 @@\n      isLoading : false ,\r\n      productList : []\r\n }\r\n \r\n+export const fetchAllProducts = createAsyncThunk('/products/fetchAllProducts',\r\n+    async()=>{\r\n+        const result = await axios.get(\"http://localhost:7000/api/admin/products/get\")\r\n+            return result?.data\r\n+    }\r\n+)\r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n-    extraReducers : (builder) \r\n+    extraReducers : (builder)=> {\r\n+\r\n+    } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212105094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,16 @@\n      isLoading : false ,\r\n      productList : []\r\n }\r\n \r\n-export const fetchAllProducts = createAsyncThunk('/products/fetchAllProducts',\r\n+export const fetchAllFiltereProducts = createAsyncThunk('/products/fetchAllProducts',\r\n     async()=>{\r\n         const result = await axios.get(\"http://localhost:7000/api/admin/products/get\")\r\n             return result?.data\r\n     }\r\n )\r\n+\r\n+\r\n const shoppingProductsSlice  = createSlice({\r\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n"
+                },
+                {
+                    "date": 1740212114283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n      isLoading : false ,\r\n      productList : []\r\n }\r\n \r\n-export const fetchAllFiltereProducts = createAsyncThunk('/products/fetchAllProducts',\r\n+export const fetchAllFilteredProducts = createAsyncThunk('/products/fetchAllProducts',\r\n     async()=>{\r\n-        const result = await axios.get(\"http://localhost:7000/api/admin/products/get\")\r\n+        const result = await axios.get(\"http://localhost:7000/api/shop/products/get\")\r\n             return result?.data\r\n     }\r\n )\r\n \r\n"
+                },
+                {
+                    "date": 1740212120530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n      isLoading : false ,\r\n      productList : []\r\n }\r\n \r\n-export const fetchAllFilteredProducts = createAsyncThunk('/products/fetchAllProducts',\r\n+export const fetchAllFilteredProducts = createAsyncThunk('/products/fetchAllFilteredProducts',\r\n     async()=>{\r\n         const result = await axios.get(\"http://localhost:7000/api/shop/products/get\")\r\n             return result?.data\r\n     }\r\n"
+                },
+                {
+                    "date": 1740212134004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-\r\n+            \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212139634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-            \r\n+            builder.addCase\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212145013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-            builder.addCase\r\n+            builder.addCase(fetchAllFilteredProducts)\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212150919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-            builder.addCase(fetchAllFilteredProducts)\r\n+            builder.addCase(fetchAllFilteredProducts.pending)\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212170937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice } = require(\"@reduxjs/toolkit\");\r\n+const { createSlice,asy } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading : false ,\r\n      productList : []\r\n"
+                },
+                {
+                    "date": 1740212183357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice,asy } = require(\"@reduxjs/toolkit\");\r\n+const { createSlice,creta } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading : false ,\r\n      productList : []\r\n"
+                },
+                {
+                    "date": 1740212189627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice,creta } = require(\"@reduxjs/toolkit\");\r\n+const { createSlice, createAsyncThunk } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading : false ,\r\n      productList : []\r\n"
+                },
+                {
+                    "date": 1740212210243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-            builder.addCase(fetchAllFilteredProducts.pending)\r\n+            builder.addCase(fetchAllFilteredProducts.pending , )\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212217234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-            builder.addCase(fetchAllFilteredProducts.pending , )\r\n+            builder.addCase(fetchAllFilteredProducts.pending , (state,action))\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212234937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,9 @@\n     name : 'shoppingProducts',\r\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n-            builder.addCase(fetchAllFilteredProducts.pending , (state,action))\r\n+            builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n+                state.isLoading = true,\r\n+            })\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212247852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n-                state.isLoading = true,\r\n+                state.isLoading = false\r\n+                state\r\n             })\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212252955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,8 @@\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = false\r\n-                state\r\n+                state.productList = \r\n             })\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212265150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n+                console.log(first)\r\n                 state.isLoading = false\r\n-                state.productList = \r\n+                state.productList = action.payload\r\n             })\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212292362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,8 @@\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n-                console.log(first)\r\n-                state.isLoading = false\r\n-                state.productList = action.payload\r\n+                state.isLoading = false,\r\n             })\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212298436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n-                state.isLoading = false,\r\n+                state.isLoading = false\r\n             })\r\n+            .addCase()\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212312105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     initialState ,\r\n     reducers : {},\r\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n-                state.isLoading = false\r\n+                state.isLoading = true\r\n             })\r\n             .addCase()\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212319086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n-            .addCase()\r\n+            .addCase(fetch)\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212324520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n-            .addCase(fetch)\r\n+            .addCase(fetchAllFilteredProducts.fulfilled)\r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212331314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n-            .addCase(fetchAllFilteredProducts.fulfilled)\r\n+            .addCase(fetchAllFilteredProducts.fulfilled )  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212338699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n-            .addCase(fetchAllFilteredProducts.fulfilled )  \r\n+            .addCase(fetchAllFilteredProducts.fulfilled , (state,action))  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212349739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,9 @@\n     extraReducers : (builder)=> {\r\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n-            .addCase(fetchAllFilteredProducts.fulfilled , (state,action))  \r\n+            .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n+                state.\r\n+            })  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212357744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,8 @@\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n-                state.\r\n+                state.isLoading = false,\r\n             })  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212371169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,8 @@\n                 state.isLoading = true\r\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n                 state.isLoading = false,\r\n+                state.productList = action.payload\r\n             })  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212381803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n+\r\n+            log\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n     } \r\n"
+                },
+                {
+                    "date": 1740212395866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { log } from \"console\";\r\n+\r\n const { createSlice, createAsyncThunk } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading : false ,\r\n@@ -21,10 +23,9 @@\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n-\r\n-            log\r\n+                log\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n     } \r\n"
+                },
+                {
+                    "date": 1740212403578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import { log } from \"console\";\r\n-\r\n const { createSlice, createAsyncThunk } = require(\"@reduxjs/toolkit\");\r\n \r\n const initialState = {\r\n      isLoading : false ,\r\n@@ -23,9 +21,9 @@\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n-                log\r\n+                console.log(first)\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n     } \r\n"
+                },
+                {
+                    "date": 1740212410001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             builder.addCase(fetchAllFilteredProducts.pending , (state,action)=> {\r\n                 state.isLoading = true\r\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n-                console.log(first)\r\n+                console.log(action.payload)\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n     } \r\n"
+                },
+                {
+                    "date": 1740212422245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,11 @@\n                 console.log(action.payload)\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n+            .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n+                console.log(action.payload)\r\n+                state.isLoading = false,\r\n+                state.productList = action.payload\r\n+            })  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212434512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n                 console.log(action.payload)\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n-            .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n+            .addCase(fetchAllFilteredProducts.rejected , (state,action)=>{\r\n                 console.log(action.payload)\r\n                 state.isLoading = false,\r\n                 state.productList = action.payload\r\n             })  \r\n"
+                },
+                {
+                    "date": 1740212441834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n             })  \r\n             .addCase(fetchAllFilteredProducts.rejected , (state,action)=>{\r\n                 console.log(action.payload)\r\n                 state.isLoading = false,\r\n-                state.productList = action.payload\r\n+                state.productList = []\r\n             })  \r\n     } \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212453357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,8 @@\n                 state.isLoading = false,\r\n                 state.productList = []\r\n             })  \r\n     } \r\n-})\n\\ No newline at end of file\n+})\r\n+\r\n+\r\n+export default \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212460381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,5 +34,5 @@\n     } \r\n })\r\n \r\n \r\n-export default \n\\ No newline at end of file\n+export default shopp\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212466643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,5 +34,5 @@\n     } \r\n })\r\n \r\n \r\n-export default shopp\n\\ No newline at end of file\n+export default shoppingProductsSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740212473517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,5 +34,5 @@\n     } \r\n })\r\n \r\n \r\n-export default shoppingProductsSlice.reducer\n\\ No newline at end of file\n+export default shoppingProductsSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1740212903568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n }\r\n \r\n export const fetchAllFilteredProducts = createAsyncThunk('/products/fetchAllFilteredProducts',\r\n     async()=>{\r\n-        const result = await axios.get(\"http://localhost:7000/api/shop/products/get\")\r\n+        const result = await axio               s.get(\"http://localhost:7000/api/shop/products/get\")\r\n             return result?.data\r\n     }\r\n )\r\n \r\n"
+                },
+                {
+                    "date": 1740212917250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n const { createSlice, createAsyncThunk } = require(\"@reduxjs/toolkit\");\r\n \r\n+\r\n const initialState = {\r\n      isLoading : false ,\r\n      productList : []\r\n }\r\n \r\n export const fetchAllFilteredProducts = createAsyncThunk('/products/fetchAllFilteredProducts',\r\n     async()=>{\r\n-        const result = await axio               s.get(\"http://localhost:7000/api/shop/products/get\")\r\n+        const result = await axios.get(\"http://localhost:7000/api/shop/products/get\")\r\n             return result?.data\r\n     }\r\n )\r\n \r\n"
+                },
+                {
+                    "date": 1740212936712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const { createSlice, createAsyncThunk } = require(\"@reduxjs/toolkit\");\r\n+import axios from \"axios\";\r\n \r\n \r\n+\r\n const initialState = {\r\n      isLoading : false ,\r\n      productList : []\r\n }\r\n"
+                },
+                {
+                    "date": 1740213024514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice, createAsyncThunk } = require(\"@reduxjs/toolkit\");\r\n+const { createSlice, createAsyncThunk } = from (\"@reduxjs/toolkit\");\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213030099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice, createAsyncThunk } = from (\"@reduxjs/toolkit\");\r\n+const { createSlice, createAsyncThunk } = from (\"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213036775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice, createAsyncThunk } = from (\"@reduxjs/toolkit\";\r\n+const { createSlice, createAsyncThunk }  from '@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213043119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { createSlice, createAsyncThunk }  from '@reduxjs/toolkit\";\r\n+import second from 'first' { createSlice, createAsyncThunk }  from '@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213050020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import second from 'first' { createSlice, createAsyncThunk }  from '@reduxjs/toolkit\";\r\n+import { createSlice, createAsyncThunk }  from '@reduxjs/toolkit\"\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213055897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { createSlice, createAsyncThunk }  from '@reduxjs/toolkit\"\r\n+import { createSlice, createAsyncThunk }  from \"@\"\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213068302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import { createSlice, createAsyncThunk }  from \"@\"\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213080670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213096622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+import { createSlice, createAsyncThunk }  from \"@/redu\"\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213113743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { createSlice, createAsyncThunk }  from \"@/redu\"\r\n+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';\r\n import axios from \"axios\";\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740213568707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             })\r\n             .addCase(fetchAllFilteredProducts.fulfilled , (state,action)=>{\r\n                 console.log(action.payload)\r\n                 state.isLoading = false,\r\n-                state.productList = action.payload\r\n+                state.productList = action.payload.data\r\n             })  \r\n             .addCase(fetchAllFilteredProducts.rejected , (state,action)=>{\r\n                 console.log(action.payload)\r\n                 state.isLoading = false,\r\n"
+                }
+            ],
+            "date": 1740211850037,
+            "name": "Commit-0",
+            "content": "\r\n\r\n"
+        }
+    ]
+}
