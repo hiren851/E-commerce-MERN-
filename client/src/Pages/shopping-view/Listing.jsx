@@ -11,49 +11,92 @@ import { DropdownMenuRadioItem } from "@/components/ui/dropdown-menu";
 import { ArrowUpDownIcon } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { fetchAllFilteredProducts } from "@/Store/shop/product-slice";
+import { fetchAllFilteredProducts, fetchProductDetails } from "@/Store/shop/product-slice";
 import SHoppingProductTile from "@/components/shopping-view/Product-tile";
+import { useSearchParams } from "react-router-dom";
+import ProductDetailsDialog from "@/components/shopping-view/ProductDetails";
+
+function createSearchParamsHelper(filterParams) {
+  const queryParams = [];
+
+  for (const [key, value] of Object.entries(filterParams)) {
+    if (Array.isArray(value) && value.length > 0) {
+      const paramValue = value.join(",");
+      queryParams.push(`${key}=${encodeURIComponent(paramValue)}`);
+    }
+  }
+  return queryParams.join("&");
+}
 
 function ShoppingListing() {
   const dispatch = useDispatch();
-  const { productList } = useSelector((state) => state.shopProducts);
-  const [sort,setSort] = useState(null)
+  const { productList,productDetails } = useSelector((state) => state.shopProducts);
+  const [sort, setSort] = useState(null);
   const [filter, setFilter] = useState({});
+  const [searchParams, setSearchParmas] = useSearchParams();
+  const [openProductDialog ,setOpenProductDialog] = useState(false)
 
-  function handleSort(value){
-    console.log(value)
-    setSort(value)
+  function handleSort(value) {
+    console.log(value);
+    setSort(value);
   }
 
-  function handleFilter(getSectionId,getCurrentOption){
-    console.log(getSectionId,getCurrentOption)
+  function handleFilter(getSectionId, getCurrentOption) {
+    console.log(getSectionId, getCurrentOption);
     let cpyFilters = { ...filter };
-    const indexOfCurrentSection  = Object.keys(cpyFilters).indexOf(getSectionId)
+    const indexOfCurrentSection = Object.keys(cpyFilters).indexOf(getSectionId);
 
-    if(indexOfCurrentSection == -1 ){
-        cpyFilters = {
-            ...cpyFilters,
-            [getSectionId] : [getCurrentOption]
-         }
-    }else{
-        const indexOfCurrentSection = cpyFilters[getSectionId].indexOf(getCurrentOption);
+    if (indexOfCurrentSection == -1) {
+      cpyFilters = {
+        ...cpyFilters,
+        [getSectionId]: [getCurrentOption],
+      };
+    } else {
+      const indexOfCurrentSection =
+        cpyFilters[getSectionId].indexOf(getCurrentOption);
 
-        if(indexOfCurrentSection == -1 ) cpyFilters[getSectionId].push(getCurrentOption);
-        else cpyFilters[getSectionId].splice(indexOfCurrentSection, 1);
+      if (indexOfCurrentSection == -1)
+        cpyFilters[getSectionId].push(getCurrentOption);
+      else cpyFilters[getSectionId].splice(indexOfCurrentSection, 1);
     }
 
     setFilter(cpyFilters);
-    sessionStorage.setItem("filters" , JSON.stringify(cpyFilters))
+    sessionStorage.setItem("filters", JSON.stringify(cpyFilters));
   }
-  
-useEffect(()=>{
-    setSort("price-lowtohigh");
-    setFilter(JSON.parse(sessionStorage.getItem("filters")) || {})
-},[])
+
+  function handleGetProductDetails(getCurrentProductId){
+    console.log(getCurrentProductId)
+    dispatch(fetchProductDetails(getCurrentProductId))
+  }
+
   useEffect(() => {
-    dispatch(fetchAllFilteredProducts());
-  }, [dispatch]);
-  console.log(filter);
+    setSort("price-lowtohigh");
+    setFilter(JSON.parse(sessionStorage.getItem("filters")) || {});
+  }, []);
+
+  useEffect(() => {
+    if (filter && Object.keys(filter).length > 0) {
+      const createQueryString = createSearchParamsHelper(filter);
+      setSearchParmas(new URLSearchParams(createQueryString));
+    }
+  }, [filter]);
+
+  useEffect(() => {
+    if (filter !== null && sort !== null)
+      dispatch(
+        fetchAllFilteredProducts({ filterParams: filter, sortParams: sort })
+      );
+  }, [dispatch, sort, filter]);
+
+  useEffect(()=>{
+    if(productDetails !== null){
+      setOpenProductDialog(true);
+    }
+  },[productDetails])
+  // console.log(productDetails);
+  console.log(openProductDialog)
+  
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6">
       <ProductFilter filter={filter} handleFilter={handleFilter} />
@@ -78,7 +121,10 @@ useEffect(()=>{
               <DropdownMenuContent align="end" className="w-[200px]">
                 <DropdownMenuRadioGroup value={sort} onValueChange={handleSort}>
                   {sortOptions.map((sortItem) => (
-                    <DropdownMenuRadioItem key={sortItem.id} value={sortItem.id}>
+                    <DropdownMenuRadioItem
+                      key={sortItem.id}
+                      value={sortItem.id}
+                    >
                       {" "}
                       {sortItem.label}
                     </DropdownMenuRadioItem>
@@ -91,11 +137,16 @@ useEffect(()=>{
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
           {productList.length > 0
             ? productList.map((productItem) => (
-                <SHoppingProductTile product={productItem} />
+                <SHoppingProductTile
+                  key={productItem._id}
+                  product={productItem}
+                  handleGetProductDetails={handleGetProductDetails}
+                />
               ))
             : null}
         </div>
       </div>
+      <ProductDetailsDialog open={openProductDialog} setOpen={setOpenProductDialog} productDetails={productDetails}/>
     </div>
   );
 }

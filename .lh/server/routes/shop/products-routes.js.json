@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1740211530923,
@@ -44,6 +44,18 @@
                 {
                     "date": 1740211593428,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n-const express = require('express');\r\n+const express = require(\"express\");\r\n \r\n+const {\r\n+  getFilteredProducts,\r\n+} = require(\"../../controllers/shop/product-controller\");\r\n \r\n-const {getFilteredProducts} = require('../../controllers/shop/product-controller');\r\n-\r\n const router = express.Router();\r\n \r\n-\r\n router.get(\"/get\", getFilteredProducts);\r\n \r\n-\r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740381008027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const express = require(\"express\");\r\n \r\n const {\r\n   getFilteredProducts,\r\n+  getProductDetails\r\n } = require(\"../../controllers/shop/product-controller\");\r\n \r\n const router = express.Router();\r\n \r\n"
+                },
+                {
+                    "date": 1740381016720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n+router.get(\"/get/:id\", getFilteredProducts);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1740381025815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n-router.get(\"/get/:id\", getFilteredProducts);\r\n+router.get(\"/get/:id\", getProductDetails);\r\n \r\n module.exports = router;\r\n"
                 }
             ],
             "date": 1740211530923,

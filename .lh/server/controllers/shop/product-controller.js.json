@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1740211038596,
@@ -112,6 +112,10 @@
                 {
                     "date": 1740211331010,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,14 @@\n   try {\r\n \r\n     const product = await Product.find({})\r\n     res.status(200).json({\r\n-        success : \r\n+        success : t\r\n     })\r\n   } catch (error) {\r\n     console.log(error);\r\n     res.status(500).json({\r\n       success: false,\r\n\\ No newline at end of file\n-      message: \" some error \n+      message: \" some error occured!\",\r\n+    });\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1740376722397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       filters.category = {$in : category.split(',')}\r\n     }\r\n \r\n     if(brand.length){\r\n-      filters.barnd = \r\n+      filters.barnd = {$i}\r\n     }\r\n \r\n \r\n     const products = await Product.find({});\r\n"
                 }
             ],
             "date": 1740211038596,

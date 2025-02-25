@@ -1,0 +1,170 @@
+{
+    "sourceFile": "server/models/Cart.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1740391440396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740391447309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const mongoose = requ\n\\ No newline at end of file\n+const mongoose = require('mongoose')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391459352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-const mongoose = require('mongoose')\n\\ No newline at end of file\n+const mongoose = require('mongoose');\r\n+\r\n+const cartSchema \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391466516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const mongoose = require('mongoose');\r\n \r\n-const cartSchema \n\\ No newline at end of file\n+const CartSchema = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391471642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const mongoose = require('mongoose');\r\n+\r\n+const CartSchema = new mongoose\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391477641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n const mongoose = require('mongoose');\r\n \r\n-const CartSchema = new mongoose\n-const mongoose = require('mongoose');\r\n-\r\n-const CartSchema = \n\\ No newline at end of file\n+const CartSchema = new mongoose.Schema({\r\n+    \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391484911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const mongoose = require('mongoose');\r\n \r\n const CartSchema = new mongoose.Schema({\r\n-    \r\n+\r\n+    userId :    \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391490548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n const mongoose = require('mongoose');\r\n \r\n-const CartSchema = new mongoose.Schema({\r\n-\r\n-    userId :    \r\n-})\n\\ No newline at end of file\n+const CartSchema = new mongoose.Schema(\r\n+    \r\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391497004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n const mongoose = require('mongoose');\r\n \r\n const CartSchema = new mongoose.Schema(\r\n-    \r\n+    {\r\n+        useId : {\r\n+            \r\n+        }\r\n+    }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391502935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n const CartSchema = new mongoose.Schema(\r\n     {\r\n         useId : {\r\n-            \r\n+            type : mo\r\n         }\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391513516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n const CartSchema = new mongoose.Schema(\r\n     {\r\n         useId : {\r\n-            type : mo\r\n+            type : mongoose.Schema.Types\r\n         }\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391522263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n const CartSchema = new mongoose.Schema(\r\n     {\r\n         useId : {\r\n-            type : mongoose.Schema.Types\r\n+            type : mongoose.Schema.Types.ObjectId,\r\n+            ref\r\n         }\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391528554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n const CartSchema = new mongoose.Schema(\r\n     {\r\n         useId : {\r\n             type : mongoose.Schema.Types.ObjectId,\r\n-            ref\r\n+            ref: \"User\",\r\n+            \r\n         }\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391535612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n     {\r\n         useId : {\r\n             type : mongoose.Schema.Types.ObjectId,\r\n             ref: \"User\",\r\n-            \r\n+            required\r\n         }\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391546065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n     {\r\n         useId : {\r\n             type : mongoose.Schema.Types.ObjectId,\r\n             ref: \"User\",\r\n-            required\r\n-        }\r\n+            required : true\r\n+        },\r\n+        \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391551455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n             type : mongoose.Schema.Types.ObjectId,\r\n             ref: \"User\",\r\n             required : true\r\n         },\r\n-        \r\n+        items: \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391561070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,9 @@\n             type : mongoose.Schema.Types.ObjectId,\r\n             ref: \"User\",\r\n             required : true\r\n         },\r\n-        items: \r\n+        items: [\r\n+            {}\r\n+        ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391571101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n             ref: \"User\",\r\n             required : true\r\n         },\r\n         items: [\r\n-            {}\r\n+            {\r\n+                produc\r\n+            }\r\n         ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391577617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             required : true\r\n         },\r\n         items: [\r\n             {\r\n-                produc\r\n+                productId : \r\n             }\r\n         ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391584710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n             required : true\r\n         },\r\n         items: [\r\n             {\r\n-                productId : \r\n+                productId : {\r\n+                    tpye\r\n+                }\r\n             }\r\n         ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391591269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         },\r\n         items: [\r\n             {\r\n                 productId : {\r\n-                    tpye\r\n+                    tpye : mongoose.Schema.\r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391596479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         },\r\n         items: [\r\n             {\r\n                 productId : {\r\n-                    tpye : mongoose.Schema.\r\n+                    tpye : mongoose.Schema.Types.ObjectId\r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391601499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         },\r\n         items: [\r\n             {\r\n                 productId : {\r\n-                    tpye : mongoose.Schema.Types.ObjectId\r\n+                    tpye : mongoose.Schema.Types.ObjectId,\r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391608674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n         },\r\n         items: [\r\n             {\r\n                 productId : {\r\n-                    tpye : mongoose.Schema.Types.ObjectId,\r\n+                    type : mongoose.Schema.Types.ObjectId,\r\n+                    \r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391616988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         items: [\r\n             {\r\n                 productId : {\r\n                     type : mongoose.Schema.Types.ObjectId,\r\n-                    \r\n+                    ref : \"Product\"\r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391624989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n         items: [\r\n             {\r\n                 productId : {\r\n                     type : mongoose.Schema.Types.ObjectId,\r\n-                    ref : \"Product\"\r\n+                    ref : \"Product\",\r\n+                    required : \r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391651184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,11 @@\n             {\r\n                 productId : {\r\n                     type : mongoose.Schema.Types.ObjectId,\r\n                     ref : \"Product\",\r\n-                    required : \r\n-                }\r\n+                    required : true,\r\n+                },\r\n+                \r\n             }\r\n         ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391657559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n                     type : mongoose.Schema.Types.ObjectId,\r\n                     ref : \"Product\",\r\n                     required : true,\r\n                 },\r\n-                \r\n+                quantity : \r\n             }\r\n         ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391668163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n                     type : mongoose.Schema.Types.ObjectId,\r\n                     ref : \"Product\",\r\n                     required : true,\r\n                 },\r\n-                quantity : \r\n+                quantity : {\r\n+                    type : nuber \r\n+                }\r\n             }\r\n         ]\r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391676814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n                     ref : \"Product\",\r\n                     required : true,\r\n                 },\r\n                 quantity : {\r\n-                    type : nuber \r\n+                    type : Number,\r\n+                    \r\n                 }\r\n             }\r\n         ]\r\n     }\r\n"
+                },
+                {
+                    "date": 1740391687796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n                     required : true,\r\n                 },\r\n                 quantity : {\r\n                     type : Number,\r\n+                    required : true,\r\n                     \r\n                 }\r\n             }\r\n         ]\r\n"
+                },
+                {
+                    "date": 1740391702497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,12 @@\n                 },\r\n                 quantity : {\r\n                     type : Number,\r\n                     required : true,\r\n-                    \r\n+                    min : 1,\r\n                 }\r\n             }\r\n         ]\r\n+    },{\r\n+        \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391708097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n                 }\r\n             }\r\n         ]\r\n     },{\r\n-        \r\n+        timestamps:     \r\n     }\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391716765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,8 @@\n                 }\r\n             }\r\n         ]\r\n     },{\r\n-        timestamps:     \r\n+        timestamps:   true,\r\n     }\r\n\\ No newline at end of file\n-)\n+);\r\n+\r\n"
+                },
+                {
+                    "date": 1740391721916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,4 +24,6 @@\n     },{\r\n         timestamps:   true,\r\n     }\r\n );\r\n+\r\n+module\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391734847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n         timestamps:   true,\r\n     }\r\n );\r\n \r\n-module\n\\ No newline at end of file\n+module.exports = mongoose\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391740055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n         timestamps:   true,\r\n     }\r\n );\r\n \r\n-module.exports = mongoose\n\\ No newline at end of file\n+module.exports = mongoose.model()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391746410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n         timestamps:   true,\r\n     }\r\n );\r\n \r\n-module.exports = mongoose.model()\n\\ No newline at end of file\n+module.exports = mongoose.model('cart', '')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391757901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n         timestamps:   true,\r\n     }\r\n );\r\n \r\n-module.exports = mongoose.model('cart', '')\n\\ No newline at end of file\n+module.exports = mongoose.model('Cart', CartSchema)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1740391440396,
+            "name": "Commit-0",
+            "content": "const mongoose = requ"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 81,
+            "activePatchIndex": 85,
             "patches": [
                 {
                     "date": 1740208125018,
@@ -332,6 +332,22 @@
                 {
                     "date": 1740291962531,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n                   checked={\r\n                     filter && \r\n                     Object.keys(filter).length > 0 && \r\n                     filter[filterItem] && \r\n-                    filter[filterItem].indexOf \r\n+                    filter[filterItem].indexOf(options) \r\n                   }\r\n                     onCheckedChange={() => handleFilter(filterItem, options.id)}\r\n                   />\r\n                   {options.label}\r\n"
+                },
+                {
+                    "date": 1740374603225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,15 @@\n               <h3 className=\"text-base font-bold\">{filterItem}</h3>\r\n             </div>\r\n             <div className=\"grid gap-2  mt-2\">\r\n               {filterOptions[filterItem].map((options) => (\r\n-                <Label className=\"flex items-center gap-2 font-medium\">\r\n+                <Label className=\"flex items-center gap-2 font-medium\" k>\r\n                   <Checkbox\r\n                   checked={\r\n                     filter && \r\n                     Object.keys(filter).length > 0 && \r\n                     filter[filterItem] && \r\n-                    filter[filterItem].indexOf(options) \r\n+                    filter[filterItem].indexOf(options.id)  > -1 \r\n                   }\r\n                     onCheckedChange={() => handleFilter(filterItem, options.id)}\r\n                   />\r\n                   {options.label}\r\n"
+                },
+                {
+                    "date": 1740374612960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n               <h3 className=\"text-base font-bold\">{filterItem}</h3>\r\n             </div>\r\n             <div className=\"grid gap-2  mt-2\">\r\n               {filterOptions[filterItem].map((options) => (\r\n-                <Label className=\"flex items-center gap-2 font-medium\" k>\r\n+                <Label className=\"flex items-center gap-2 font-medium\" key={op}>\r\n                   <Checkbox\r\n                   checked={\r\n                     filter && \r\n                     Object.keys(filter).length > 0 && \r\n"
+                },
+                {
+                    "date": 1740374755398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,15 @@\n         <h2 className=\"text-lg font-extrabold\">Filters</h2>\r\n       </div>\r\n       <div className=\"p-4 space-y-4 \">\r\n         {Object.keys(filterOptions).map((filterItem) => (\r\n-          <Fragment>\r\n+          <Fragment >\r\n             <div>\r\n               <h3 className=\"text-base font-bold\">{filterItem}</h3>\r\n             </div>\r\n             <div className=\"grid gap-2  mt-2\">\r\n               {filterOptions[filterItem].map((options) => (\r\n-                <Label className=\"flex items-center gap-2 font-medium\" key={op}>\r\n+                <Label className=\"flex items-center gap-2 font-medium\" key={options.id}>\r\n                   <Checkbox\r\n                   checked={\r\n                     filter && \r\n                     Object.keys(filter).length > 0 && \r\n"
+                },
+                {
+                    "date": 1740374763161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <h2 className=\"text-lg font-extrabold\">Filters</h2>\r\n       </div>\r\n       <div className=\"p-4 space-y-4 \">\r\n         {Object.keys(filterOptions).map((filterItem) => (\r\n-          <Fragment >\r\n+          <Fragment key={filterItem}>\r\n             <div>\r\n               <h3 className=\"text-base font-bold\">{filterItem}</h3>\r\n             </div>\r\n             <div className=\"grid gap-2  mt-2\">\r\n"
                 }
             ],
             "date": 1740208125018,

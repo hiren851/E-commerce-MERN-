@@ -1,0 +1,98 @@
+{
+    "sourceFile": "server/controllers/shop/cart-controllers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1740391819745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740391833551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-const addto\n\\ No newline at end of file\n+\r\n+\r\n+\r\n+const addToCart\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391838919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n \r\n \r\n-const addToCart\n\\ No newline at end of file\n+const addToCart = async\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391846115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n \r\n \r\n \r\n-const addToCart = async\n\\ No newline at end of file\n+const addToCart = async(req,res)=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391851428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n \r\n \r\n \r\n const addToCart = async(req,res)=>{\r\n-    \r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391863012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n const addToCart = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n+        console.log(error);\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391870358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n+        res.stat\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391876020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n-        res.stat\r\n+        res.status(500)\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391886058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n-        res.status(500)\r\n+        res.status(500).json({\r\n+            success: \r\n+        })\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391893771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n         res.status(500).json({\r\n-            success: \r\n+            success: false,\r\n+            message : \r\n         })\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391901419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     } catch (error) {\r\n         console.log(error);\r\n         res.status(500).json({\r\n             success: false,\r\n-            message : \r\n+            message : 'Error'\r\n         })\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391963549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,41 @@\n             message : 'Error'\r\n         })\r\n         \r\n     }\r\n+}\r\n+const fetch = async(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        console.log(error);\r\n+        res.status(500).json({\r\n+            success: false,\r\n+            message : 'Error'\r\n+        })\r\n+        \r\n+    }\r\n+}\r\n+const addToCart = async(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        console.log(error);\r\n+        res.status(500).json({\r\n+            success: false,\r\n+            message : 'Error'\r\n+        })\r\n+        \r\n+    }\r\n+}\r\n+const addToCart = async(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (error) {\r\n+        console.log(error);\r\n+        res.status(500).json({\r\n+            success: false,\r\n+            message : 'Error'\r\n+        })\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740391970573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const fetch = async(req,res)=>{\r\n+const fetchCartItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                },
+                {
+                    "date": 1740391978299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const addToCart = async(req,res)=>{\r\n+const up = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                },
+                {
+                    "date": 1740391984752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const up = async(req,res)=>{\r\n+const updateItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                },
+                {
+                    "date": 1740391992456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const updateItems = async(req,res)=>{\r\n+const updateItemsQty = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n@@ -36,9 +36,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const addToCart = async(req,res)=>{\r\n+const delete = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                },
+                {
+                    "date": 1740391998124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const delete = async(req,res)=>{\r\n+const deleteCartItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                },
+                {
+                    "date": 1740392018740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const updateItemsQty = async(req,res)=>{\r\n+const updateCartItemsQty = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                },
+                {
+                    "date": 1740392043853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,8 @@\n             message : 'Error'\r\n         })\r\n         \r\n     }\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+\r\n+module.exports\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740392052251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,6 +51,7 @@\n }\r\n \r\n \r\n module.exports = {\r\n+    addToCart,\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740392253880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n const addToCart = async(req,res)=>{\r\n     try {\r\n         const {userId , productId , quantity} = req.body;\r\n         if(!userId || !productId || quantity<=0 ) {\r\n-            return res.status(400).json\r\n+            return res.status(400).json()\r\n         }\r\n \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                }
+            ],
+            "date": 1740391819745,
+            "name": "Commit-0",
+            "content": "const addto"
+        }
+    ]
+}

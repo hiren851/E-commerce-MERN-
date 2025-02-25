@@ -1,0 +1,430 @@
+{
+    "sourceFile": "client/src/components/shopping-view/ProductDetails.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 103,
+            "patches": [
+                {
+                    "date": 1740386125016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740386132233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n \r\n \r\n-ffc\n\\ No newline at end of file\n+function ProductDetails() {\r\n+    return (  );\r\n+}\r\n+\r\n+export default ProductDetails;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740386141748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n \r\n \r\n-function ProductDetails() {\r\n-    return (  );\r\n+function ProductDetailsDialog() {\r\n+    return ( \r\n+        \r\n\\ No newline at end of file\n+     );\r\n }\r\n \r\n-export default ProductDetails;\n+export default ProductDetailsDialog;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740386201192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n \r\n function ProductDetailsDialog() {\r\n     return ( \r\n-        \r\n+        <dialog\r\n      );\r\n }\r\n \r\n export default ProductDetailsDialog;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740386256334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n+import { Dialog } from \"../ui/dialog\";\r\n \r\n \r\n-function ProductDetailsDialog() {\r\n+function ProductDetailsDialog({}) {\r\n     return ( \r\n-        <dialog\r\n+        <Dialog></Dialog>\r\n      );\r\n }\r\n \r\n export default ProductDetailsDialog;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740386266006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import { Dialog } from \"../ui/dialog\";\r\n \r\n \r\n-function ProductDetailsDialog({}) {\r\n+function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n-        <Dialog></Dialog>\r\n+        <Dialog>\r\n+            \r\n+        </Dialog>\r\n      );\r\n }\r\n \r\n export default ProductDetailsDialog;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740386276118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n-        <Dialog>\r\n-            \r\n+        <Dialog open={open} onOpenChange={}>\r\n+\r\n         </Dialog>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740386293209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n-        <Dialog open={open} onOpenChange={}>\r\n-\r\n+        <Dialog open={open} onOpenChange={setOpen}>\r\n+        <DialogCone\r\n         </Dialog>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740386306756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,14 @@\n-import { Dialog } from \"../ui/dialog\";\r\n+import { Dialog, DialogContent } from \"../ui/dialog\";\r\n \r\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogCone\r\n+        <DialogContent className=\r\n+        >\r\n+\r\n+        </DialogContent>\r\n         </Dialog>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740386324566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className=\r\n-        >\r\n+        <DialogContent className = \"grid grid-cols-2 \">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386331072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 \">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386338136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386346529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386352070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw]\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386366157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw]\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:w\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386380157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:w\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386385507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[]\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386397130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[]\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386403858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w\">\r\n+        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n \r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386413953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n-\r\n+            <div></div>\r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740386454819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n-            <div></div>\r\n+            <div className=\"\">\r\n+\r\n+            </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740386461449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n-            <div className=\"\">\r\n+            <div className=\"relative \">\r\n \r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740386469332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n-            <div className=\"relative \">\r\n+            <div className=\"relative overflow-hidden rounded\">\r\n \r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740386478118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n function ProductDetailsDialog({open,setOpen}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n-            <div className=\"relative overflow-hidden rounded\">\r\n+            <div className=\"relative overflow-hidden rounded-lg \">\r\n+                <img\r\n \r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740386811973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n+                \r\n+                />\r\n \r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740386832685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n-                \r\n+                src={produc}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386838108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n-                src={produc}\r\n+                src={producDet}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386852469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { Dialog, DialogContent } from \"../ui/dialog\";\r\n \r\n \r\n-function ProductDetailsDialog({open,setOpen}) {\r\n+function ProductDetailsDialog({open,setOpen,productDetiks}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n-                src={producDet}\r\n+                src={producDetails}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386863895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { Dialog, DialogContent } from \"../ui/dialog\";\r\n \r\n \r\n-function ProductDetailsDialog({open,setOpen,productDetiks}) {\r\n+function ProductDetailsDialog({open,setOpen,productDetails}) {\r\n     return ( \r\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n-                src={producDetails}\r\n+                src={produ}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386870751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n-                src={produ}\r\n+                src={productDetails?.}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386876771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n         <Dialog open={open} onOpenChange={setOpen}>\r\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n-                src={productDetails?.}\r\n+                src={productDetails?.image}\r\n+                alt=\"\"\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386883049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n                 src={productDetails?.image}\r\n-                alt=\"\"\r\n+                alt={productDetails?.}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386890249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n         <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n                 src={productDetails?.image}\r\n-                alt={productDetails?.}\r\n+                alt={productDetails?.title}\r\n+                width={}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386901268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n             <div className=\"relative overflow-hidden rounded-lg \">\r\n                 <img\r\n                 src={productDetails?.image}\r\n                 alt={productDetails?.title}\r\n-                width={}\r\n+                width={600}\r\n+                height={}\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386907447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n                 <img\r\n                 src={productDetails?.image}\r\n                 alt={productDetails?.title}\r\n                 width={600}\r\n-                height={}\r\n+                height={600}\r\n+                className=\"\"\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386913305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                 src={productDetails?.image}\r\n                 alt={productDetails?.title}\r\n                 width={600}\r\n                 height={600}\r\n-                className=\"\"\r\n+                className=\"aspect-square\"\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386921365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                 src={productDetails?.image}\r\n                 alt={productDetails?.title}\r\n                 width={600}\r\n                 height={600}\r\n-                className=\"aspect-square\"\r\n+                className=\"aspect-square w-full object-cover\"\r\n                 />\r\n \r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740386931257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,11 @@\n                 className=\"aspect-square w-full object-cover\"\r\n                 />\r\n \r\n             </div>\r\n+            <div>\r\n+                \r\n+            </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740386937325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n                 className=\"aspect-square w-full object-cover\"\r\n                 />\r\n \r\n             </div>\r\n-            <div>\r\n-                \r\n+            <div className=\"grid-\">\r\n+\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386945496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 className=\"aspect-square w-full object-cover\"\r\n                 />\r\n \r\n             </div>\r\n-            <div className=\"grid-\">\r\n+            <div className=\"grid gap-6 \">\r\n \r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740386972811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                 />\r\n \r\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n-\r\n+                \r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386979743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n                 />\r\n \r\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n-                \r\n+                <div>\r\n+                    <h1></h1>\r\n+                </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740386986599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n-                    <h1></h1>\r\n+                    <h1>{productDetails.}</h1>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740387008928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n-                    <h1>{productDetails.}</h1>\r\n+                    <h1 className=\"text-3xl font-etx\">{productDetails?.title}</h1>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740387021962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n \r\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n-                    <h1 className=\"text-3xl font-etx\">{productDetails?.title}</h1>\r\n+                    <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n+                    <p>{productDetails.</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740387030351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-                    <p>{productDetails.</p>\r\n+                    <p>{productDetails.description}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740387042213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-                    <p>{productDetails.description}</p>\r\n+                    <p className=\"\">{productDetails?.description}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740387047928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             </div>\r\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-                    <p className=\"\">{productDetails?.description}</p>\r\n+                    <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388123272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n+                    \r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388129702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,10 @@\n             <div className=\"grid gap-6 \">\r\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n+                </div>\r\n+                <div>\r\n                     \r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388137326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n-                <div>\r\n-                    \r\n+                <div className=\"flex \">\r\n+\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388198570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n-                <div className=\"flex \">\r\n+                <div className=\"flex items-center \">\r\n \r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388203647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 <div>\r\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n-                <div className=\"flex items-center \">\r\n+                <div className=\"flex items-center justify-between\">\r\n \r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388213195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-\r\n+                    <p></p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388218762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p></p>\r\n+                    <p>{productDetails?.}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388225177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p>{productDetails?.}</p>\r\n+                    <p className=\"\">{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388230988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className=\"\">{productDetails?.price}</p>\r\n+                    <p className=\"text-3xl font\">{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388237764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className=\"text-3xl font\">{productDetails?.price}</p>\r\n+                    <p className=\"text-3xl font-bold text-primary\">{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388244162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className=\"text-3xl font-bold text-primary\">{productDetails?.price}</p>\r\n+                    <p className=\"text-3xl font-bold text-primary>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388253939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className=\"text-3xl font-bold text-primary>{productDetails?.price}</p>\r\n+                    <p className={}`text-3xl font-bold text-primary`>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388267853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className={}`text-3xl font-bold text-primary`>{productDetails?.price}</p>\r\n+                    <p className={`text-3xl font-bold text-primary ${}`}>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388276917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className={`text-3xl font-bold text-primary ${}`}>{productDetails?.price}</p>\r\n+                    <p className={`text-3xl font-bold text-primary ${productDetails}}`}>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388286493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className={`text-3xl font-bold text-primary ${productDetails}}`}>{productDetails?.price}</p>\r\n+                    <p className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 }}`}>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388298280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 }}`}>{productDetails?.price}</p>\r\n+                    <p className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 ? \"\"}}`}>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388304435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                     <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n                     <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n                 </div>\r\n                 <div className=\"flex items-center justify-between\">\r\n-                    <p className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 ? \"\"}}`}>{productDetails?.price}</p>\r\n+                    <p className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 ? \"line-through\" : }}`}>{productDetails?.price}</p>\r\n                 </div>\r\n             </div>\r\n         </DialogContent>\r\n         </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388323470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,38 @@\n import { Dialog, DialogContent } from \"../ui/dialog\";\r\n \r\n-\r\n-function ProductDetailsDialog({open,setOpen,productDetails}) {\r\n-    return ( \r\n-        <Dialog open={open} onOpenChange={setOpen}>\r\n-        <DialogContent className = \"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n-            <div className=\"relative overflow-hidden rounded-lg \">\r\n-                <img\r\n-                src={productDetails?.image}\r\n-                alt={productDetails?.title}\r\n-                width={600}\r\n-                height={600}\r\n-                className=\"aspect-square w-full object-cover\"\r\n-                />\r\n-\r\n-            </div>\r\n-            <div className=\"grid gap-6 \">\r\n-                <div>\r\n-                    <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-                    <p className=\"text-muted-foreground\">{productDetails?.description}</p>\r\n-                </div>\r\n-                <div className=\"flex items-center justify-between\">\r\n-                    <p className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 ? \"line-through\" : }}`}>{productDetails?.price}</p>\r\n-                </div>\r\n-            </div>\r\n-        </DialogContent>\r\n-        </Dialog>\r\n-     );\r\n+function ProductDetailsDialog({ open, setOpen, productDetails }) {\r\n+  return (\r\n+    <Dialog open={open} onOpenChange={setOpen}>\r\n\\ No newline at end of file\n+      <DialogContent className=\"grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]\">\r\n+        <div className=\"relative overflow-hidden rounded-lg \">\r\n+          <img\r\n+            src={productDetails?.image}\r\n+            alt={productDetails?.title}\r\n+            width={600}\r\n+            height={600}\r\n+            className=\"aspect-square w-full object-cover\"\r\n+          />\r\n+        </div>\r\n+        <div className=\"grid gap-6 \">\r\n+          <div>\r\n+            <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n+            <p className=\"text-muted-foreground\">\r\n+              {productDetails?.description}\r\n+            </p>\r\n+          </div>\r\n+          <div className=\"flex items-center justify-between\">\r\n+            <p\r\n+              className={`text-3xl font-bold text-primary ${\r\n+                productDetails?.salePrice > 0 ? \"line-through\" : \"\"\r\n+              }}`}\r\n+            >\r\n+              {productDetails?.price}\r\n+            </p>\r\n+          </div>\r\n+        </div>\r\n+      </DialogContent>\r\n+    </Dialog>\r\n+  );\r\n }\r\n \r\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388332071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,12 +27,15 @@\n               }}`}\r\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n+            {\r\n+                Produc\r\n+            }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n\\ No newline at end of file\n }\r\n \r\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388348680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                Produc\r\n+                productDetails?.salePrice \r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388355080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice \r\n+                productDetails?.salePrice > 0 \r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388363057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0 \r\n+                productDetails?.salePrice > 0 <P>{</P>\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388373288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0 <P>{</P>\r\n+                productDetails?.salePrice > 0 <P>{productDetails?.salePrice}</P>\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388384629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0 <P>{productDetails?.salePrice}</P>\r\n+                productDetails?.salePrice > 0 <P>{productDetails?.salePrice}</P> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388396234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0 <P>{productDetails?.salePrice}</P> : null\r\n+                productDetails?.salePrice > 0 <P>${productDetails?.salePrice}</P> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388402063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0 <P>${productDetails?.salePrice}</P> : null\r\n+                productDetails?.salePrice > 0 <p>${productDetails?.salePrice}</P> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388409888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0 <p>${productDetails?.salePrice}</P> : null\r\n+                productDetails?.salePrice > 0  ? <p>${productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388421547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0  ? <p>${productDetails?.salePrice}</p> : null\r\n+                productDetails?.salePrice > 0  ? <p className=\"text-2xl \">${productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388430468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n             >\r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0  ? <p className=\"text-2xl \">${productDetails?.salePrice}</p> : null\r\n+                productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">${productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ProductDetailsDialog;\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388500332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n               className={`text-3xl font-bold text-primary ${\r\n                 productDetails?.salePrice > 0 ? \"line-through\" : \"\"\r\n               }}`}\r\n             >\r\n+              \r\n               {productDetails?.price}\r\n             </p>\r\n             {\r\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">${productDetails?.salePrice}</p> : null\r\n@@ -37,5 +38,5 @@\n     </Dialog>\r\n   );\r\n }\r\n \r\n-export default ProductDetailsDialog;\n\\ No newline at end of file\n+export default ProductDetailsDialog;\r\n"
+                },
+                {
+                    "date": 1740388507381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n               className={`text-3xl font-bold text-primary ${\r\n                 productDetails?.salePrice > 0 ? \"line-through\" : \"\"\r\n               }}`}\r\n             >\r\n-              \r\n-              {productDetails?.price}\r\n+              ₹{productDetails?.price}\r\n             </p>\r\n             {\r\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">${productDetails?.salePrice}</p> : null\r\n             }\r\n"
+                },
+                {
+                    "date": 1740388514118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             >\r\n               ₹{productDetails?.price}\r\n             </p>\r\n             {\r\n-                productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">${productDetails?.salePrice}</p> : null\r\n+                productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388522155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             height={600}\r\n             className=\"aspect-square w-full object-cover\"\r\n           />\r\n         </div>\r\n-        <div className=\"grid gap-6 \">\r\n+        <div className=\"\">\r\n           <div>\r\n             <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n             <p className=\"text-muted-foreground\">\r\n               {productDetails?.description}\r\n"
+                },
+                {
+                    "date": 1740388550687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n         <div className=\"\">\r\n           <div>\r\n             <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-            <p className=\"text-muted-foreground\">\r\n+            <p className=\"text-muted-foreground \">\r\n               {productDetails?.description}\r\n             </p>\r\n           </div>\r\n           <div className=\"flex items-center justify-between\">\r\n"
+                },
+                {
+                    "date": 1740388568097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n         <div className=\"\">\r\n           <div>\r\n             <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-            <p className=\"text-muted-foreground \">\r\n+            <p className=\"text-muted-foreground text-2xl \">\r\n               {productDetails?.description}\r\n             </p>\r\n           </div>\r\n           <div className=\"flex items-center justify-between\">\r\n"
+                },
+                {
+                    "date": 1740388577831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n         <div className=\"\">\r\n           <div>\r\n             <h1 className=\"text-3xl font-extrabold\">{productDetails?.title}</h1>\r\n-            <p className=\"text-muted-foreground text-2xl \">\r\n+            <p className=\"text-muted-foreground text-2xl mb-5 mt-4\">\r\n               {productDetails?.description}\r\n             </p>\r\n           </div>\r\n           <div className=\"flex items-center justify-between\">\r\n"
+                },
+                {
+                    "date": 1740388634694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,11 @@\n             {\r\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n+          <div>\r\n+            \r\n+          </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740388644768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Button } from \"../ui/button\";\r\n import { Dialog, DialogContent } from \"../ui/dialog\";\r\n \r\n function ProductDetailsDialog({ open, setOpen, productDetails }) {\r\n   return (\r\n@@ -32,9 +33,9 @@\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n           <div>\r\n-            \r\n+            <Button>Add to cart</Button>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388653340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             {\r\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n-          <div>\r\n+          <div className=\"mt-5 \">\r\n             <Button>Add to cart</Button>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388679552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n           <div className=\"mt-5 \">\r\n-            <Button>Add to cart</Button>\r\n+            <Button className=\"\">Add to cart</Button>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388713757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,11 @@\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n           <div className=\"mt-5 \">\r\n-            <Button className=\"\">Add to cart</Button>\r\n+            <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n+          \r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740388721631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Button } from \"../ui/button\";\r\n import { Dialog, DialogContent } from \"../ui/dialog\";\r\n+import { Separator } from \"../ui/separator\";\r\n \r\n function ProductDetailsDialog({ open, setOpen, productDetails }) {\r\n   return (\r\n     <Dialog open={open} onOpenChange={setOpen}>\r\n@@ -35,9 +36,9 @@\n           </div>\r\n           <div className=\"mt-5 \">\r\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n-          \r\n+          <Separator/>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740388770703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n             {\r\n                 productDetails?.salePrice > 0  ? <p className=\"text-2xl font-bold text-muted-foreground\">₹{productDetails?.salePrice}</p> : null\r\n             }\r\n           </div>\r\n-          <div className=\"mt-5 \">\r\n+          <div className=\"mt-5 mb-5 \">\r\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740388785718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,11 @@\n           <div className=\"mt-5 mb-5 \">\r\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n+          <div>\r\n+            \r\n+          </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740388792882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n           <div className=\"mt-5 mb-5 \">\r\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n-          <div>\r\n-            \r\n+          <div className=\"max-h-\">\r\n+\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388800851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n           <div className=\"mt-5 mb-5 \">\r\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n-          <div className=\"max-h-\">\r\n+          <div className=\"max-h-[300px] overflow-auto \">\r\n \r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388809467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n-\r\n+                <h2>Reviews</h2>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388815075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n-                <h2>Reviews</h2>\r\n+                <h2 className=\"\">Reviews</h2>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388825349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <Button className=\"w-full\">Add to cart</Button>\r\n           </div>\r\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n-                <h2 className=\"\">Reviews</h2>\r\n+                <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388836387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,11 @@\n           </div>\r\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n                 <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n+                <div>\r\n+                    \r\n+                </div>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388846897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,10 +39,10 @@\n           </div>\r\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n                 <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n-                <div>\r\n-                    \r\n+                <div className=\"grid gap-6 \">\r\n+\r\n                 </div>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n"
+                },
+                {
+                    "date": 1740388853482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,12 @@\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n                 <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n                 <div className=\"grid gap-6 \">\r\n-\r\n+                <div>\r\n+                    \r\n                 </div>\r\n+                </div>\r\n           </div>\r\n         </div>\r\n       </DialogContent>\r\n     </Dialog>\r\n"
+                },
+                {
+                    "date": 1740388859647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,10 @@\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n                 <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n                 <div className=\"grid gap-6 \">\r\n-                <div>\r\n-                    \r\n+                <div className=\"\">\r\n+\r\n                 </div>\r\n                 </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740388867482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n           <Separator/>\r\n           <div className=\"max-h-[300px] overflow-auto \">\r\n                 <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n                 <div className=\"grid gap-6 \">\r\n-                <div className=\"\">\r\n+                <div className=\"flex \">\r\n \r\n                 </div>\r\n                 </div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1740388877047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n           <div className=\"max-h-[300px] overflow-auto \">\r\n                 <h2 className=\"text-xl font-bold mb-4 \">Reviews</h2>\r\n                 <div className=\"grid gap-6 \">\r\n                 <div className=\"flex gap-4 \">\r\n-\r\n+                    \r\n                 </div>\r\n                 </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740388948674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n                     <Avatar className=\"w-10 h-10 border\">\r\n                         <AvatarFallback>Hk</AvatarFallback>\r\n                     </Avatar>\r\n                     <div className=\"grid gap-1 \">\r\n-                        <div>\r\n-                            \r\n+                        <div className=\"f\">\r\n+\r\n                         </div>\r\n                     </div>\r\n                 </div>\r\n                 </div>\r\n"
+                }
+            ],
+            "date": 1740386125016,
+            "name": "Commit-0",
+            "content": "\r\n\r\nffc"
+        }
+    ]
+}

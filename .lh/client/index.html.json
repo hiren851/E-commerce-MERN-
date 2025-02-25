@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1740118977074,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740394174805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <!doctype html>\n <html lang=\"en\">\n   <head>\n     <meta charset=\"UTF-8\" />\n-    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n+    <link rel=\"icon\" type=\"image/svg+xml\" href=\"\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>E-commerce</title>\n   </head>\n   <body>\n"
+                },
+                {
+                    "date": 1740394847299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <!doctype html>\n <html lang=\"en\">\n   <head>\n     <meta charset=\"UTF-8\" />\n-    <link rel=\"icon\" type=\"image/svg+xml\" href=\"\" />\n+    <link rel=\"icon\" type=\"image/svg+xml\" href=\"./\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>E-commerce</title>\n   </head>\n   <body>\n"
+                },
+                {
+                    "date": 1740394856162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <!doctype html>\n <html lang=\"en\">\n   <head>\n     <meta charset=\"UTF-8\" />\n-    <link rel=\"icon\" type=\"image/svg+xml\" href=\"./\" />\n+    <link rel=\"icon\" type=\"image/svg+xml\" href=\"./src/storefront-sharp.svg\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>E-commerce</title>\n   </head>\n   <body>\n"
+                },
+                {
+                    "date": 1740394885208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   <head>\n     <meta charset=\"UTF-8\" />\n     <link rel=\"icon\" type=\"image/svg+xml\" href=\"./src/storefront-sharp.svg\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n-    <title>E-commerce</title>\n+    <title>Sho</title>\n   </head>\n   <body>\n     <div id=\"root\"></div>\n     <script type=\"module\" src=\"/src/main.jsx\"></script>\n"
                 }
             ],
             "date": 1740118977074,
