@@ -1,7 +1,173 @@
+import { Button } from "@/components/ui/button";
+import banner1 from "../../assets/b_1.webp";
+import banner2 from "../../assets/b_2.webp";
+import banner3 from "../../assets/b_3.webp";
+import banner4 from "../../assets/b_4.webp";
+import levis from "../../assets/levi.svg";
+import hm from "../../assets/h-m.svg";
+
+import {
+  Baby,
+  ChevronLeft,
+  ChevronRight,
+  Footprints,
+  Glasses,
+  Shirt,
+  ShoppingBasket,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllFilteredProducts } from "@/Store/shop/product-slice";
+import SHoppingProductTile from "@/components/shopping-view/Product-tile";
+import { SiNike, SiAdidas, SiPuma, SiZara } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
+// import { timeEnd } from "console";
+
+const categoriesWithIcons = [
+  { id: "men", label: "Men", icon: Shirt },
+  { id: "women", label: "Women", icon: ShoppingBasket },
+  { id: "kids", label: "Kids", icon: Baby },
+  { id: "accessories", label: "Accessories", icon: Glasses },
+  { id: "footwear", label: "Footwear", icon: Footprints },
+];
+
+const brandWithIcon = [
+  { id: "nike", label: "Nike", icon: SiNike },
+  { id: "adidas", label: "Adidas", icon: SiAdidas },
+  { id: "puma", label: "Puma", icon: SiPuma },
+  { id: "levi", label: "Levi's", icon: levis },
+  { id: "zara", label: "Zara", icon: SiZara },
+  { id: "h&m", label: "H&M", icon: hm },
+];
+
 function ShoppingHome() {
-    return ( 
-        <div>Shopping View Home</div>
-     );
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const dispatch = useDispatch();
+  const { productList } = useSelector((state) => state.shopProducts);
+  const navigate = useNavigate();
+
+  //   console.log(banner2);
+  const slides = [banner1, banner2, banner3, banner4];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    dispatch(
+      fetchAllFilteredProducts({
+        filterParams: {},
+        sortParams: "price-lowtohigh",
+      })
+    );
+  }, [dispatch]);
+
+
+  function handleNavigateToListingPage(getCurrentItem,section){
+    sessionStorage.removeItem('filters')
+    const currentFilter = {
+        [section] : [getCurrentItem.id]
+    }
+
+    sessionStorage.setItem('filters' , JSON.stringify(currentFilter))
+    navigate(`/shop/listing`)
+  }
+
+  console.log(productList);
+  return (
+    <div className="flex flex-col min-h-screen">
+      <div className="relative w-full h-[600px] overflow-hidden">
+        {slides.map((slide, index) => (
+          <img
+            src={slide}
+            key={index}
+            className={` ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            } absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000`}
+          />
+        ))}
+        <Button
+          variant="outline"
+          size="icon"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80"
+          onClick={() =>
+            setCurrentSlide(
+              (prev) => (prev - 1 + slides.length) % slides.length
+            )
+          }
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80"
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+        >
+          <ChevronRight className="w-4 h-4" />
+        </Button>
+      </div>
+      <section className="py-12 bg-gray-50 " >
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Shop By Category
+          </h2>
+          <div className="grid grid:cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {categoriesWithIcons.map((items) => (
+              <Card className="cursor-pointer hover:shadow-lg transition-shadow" onClick={()=>handleNavigateToListingPage(items , "category")}>
+                <CardContent className="flex flex-col items-center justify-center p-6 ">
+                  <items.icon className="w-12 h-12 mb-4 text-primary" />
+                  <span className="font-bold">{items.label}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-12 bg-gray-50 ">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Shop By Brand</h2>
+          <div className="grid grid:cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {brandWithIcon.map((items) => (
+              <Card className="cursor-pointer hover:shadow-lg transition-shadow"  onClick={()=>handleNavigateToListingPage(items , "brand")}>
+                <CardContent className="flex flex-col items-center justify-center p-6 ">
+                  {typeof items.icon === "string" ? (
+                    <img
+                      src={items.icon}
+                      alt={items.label}
+                      className="w-16 h-16 mb-4"
+                    />
+                  ) : (
+                    <items.icon className="w-12 h-12 mb-4 text-primary" />
+                  )}
+                  <span className="font-bold">{items.label}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-12 ">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Feature Products
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+            {productList && productList.length > 0
+              ? productList.map((productItem) => (
+                  <SHoppingProductTile product={productItem} />
+                ))
+              : null}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default ShoppingHome;

@@ -4,10 +4,37 @@ import { Button } from "../ui/button";
 import { Dialog, DialogContent } from "../ui/dialog";
 import { Separator } from "../ui/separator";
 import { Input } from "../ui/input";
+import { addToCart, fetchCartItems } from "@/Store/shop/cart-slice";
+import { useDispatch, useSelector } from "react-redux";
+import { useToast } from "@/hooks/use-toast";
+import { setProductDetails } from "@/Store/shop/product-slice";
+
 
 function ProductDetailsDialog({ open, setOpen, productDetails }) {
+
+  const dispatch = useDispatch();
+  const { toast} = useToast()
+  const {user} = useSelector(state => state.auth)
+
+   function handleAddToCart(getCurrentProductId){
+        dispatch(addToCart({userId : user.id , productId : getCurrentProductId , quantity : 1}))
+        .then((data)=>{
+          if(data?.payload?.success){
+            dispatch(fetchCartItems(user?.id))
+            toast({
+              title: 'Product Added to Cart',
+            })
+          }
+        })
+    }
+
+    function handleDialogClose( ){
+      setOpen(false)
+      dispatch(setProductDetails())
+    }
+
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleDialogClose}>
       <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]">
         <div className="relative overflow-hidden rounded-lg ">
           <img
@@ -50,7 +77,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                   <span className="text-muted-foreground">(4.5)</span>
           </div>
           <div className="mt-5 mb-5 ">
-            <Button className="w-full">Add to cart</Button>
+            <Button className="w-full" onClick = {()=>handleAddToCart(productDetails._id)}>Add to cart</Button>
           </div>
           <Separator />
           <div className="max-h-[300px] overflow-auto ">

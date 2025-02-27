@@ -15,6 +15,9 @@ import { fetchAllFilteredProducts, fetchProductDetails } from "@/Store/shop/prod
 import SHoppingProductTile from "@/components/shopping-view/Product-tile";
 import { useSearchParams } from "react-router-dom";
 import ProductDetailsDialog from "@/components/shopping-view/ProductDetails";
+import { addToCart, fetchCartItems } from "@/Store/shop/cart-slice";
+import { useToast } from "@/hooks/use-toast";
+
 
 function createSearchParamsHelper(filterParams) {
   const queryParams = [];
@@ -35,7 +38,11 @@ function ShoppingListing() {
   const [filter, setFilter] = useState({});
   const [searchParams, setSearchParmas] = useSearchParams();
   const [openProductDialog ,setOpenProductDialog] = useState(false)
+  const {user} = useSelector(state => state.auth)
+  const {cartItems } = useSelector(state => state.shopCart)
+  const {toast} = useToast();
 
+ 
   function handleSort(value) {
     console.log(value);
     setSort(value);
@@ -69,6 +76,18 @@ function ShoppingListing() {
     dispatch(fetchProductDetails(getCurrentProductId))
   }
 
+  function handleAddToCart(getCurrentProductId){
+      dispatch(addToCart({userId : user.id , productId : getCurrentProductId , quantity : 1}))
+      .then((data)=>{
+        if(data?.payload?.success){
+          dispatch(fetchCartItems(user?.id))
+          toast({
+            title: 'Product Added to Cart',
+          })
+        }
+      })
+  }
+
   useEffect(() => {
     setSort("price-lowtohigh");
     setFilter(JSON.parse(sessionStorage.getItem("filters")) || {});
@@ -94,9 +113,9 @@ function ShoppingListing() {
     }
   },[productDetails])
   // console.log(productDetails);
-  console.log(openProductDialog)
-  
-
+  // console.log(openProductDialog)
+  // console.log(cartItems)
+// console.log(cartItems)
   return (
     <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 p-4 md:p-6">
       <ProductFilter filter={filter} handleFilter={handleFilter} />
@@ -141,6 +160,7 @@ function ShoppingListing() {
                   key={productItem._id}
                   product={productItem}
                   handleGetProductDetails={handleGetProductDetails}
+                  handleAddToCart={handleAddToCart}
                 />
               ))
             : null}

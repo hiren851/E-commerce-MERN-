@@ -1,0 +1,122 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Cart-wrapper.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1740548716992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740548934546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     <SheetTitle>Your Cart</SheetTitle>\r\n                 </SheetHeader>\r\n                 <div className=\"mt-8 space-y-4 \">\r\n                     {\r\n-                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent  cartItems={item}  />): null\r\n+                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent   cartItems={item}  />): null\r\n                     }\r\n                 </div>\r\n                 <div className=\"mt-8 space-y-4\">\r\n                     <div className=\"flex justify-between\">\r\n"
+                },
+                {
+                    "date": 1740548941370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     <SheetTitle>Your Cart</SheetTitle>\r\n                 </SheetHeader>\r\n                 <div className=\"mt-8 space-y-4 \">\r\n                     {\r\n-                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent   cartItems={item}  />): null\r\n+                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent key={cartItems}  cartItems={item}  />): null\r\n                     }\r\n                 </div>\r\n                 <div className=\"mt-8 space-y-4\">\r\n                     <div className=\"flex justify-between\">\r\n"
+                },
+                {
+                    "date": 1740548947005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                     <SheetTitle>Your Cart</SheetTitle>\r\n                 </SheetHeader>\r\n                 <div className=\"mt-8 space-y-4 \">\r\n                     {\r\n-                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent key={cartItems}  cartItems={item}  />): null\r\n+                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent key={cartItems.productId}  cartItems={item}  />): null\r\n                     }\r\n                 </div>\r\n                 <div className=\"mt-8 space-y-4\">\r\n                     <div className=\"flex justify-between\">\r\n"
+                },
+                {
+                    "date": 1740561212781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n import { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n+\r\n+    const totalCartAmount \r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561219839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount \r\n+    const totalCartAmount = cartItems\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561231905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 \r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561238965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 \r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ? \r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561246169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ? \r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?    : \r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561252042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?    : \r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561258051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce()  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561265298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce()  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561273421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cartItems)=> )  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561282681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cartItems)=> )  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cartItems)=> sum + )  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561288355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cartItems)=> sum + )  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cartItems)=> sum + ())  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561300050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cartItems)=> sum + ())  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cure)=> sum + (curre))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561307420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,cure)=> sum + (curre))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (current))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561324051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (current))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561331389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561337140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? ))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561354863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? ))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.))  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561364674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.))  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price)* )  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561370605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price)* )  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price)* currentItem?.)  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561376218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({cartItems}) {\r\n \r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price)* currentItem?.)  : 0\r\n+    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price)* currentItem?.quantity)  : 0\r\n     // console.log(cartItems)\r\n     return ( \r\n         <SheetContent className=\"sm:max-w-md\">\r\n                 <SheetHeader>\r\n"
+                },
+                {
+                    "date": 1740561381517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,44 @@\n import { Button } from \"../ui/button\";\r\n import { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n-function UserCartWrapper({cartItems}) {\r\n-\r\n-    const totalCartAmount = cartItems && cartItems.length > 0 ?  cartItems.reduce((sum,currentItem)=> sum + (currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price)* currentItem?.quantity)  : 0\r\n-    // console.log(cartItems)\r\n-    return ( \r\n-        <SheetContent className=\"sm:max-w-md\">\r\n-                <SheetHeader>\r\n-                    <SheetTitle>Your Cart</SheetTitle>\r\n-                </SheetHeader>\r\n-                <div className=\"mt-8 space-y-4 \">\r\n-                    {\r\n-                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent key={cartItems.productId}  cartItems={item}  />): null\r\n-                    }\r\n-                </div>\r\n-                <div className=\"mt-8 space-y-4\">\r\n-                    <div className=\"flex justify-between\">\r\n-                        <span className=\"font-bold\">Total</span>\r\n-                        <span className=\"font-bold\">₹100</span>\r\n-                    </div>\r\n-                </div>\r\n-                <Button className=\"w-full mt-6\">Checkout</Button>\r\n-        </SheetContent>\r\n-     );\r\n+function UserCartWrapper({ cartItems }) {\r\n+  const totalCartAmount =\r\n+    cartItems && cartItems.length > 0\r\n\\ No newline at end of file\n+      ? cartItems.reduce(\r\n+          (sum, currentItem) =>\r\n+            sum +\r\n+            (currentItem?.salePrice > 0\r\n+              ? currentItem?.salePrice\r\n+              : currentItem?.price) *\r\n+              currentItem?.quantity\r\n+        )\r\n+      : 0;\r\n+  // console.log(cartItems)\r\n+  return (\r\n+    <SheetContent className=\"sm:max-w-md\">\r\n+      <SheetHeader>\r\n+        <SheetTitle>Your Cart</SheetTitle>\r\n+      </SheetHeader>\r\n+      <div className=\"mt-8 space-y-4 \">\r\n+        {cartItems && cartItems.length > 0\r\n+          ? cartItems.map((item) => (\r\n+              <UserCartItemsContent\r\n+                key={cartItems.productId}\r\n+                cartItems={item}\r\n+              />\r\n+            ))\r\n+          : null}\r\n+      </div>\r\n+      <div className=\"mt-8 space-y-4\">\r\n+        <div className=\"flex justify-between\">\r\n+          <span className=\"font-bold\">Total</span>\r\n+          <span className=\"font-bold\">₹100</span>\r\n+        </div>\r\n+      </div>\r\n+      <Button className=\"w-full mt-6\">Checkout</Button>\r\n+    </SheetContent>\r\n+  );\r\n }\r\n \r\n-export default UserCartWrapper;\n+export default UserCartWrapper;\r\n"
+                },
+                {
+                    "date": 1740561393093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       </div>\r\n       <div className=\"mt-8 space-y-4\">\r\n         <div className=\"flex justify-between\">\r\n           <span className=\"font-bold\">Total</span>\r\n-          <span className=\"font-bold\">₹100</span>\r\n+          <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n       <Button className=\"w-full mt-6\">Checkout</Button>\r\n     </SheetContent>\r\n"
+                },
+                {
+                    "date": 1740561444874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n             sum +\r\n             (currentItem?.salePrice > 0\r\n               ? currentItem?.salePrice\r\n               : currentItem?.price) *\r\n-              currentItem?.quantity\r\n+              currentItem?.quantity , 0\r\n         )\r\n       : 0;\r\n   // console.log(cartItems)\r\n   return (\r\n@@ -40,5 +40,5 @@\n     </SheetContent>\r\n   );\r\n }\r\n \r\n-export default UserCartWrapper;\n\\ No newline at end of file\n+export default UserCartWrapper;\r\n"
+                }
+            ],
+            "date": 1740548716992,
+            "name": "Commit-0",
+            "content": "import { Button } from \"../ui/button\";\r\nimport { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\nimport UserCartItemsContent from \"./Cart-items-content\";\r\n\r\nfunction UserCartWrapper({cartItems}) {\r\n    // console.log(cartItems)\r\n    return ( \r\n        <SheetContent className=\"sm:max-w-md\">\r\n                <SheetHeader>\r\n                    <SheetTitle>Your Cart</SheetTitle>\r\n                </SheetHeader>\r\n                <div className=\"mt-8 space-y-4 \">\r\n                    {\r\n                        cartItems && cartItems.length > 0 ? cartItems.map((item)=> <UserCartItemsContent  cartItems={item}  />): null\r\n                    }\r\n                </div>\r\n                <div className=\"mt-8 space-y-4\">\r\n                    <div className=\"flex justify-between\">\r\n                        <span className=\"font-bold\">Total</span>\r\n                        <span className=\"font-bold\">₹100</span>\r\n                    </div>\r\n                </div>\r\n                <Button className=\"w-full mt-6\">Checkout</Button>\r\n        </SheetContent>\r\n     );\r\n}\r\n\r\nexport default UserCartWrapper;"
+        }
+    ]
+}

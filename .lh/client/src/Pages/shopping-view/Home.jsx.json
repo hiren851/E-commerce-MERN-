@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 123,
             "patches": [
                 {
                     "date": 1739531609694,
@@ -20,6 +20,486 @@
                 {
                     "date": 1739531794751,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function ShoppingHome() {\r\n-    return (  );\r\n+    return ( \r\n+        <div>Shopping View </div>\r\n+     );\r\n }\r\n \r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740564195205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function ShoppingHome() {\r\n     return ( \r\n-        <div>Shopping View </div>\r\n+        <div>\r\n+            \r\n+        </div>\r\n      );\r\n }\r\n \r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740564200821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingHome() {\r\n     return ( \r\n-        <div>\r\n-            \r\n+        <div className=\"flex \">\r\n+\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740564209632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingHome() {\r\n     return ( \r\n-        <div className=\"flex \">\r\n+        <div className=\"flex flex-col min-h-screen\">\r\n \r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740564220553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n function ShoppingHome() {\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n+            <div className=\"relative w\">\r\n \r\n+            </div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740564225967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingHome() {\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w\">\r\n+            <div className=\"relative w-full h-[\">\r\n \r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740564231008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingHome() {\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w-full h-[\">\r\n+            <div className=\"relative w-full h-[600p] over\">\r\n \r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740565145490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n+\r\n+\r\n+\r\n function ShoppingHome() {\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w-full h-[600p] over\">\r\n+            <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n \r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740565154679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n+import banner1 from \r\n \r\n \r\n-\r\n function ShoppingHome() {\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n"
+                },
+                {
+                    "date": 1740565161969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from \r\n+import banner1 from '../../assets'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565175618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets'\r\n+import banner1 from '../../assets/'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565190815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets/'\r\n+import banner1 from '../'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565196040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../'\r\n+import banner1 from '../../'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565216423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../'\r\n+import banner1 from '../../assets/'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565257613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets/'\r\n+import banner1 from '../../assets'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565274881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets'\r\n+import banner1 from '../../assets/b_1'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565280161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets/b_1'\r\n+import banner1 from '../../assets/b_1.webp'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565291583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n import banner1 from '../../assets/b_1.webp'\r\n+import banner1 from '../../assets/b_1.webp'\r\n+import banner1 from '../../assets/b_1.webp'\r\n+import banner1 from '../../assets/b_1.webp'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565297236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import banner1 from '../../assets/b_1.webp'\r\n-import banner1 from '../../assets/b_1.webp'\r\n-import banner1 from '../../assets/b_1.webp'\r\n-import banner1 from '../../assets/b_1.webp'\r\n+import banner2 from '../../assets/b_1.webp'\r\n+import banner3 from '../../assets/b_1.webp'\r\n+import banner4 from '../../assets/b_1.webp'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565303952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import banner1 from '../../assets/b_1.webp'\r\n import banner2 from '../../assets/b_1.webp'\r\n-import banner3 from '../../assets/b_1.webp'\r\n-import banner4 from '../../assets/b_1.webp'\r\n+import banner3 from '../../assets/b_3.webp'\r\n+import banner4 from '../../assets/b_4.webp'\r\n \r\n \r\n function ShoppingHome() {\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565319060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import banner1 from '../../assets/b_1.webp'\r\n-import banner2 from '../../assets/b_1.webp'\r\n+import banner2 from '../../assets/b_2.webp'\r\n import banner3 from '../../assets/b_3.webp'\r\n import banner4 from '../../assets/b_4.webp'\r\n \r\n \r\n function ShoppingHome() {\r\n+\r\n+    const slide\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n \r\n"
+                },
+                {
+                    "date": 1740565337428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n function ShoppingHome() {\r\n \r\n-    const slide\r\n+    const slides = [banner1,bane]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n \r\n"
+                },
+                {
+                    "date": 1740565343037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n function ShoppingHome() {\r\n \r\n-    const slides = [banner1,bane]\r\n+    const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n \r\n"
+                },
+                {
+                    "date": 1740565366847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-\r\n+                {\r\n+                    \r\n+                }\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740565375491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {\r\n-                    \r\n+                {slides.map()\r\n+\r\n                 }\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740565380656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map()\r\n+                {slides.map((slide))\r\n \r\n                 }\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740565393112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map((slide))\r\n+                {slides.map((slide,index)=>img)\r\n \r\n                 }\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740565399422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map((slide,index)=>img)\r\n+                {slides.map((slide,index)=> <img)\r\n \r\n                 }\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740565410362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map((slide,index)=> <img)\r\n+                {slides.map((slide,index)=> <img\r\n+                    src={}\r\n+                />)\r\n \r\n                 }\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740565421861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n-                    src={}\r\n+                    src={slide}\r\n+                    key={index}\r\n+                    className=''\r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565428670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className=''\r\n+                    className='absolute'\r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565435970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute'\r\n+                    className='absolute top-0 '  \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565446280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 '  \r\n+                    className='absolute top-0 left-0 '  \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565451673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import banner1 from '../../assets/b_1.webp'\r\n+import banner2 from '../../assets/b_2.webp'\r\n+import banner3 from '../../assets/b_3.webp'\r\n+import banner4 from '../../assets/b_4.webp'\r\n+\r\n+\r\n+function ShoppingHome() {\r\n+\r\n+    const slides = [banner1,banner2,banner3,banner4]\r\n+    return ( \r\n+        <div className=\"flex flex-col min-h-screen\">\r\n+            <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n+                {slides.map((slide,index)=> <img\r\n+                    src={slide}\r\n+                    key={index}\r\n+                    className='absolute top-0 left-0 w-full h-full'  \r\n+                />)\r\n+\r\n+                }\r\n+            </div>\r\n+        </div>\r\n+     );\r\n+}\r\n+\r\n+export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740565464771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,39 +12,14 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full'  \r\n+                    className='absolute top-0 left-0 w-full h-full object-cover '   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n \r\n-export default ShoppingHome;\n-import banner1 from '../../assets/b_1.webp'\r\n-import banner2 from '../../assets/b_2.webp'\r\n-import banner3 from '../../assets/b_3.webp'\r\n-import banner4 from '../../assets/b_4.webp'\r\n-\r\n-\r\n-function ShoppingHome() {\r\n-\r\n-    const slides = [banner1,banner2,banner3,banner4]\r\n-    return ( \r\n-        <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map((slide,index)=> <img\r\n-                    src={slide}\r\n-                    key={index}\r\n-                    className='absolute top-0 left-0 '  \r\n-                />)\r\n-\r\n-                }\r\n-            </div>\r\n-        </div>\r\n-     );\r\n-}\r\n-\r\n export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740565470578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover '   \r\n+                    className='absolute top-0 left-0 w-full h-full object-cover trans'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565477078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover trans'   \r\n+                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity '   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565594173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets/b_1.webp'\r\n+import banner1 from '../../'\r\n import banner2 from '../../assets/b_2.webp'\r\n import banner3 from '../../assets/b_3.webp'\r\n import banner4 from '../../assets/b_4.webp'\r\n \r\n@@ -12,9 +12,9 @@\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity '   \r\n+                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740565603594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../'\r\n+import banner1 from '../../assets/\\'\r\n import banner2 from '../../assets/b_2.webp'\r\n import banner3 from '../../assets/b_3.webp'\r\n import banner4 from '../../assets/b_4.webp'\r\n \r\n"
+                },
+                {
+                    "date": 1740565650519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-import banner1 from '../../assets/\\'\r\n-import banner2 from '../../assets/b_2.webp'\r\n-import banner3 from '../../assets/b_3.webp'\r\n-import banner4 from '../../assets/b_4.webp'\r\n \r\n+import bannerOne from \"../../assets/banner-1.webp\";\r\n+import bannerTwo from \"../../assets/banner-2.webp\";\r\n+import bannerThree from \"../../assets/banner-3.webp\";\r\n \r\n+\r\n function ShoppingHome() {\r\n \r\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565660255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-import bannerOne from \"../../assets/banner-1.webp\";\r\n+import bannerOne from \"../../assets/\";\r\n import bannerTwo from \"../../assets/banner-2.webp\";\r\n import bannerThree from \"../../assets/banner-3.webp\";\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1740565665918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n+import banner1 from '../../assets'\r\n+import banner2 from '../../assets/b_2.webp'\r\n+import banner3 from '../../assets/b_3.webp'\r\n+import banner4 from '../../assets/b_4.webp'\r\n \r\n-import bannerOne from \"../../assets/\";\r\n-import bannerTwo from \"../../assets/banner-2.webp\";\r\n-import bannerThree from \"../../assets/banner-3.webp\";\r\n \r\n-\r\n function ShoppingHome() {\r\n \r\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n"
+                },
+                {
+                    "date": 1740565671805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets'\r\n+import banner1 from '../../assets/'\r\n import banner2 from '../../assets/b_2.webp'\r\n import banner3 from '../../assets/b_3.webp'\r\n import banner4 from '../../assets/b_4.webp'\r\n \r\n"
+                },
+                {
+                    "date": 1740565681015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import banner1 from '../../assets/'\r\n+import banner1 from '../../assets/b'\r\n import banner2 from '../../assets/b_2.webp'\r\n import banner3 from '../../assets/b_3.webp'\r\n import banner4 from '../../assets/b_4.webp'\r\n \r\n"
+                },
+                {
+                    "date": 1740565824204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n import banner3 from '../../assets/b_3.webp'\r\n import banner4 from '../../assets/b_4.webp'\r\n \r\n \r\n+\r\n function ShoppingHome() {\r\n-\r\n+    console.log(first)\r\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n"
+                },
+                {
+                    "date": 1740565831079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n \r\n function ShoppingHome() {\r\n-    console.log(first)\r\n+    console.log(banner2)\r\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n"
+                },
+                {
+                    "date": 1740566003318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-import banner1 from '../../assets/b'\r\n-import banner2 from '../../assets/b_2.webp'\r\n-import banner3 from '../../assets/b_3.webp'\r\n-import banner4 from '../../assets/b_4.webp'\r\n+// import banner1 from '../../assets/b'\r\n+// import banner2 from '../../assets/b_2.webp'\r\n+// import banner3 from '../../assets/b_3.webp'\r\n+// import banner4 from '../../assets/b_4.webp'\r\n \r\n \r\n \r\n function ShoppingHome() {\r\n"
+                },
+                {
+                    "date": 1740566025479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,19 +6,19 @@\n \r\n \r\n function ShoppingHome() {\r\n     console.log(banner2)\r\n-    const slides = [banner1,banner2,banner3,banner4]\r\n+    // const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map((slide,index)=> <img\r\n+                {/* {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n                     className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n-                }\r\n+                } */}\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566041890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n \r\n \r\n function ShoppingHome() {\r\n-    console.log(banner2)\r\n+    // console.log(banner2)\r\n     // const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n@@ -15,9 +15,9 @@\n                     src={slide}\r\n                     key={index}\r\n                     className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n-\r\n+                    \r\n                 } */}\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740566047658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n                     className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n                     \r\n                 } */}\r\n+                <h1></h1>\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566055663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,8 @@\n                     className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n                     \r\n                 } */}\r\n-                <h1></h1>\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566064034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,20 +5,20 @@\n \r\n \r\n \r\n function ShoppingHome() {\r\n-    // console.log(banner2)\r\n+    console.log(banner2)\r\n     // const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {/* {slides.map((slide,index)=> <img\r\n+                {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n                     className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n-                    \r\n-                } */}\r\n+\r\n+                }\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566074558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-// import banner1 from '../../assets/b'\r\n-// import banner2 from '../../assets/b_2.webp'\r\n-// import banner3 from '../../assets/b_3.webp'\r\n-// import banner4 from '../../assets/b_4.webp'\r\n+import banner1 from '../../assets/b_1'\r\n+import banner2 from '../../assets/b_2.webp'\r\n+import banner3 from '../../assets/b_3.webp'\r\n+import banner4 from '../../assets/b_4.webp'\r\n \r\n \r\n \r\n function ShoppingHome() {\r\n     console.log(banner2)\r\n-    // const slides = [banner1,banner2,banner3,banner4]\r\n+    const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n             <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n"
+                },
+                {
+                    "date": 1740566105209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,1 @@\n-import banner1 from '../../assets/b_1'\r\n-import banner2 from '../../assets/b_2.webp'\r\n-import banner3 from '../../assets/b_3.webp'\r\n-import banner4 from '../../assets/b_4.webp'\r\n-\r\n-\r\n-\r\n-function ShoppingHome() {\r\n-    console.log(banner2)\r\n-    const slides = [banner1,banner2,banner3,banner4]\r\n-    return ( \r\n-        <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w-full h-[600p] overflow-hidden\">\r\n-                {slides.map((slide,index)=> <img\r\n-                    src={slide}\r\n-                    key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n-                />)\r\n-\r\n-                }\r\n-            </div>\r\n-        </div>\r\n-     );\r\n-}\r\n-\r\n-export default ShoppingHome;\n\\ No newline at end of file\n+c\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740566126993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,26 @@\n-c\n\\ No newline at end of file\n+import banner1 from '../../assets/b_1.webp'\r\n+import banner2 from '../../assets/b_2.webp'\r\n+import banner3 from '../../assets/b_3.webp'\r\n+import banner4 from '../../assets/b_4.webp'\r\n+\r\n+\r\n+\r\n+function ShoppingHome() {\r\n+    console.log(banner2)\r\n+    const slides = [banner1,banner2,banner3,banner4]\r\n+    return ( \r\n+        <div className=\"flex flex-col min-h-screen\">\r\n+            <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n+                {slides.map((slide,index)=> <img\r\n+                    src={slide}\r\n+                    key={index}\r\n+                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                />)\r\n+\r\n+                }\r\n+            </div>\r\n+        </div>\r\n+     );\r\n+}\r\n+\r\n+export default ShoppingHome;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740566146637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                    className='absolute top-10 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566155474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-10 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                    className='absolute top- left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566242769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top- left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                    className='absolute top-[10px] left-0 w-full h-full object-cont transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566249072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-[10px] left-0 w-full h-full object-cont transition-opacity duration-1000'   \r\n+                    className='absolute top-[10px] left-0 w-full h-full object-contain transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566263550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-[10px] left-0 w-full h-full object-contain transition-opacity duration-1000'   \r\n+                    className='absolute top-[10px] left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566270581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-[10px] left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                    className='absolute  left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566278726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute  left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566291372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n+                    className='absolute top-0 left-0 w-full h-full object- transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566318683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n     console.log(banner2)\r\n     const slides = [banner1,banner2,banner3,banner4]\r\n     return ( \r\n         <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n+            <div className=\"relative w-full h-full overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object- transition-opacity duration-1000'   \r\n+                    className='absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566327419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div className=\"relative w-full h-full overflow-hidden\">\r\n                 {slides.map((slide,index)=> <img\r\n                     src={slide}\r\n                     key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000'   \r\n+                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n                 />)\r\n \r\n                 }\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1740566495950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,24 @@\n-import banner1 from '../../assets/b_1.webp'\r\n-import banner2 from '../../assets/b_2.webp'\r\n-import banner3 from '../../assets/b_3.webp'\r\n-import banner4 from '../../assets/b_4.webp'\r\n+import banner1 from \"../../assets/b_1.webp\";\r\n+import banner2 from \"../../assets/b_2.webp\";\r\n+import banner3 from \"../../assets/b_3.webp\";\r\n+import banner4 from \"../../assets/b_4.webp\";\r\n \r\n-\r\n-\r\n function ShoppingHome() {\r\n-    console.log(banner2)\r\n-    const slides = [banner1,banner2,banner3,banner4]\r\n-    return ( \r\n-        <div className=\"flex flex-col min-h-screen\">\r\n-            <div className=\"relative w-full h-full overflow-hidden\">\r\n-                {slides.map((slide,index)=> <img\r\n-                    src={slide}\r\n-                    key={index}\r\n-                    className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000'   \r\n-                />)\r\n-\r\n-                }\r\n-            </div>\r\n-        </div>\r\n\\ No newline at end of file\n-     );\r\n+  console.log(banner2);\r\n+  const slides = [banner1, banner2, banner3, banner4];\r\n+  return (\r\n+    <div className=\"flex flex-col min-h-screen\">\r\n+      <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n+        {slides.map((slide, index) => (\r\n+          <img\r\n+            src={slide}\r\n+            key={index}\r\n+            className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n+          />\r\n+        ))}\r\n+      </div>\r\n+    </div>\r\n+  );\r\n }\r\n \r\n-export default ShoppingHome;\n+export default ShoppingHome;\r\n"
+                },
+                {
+                    "date": 1740566504974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Button } from \"@/components/ui/button\";\r\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n@@ -15,8 +16,11 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n+        <Button>\r\n+            \r\n+        </Button>\r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566512738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n         <Button>\r\n-            \r\n+            <ChevronLe\r\n         </Button>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566525696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n+import { ChevronLeft } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n@@ -17,9 +18,9 @@\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n         <Button>\r\n-            <ChevronLe\r\n+            <ChevronLeft className=\"w-\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566531220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button>\r\n-            <ChevronLeft className=\"w-\" />\r\n+        <Button >\r\n+            <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566538031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button >\r\n+        <Button variant=\"\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566549021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"\">\r\n+        <Button variant=\"outline\" size=\"icon\" >\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566562967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" >\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute \">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566573645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute \">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 \">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566581243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 \">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform tra\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566590622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform tra\">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform translate-\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566596013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform translate-\">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform translate-y-1/2\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566623921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform translate-y-1/2\">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566648862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,14 @@\n             key={index}\r\n             className=\"absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000\"\r\n           />\r\n         ))}\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white\">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80\">\r\n+            <ChevronLeft className=\"w-4 h-4\" />\r\n+        </Button>\r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566656405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n-import { ChevronLeft } from \"lucide-react\";\r\n+import { ChevronLeft, ChevronRight } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n@@ -21,9 +21,9 @@\n         <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n         <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80\">\r\n-            <ChevronLeft className=\"w-4 h-4\" />\r\n+            <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566733280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         ))}\r\n         <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronLeft className=\"w-4 h-4\" />\r\n         </Button>\r\n-        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80\">\r\n+        <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1740566765027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n         <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n+      <section className=\"\"></section>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740566774021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n-      <section className=\"\"></section>\r\n+      <section className=\"py-12 bg-gray-50 \"></section>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740566784819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n         <Button variant=\"outline\" size=\"icon\" className=\"absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80\">\r\n             <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n-      <section className=\"py-12 bg-gray-50 \"></section>\r\n+      <section className=\"py-12 bg-gray-50 \">\r\n+        <div className=\"conta\"></div>\r\n+      </section>\r\n     </div>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740566792792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n-        <div className=\"conta\"></div>\r\n+        <div className=\"container mx-auto \"></div>\r\n       </section>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566799150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,11 @@\n             <ChevronRight className=\"w-4 h-4\" />\r\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n-        <div className=\"container mx-auto \"></div>\r\n+        <div className=\"container mx-auto px-4\">\r\n+            \r\n+        </div>\r\n       </section>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740566806571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n-            \r\n+            <h2>shop By cate</h2>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566814427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n-            <h2>shop By cate</h2>\r\n+            <h2 className=\"\">shop By category</h2>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566823859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n-            <h2 className=\"\">shop By category</h2>\r\n+            <h2 className=\"text-3xl font-bold text-c\">shop By category</h2>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566839283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n-            <h2 className=\"text-3xl font-bold text-c\">shop By category</h2>\r\n+            <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By category</h2>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566864374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n+\r\n+  \r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n       <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n         {slides.map((slide, index) => (\r\n@@ -26,9 +28,9 @@\n         </Button>\r\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n-            <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By category</h2>\r\n+            <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740566869586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n-  \r\n+    \r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n       <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n         {slides.map((slide, index) => (\r\n"
+                },
+                {
+                    "date": 1740566917841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n-    \r\n+  const categories = \r\n+\r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n       <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n         {slides.map((slide, index) => (\r\n"
+                },
+                {
+                    "date": 1740566955767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,15 @@\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n-  const categories = \r\n+  const categories =  [\r\n+    { id: \"men\", label: \"Men\" },\r\n+    { id: \"women\", label: \"Women\" },\r\n+    { id: \"kids\", label: \"Kids\" },\r\n+    { id: \"accessories\", label: \"Accessories\" },\r\n+    { id: \"footwear\", label: \"Footwear\" },\r\n+  ]\r\n \r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n       <div className=\"relative w-full h-[600px] overflow-hidden\">\r\n"
+                },
+                {
+                    "date": 1740566963684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" },\r\n+    { id: \"men\", label: \"Men\" ,  },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567100583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" ,  },\r\n+    { id: \"men\", label: \"Men\" , icon :   },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567107095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" , icon :   },\r\n+    { id: \"men\", label: \"Men\" , icon : t-s  },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567113838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" , icon : t-s  },\r\n+    { id: \"men\", label: \"Men\" , icon : TSh  },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567123501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" , icon : TSh  },\r\n+    { id: \"men\", label: \"Men\" , icon :   },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567141556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" , icon :   },\r\n+    { id: \"men\", label: \"Men\" , icon : <Shirt />  },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567147309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" , icon : <Shirt />  },\r\n+    { id: \"men\", label: \"Men\" , icon : shirt  },\r\n     { id: \"women\", label: \"Women\" },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n"
+                },
+                {
+                    "date": 1740567154810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,17 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n-import { ChevronLeft, ChevronRight } from \"lucide-react\";\r\n+import { ChevronLeft, ChevronRight, Shirt } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n-    { id: \"men\", label: \"Men\" , icon : shirt  },\r\n-    { id: \"women\", label: \"Women\" },\r\n+    { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n+    { id: \"women\", label: \"Women\" ,  },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n"
+                },
+                {
+                    "date": 1740567160997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n-    { id: \"women\", label: \"Women\" ,  },\r\n+    { id: \"women\", label: \"Women\" , icon :  },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n"
+                },
+                {
+                    "date": 1740567679501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n-    { id: \"women\", label: \"Women\" , icon :  },\r\n+    { id: \"women\", label: \"Women\" , icon : <ShoppingBasket /> },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n"
+                },
+                {
+                    "date": 1740567686093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,17 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n-import { ChevronLeft, ChevronRight, Shirt } from \"lucide-react\";\r\n+import { ChevronLeft, ChevronRight, Shirt, ShoppingBasket } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n-    { id: \"women\", label: \"Women\" , icon : <ShoppingBasket /> },\r\n+    { id: \"women\", label: \"Women\" , icon : <ShoppingBasket },\r\n     { id: \"kids\", label: \"Kids\" },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n"
+                },
+                {
+                    "date": 1740567692112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n-    { id: \"women\", label: \"Women\" , icon : <ShoppingBasket },\r\n-    { id: \"kids\", label: \"Kids\" },\r\n+    { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n+    { id: \"kids\", label: \"Kids\" ,  },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n \r\n"
+                },
+                {
+                    "date": 1740567700956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n-    { id: \"kids\", label: \"Kids\" ,  },\r\n+    { id: \"kids\", label: \"Kids\" , icon : < },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n \r\n"
+                },
+                {
+                    "date": 1740567716860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n-    { id: \"kids\", label: \"Kids\" , icon : < },\r\n+    { id: \"kids\", label: \"Kids\" , icon : <baby },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n \r\n"
+                },
+                {
+                    "date": 1740567723315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,18 +2,18 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n-import { ChevronLeft, ChevronRight, Shirt, ShoppingBasket } from \"lucide-react\";\r\n+import { Baby, ChevronLeft, ChevronRight, Shirt, ShoppingBasket } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n-    { id: \"kids\", label: \"Kids\" , icon : <baby },\r\n+    { id: \"kids\", label: \"Kids\" , icon : Baby },\r\n     { id: \"accessories\", label: \"Accessories\" },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n \r\n"
+                },
+                {
+                    "date": 1740567761980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n     { id: \"kids\", label: \"Kids\" , icon : Baby },\r\n-    { id: \"accessories\", label: \"Accessories\" },\r\n+    { id: \"accessories\", label: \"Accessories\" , icon : glasse },\r\n     { id: \"footwear\", label: \"Footwear\" },\r\n   ]\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1740567768270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n-import { Baby, ChevronLeft, ChevronRight, Shirt, ShoppingBasket } from \"lucide-react\";\r\n+import { Baby, ChevronLeft, ChevronRight, Glasses, Shirt, ShoppingBasket } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n@@ -12,10 +12,10 @@\n   const categories =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n     { id: \"kids\", label: \"Kids\" , icon : Baby },\r\n-    { id: \"accessories\", label: \"Accessories\" , icon : glasse },\r\n-    { id: \"footwear\", label: \"Footwear\" },\r\n+    { id: \"accessories\", label: \"Accessories\" , icon : Glasses },\r\n+    { id: \"footwear\", label: \"Footwear\" , icon :  },\r\n   ]\r\n \r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n"
+                },
+                {
+                    "date": 1740567797841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n     { id: \"kids\", label: \"Kids\" , icon : Baby },\r\n     { id: \"accessories\", label: \"Accessories\" , icon : Glasses },\r\n-    { id: \"footwear\", label: \"Footwear\" , icon :  },\r\n+    { id: \"footwear\", label: \"Footwear\" , icon : < },\r\n   ]\r\n \r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n"
+                },
+                {
+                    "date": 1740567802955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import banner1 from \"../../assets/b_1.webp\";\r\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n-import { Baby, ChevronLeft, ChevronRight, Glasses, Shirt, ShoppingBasket } from \"lucide-react\";\r\n+import { Baby, ChevronLeft, ChevronRight, Footprints, Glasses, Shirt, ShoppingBasket } from \"lucide-react\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n@@ -13,9 +13,9 @@\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n     { id: \"kids\", label: \"Kids\" , icon : Baby },\r\n     { id: \"accessories\", label: \"Accessories\" , icon : Glasses },\r\n-    { id: \"footwear\", label: \"Footwear\" , icon : < },\r\n+    { id: \"footwear\", label: \"Footwear\" , icon : Footprints },\r\n   ]\r\n \r\n   return (\r\n     <div className=\"flex flex-col min-h-screen\">\r\n"
+                },
+                {
+                    "date": 1740567843319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n \r\n-  const categories =  [\r\n+  const categoriesWithIcons =  [\r\n     { id: \"men\", label: \"Men\" , icon : Shirt  },\r\n     { id: \"women\", label: \"Women\" , icon : ShoppingBasket },\r\n     { id: \"kids\", label: \"Kids\" , icon : Baby },\r\n     { id: \"accessories\", label: \"Accessories\" , icon : Glasses },\r\n"
+                },
+                {
+                    "date": 1740567860936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n+            <div className=\"grid cols-2\"></div>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740567868906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n-            <div className=\"grid cols-2\"></div>\r\n+            <div className=\"grid grid\"></div>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740567885151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n-            <div className=\"grid grid\"></div>\r\n+            <div className=\"grid grid:cols-2 md:\"></div>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740567892677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n-            <div className=\"grid grid:cols-2 md:\"></div>\r\n+            <div className=\"grid grid:cols-2 md:grid-cols-3\"></div>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740567899539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n-            <div className=\"grid grid:cols-2 md:grid-cols-3\"></div>\r\n+            <div className=\"grid grid:cols-2 md:grid-cols-3 lg:\"></div>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740567904888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       </div>\r\n       <section className=\"py-12 bg-gray-50 \">\r\n         <div className=\"container mx-auto px-4\">\r\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n-            <div className=\"grid grid:cols-2 md:grid-cols-3 lg:grid\"></div>\r\n+            <div className=\"grid grid:cols-2 md:grid-cols-3 lg:grid-cols-6\"></div>\r\n         </div>\r\n       </section>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740567998016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import banner2 from \"../../assets/b_2.webp\";\r\n import banner3 from \"../../assets/b_3.webp\";\r\n import banner4 from \"../../assets/b_4.webp\";\r\n import { Baby, ChevronLeft, ChevronRight, Footprints, Glasses, Shirt, ShoppingBasket } from \"lucide-react\";\r\n-import { Card } from \"@/components/ui/card\";\r\n+import { Card, CardContent } from \"@/components/ui/card\";\r\n \r\n function ShoppingHome() {\r\n   console.log(banner2);\r\n   const slides = [banner1, banner2, banner3, banner4];\r\n@@ -40,9 +40,9 @@\n             <h2 className=\"text-3xl font-bold text-center mb-8\">Shop By Category</h2>\r\n             <div className=\"grid grid:cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4\">\r\n                 {\r\n                     categoriesWithIcons.map(items => <Card className=\"cursor-pointer hover:shadow-lg transition-shadow\">\r\n-\r\n+                        <CardContent></CardContent>\r\n                     </Card>)\r\n                 }\r\n             </div>\r\n         </div>\r\n"
                 }
             ],
             "date": 1739531609694,

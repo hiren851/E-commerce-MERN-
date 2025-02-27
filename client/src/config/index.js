@@ -128,11 +128,11 @@ export const addProductFormElements = [
       label : 'Kids',
       path : '/shop/listing'
     },
-    {
-      id: 'watch',
-      label : 'Watch',
-      path : '/shop/listing'
-    },
+    // {
+    //   id: 'watch',
+    //   label : 'Watch',
+    //   path : '/shop/listing'
+    // },
     {
       id: 'footwear',
       label : 'Footwear',
