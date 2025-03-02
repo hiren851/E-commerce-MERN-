@@ -1,0 +1,190 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Address-card.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1740647519168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740647525430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n \r\n \r\n function AddressCard() {\r\n-    return (  );\r\n+    return ( \r\n+        <div>\r\n+            \r\n+        </div>\r\n+     );\r\n }\r\n \r\n export default AddressCard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740647543482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n+import { Card } from \"../ui/card\";\r\n \r\n \r\n function AddressCard() {\r\n     return ( \r\n-        <div>\r\n+        <Card>\r\n             \r\n-        </div>\r\n+        </Card>\r\n      );\r\n }\r\n \r\n export default AddressCard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740647560927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-import { Card } from \"../ui/card\";\r\n+import { Card, CardContent } from \"../ui/card\";\r\n \r\n \r\n function AddressCard() {\r\n     return ( \r\n         <Card>\r\n-            \r\n+            <CardContent classNA></CardContent>\r\n         </Card>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740647569298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function AddressCard() {\r\n     return ( \r\n         <Card>\r\n-            <CardContent classNA></CardContent>\r\n+            <CardContent className=\"grid gap-4\"></CardContent>\r\n         </Card>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740647576643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,13 @@\n \r\n function AddressCard() {\r\n     return ( \r\n         <Card>\r\n-            <CardContent className=\"grid gap-4\"></CardContent>\r\n+            <CardContent className=\"grid gap-4\">\r\n+                <div>\r\n+                    \r\n+                </div>\r\n+            </CardContent>\r\n         </Card>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740647588249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,9 @@\n function AddressCard() {\r\n     return ( \r\n         <Card>\r\n             <CardContent className=\"grid gap-4\">\r\n-                <div>\r\n-                    \r\n-                </div>\r\n+                \r\n             </CardContent>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740647594750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,15 @@\n import { Card, CardContent } from \"../ui/card\";\r\n+import { Label } from \"../ui/label\";\r\n \r\n \r\n function AddressCard() {\r\n     return ( \r\n         <Card>\r\n             <CardContent className=\"grid gap-4\">\r\n-                \r\n+                <Label>\r\n+                    \r\n+                </Label>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740647607398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { Card, CardContent } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n \r\n-function AddressCard() {\r\n+function AddressCard({address}) {\r\n     return ( \r\n         <Card>\r\n             <CardContent className=\"grid gap-4\">\r\n                 <Label>\r\n-                    \r\n+\r\n                 </Label>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740647612576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     return ( \r\n         <Card>\r\n             <CardContent className=\"grid gap-4\">\r\n                 <Label>\r\n-\r\n+                    {address}\r\n                 </Label>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740647619973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     return ( \r\n         <Card>\r\n             <CardContent className=\"grid gap-4\">\r\n                 <Label>\r\n-                    {address}\r\n+                    {address?.address}\r\n                 </Label>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740647628199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     return ( \r\n         <Card>\r\n             <CardContent className=\"grid gap-4\">\r\n                 <Label>\r\n-                    {address?.address}\r\n+                    {addressInfo?.address}\r\n                 </Label>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740647636813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,14 @@\n import { Card, CardContent } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-\r\n-function AddressCard({address}) {\r\n-    return ( \r\n-        <Card>\r\n-            <CardContent className=\"grid gap-4\">\r\n-                <Label>\r\n-                    {addressInfo?.address}\r\n-                </Label>\r\n-            </CardContent>\r\n-        </Card>\r\n-     );\r\n+function AddressCard({ addressInfo }) {\r\n+  return (\r\n+    <Card>\r\n\\ No newline at end of file\n+      <CardContent className=\"grid gap-4\">\r\n+        <Label>{addressInfo?.address}</Label>\r\n+      </CardContent>\r\n+    </Card>\r\n+  );\r\n }\r\n \r\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740647641925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,15 @@\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4\">\r\n         <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.address}</Label>\r\n       </CardContent>\r\n\\ No newline at end of file\n     </Card>\r\n   );\r\n }\r\n \r\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740647649357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,15 @@\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4\">\r\n         <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.city}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n-        <Label>{addressInfo?.address}</Label>\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740647655122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,14 +6,14 @@\n     <Card>\r\n       <CardContent className=\"grid gap-4\">\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.city}</Label>\r\n+        <Label>{addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n-        <Label>{addressInfo?.address}</Label>\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740647664450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n       <CardContent className=\"grid gap-4\">\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.city}</Label>\r\n         <Label>{addressInfo?.state}</Label>\r\n+        <Label>{addressInfo?.country}</Label>\r\n+        <Label>{addressInfo?.pincode}</Label>\r\n         <Label>{addressInfo?.address}</Label>\r\n-        <Label>{addressInfo?.address}</Label>\r\n-        <Label>{addressInfo?.address}</Label>\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n }\r\n\\ No newline at end of file\n \r\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740647674002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n         <Label>{addressInfo?.city}</Label>\r\n         <Label>{addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.country}</Label>\r\n         <Label>{addressInfo?.pincode}</Label>\r\n-        <Label>{addressInfo?.address}</Label>\r\n+        <Label>{addressInfo?.phone}</Label>\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740647680512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,11 @@\n         <Label>{addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.country}</Label>\r\n         <Label>{addressInfo?.pincode}</Label>\r\n         <Label>{addressInfo?.phone}</Label>\r\n+        <Label>{addressInfo?.notes}</Label>\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n }\r\n \r\n\\ No newline at end of file\n-export default AddressCard;\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740653206832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function AddressCard({ addressInfo }) {\r\n   return (\r\n     <Card>\r\n-      <CardContent className=\"grid gap-4\">\r\n+      <CardContent className=\"grid gap-4 p-3\">\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.city}</Label>\r\n         <Label>{addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.country}</Label>\r\n@@ -16,5 +16,5 @@\n     </Card>\r\n   );\r\n }\r\n \r\n-export default AddressCard;\n\\ No newline at end of file\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740653215088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function AddressCard({ addressInfo }) {\r\n   return (\r\n     <Card>\r\n-      <CardContent className=\"grid gap-4 p-3\">\r\n+      <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>{addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.city}</Label>\r\n         <Label>{addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.country}</Label>\r\n"
+                },
+                {
+                    "date": 1740653221502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function AddressCard({ addressInfo }) {\r\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n-        <Label>{addressInfo?.address}</Label>\r\n+        <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>{addressInfo?.city}</Label>\r\n         <Label>{addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.country}</Label>\r\n         <Label>{addressInfo?.pincode}</Label>\r\n"
+                },
+                {
+                    "date": 1740653232553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n-        <Label>{addressInfo?.city}</Label>\r\n-        <Label>{addressInfo?.state}</Label>\r\n+        <Label>City : {addressInfo?.city}</Label>\r\n+        <Label>State: {addressInfo?.state}</Label>\r\n         <Label>{addressInfo?.country}</Label>\r\n         <Label>{addressInfo?.pincode}</Label>\r\n         <Label>{addressInfo?.phone}</Label>\r\n         <Label>{addressInfo?.notes}</Label>\r\n"
+                },
+                {
+                    "date": 1740653238444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n-        <Label>{addressInfo?.country}</Label>\r\n+        <Label>Country: {addressInfo?.country}</Label>\r\n         <Label>{addressInfo?.pincode}</Label>\r\n         <Label>{addressInfo?.phone}</Label>\r\n         <Label>{addressInfo?.notes}</Label>\r\n       </CardContent>\r\n"
+                },
+                {
+                    "date": 1740653243884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n         <Label>Country: {addressInfo?.country}</Label>\r\n-        <Label>{addressInfo?.pincode}</Label>\r\n+        <Label>Pincode: {addressInfo?.pincode}</Label>\r\n         <Label>{addressInfo?.phone}</Label>\r\n         <Label>{addressInfo?.notes}</Label>\r\n       </CardContent>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740653250052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         <Label>State: {addressInfo?.state}</Label>\r\n         <Label>Country: {addressInfo?.country}</Label>\r\n         <Label>Pincode: {addressInfo?.pincode}</Label>\r\n         <Label>{addressInfo?.phone}</Label>\r\n-        <Label>{addressInfo?.notes}</Label>\r\n+        <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740654405297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import { Card, CardContent } from \"../ui/card\";\r\n+import { Label } from \"../ui/label\";\r\n+\r\n+function AddressCard({ addressInfo }) {\r\n+  return (\r\n+    <Card>\r\n+      <CardContent className=\"grid gap-4 p-4\">\r\n+        <Label>Address: {addressInfo?.address}</Label>\r\n+        <Label>City : {addressInfo?.city}</Label>\r\n+        <Label>State: {addressInfo?.state}</Label>\r\n+        <Label>Country: {addressInfo?.country}</Label>\r\n+        <Label>Pincode: {addressInfo?.pincode}</Label>\r\n+        <Label>Phone: {addressInfo?.phone}</Label>\r\n+        <Label>Notes: {addressInfo?.notes}</Label>\r\n+      </CardContent>\r\n+      <CardFooter className=\"flex justify-between p-3\">\r\n+        <Button>Edit</Button>\r\n+        <Button>Delete</Button>\r\n+      </CardFooter>\r\n+    </Card>\r\n+  );\r\n+}\r\n+\r\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740654410705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Card, CardContent } from \"../ui/card\";\r\n+import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo }) {\r\n   return (\r\n@@ -21,24 +21,4 @@\n   );\r\n }\r\n \r\n export default AddressCard;\r\n-import { Card, CardContent } from \"../ui/card\";\r\n-import { Label } from \"../ui/label\";\r\n-\r\n-function AddressCard({ addressInfo }) {\r\n-  return (\r\n-    <Card>\r\n-      <CardContent className=\"grid gap-4 p-4\">\r\n-        <Label>Address: {addressInfo?.address}</Label>\r\n-        <Label>City : {addressInfo?.city}</Label>\r\n-        <Label>State: {addressInfo?.state}</Label>\r\n-        <Label>Country: {addressInfo?.country}</Label>\r\n-        <Label>Pincode: {addressInfo?.pincode}</Label>\r\n-        <Label>{addressInfo?.phone}</Label>\r\n-        <Label>Notes: {addressInfo?.notes}</Label>\r\n-      </CardContent>\r\n-    </Card>\r\n-  );\r\n-}\r\n-\r\n-export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740654437498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo }) {\r\n@@ -14,9 +15,9 @@\n         <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n       <CardFooter className=\"flex justify-between p-3\">\r\n         <Button>Edit</Button>\r\n-        <Button>Delete</Button>\r\n+        <Button onCli>Delete</Button>\r\n       </CardFooter>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740654445097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n       <CardFooter className=\"flex justify-between p-3\">\r\n         <Button>Edit</Button>\r\n-        <Button onCli>Delete</Button>\r\n+        <Button onClick={(=>handle)}>Delete</Button>\r\n       </CardFooter>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740654453423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n       <CardFooter className=\"flex justify-between p-3\">\r\n         <Button>Edit</Button>\r\n-        <Button onClick={(=>handle)}>Delete</Button>\r\n+        <Button onClick={(=>handleDeleteAddress())}>Delete</Button>\r\n       </CardFooter>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740654459538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n       <CardFooter className=\"flex justify-between p-3\">\r\n         <Button>Edit</Button>\r\n-        <Button onClick={(=>handleDeleteAddress())}>Delete</Button>\r\n+        <Button onClick={()=>handleDeleteAddress()}>Delete</Button>\r\n       </CardFooter>\r\n     </Card>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740654469049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import { Button } from \"../ui/button\";\r\n+import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n+import { Label } from \"../ui/label\";\r\n+\r\n+function AddressCard({ addressInfo }) {\r\n+  return (\r\n+    <Card>\r\n+      <CardContent className=\"grid gap-4 p-4\">\r\n+        <Label>Address: {addressInfo?.address}</Label>\r\n+        <Label>City : {addressInfo?.city}</Label>\r\n+        <Label>State: {addressInfo?.state}</Label>\r\n+        <Label>Country: {addressInfo?.country}</Label>\r\n+        <Label>Pincode: {addressInfo?.pincode}</Label>\r\n+        <Label>Phone: {addressInfo?.phone}</Label>\r\n+        <Label>Notes: {addressInfo?.notes}</Label>\r\n+      </CardContent>\r\n+      <CardFooter className=\"flex justify-between p-3\">\r\n+        <Button>Edit</Button>\r\n+        <Button onClick={()=>handleDeleteAddress(addressInfo)}>Delete</Button>\r\n+      </CardFooter>\r\n+    </Card>\r\n+  );\r\n+}\r\n+\r\n+export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740654491864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-function AddressCard({ addressInfo }) {\r\n+function AddressCard({ addressInfo  }) {\r\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n@@ -22,29 +22,4 @@\n   );\r\n }\r\n \r\n export default AddressCard;\r\n-import { Button } from \"../ui/button\";\r\n-import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n-import { Label } from \"../ui/label\";\r\n-\r\n-function AddressCard({ addressInfo }) {\r\n-  return (\r\n-    <Card>\r\n-      <CardContent className=\"grid gap-4 p-4\">\r\n-        <Label>Address: {addressInfo?.address}</Label>\r\n-        <Label>City : {addressInfo?.city}</Label>\r\n-        <Label>State: {addressInfo?.state}</Label>\r\n-        <Label>Country: {addressInfo?.country}</Label>\r\n-        <Label>Pincode: {addressInfo?.pincode}</Label>\r\n-        <Label>Phone: {addressInfo?.phone}</Label>\r\n-        <Label>Notes: {addressInfo?.notes}</Label>\r\n-      </CardContent>\r\n-      <CardFooter className=\"flex justify-between p-3\">\r\n-        <Button>Edit</Button>\r\n-        <Button onClick={()=>handleDeleteAddress()}>Delete</Button>\r\n-      </CardFooter>\r\n-    </Card>\r\n-  );\r\n-}\r\n-\r\n-export default AddressCard;\r\n"
+                },
+                {
+                    "date": 1740654499842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-function AddressCard({ addressInfo  }) {\r\n+function AddressCard({ addressInfo , handleDeleteAddress }) {\r\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n"
+                },
+                {
+                    "date": 1740654506160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-function AddressCard({ addressInfo , handleDeleteAddress }) {\r\n+function AddressCard({ addressInfo , handleDeleteAddress , handleAddress }) {\r\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n"
+                },
+                {
+                    "date": 1740657759497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-function AddressCard({ addressInfo , handleDeleteAddress , handleAddress }) {\r\n+function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress }) {\r\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n@@ -14,9 +14,9 @@\n         <Label>Phone: {addressInfo?.phone}</Label>\r\n         <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n       <CardFooter className=\"flex justify-between p-3\">\r\n-        <Button>Edit</Button>\r\n+        <Button onClick={()=>handleDeleteAddress(addressInfo)}>Edit</Button>\r\n         <Button onClick={()=>handleDeleteAddress(addressInfo)}>Delete</Button>\r\n       </CardFooter>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740657765049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <Label>Phone: {addressInfo?.phone}</Label>\r\n         <Label>Notes: {addressInfo?.notes}</Label>\r\n       </CardContent>\r\n       <CardFooter className=\"flex justify-between p-3\">\r\n-        <Button onClick={()=>handleDeleteAddress(addressInfo)}>Edit</Button>\r\n+        <Button onClick={()=>handleEditAddress(addressInfo)}>Edit</Button>\r\n         <Button onClick={()=>handleDeleteAddress(addressInfo)}>Delete</Button>\r\n       </CardFooter>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740826349290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress }) {\r\n+function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress ,  }) {\r\n   return (\r\n     <Card>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n"
+                },
+                {
+                    "date": 1740826359422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import { Button } from \"../ui/button\";\r\n import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n import { Label } from \"../ui/label\";\r\n \r\n-function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress ,  }) {\r\n+function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n   return (\r\n-    <Card>\r\n+    <Card >\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n"
+                },
+                {
+                    "date": 1740826380264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n   return (\r\n-    <Card >\r\n+    <Card onClick={}>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n"
+                },
+                {
+                    "date": 1740826386266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n   return (\r\n-    <Card onClick={}>\r\n+    <Card onClick={setCurrentSelectedAddress ? }>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n"
+                },
+                {
+                    "date": 1740826403494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n   return (\r\n-    <Card onClick={setCurrentSelectedAddress ? }>\r\n+    <Card onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo?.) : null}>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n"
+                },
+                {
+                    "date": 1740826417328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n   return (\r\n-    <Card onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo?.) : null}>\r\n+    <Card onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo) : null}>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n"
+                }
+            ],
+            "date": 1740647519168,
+            "name": "Commit-0",
+            "content": "\r\n\r\nfunction AddressCard() {\r\n    return (  );\r\n}\r\n\r\nexport default AddressCard;"
+        }
+    ]
+}

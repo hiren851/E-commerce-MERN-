@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 19,
             "patches": [
                 {
                     "date": 1739531748074,
@@ -20,6 +20,70 @@
                 {
                     "date": 1739531771011,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function ShoppingCheckout() {\r\n     return ( \r\n-        \r\n+        <div>\r\n+            Shopping View Ce\r\n+        </div>\r\n      );\r\n }\r\n \r\n export default ShoppingCheckout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740722289124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div>\r\n-            Shopping View Ce\r\n+           \r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740722306142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingCheckout() {\r\n     return ( \r\n-        <div>\r\n+        <div className=\"\">\r\n            \r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740722311958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function ShoppingCheckout() {\r\n     return ( \r\n-        <div className=\"\">\r\n+        <div className=\"flex flex-col \">\r\n            \r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740722320666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n-           \r\n+           <div className=\"rela\"></div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740722332001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n-           <div className=\"rela\"></div>\r\n+           <div className=\"relative h-[\"></div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740722339966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n-           <div className=\"relative h-[\"></div>\r\n+           <div className=\"relative h-[300px] w-full \"></div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740722345937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n-           <div className=\"relative h-[300px] w-full \"></div>\r\n+           <div className=\"relative h-[300px] w-full overflow-hidden\"></div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740722351107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n-           <div className=\"relative h-[300px] w-full overflow-hidden\"></div>\r\n+           <div className=\"relative h-[300px] w-full overflow-hidden\">\r\n+            \r\n+           </div>\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740722370074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+\r\n+\r\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n            <div className=\"relative h-[300px] w-full overflow-hidden\">\r\n-            \r\n+\r\n            </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740722375437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+import \r\n \r\n-\r\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n            <div className=\"relative h-[300px] w-full overflow-hidden\">\r\n"
+                },
+                {
+                    "date": 1740722380905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import \r\n+import img from './'\r\n \r\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n"
+                },
+                {
+                    "date": 1740722388177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import img from './'\r\n+import img from '../../assets/'\r\n \r\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n"
+                },
+                {
+                    "date": 1740722397674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import img from '../../assets/'\r\n+import img from '../../assets/account'\r\n \r\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n"
+                },
+                {
+                    "date": 1740722403485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-import img from '../../assets/account'\r\n+import img from '../../assets/account.jpg'\r\n \r\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n            <div className=\"relative h-[300px] w-full overflow-hidden\">\r\n-\r\n+            \r\n            </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740722412150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function ShoppingCheckout() {\r\n     return ( \r\n         <div className=\"flex flex-col \">\r\n            <div className=\"relative h-[300px] w-full overflow-hidden\">\r\n-            <img src{\" alt=\"\" />\r\n+            <img src{ alt=\"\" />\r\n            </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740722738433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n            <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5 p-5'>\r\n             <Address/>\r\n             <div className='flex flex-col gap-4'>\r\n             {\r\n-                cartItems && cartItems.length >0  \r\n+                cartItems && cartItems.length >0  ? \r\n             }\r\n             </div>\r\n            </div>\r\n         </div>\r\n"
                 }
             ],
             "date": 1739531748074,

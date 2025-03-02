@@ -1,0 +1,26 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Success.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1740739320053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740739334083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function Payment() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default Payment;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740739340470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-function Payment() {\r\n-    return (  );\r\n+function PaymentCancel() {\r\n+    return ( \r\n+        <div></div>\r\n\\ No newline at end of file\n+     );\r\n }\r\n \r\n-export default Payment;\n+export default PaymentCancel;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1740739320053,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "server/models/Order.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1740727475223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740727482535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n   addressInfo: {\r\n     addressId: String,\r\n     address: String,\r\n     city: String,\r\n+    s\r\n     pincode: String,\r\n     phone: String,\r\n     notes: String,\r\n   },\r\n"
+                },
+                {
+                    "date": 1740727487994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n   addressInfo: {\r\n     addressId: String,\r\n     address: String,\r\n     city: String,\r\n-    s\r\n+    state: String,\r\n+    countr\r\n     pincode: String,\r\n     phone: String,\r\n     notes: String,\r\n   },\r\n"
+                },
+                {
+                    "date": 1740727493621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     addressId: String,\r\n     address: String,\r\n     city: String,\r\n     state: String,\r\n-    countr\r\n+    country: String,\r\n     pincode: String,\r\n     phone: String,\r\n     notes: String,\r\n   },\r\n"
+                }
+            ],
+            "date": 1740727475223,
+            "name": "Commit-0",
+            "content": "const mongoose = require(\"mongoose\");\r\n\r\nconst OrderSchema = new mongoose.Schema({\r\n  userId: String,\r\n  cartId: String,\r\n  cartItems: [\r\n    {\r\n      productId: String,\r\n      title: String,\r\n      image: String,\r\n      price: String,\r\n      quantity: Number,\r\n    },\r\n  ],\r\n  addressInfo: {\r\n    addressId: String,\r\n    address: String,\r\n    city: String,\r\n    pincode: String,\r\n    phone: String,\r\n    notes: String,\r\n  },\r\n  orderStatus: String,\r\n  paymentMethod: String,\r\n  paymentStatus: String,\r\n  totalAmount: Number,\r\n  orderDate: Date,\r\n  orderUpdateDate: Date,\r\n  paymentId: String,\r\n  payerId: String,\r\n});\r\n\r\nmodule.exports = mongoose.model(\"Order\", OrderSchema);"
+        }
+    ]
+}

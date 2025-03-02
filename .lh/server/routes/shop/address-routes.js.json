@@ -1,0 +1,70 @@
+{
+    "sourceFile": "server/routes/shop/address-routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1740636093056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740636098704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const express \n\\ No newline at end of file\n+const express = require()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636107088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-const express = require()\n\\ No newline at end of file\n+const express = require('express');\r\n+\r\n+const { } = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636116843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const express = require('express');\r\n \r\n-const { } = \n\\ No newline at end of file\n+const { } = require('../../controllers/')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636123517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const express = require('express');\r\n \r\n-const { } = require('../../controllers/')\n\\ No newline at end of file\n+const { } = require('../../controllers/shop/')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636135719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const express = require('express');\r\n \r\n-const { } = require('../../controllers/shop/')\n\\ No newline at end of file\n+const { addAddress , fetchAllAddress , } = require('../../controllers/shop/address-controllers')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636141999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const express = require('express');\r\n \r\n-const { addAddress , fetchAllAddress , } = require('../../controllers/shop/address-controllers')\n\\ No newline at end of file\n+const { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636150794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n const express = require('express');\r\n \r\n-const { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\n\\ No newline at end of file\n+const { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\r\n+\r\n+\r\n+const route\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636166016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n \r\n const { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\r\n \r\n \r\n-const route\n\\ No newline at end of file\n+const router = express.Router();\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1740636174383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,5 @@\n \r\n const router = express.Router();\r\n \r\n \r\n+router.post()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636182864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.post()\n\\ No newline at end of file\n+router.post('/add' , addAddress)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636188962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,7 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.post('/add' , addAddress)\n\\ No newline at end of file\n+router.post('/add' , addAddress);\r\n+router.get('/fetch' , fetchAllAddress);\r\n+router.put('/edit/:id' , editAddress);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636205159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n const router = express.Router();\r\n \r\n \r\n router.post('/add' , addAddress);\r\n-router.get('/get/:userId' , fetchAllAddress);\r\n+router.get('/get/:userId/' , fetchAllAddress);\r\n router.put('/edit/:id' , editAddress);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636296410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+const express = require('express');\r\n+\r\n+const { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\r\n+\r\n+\r\n+const router = express.Router();\r\n+\r\n+\r\n+router.post('/add' , addAddress);\r\n+router.get('/get/:userId' , fetchAllAddress);\r\n+router.put('/update/:userId/:addressId' , editAddress);\r\n+router.delete('delete/:userId/:addressId',deleteAddress)\r\n+\r\n+\r\n+module.exports \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1740636093056,
+            "name": "Commit-0",
+            "content": "const express "
+        }
+    ]
+}

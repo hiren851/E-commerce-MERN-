@@ -1,0 +1,134 @@
+{
+    "sourceFile": "server/controllers/shop/order-controller.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1740736044903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740736061289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const Order = \n\\ No newline at end of file\n+const Order = requ\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736068095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const Order = requ\n\\ No newline at end of file\n+const Order = require('../')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736074674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const Order = require('../')\n\\ No newline at end of file\n+const Order = require('../../models/Order')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736092959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const Order = require('../../models/Order')\n\\ No newline at end of file\n+const Order = require('../../models/Order');\r\n+\r\n+\r\n+\r\n+const createOrder \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736099483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const Order = require('../../models/Order');\r\n \r\n \r\n \r\n-const createOrder \n\\ No newline at end of file\n+const createOrder = async()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736104729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const Order = require('../../models/Order');\r\n \r\n \r\n \r\n-const createOrder = async()\n\\ No newline at end of file\n+const createOrder = async(req,res)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736112104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const Order = require('../../models/Order');\r\n \r\n \r\n \r\n-const createOrder = async(req,res)\n\\ No newline at end of file\n+const createOrder = async(req,res)=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736120317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,10 @@\n \r\n \r\n \r\n const createOrder = async(req,res)=>{\r\n-    \r\n+    try {\r\n+        \r\n+    } catch (e) {\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736143252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n const createOrder = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n-        \r\n+        console.log(first)\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736149269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n const createOrder = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n-        console.log(first)\r\n+        clg\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736155763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n const createOrder = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n-        clg\r\n+        console.log(e)\r\n+        \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736168148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n-        \r\n+        res.status(500)\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736177249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,10 @@\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n-        res.status(500)\r\n+        res.status(500).json({\r\n+            success:false,\r\n+            \r\n+        })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736192575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success:false,\r\n-            \r\n+            message : \"Err\"\r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736217875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,15 @@\n \r\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n+\r\n+        const {}\r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success:false,\r\n-            message : \"Err\"\r\n+            message : \"Error!\"\r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740736763124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n \r\n-        const {}\r\n         \r\n+        \r\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success:false,\r\n"
+                },
+                {
+                    "date": 1740736772800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const Order = require('../../models/Order');\r\n+const Stripe = \r\n \r\n \r\n \r\n const createOrder = async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1740736780571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const Order = require('../../models/Order');\r\n-const Stripe = \r\n+const Stripe = require()\r\n \r\n \r\n \r\n const createOrder = async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1740736785835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const Order = require('../../models/Order');\r\n-const Stripe = require()\r\n+const Stripe = require('stripe')\r\n \r\n \r\n \r\n const createOrder = async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1740736796967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const Order = require('../../models/Order');\r\n-const Stripe = require('stripe')\r\n+const Stripe = require('stripe')(\"sk_test_51QxPWqA8ZItKkZV0Gb0GVJNN2RhnVTSbrnPQCp5X4PF7M7Ui4oy3Hth9LMvfUNiuUaifhkFpCBeqY31eRQFknJzz00SpyiT0wR\")\r\n \r\n \r\n \r\n const createOrder = async(req,res)=>{\r\n"
+                },
+                {
+                    "date": 1740736812612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n \r\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n-\r\n         \r\n         \r\n+        \r\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success:false,\r\n"
+                },
+                {
+                    "date": 1740736949993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,12 @@\n \r\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n+\r\n+        const {userId , }\r\n         \r\n         \r\n-        \r\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success:false,\r\n"
+                },
+                {
+                    "date": 1740736958776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n \r\n-        const {userId , }\r\n+        const {userId , cartId , }\r\n         \r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n"
+                },
+                {
+                    "date": 1740737077867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,8 @@\n             success:false,\r\n             message : \"Error!\"\r\n         })\r\n     }\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+\r\n+mod\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740737082944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n     }\r\n }\r\n \r\n \r\n-mod\n\\ No newline at end of file\n+module.exports \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740737090125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n     }\r\n }\r\n \r\n \r\n-module.exports \n\\ No newline at end of file\n+module.exports = {create}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740737123531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n \r\n-        const {userId , cartId , }\r\n+        const {userId , cartId ,  }\r\n         \r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n@@ -18,5 +18,5 @@\n     }\r\n }\r\n \r\n \r\n-module.exports = {create}\n\\ No newline at end of file\n+module.exports = {createOrder}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740737131297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n const createOrder = async(req,res)=>{\r\n     try {\r\n \r\n-        const {userId , cartItems , add }\r\n+        const {userId , cartItems , addr }\r\n         \r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n"
+                },
+                {
+                    "date": 1740738994805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n           message: \"Invalid data!\",\r\n         });\r\n       }\r\n \r\n-      const lineItems =  cartItems && cartItems.length >0 && cartItems((cartItem)=>)\r\n+      const lineItems =  cartItems && cartItems.length >0 && cartItems((cartItem)=>({[\r\n+        \r\n+      ]}))\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                }
+            ],
+            "date": 1740736044903,
+            "name": "Commit-0",
+            "content": "const Order = "
+        }
+    ]
+}

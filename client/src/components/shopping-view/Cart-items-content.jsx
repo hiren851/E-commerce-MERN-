@@ -5,7 +5,7 @@ import { deleteCartItem, updateCartQuantity } from "@/Store/shop/cart-slice";
 import { useToast } from "@/hooks/use-toast";
 // import { title } from "process";
 
-function UserCartItemsContent({ cartItems, key }) {
+function UserCartItemsContent({ cartItems }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { toast } = useToast();
@@ -44,7 +44,7 @@ function UserCartItemsContent({ cartItems, key }) {
 
   // console.log(cartItems?.salePrice)
   return (
-    <div className="flex items-center space-x-4" key={key}>
+    <div className="flex items-center space-x-4">
       <img
         src={cartItems?.image}
         alt={cartItems?.title}

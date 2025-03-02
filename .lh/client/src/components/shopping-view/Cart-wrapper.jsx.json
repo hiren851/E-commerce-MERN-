@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 41,
             "patches": [
                 {
                     "date": 1740548716992,
@@ -112,6 +112,66 @@
                 {
                     "date": 1740561444874,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n             sum +\r\n             (currentItem?.salePrice > 0\r\n               ? currentItem?.salePrice\r\n               : currentItem?.price) *\r\n-              currentItem?.quantity\r\n+              currentItem?.quantity , 0\r\n         )\r\n       : 0;\r\n   // console.log(cartItems)\r\n   return (\r\n@@ -40,5 +40,5 @@\n     </SheetContent>\r\n   );\r\n }\r\n \r\n-export default UserCartWrapper;\n\\ No newline at end of file\n+export default UserCartWrapper;\r\n"
+                },
+                {
+                    "date": 1740721781981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <span className=\"font-bold\">Total</span>\r\n           <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n-      <Button className=\"w-full mt-6\">Checkout</Button>\r\n+      <Button className=\"w-full mt-6\" >Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740721809284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <span className=\"font-bold\">Total</span>\r\n           <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n-      <Button className=\"w-full mt-6\" >Checkout</Button>\r\n+      <Button className=\"w-full mt-6\" onCli>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740721818463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <span className=\"font-bold\">Total</span>\r\n           <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n-      <Button className=\"w-full mt-6\" onCli>Checkout</Button>\r\n+      <Button className=\"w-full mt-6\" onClick={}>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740721828005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,11 @@\n           <span className=\"font-bold\">Total</span>\r\n           <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n-      <Button className=\"w-full mt-6\" onClick={}>Checkout</Button>\r\n+      <Button className=\"w-full mt-6\" onClick={()=>{\r\n+        navigate\r\n+      }}>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740721833427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n           <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n       <Button className=\"w-full mt-6\" onClick={()=>{\r\n-        navigate\r\n+        Navigate('/sho')\r\n       }}>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740721842342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n           <span className=\"font-bold\">₹{totalCartAmount}</span>\r\n         </div>\r\n       </div>\r\n       <Button className=\"w-full mt-6\" onClick={()=>{\r\n-        Navigate('/sho')\r\n+        navigate('/shop/checkout')\r\n       }}>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740721852708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n import { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({ cartItems }) {\r\n+\r\n+  \r\n   const totalCartAmount =\r\n     cartItems && cartItems.length > 0\r\n       ? cartItems.reduce(\r\n           (sum, currentItem) =>\r\n"
+                },
+                {
+                    "date": 1740721863732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n+import { useNavigate } from \"react-router-dom\";\r\n import { Button } from \"../ui/button\";\r\n import { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n function UserCartWrapper({ cartItems }) {\r\n+  const navigate = useNavigate\r\n \r\n-  \r\n   const totalCartAmount =\r\n     cartItems && cartItems.length > 0\r\n       ? cartItems.reduce(\r\n           (sum, currentItem) =>\r\n"
+                },
+                {
+                    "date": 1740722231483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n import { Button } from \"../ui/button\";\r\n import { Sheet, SheetContent, SheetHeader, SheetTitle } from \"../ui/sheet\";\r\n import UserCartItemsContent from \"./Cart-items-content\";\r\n \r\n-function UserCartWrapper({ cartItems }) {\r\n-  const navigate = useNavigate\r\n+function UserCartWrapper({ cartItems ,setOpenCartSheet }) {\r\n+  const navigate = useNavigate()\r\n \r\n   const totalCartAmount =\r\n     cartItems && cartItems.length > 0\r\n       ? cartItems.reduce(\r\n"
+                },
+                {
+                    "date": 1740722237401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n         </div>\r\n       </div>\r\n       <Button className=\"w-full mt-6\" onClick={()=>{\r\n         navigate('/shop/checkout')\r\n+        setOpenCartSheet\r\n       }}>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740821254271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n       <SheetHeader>\r\n         <SheetTitle>Your Cart</SheetTitle>\r\n       </SheetHeader>\r\n       <div className=\"mt-8 space-y-4 \">\r\n+        console.log(first)\r\n         {cartItems && cartItems.length > 0\r\n           ? cartItems.map((item) => (\r\n               <UserCartItemsContent\r\n                 key={cartItems.productId}\r\n@@ -40,9 +41,9 @@\n         </div>\r\n       </div>\r\n       <Button className=\"w-full mt-6\" onClick={()=>{\r\n         navigate('/shop/checkout')\r\n-        setOpenCartSheet\r\n+        setOpenCartSheet(false)\r\n       }}>Checkout</Button>\r\n     </SheetContent>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1740821266069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       <SheetHeader>\r\n         <SheetTitle>Your Cart</SheetTitle>\r\n       </SheetHeader>\r\n       <div className=\"mt-8 space-y-4 \">\r\n-        console.log(first)\r\n+        {console.log(first)}\r\n         {cartItems && cartItems.length > 0\r\n           ? cartItems.map((item) => (\r\n               <UserCartItemsContent\r\n                 key={cartItems.productId}\r\n"
+                },
+                {
+                    "date": 1740821271576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       <SheetHeader>\r\n         <SheetTitle>Your Cart</SheetTitle>\r\n       </SheetHeader>\r\n       <div className=\"mt-8 space-y-4 \">\r\n-        {console.log(first)}\r\n+        {console.log(cart)}\r\n         {cartItems && cartItems.length > 0\r\n           ? cartItems.map((item) => (\r\n               <UserCartItemsContent\r\n                 key={cartItems.productId}\r\n"
+                },
+                {
+                    "date": 1740821296768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,13 @@\n       <SheetHeader>\r\n         <SheetTitle>Your Cart</SheetTitle>\r\n       </SheetHeader>\r\n       <div className=\"mt-8 space-y-4 \">\r\n-        {console.log(cart)}\r\n+        {console.log(cartItems)}\r\n         {cartItems && cartItems.length > 0\r\n           ? cartItems.map((item) => (\r\n               <UserCartItemsContent\r\n-                key={cartItems.productId}\r\n+                key={.productId}\r\n                 cartItems={item}\r\n               />\r\n             ))\r\n           : null}\r\n"
+                },
+                {
+                    "date": 1740821307641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,13 @@\n       <SheetHeader>\r\n         <SheetTitle>Your Cart</SheetTitle>\r\n       </SheetHeader>\r\n       <div className=\"mt-8 space-y-4 \">\r\n-        {console.log(cartItems)}\r\n+        {/* {console.log(cartItems)} */}\r\n         {cartItems && cartItems.length > 0\r\n           ? cartItems.map((item) => (\r\n               <UserCartItemsContent\r\n-                key={.productId}\r\n+                key={item.productId}\r\n                 cartItems={item}\r\n               />\r\n             ))\r\n           : null}\r\n"
                 }
             ],
             "date": 1740548716992,

@@ -1,0 +1,178 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Orders.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 40,
+            "patches": [
+                {
+                    "date": 1740645873867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740645879250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n \r\n-function () {\r\n+function Orders() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default Orders;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740645886410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n \r\n \r\n function Orders() {\r\n-    return (  );\r\n+    return ( <div>\r\n+        orders\r\n+    </div> );\r\n }\r\n \r\n export default Orders;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740723479793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n \r\n-function Orders() {\r\n+function SOrders() {\r\n     return ( <div>\r\n         orders\r\n     </div> );\r\n }\r\n"
+                },
+                {
+                    "date": 1740723485676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n \r\n-function SOrders() {\r\n+function ShoppingOrders() {\r\n     return ( <div>\r\n         orders\r\n     </div> );\r\n }\r\n"
+                },
+                {
+                    "date": 1740723497816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n         orders\r\n     </div> );\r\n }\r\n \r\n-export default Orders;\n\\ No newline at end of file\n+export default ShoppingOrders;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740723618217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n \r\n \r\n function ShoppingOrders() {\r\n-    return ( <div>\r\n-        orders\r\n-    </div> );\r\n+    return ( );\r\n }\r\n \r\n export default ShoppingOrders;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740723623909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n+import { Card } from \"../ui/card\";\r\n \r\n \r\n function ShoppingOrders() {\r\n-    return ( );\r\n+    return (\r\n+        <Card>\r\n+            \r\n+        </Card>\r\n+     );\r\n }\r\n \r\n export default ShoppingOrders;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740723632456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n-import { Card } from \"../ui/card\";\r\n+import { Card, CardHeader } from \"../ui/card\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n         <Card>\r\n-            \r\n+            <CardHeader>\r\n+                \r\n+            </CardHeader>\r\n         </Card>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740723649732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n-import { Card, CardHeader } from \"../ui/card\";\r\n+import { Card, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n         <Card>\r\n             <CardHeader>\r\n-                \r\n+                <CardTitle>\r\n+                    \r\n+                </CardTitle>\r\n             </CardHeader>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740723657622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,9 @@\n function ShoppingOrders() {\r\n     return (\r\n         <Card>\r\n             <CardHeader>\r\n-                <CardTitle>\r\n-                    \r\n-                </CardTitle>\r\n+                <CardTitle>Order History</CardTitle>\r\n             </CardHeader>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740723712880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,16 @@\n-import { Card, CardHeader, CardTitle } from \"../ui/card\";\r\n+import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n         <Card>\r\n             <CardHeader>\r\n                 <CardTitle>Order History</CardTitle>\r\n             </CardHeader>\r\n+            <CardContent>\r\n+                \r\n+            </CardContent>\r\n         </Card>\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740723720165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             <CardHeader>\r\n                 <CardTitle>Order History</CardTitle>\r\n             </CardHeader>\r\n             <CardContent>\r\n-                \r\n+                <Table\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740723728583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n+import { Table } from \"../ui/table\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n@@ -7,9 +8,11 @@\n             <CardHeader>\r\n                 <CardTitle>Order History</CardTitle>\r\n             </CardHeader>\r\n             <CardContent>\r\n-                <Table\r\n+                <Table>\r\n+                    <TableHe\r\n+                </Table>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1740723738308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n-import { Table } from \"../ui/table\";\r\n+import { Table, TableHeader, TableRow } from \"../ui/table\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n@@ -9,9 +9,13 @@\n                 <CardTitle>Order History</CardTitle>\r\n             </CardHeader>\r\n             <CardContent>\r\n                 <Table>\r\n-                    <TableHe\r\n+                    <TableHeader>\r\n+                        <TableRow>\r\n+                            \r\n+                        </TableRow>\r\n+                    </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740723745813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n-import { Table, TableHeader, TableRow } from \"../ui/table\";\r\n+import { Table, TableHead, TableHeader, TableRow } from \"../ui/table\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n@@ -11,9 +11,9 @@\n             <CardContent>\r\n                 <Table>\r\n                     <TableHeader>\r\n                         <TableRow>\r\n-                            \r\n+                            <TableHead></TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723754117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             <CardContent>\r\n                 <Table>\r\n                     <TableHeader>\r\n                         <TableRow>\r\n-                            <TableHead></TableHead>\r\n+                            <TableHead>Order Id</TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723764218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n                 <Table>\r\n                     <TableHeader>\r\n                         <TableRow>\r\n                             <TableHead>Order Id</TableHead>\r\n+                            <TableHead>Order Date</TableHead>\r\n+                            <TableHead>Order </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723769848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n                     <TableHeader>\r\n                         <TableRow>\r\n                             <TableHead>Order Id</TableHead>\r\n                             <TableHead>Order Date</TableHead>\r\n-                            <TableHead>Order </TableHead>\r\n+                            <TableHead>Order Status</TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723776621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n                         <TableRow>\r\n                             <TableHead>Order Id</TableHead>\r\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n+                            <TableHead>Order pRICE</TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723781883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                         <TableRow>\r\n                             <TableHead>Order Id</TableHead>\r\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n-                            <TableHead>Order pRICE</TableHead>\r\n+                            <TableHead>Order Price</TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723789112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                         <TableRow>\r\n                             <TableHead>Order Id</TableHead>\r\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n-                            <TableHead>Order Price</TableHead>\r\n+                            <TableHead>Order Price </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723795614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n                         <TableRow>\r\n                             <TableHead>Order Id</TableHead>\r\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n-                            <TableHead>Order Price </TableHead>\r\n+                            <TableHead>Order Price</TableHead>\r\n+                            <TableHead>Order Price</TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723829981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n                             <TableHead>Order Id</TableHead>\r\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n                             <TableHead>Order Price</TableHead>\r\n-                            <TableHead>Order Price</TableHead>\r\n+                            <TableHead>\r\n+                                <span></span>\r\n+                            </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723837806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n                             <TableHead>Order Price</TableHead>\r\n                             <TableHead>\r\n-                                <span></span>\r\n+                                <span>Deta</span>\r\n                             </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n"
+                },
+                {
+                    "date": 1740723843837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n                             <TableHead>Order Price</TableHead>\r\n                             <TableHead>\r\n-                                <span>Deta</span>\r\n+                                <span className=\"\">Details</span>\r\n                             </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n"
+                },
+                {
+                    "date": 1740723850893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n                             <TableHead>Order Price</TableHead>\r\n                             <TableHead>\r\n-                                <span className=\"\">Details</span>\r\n+                                <span className=\"sr-\">Details</span>\r\n                             </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                 </Table>\r\n"
+                },
+                {
+                    "date": 1740723874028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n-import { Table, TableHead, TableHeader, TableRow } from \"../ui/table\";\r\n+import { Table, TableBody, TableHead, TableHeader, TableRow } from \"../ui/table\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n@@ -16,12 +16,15 @@\n                             <TableHead>Order Date</TableHead>\r\n                             <TableHead>Order Status</TableHead>\r\n                             <TableHead>Order Price</TableHead>\r\n                             <TableHead>\r\n-                                <span className=\"sr-\">Details</span>\r\n+                                <span className=\"sr-only\">Details</span>\r\n                             </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n+                    <TableBody>\r\n+                        \r\n+                    </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n         </Card>\r\n      );\r\n"
+                },
+                {
+                    "date": 1740723880941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,11 @@\n                             </TableHead>\r\n                         </TableRow>\r\n                     </TableHeader>\r\n                     <TableBody>\r\n-                        \r\n+                        <TableRow>\r\n+                            \r\n+                        </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n         </Card>\r\n"
+                },
+                {
+                    "date": 1740723905358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n                         </TableRow>\r\n                     </TableHeader>\r\n                     <TableBody>\r\n                         <TableRow>\r\n-                            \r\n+                            <TableCe\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723913150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n-import { Table, TableBody, TableHead, TableHeader, TableRow } from \"../ui/table\";\r\n+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"../ui/table\";\r\n \r\n \r\n function ShoppingOrders() {\r\n     return (\r\n@@ -22,9 +22,9 @@\n                         </TableRow>\r\n                     </TableHeader>\r\n                     <TableBody>\r\n                         <TableRow>\r\n-                            <TableCe\r\n+                            <TableCell>123456</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723919719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,11 @@\n                     </TableHeader>\r\n                     <TableBody>\r\n                         <TableRow>\r\n                             <TableCell>123456</TableCell>\r\n+                            <TableCell>123456</TableCell>\r\n+                            <TableCell>123456</TableCell>\r\n+                            <TableCell>123456</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723926637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n                     </TableHeader>\r\n                     <TableBody>\r\n                         <TableRow>\r\n                             <TableCell>123456</TableCell>\r\n+                            <TableCell>1</TableCell>\r\n                             <TableCell>123456</TableCell>\r\n                             <TableCell>123456</TableCell>\r\n-                            <TableCell>123456</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723933521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n                     </TableHeader>\r\n                     <TableBody>\r\n                         <TableRow>\r\n                             <TableCell>123456</TableCell>\r\n-                            <TableCell>1</TableCell>\r\n+                            <TableCell>28/02</TableCell>\r\n                             <TableCell>123456</TableCell>\r\n                             <TableCell>123456</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n"
+                },
+                {
+                    "date": 1740723943477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n                     </TableHeader>\r\n                     <TableBody>\r\n                         <TableRow>\r\n                             <TableCell>123456</TableCell>\r\n-                            <TableCell>28/02</TableCell>\r\n+                            <TableCell>28/02/2025</TableCell>\r\n+                            <TableCell></TableCell>\r\n                             <TableCell>123456</TableCell>\r\n-                            <TableCell>123456</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723949301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n                     <TableBody>\r\n                         <TableRow>\r\n                             <TableCell>123456</TableCell>\r\n                             <TableCell>28/02/2025</TableCell>\r\n-                            <TableCell></TableCell>\r\n+                            <TableCell>In Process</TableCell>\r\n                             <TableCell>123456</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n"
+                },
+                {
+                    "date": 1740723965595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n                         <TableRow>\r\n                             <TableCell>123456</TableCell>\r\n                             <TableCell>28/02/2025</TableCell>\r\n                             <TableCell>In Process</TableCell>\r\n-                            <TableCell>123456</TableCell>\r\n+                            <TableCell>₹1000</TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723970872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n                             <TableCell>123456</TableCell>\r\n                             <TableCell>28/02/2025</TableCell>\r\n                             <TableCell>In Process</TableCell>\r\n                             <TableCell>₹1000</TableCell>\r\n+                            \r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723977714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n                             <TableCell>123456</TableCell>\r\n                             <TableCell>28/02/2025</TableCell>\r\n                             <TableCell>In Process</TableCell>\r\n                             <TableCell>₹1000</TableCell>\r\n-                            \r\n+                            <TableCell></TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n             </CardContent>\r\n"
+                },
+                {
+                    "date": 1740723988018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n                             <TableCell>28/02/2025</TableCell>\r\n                             <TableCell>In Process</TableCell>\r\n                             <TableCell>₹1000</TableCell>\r\n                             <TableCell>\r\n-                                <Button></Button>\r\n+                                <Button>V</Button>\r\n                             </TableCell>\r\n                         </TableRow>\r\n                     </TableBody>\r\n                 </Table>\r\n"
+                },
+                {
+                    "date": 1740726929933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+import { Button } from \"../ui/button\";\r\n+import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n+import { Dialog } from \"../ui/dialog\";\r\n+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"../ui/table\";\r\n+import ShoppingViewOrdersDetails from \"./Order-Details\";\r\n+\r\n+\r\n+function ShoppingOrders() {\r\n+    return (\r\n+        <Card>\r\n+            <CardHeader>\r\n+                <CardTitle>Order History</CardTitle>\r\n+            </CardHeader>\r\n+            <CardContent>\r\n+                <Table>\r\n+                    <TableHeader>\r\n+                        <TableRow>\r\n+                            <TableHead>Order Id</TableHead>\r\n+                            <TableHead>Order Date</TableHead>\r\n+                            <TableHead>Order Status</TableHead>\r\n+                            <TableHead>Order Price</TableHead>\r\n+                            <TableHead>\r\n+                                <span className=\"sr-only\">Details</span>\r\n+                            </TableHead>\r\n+                        </TableRow>\r\n+                    </TableHeader>\r\n+                    <TableBody>\r\n+                        <TableRow>\r\n+                            <TableCell>123456</TableCell>\r\n+                            <TableCell>28/02/2025</TableCell>\r\n+                            <TableCell>In Process</TableCell>\r\n+                            <TableCell>₹1000</TableCell>\r\n+                            <TableCell>\r\n+                                <Dialog open={openDetailsDialog} onOpenChange={setOpenDetails}>\r\n+                                <Button>View Details</Button>\r\n+                                <ShoppingViewOrdersDetails/>\r\n+                                </Dialog>\r\n+                            </TableCell>\r\n+                        </TableRow>\r\n+                    </TableBody>\r\n+                </Table>\r\n+            </CardContent>\r\n+        </Card>\r\n+     );\r\n+}\r\n+\r\n+export default ShoppingOrders;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1740645873867,
+            "name": "Commit-0",
+            "content": "\r\n\r\nfunction () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

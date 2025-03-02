@@ -1,0 +1,602 @@
+{
+    "sourceFile": "client/src/components/shopping-view/Address.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 146,
+            "patches": [
+                {
+                    "date": 1740645856172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740645869117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,9 @@\n \r\n \r\n-ffc\n\\ No newline at end of file\n+function Address() {\r\n+    return ( <div>\r\n+        address\r\n+    </div> );\r\n+}\r\n+\r\n+export default Address;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740647048057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n-\r\n-\r\n function Address() {\r\n-    return ( <div>\r\n-        address\r\n-    </div> );\r\n+  return <div>address</div>;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647053327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function Address() {\r\n-  return <div>address</div>;\r\n+  return \r\n+  \r\n+  ;\r\n\\ No newline at end of file\n }\r\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647059565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Address() {\r\n   return \r\n-  \r\n+    <Card\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647069005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,13 @@\n+import { Card } from \"../ui/card\";\r\n+\r\n function Address() {\r\n   return \r\n-    <Card\r\n+    <Card>\r\n+        <div>\r\n\\ No newline at end of file\n+            \r\n+        </div>\r\n+    </Card>\r\n   ;\r\n }\r\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647074197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n import { Card } from \"../ui/card\";\r\n \r\n function Address() {\r\n-  return \r\n-    <Card>\r\n+  return <Card>\r\n         <div>\r\n-            \r\n+\r\n         </div>\r\n     </Card>\r\n   ;\r\n }\r\n\\ No newline at end of file\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647082693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n \r\n function Address() {\r\n   return <Card>\r\n         <div>\r\n-\r\n+            Address List\r\n         </div>\r\n     </Card>\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647097200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,15 @@\n-import { Card } from \"../ui/card\";\r\n+import { Card, CardHeader } from \"../ui/card\";\r\n \r\n function Address() {\r\n   return <Card>\r\n         <div>\r\n             Address List\r\n         </div>\r\n+        <CardHeader>\r\n+            \r\n+        </CardHeader>\r\n     </Card>\r\n\\ No newline at end of file\n   ;\r\n }\r\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647104419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n-import { Card, CardHeader } from \"../ui/card\";\r\n+import { Card, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n   return <Card>\r\n         <div>\r\n             Address List\r\n         </div>\r\n         <CardHeader>\r\n-            \r\n+            <CardTitle>\r\n+                \r\n+            </CardTitle>\r\n         </CardHeader>\r\n     </Card>\r\n\\ No newline at end of file\n   ;\r\n }\r\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647110352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,11 @@\n         <div>\r\n             Address List\r\n         </div>\r\n         <CardHeader>\r\n-            <CardTitle>\r\n-                \r\n-            </CardTitle>\r\n+            <CardTitle>Add new </CardTitle>\r\n         </CardHeader>\r\n     </Card>\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647117824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,12 @@\n         <div>\r\n             Address List\r\n         </div>\r\n         <CardHeader>\r\n-            <CardTitle>Add new </CardTitle>\r\n+            <CardTitle>Add new address</CardTitle>\r\n+            \r\n         </CardHeader>\r\n     </Card>\r\n   ;\r\n }\r\n\\ No newline at end of file\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647124429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,12 @@\n             Address List\r\n         </div>\r\n         <CardHeader>\r\n             <CardTitle>Add new address</CardTitle>\r\n-            \r\n+\r\n         </CardHeader>\r\n+        <\r\n     </Card>\r\n   ;\r\n }\r\n\\ No newline at end of file\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647131049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Card, CardHeader, CardTitle } from \"../ui/card\";\r\n+import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n   return <Card>\r\n         <div>\r\n@@ -8,10 +8,10 @@\n         <CardHeader>\r\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n-        <\r\n+        <CardContent\r\n     </Card>\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647138281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,12 @@\n         <CardHeader>\r\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n-        <CardContent\r\n+        <CardContent clas>\r\n+\r\n+        </CardContent>\r\n     </Card>\r\n   ;\r\n\\ No newline at end of file\n }\r\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647144588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n         <CardHeader>\r\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n-        <CardContent clas>\r\n+        <CardContent className=\"\">\r\n \r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647151782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n         <CardHeader>\r\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n-        <CardContent className=\"\">\r\n+        <CardContent className=\"space-\">\r\n \r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647156928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n         <CardHeader>\r\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n-        <CardContent className=\"space-\">\r\n-\r\n+        <CardContent className=\"space-y-3\">\r\n+        \r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n }\r\n\\ No newline at end of file\n \r\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647167135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n   return <Card>\r\n@@ -9,11 +10,11 @@\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n         <CardContent className=\"space-y-3\">\r\n-        \r\n+        <CommonForm/>\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n }\r\n \r\n\\ No newline at end of file\n-export default Address;\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647174370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n+\r\n+    \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n         </div>\r\n@@ -16,5 +18,5 @@\n     </Card>\r\n   ;\r\n }\r\n \r\n-export default Address;\n\\ No newline at end of file\n+export default Address;\r\n"
+                },
+                {
+                    "date": 1740647192101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n+    const [formData,setFormData] = \r\n \r\n-    \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1740647207897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n+import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n-    const [formData,setFormData] = \r\n+    const [formData,setFormData] = useState()\r\n \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n"
+                },
+                {
+                    "date": 1740647214775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n-    const [formData,setFormData] = useState()\r\n+    const [formData,setFormData] = useState(initial)\r\n \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n"
+                },
+                {
+                    "date": 1740647222269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n function Address() {\r\n-    const [formData,setFormData] = useState(initial)\r\n+    const [formData,setFormData] = useState(initialAddressForm)\r\n \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n"
+                },
+                {
+                    "date": 1740647233691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n+\r\n+\r\n function Address() {\r\n-    const [formData,setFormData] = useState(initialAddressForm)\r\n+    const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n"
+                },
+                {
+                    "date": 1740647239340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n+const initialAddressFormData = []\r\n \r\n-\r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n"
+                },
+                {
+                    "date": 1740647245693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n-const initialAddressFormData = []\r\n+const initialAddressFormData = {\r\n+    ad\r\n+}\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n"
+                },
+                {
+                    "date": 1740647253078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n const initialAddressFormData = {\r\n-    ad\r\n+    address : \"\",\r\n+    city : ''\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647262801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n \r\n const initialAddressFormData = {\r\n     address : \"\",\r\n-    city : ''\r\n+    city : '',\r\n+    state :''\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647275846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n \r\n const initialAddressFormData = {\r\n     address : \"\",\r\n     city : '',\r\n-    state :''\r\n+    state :'',\r\n+    country : '',\r\n+    \r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647297723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n     address : \"\",\r\n     city : '',\r\n     state :'',\r\n     country : '',\r\n-    \r\n+    pincode : '',\r\n+    phone : '',\r\n+    notes : ''\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647312376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,11 @@\n             <CardTitle>Add new address</CardTitle>\r\n \r\n         </CardHeader>\r\n         <CardContent className=\"space-y-3\">\r\n-        <CommonForm/>\r\n+        <CommonForm\r\n+        \r\n+        />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n }\r\n"
+                },
+                {
+                    "date": 1740647323116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n+import { addressFormControls } from \"@/config\";\r\n \r\n const initialAddressFormData = {\r\n     address : \"\",\r\n     city : '',\r\n@@ -24,9 +25,9 @@\n \r\n         </CardHeader>\r\n         <CardContent className=\"space-y-3\">\r\n         <CommonForm\r\n-        \r\n+        formControls={addressFormControls}\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647338757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n         </CardHeader>\r\n         <CardContent className=\"space-y-3\">\r\n         <CommonForm\r\n         formControls={addressFormControls}\r\n+        \r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647347721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,10 @@\n         </CardHeader>\r\n         <CardContent className=\"space-y-3\">\r\n         <CommonForm\r\n         formControls={addressFormControls}\r\n-        \r\n+        formData={formData}\r\n+        se\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647356062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,11 @@\n         <CardContent className=\"space-y-3\">\r\n         <CommonForm\r\n         formControls={addressFormControls}\r\n         formData={formData}\r\n-        se\r\n+        setFormData={setFormData\r\n+        butt\r\n+        }\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647361604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         <CommonForm\r\n         formControls={addressFormControls}\r\n         formData={formData}\r\n         setFormData={setFormData\r\n-        butt\r\n+        buttonText={}\r\n         }\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740647371269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n         <CommonForm\r\n         formControls={addressFormControls}\r\n         formData={formData}\r\n         setFormData={setFormData\r\n-        buttonText={}\r\n-        }\r\n+        buttonText={'add'}\r\n+        \r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647381223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,11 +27,11 @@\n         <CardContent className=\"space-y-3\">\r\n         <CommonForm\r\n         formControls={addressFormControls}\r\n         formData={formData}\r\n-        setFormData={setFormData\r\n+        setFormData={setFormData}\r\n         buttonText={'add'}\r\n-        \r\n+        onSubmit={}\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647388499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         formControls={addressFormControls}\r\n         formData={formData}\r\n         setFormData={setFormData}\r\n         buttonText={'add'}\r\n-        onSubmit={}\r\n+        onSubmit={handleManageAddress}\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647401462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n     phone : '',\r\n     notes : ''\r\n }\r\n \r\n+\r\n+\r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n"
+                },
+                {
+                    "date": 1740647408969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n     phone : '',\r\n     notes : ''\r\n }\r\n \r\n+function handleManageAddress()\r\n \r\n-\r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n"
+                },
+                {
+                    "date": 1740647418003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,12 @@\n     phone : '',\r\n     notes : ''\r\n }\r\n \r\n-function handleManageAddress()\r\n+function handleManageAddress(e){\r\n \r\n+}\r\n+\r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n"
+                },
+                {
+                    "date": 1740647423101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     notes : ''\r\n }\r\n \r\n function handleManageAddress(e){\r\n-\r\n+    e.pre\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647428922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     notes : ''\r\n }\r\n \r\n function handleManageAddress(e){\r\n-    e.pre\r\n+    e.preventDefault()\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647703042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,13 @@\n     notes : ''\r\n }\r\n \r\n function handleManageAddress(e){\r\n-    e.preventDefault()\r\n+    e.preventDefault();\r\n }\r\n \r\n+function isFormValid()\r\n+\r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n"
+                },
+                {
+                    "date": 1740647747780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n function handleManageAddress(e){\r\n     e.preventDefault();\r\n }\r\n \r\n-function isFormValid()\r\n+function isFormValid(){\r\n+    return \r\n+}\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n"
+                },
+                {
+                    "date": 1740647753038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     e.preventDefault();\r\n }\r\n \r\n function isFormValid(){\r\n-    return \r\n+    return Object.Keys\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647758247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     e.preventDefault();\r\n }\r\n \r\n function isFormValid(){\r\n-    return Object.Keys\r\n+    return Object.Keys(formData)\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647763599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n+    .map()\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647772740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map()\r\n+    .map((key)=> formData)\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647778738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData)\r\n+    .map((key)=> formData[key] )\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647784892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData[key] )\r\n+    .map((key)=> formData[key] !== '')\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647792152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData[key] !== '')\r\n+    .map((key)=> formData[key] !== '').Addres\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647798559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData[key] !== '').Addres\r\n+    .map((key)=> formData[key] !== '').every\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647806299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData[key] !== '').every\r\n+    .map((key)=> formData[key] !== '').every((item)=>ites)\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647817297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData[key] !== '').every((item)=>ites)\r\n+    .map((key)=> formData[key] !== '').every((item)=>item);\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n@@ -39,8 +39,9 @@\n         formData={formData}\r\n         setFormData={setFormData}\r\n         buttonText={'add'}\r\n         onSubmit={handleManageAddress}\r\n+        isBtnDisabled={}\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647901381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n function isFormValid(){\r\n     return Object.Keys(formData)\r\n-    .map((key)=> formData[key] !== '').every((item)=>item);\r\n+    .map((key)=> formData[key] !== '').every((item=>item);\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n@@ -39,9 +39,9 @@\n         formData={formData}\r\n         setFormData={setFormData}\r\n         buttonText={'add'}\r\n         onSubmit={handleManageAddress}\r\n-        isBtnDisabled={}\r\n+        isBtnDisabled={isFormValid()}\r\n         />\r\n         </CardContent>\r\n     </Card>\r\n   ;\r\n"
+                },
+                {
+                    "date": 1740647926887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     e.preventDefault();\r\n }\r\n \r\n function isFormValid(){\r\n-    return Object.Keys(formData)\r\n-    .map((key)=> formData[key] !== '').every((item=>item);\r\n+    return Object.Keys()\r\n+    .map((key)=> formData[key] !== '').every(item=>item);\r\n }\r\n \r\n function Address() {\r\n     const [formData,setFormData] = useState(initialAddressFormData)\r\n"
+                },
+                {
+                    "date": 1740647961615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     e.preventDefault();\r\n }\r\n \r\n function isFormValid(){\r\n-    return Object.Keys()\r\n+    return Object.keys(forn)\r\n     .map((key)=> formData[key] !== '').every(item=>item);\r\n }\r\n \r\n function Address() {\r\n"
+                },
+                {
+                    "date": 1740647967703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     e.preventDefault();\r\n }\r\n \r\n function isFormValid(){\r\n-    return Object.keys(forn)\r\n+    return Object.keys(formData)\r\n     .map((key)=> formData[key] !== '').every(item=>item);\r\n }\r\n \r\n function Address() {\r\n"
+                },
+                {
+                    "date": 1740648092556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n     .map((key)=> formData[key] !== '').every(item=>item);\r\n }\r\n \r\n function Address() {\r\n-    const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n   return <Card>\r\n         <div>\r\n             Address List\r\n"
+                },
+                {
+                    "date": 1740648101212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,47 +3,45 @@\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n \r\n const initialAddressFormData = {\r\n-    address : \"\",\r\n-    city : '',\r\n-    state :'',\r\n-    country : '',\r\n-    pincode : '',\r\n-    phone : '',\r\n-    notes : ''\r\n-}\r\n+  address: \"\",\r\n+  city: \"\",\r\n+  state: \"\",\r\n+  country: \"\",\r\n+  pincode: \"\",\r\n+  phone: \"\",\r\n+  notes: \"\",\r\n+};\r\n \r\n-function handleManageAddress(e){\r\n-    e.preventDefault();\r\n+function handleManageAddress(e) {\r\n+  e.preventDefault();\r\n }\r\n \r\n-function isFormValid(){\r\n-    return Object.keys(formData)\r\n-    .map((key)=> formData[key] !== '').every(item=>item);\r\n+function isFormValid() {\r\n+  return Object.keys(formData)\r\n+    .map((key) => formData[key] !== \"\")\r\n+    .every((item) => item);\r\n }\r\n \r\n function Address() {\r\n-\r\n-  return <Card>\r\n-        <div>\r\n-            Address List\r\n-        </div>\r\n-        <CardHeader>\r\n-            <CardTitle>Add new address</CardTitle>\r\n-\r\n-        </CardHeader>\r\n-        <CardContent className=\"space-y-3\">\r\n+  return (\r\n+    <Card>\r\n+      <div>Address List</div>\r\n+      <CardHeader>\r\n+        <CardTitle>Add new address</CardTitle>\r\n+      </CardHeader>\r\n+      <CardContent className=\"space-y-3\">\r\n         <CommonForm\r\n-        formControls={addressFormControls}\r\n-        formData={formData}\r\n-        setFormData={setFormData}\r\n-        buttonText={'add'}\r\n-        onSubmit={handleManageAddress}\r\n-        isBtnDisabled={isFormValid()}\r\n+          formControls={addressFormControls}\r\n+          formData={formData}\r\n+          setFormData={setFormData}\r\n+          buttonText={\"add\"}\r\n+          onSubmit={handleManageAddress}\r\n+          isBtnDisabled={isFormValid()}\r\n         />\r\n-        </CardContent>\r\n+      </CardContent>\r\n     </Card>\r\n-  ;\r\n+  );\r\n }\r\n \r\n export default Address;\r\n"
+                },
+                {
+                    "date": 1740648106333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n   phone: \"\",\r\n   notes: \"\",\r\n };\r\n \r\n+const [formData,setFormData] = useState(initialAddressFormData)\r\n+\r\n function handleManageAddress(e) {\r\n   e.preventDefault();\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740648122364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,8 @@\n function handleManageAddress(e) {\r\n   e.preventDefault();\r\n }\r\n \r\n-function isFormValid() {\r\n-  return Object.keys(formData)\r\n-    .map((key) => formData[key] !== \"\")\r\n-    .every((item) => item);\r\n-}\r\n \r\n function Address() {\r\n   return (\r\n     <Card>\r\n"
+                },
+                {
+                    "date": 1740648129324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,16 +12,23 @@\n   phone: \"\",\r\n   notes: \"\",\r\n };\r\n \r\n-const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n function handleManageAddress(e) {\r\n   e.preventDefault();\r\n }\r\n \r\n \r\n function Address() {\r\n+const [formData,setFormData] = useState(initialAddressFormData)\r\n+\r\n+    \r\n+function isFormValid() {\r\n+    return Object.keys(formData)\r\n+      .map((key) => formData[key] !== \"\")\r\n+      .every((item) => item);\r\n+  }\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n       <CardHeader>\r\n"
+                },
+                {
+                    "date": 1740648162213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n     \r\n function isFormValid() {\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key] !== \"\")\r\n-      .every((item) => item);\r\n+      .every((item)\r\n+       => item);\r\n   }\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n"
+                },
+                {
+                    "date": 1740648359128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,8 @@\n   notes: \"\",\r\n };\r\n \r\n \r\n-function handleManageAddress(e) {\r\n-  e.preventDefault();\r\n-}\r\n \r\n \r\n function Address() {\r\n const [formData,setFormData] = useState(initialAddressFormData)\r\n@@ -25,10 +22,9 @@\n     \r\n function isFormValid() {\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key] !== \"\")\r\n-      .every((item)\r\n-       => item);\r\n+      .every(item => item);\r\n   }\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n"
+                },
+                {
+                    "date": 1740648556992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,16 @@\n \r\n function Address() {\r\n const [formData,setFormData] = useState(initialAddressFormData)\r\n \r\n+function handleManageAddress(e) {\r\n+    e.preventDefault();\r\n+  }\r\n+  \r\n     \r\n function isFormValid() {\r\n     return Object.keys(formData)\r\n-      .map((key) => formData[key] !== \"\")\r\n+      .map((key => formData[key] !== \"\")\r\n       .every(item => item);\r\n   }\r\n   return (\r\n     <Card>\r\n"
+                },
+                {
+                    "date": 1740648574945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n   \r\n     \r\n function isFormValid() {\r\n     return Object.keys(formData)\r\n-      .map((key => formData[key] !== \"\")\r\n-      .every(item => item);\r\n+      .map( key => formData[key] !== \"\")\r\n+      .every((item) => item);\r\n   }\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n"
+                },
+                {
+                    "date": 1740648583732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n   \r\n     \r\n function isFormValid() {\r\n     return Object.keys(formData)\r\n-      .map( key => formData[key] !== \"\")\r\n-      .every((item) => item);\r\n+      .map( key => formData[key] !== \"\").every((item) => item);\r\n   }\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n"
+                },
+                {
+                    "date": 1740648625484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,22 +12,19 @@\n   phone: \"\",\r\n   notes: \"\",\r\n };\r\n \r\n-\r\n-\r\n-\r\n function Address() {\r\n-const [formData,setFormData] = useState(initialAddressFormData)\r\n+  const [formData, setFormData] = useState(initialAddressFormData);\r\n \r\n-function handleManageAddress(e) {\r\n+  function handleManageAddress(e) {\r\n     e.preventDefault();\r\n   }\r\n-  \r\n-    \r\n-function isFormValid() {\r\n+\r\n+  function isFormValid() {\r\n     return Object.keys(formData)\r\n-      .map( key => formData[key] !== \"\").every((item) => item);\r\n+      .map((key) => formData[key] !== \"\")\r\n+      .every((item) => item);\r\n   }\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n"
+                },
+                {
+                    "date": 1740648650703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n   }\r\n \r\n-  function isFormValid() {\r\n+  function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key] !== \"\")\r\n       .every((item) => item);\r\n   }\r\n"
+                },
+                {
+                    "date": 1740648658945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         <CommonForm\r\n           formControls={addressFormControls}\r\n           formData={formData}\r\n           setFormData={setFormData}\r\n-          buttonText={\"add\"}\r\n+          buttonText={\"Add\"}\r\n           onSubmit={handleManageAddress}\r\n           isBtnDisabled={isFormValid()}\r\n         />\r\n       </CardContent>\r\n"
+                },
+                {
+                    "date": 1740648734364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n           onSubmit={handleManageAddress}\r\n-          isBtnDisabled={isFormValid()}\r\n+          isBtnDisabled={!isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740648954969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n-      .map((key) => formData[key] !== \"\")\r\n+      .map((key) => formData[key].trim !== \"\")\r\n       .every((item) => item);\r\n   }\r\n   return (\r\n     <Card>\r\n"
+                },
+                {
+                    "date": 1740649131564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n+import { useDispatch } from \"react-redux\";\r\n \r\n const initialAddressFormData = {\r\n   address: \"\",\r\n   city: \"\",\r\n@@ -14,16 +15,17 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n+  const dispatch = useDispatch()\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n-      .map((key) => formData[key].trim !== \"\")\r\n+      .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n   return (\r\n     <Card>\r\n"
+                },
+                {
+                    "date": 1740649139668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n-  const dispatch = useDispatch()\r\n+  const dispatch = useDispatch();\r\n+  const {user}\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n   }\r\n"
+                },
+                {
+                    "date": 1740649149915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,13 @@\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n-  const {user}\r\n+  const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n+    \r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649158464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n-    \r\n+    dis\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649167824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n import { useDispatch } from \"react-redux\";\r\n+import { addNewAddress } from \"@/Store/shop/address-slice\";\r\n \r\n const initialAddressFormData = {\r\n   address: \"\",\r\n   city: \"\",\r\n@@ -20,9 +21,9 @@\n   const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n-    dis\r\n+    dispatch(addNewAddress)\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649174841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,11 @@\n   const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n-    dispatch(addNewAddress)\r\n+    dispatch(addNewAddress({\r\n+        ..\r\n+    }))\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649181870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n-        ..\r\n+        ...formData,\r\n+        userId\r\n     }))\r\n   }\r\n \r\n   function isFormValid(){\r\n"
+                },
+                {
+                    "date": 1740649196604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,19 +17,21 @@\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n-  const {user} = useSelector(state => state.auth);\r\n+  const { user } = useSelector((state) => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n-    dispatch(addNewAddress({\r\n+    dispatch(\r\n+      addNewAddress({\r\n         ...formData,\r\n-        userId\r\n-    }))\r\n+        userId: user.id,\r\n+      })\r\n+    );\r\n   }\r\n \r\n-  function isFormValid(){\r\n+  function isFormValid() {\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n"
+                },
+                {
+                    "date": 1740649216142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,10 @@\n       addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n       })\r\n-    );\r\n+    )\r\n+    TheaterIcon();\r\n   }\r\n \r\n   function isFormValid() {\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649223118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         ...formData,\r\n         userId: user.id,\r\n       })\r\n     )\r\n-    TheaterIcon();\r\n+    then((data));\r\n   }\r\n \r\n   function isFormValid() {\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649233293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,11 @@\n         ...formData,\r\n         userId: user.id,\r\n       })\r\n     )\r\n-    then((data));\r\n+    then((data)=>{\r\n+        console.log(data)\r\n+    });\r\n   }\r\n \r\n   function isFormValid() {\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649250870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n-import { useDispatch } from \"react-redux\";\r\n+import { useDispatch, useSelector } from \"react-redux\";\r\n import { addNewAddress } from \"@/Store/shop/address-slice\";\r\n \r\n const initialAddressFormData = {\r\n   address: \"\",\r\n"
+                },
+                {
+                    "date": 1740649327760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         ...formData,\r\n         userId: user.id,\r\n       })\r\n     )\r\n-    then((data)=>{\r\n+    .then((data)=>{\r\n         console.log(data)\r\n     });\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740649384748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,10 @@\n       addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n       })\r\n-    )\r\n-    .then((data)=>{\r\n-        console.log(data)\r\n+    ).then((data) => {\r\n+      console.log(data);\r\n     });\r\n   }\r\n \r\n   function isFormValid() {\r\n"
+                },
+                {
+                    "date": 1740649391837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,9 @@\n       addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n       })\r\n-    ).then((data) => {\r\n-      console.log(data);\r\n-    });\r\n+    );\r\n   }\r\n \r\n   function isFormValid() {\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649481311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n     e.preventDefault();\r\n     dispatch(\r\n       addNewAddress({\r\n         ...formData,\r\n-        userId: user.id,\r\n+        userId: user?.id,\r\n+      }).then((data) => {\r\n+        console.log(data);\r\n       })\r\n     );\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740649489950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n-import { useDispatch, useSelector } from \"react-redux\";\r\n+import { useDispatch } from \"react-redux\";\r\n import { addNewAddress } from \"@/Store/shop/address-slice\";\r\n \r\n const initialAddressFormData = {\r\n   address: \"\",\r\n@@ -17,20 +17,21 @@\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n-  const { user } = useSelector((state) => state.auth);\r\n+  const { user } = useSelecto((state) => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n     dispatch(\r\n       addNewAddress({\r\n         ...formData,\r\n-        userId: user?.id,\r\n-      }).then((data) => {\r\n-        console.log(data);\r\n+        userId: user.id,\r\n       })\r\n-    );\r\n+    )\r\n+    then((data)=>{\r\n+        console.log(data)\r\n+    });\r\n   }\r\n \r\n   function isFormValid() {\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649496933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,24 +17,19 @@\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n-  const { user } = useSelecto((state) => state.auth);\r\n+  const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n-    dispatch(\r\n-      addNewAddress({\r\n+    dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n-      })\r\n-    )\r\n-    then((data)=>{\r\n-        console.log(data)\r\n-    });\r\n+    }))\r\n   }\r\n \r\n-  function isFormValid() {\r\n+  function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n"
+                },
+                {
+                    "date": 1740649504210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n-import { useDispatch } from \"react-redux\";\r\n+import { useDispatch, useSelector } from \"react-redux\";\r\n import { addNewAddress } from \"@/Store/shop/address-slice\";\r\n \r\n const initialAddressFormData = {\r\n   address: \"\",\r\n@@ -23,9 +23,9 @@\n   function handleManageAddress(e) {\r\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n-        userId: user.id,\r\n+        userId: user?.id,\r\n     }))\r\n   }\r\n \r\n   function isFormValid(){\r\n"
+                },
+                {
+                    "date": 1740649510447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user?.id,\r\n-    }))\r\n+    })).then()\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649518819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user?.id,\r\n-    })).then()\r\n+    })).then(data=> )\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649557512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n-    e.preventDefault();\r\n+    // e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user?.id,\r\n-    })).then(data=> )\r\n+    })).then(data=> console.log(data))\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649579231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n   function handleManageAddress(e) {\r\n-    // e.preventDefault();\r\n+    e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user?.id,\r\n     })).then(data=> console.log(data))\r\n"
+                },
+                {
+                    "date": 1740649740020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,16 +19,10 @@\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n-  function handleManageAddress(e) {\r\n-    e.preventDefault();\r\n-    dispatch(addNewAddress({\r\n-        ...formData,\r\n-        userId: user?.id,\r\n-    })).then(data=> console.log(data))\r\n-  }\r\n \r\n+\r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n"
+                },
+                {
+                    "date": 1740649755359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n+function \r\n \r\n-\r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n"
+                },
+                {
+                    "date": 1740649764954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n-function \r\n+function handleManageAddress\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n"
+                },
+                {
+                    "date": 1740649775097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n-function handleManageAddress\r\n+function handleManageAddress(){\r\n+    dispatc\r\n+}\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n"
+                },
+                {
+                    "date": 1740649782553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n function handleManageAddress(){\r\n-    dispatc\r\n+    console.log(user?.)\r\n }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649864991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n function handleManageAddress(){\r\n-    console.log(user?.)\r\n+    console.log(user)\r\n }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649917606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector(state => state.auth);\r\n \r\n function handleManageAddress(){\r\n-    console.log(user)\r\n+    console.log(\"user\")\r\n }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740649944971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n           onSubmit={handleManageAddress}\r\n-          isBtnDisabled={!isFormValid()}\r\n+          isBtnDisabled={isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740650092500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,8 @@\n           formControls={addressFormControls}\r\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n-          onSubmit={handleManageAddress}\r\n           isBtnDisabled={isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740650099358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,8 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n-  const dispatch = useDispatch();\r\n-  const {user} = useSelector(state => state.auth);\r\n \r\n function handleManageAddress(){\r\n     console.log(\"user\")\r\n }\r\n"
+                },
+                {
+                    "date": 1740650111983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,11 @@\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n \r\n-function handleManageAddress(){\r\n-    console.log(\"user\")\r\n-}\r\n \r\n+  function handleSubmit\r\n+\r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n"
+                },
+                {
+                    "date": 1740650117429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,11 @@\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n \r\n \r\n-  function handleSubmit\r\n+  function handleSubmit(){\r\n+    console.log(\"first\")\r\n+  }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n"
+                },
+                {
+                    "date": 1740650127694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n           formControls={addressFormControls}\r\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n+          \r\n           isBtnDisabled={isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740650133832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           formControls={addressFormControls}\r\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n-          \r\n+          onSubmit={handleSubmit}\r\n           isBtnDisabled={isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740650172129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n \r\n \r\n   function handleSubmit(){\r\n+    \r\n     console.log(\"first\")\r\n   }\r\n \r\n   function isFormValid(){\r\n"
+                },
+                {
+                    "date": 1740650180418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n \r\n \r\n-  function handleSubmit(){\r\n-    \r\n+  function handleSubmit(e){\r\n+    e.preventDe\r\n     console.log(\"first\")\r\n   }\r\n \r\n   function isFormValid(){\r\n"
+                },
+                {
+                    "date": 1740650188532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n \r\n \r\n   function handleSubmit(e){\r\n-    e.preventDe\r\n+    e.preventDefault();\r\n     console.log(\"first\")\r\n   }\r\n \r\n   function isFormValid(){\r\n"
+                },
+                {
+                    "date": 1740650207277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    console.log(\"first\")\r\n+    console\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650215541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    console\r\n+    console.log(user?id)\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650231360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    console.log(user?id)\r\n+    console.log(user)\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650239197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n+  const\r\n \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740650245046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n-  const\r\n+  const {user}\r\n+ \r\n \r\n-\r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n     console.log(user)\r\n   }\r\n"
+                },
+                {
+                    "date": 1740650266226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,14 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n-  const {user}\r\n+  const {user} = useSelector((state) => state.auth);\r\n  \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    console.log(user)\r\n+    \r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650274567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n+  const dispatch = useDispatc();\r\n   const {user} = useSelector((state) => state.auth);\r\n  \r\n \r\n   function handleSubmit(e){\r\n"
+                },
+                {
+                    "date": 1740650280932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,15 +16,15 @@\n };\r\n \r\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n-  const dispatch = useDispatc();\r\n+  const dispatch = useDispatch();\r\n   const {user} = useSelector((state) => state.auth);\r\n  \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    \r\n+    dispatch()\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650290805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n  \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    dispatch()\r\n+    dispatch(add)\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650298683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n  \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    dispatch(add)\r\n+    dispatch(addNewAddress({}))\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650307283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,12 @@\n  \r\n \r\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n-    dispatch(addNewAddress({}))\r\n+    dispatch(addNewAddress({\r\n+        ...formData,\r\n+        \r\n+    }))\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650313157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n   function handleSubmit(e){\r\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n+        userId: user.id,\r\n         \r\n     }))\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1740650320065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n-        \r\n-    }))\r\n+    })).then()\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650325775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n-    })).then()\r\n+    })).then(data=> console.log(data))\r\n   }\r\n \r\n   function isFormValid(){\r\n     return Object.keys(formData)\r\n"
+                },
+                {
+                    "date": 1740650358433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n           onSubmit={handleSubmit}\r\n-          isBtnDisabled={isFormValid()}\r\n+          isBtnDisabled={!isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n   );\r\n"
+                },
+                {
+                    "date": 1740650456582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector((state) => state.auth);\r\n  \r\n \r\n-  function handleSubmit(e){\r\n+  function handle(e){\r\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n"
+                },
+                {
+                    "date": 1740650469226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const dispatch = useDispatch();\r\n   const {user} = useSelector((state) => state.auth);\r\n  \r\n \r\n-  function handle(e){\r\n+  function handleManageAddress(e){\r\n     e.preventDefault();\r\n     dispatch(addNewAddress({\r\n         ...formData,\r\n         userId: user.id,\r\n@@ -45,9 +45,9 @@\n           formControls={addressFormControls}\r\n           formData={formData}\r\n           setFormData={setFormData}\r\n           buttonText={\"Add\"}\r\n-          onSubmit={handleSubmit}\r\n+          onSubmit={handleManageAddress}\r\n           isBtnDisabled={!isFormValid()}\r\n         />\r\n       </CardContent>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1740652712597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n   const {user} = useSelector((state) => state.auth);\r\n+  const {user} = useSelector((state) => state.auth);\r\n  \r\n \r\n   function handleManageAddress(e){\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740652730068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n function Address() {\r\n   const [formData, setFormData] = useState(initialAddressFormData);\r\n   const dispatch = useDispatch();\r\n   const {user} = useSelector((state) => state.auth);\r\n-  const {user} = useSelector((state) => state.auth);\r\n+  const {addressList} = useSelector((state) => state.shopAddress);\r\n  \r\n \r\n   function handleManageAddress(e){\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1740652735257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,10 @@\n     return Object.keys(formData)\r\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n+\r\n+  console.log(first)\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n       <CardHeader>\r\n"
+                },
+                {
+                    "date": 1740652741315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n \r\n-  console.log(first)\r\n+  console.log(addressList)\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n       <CardHeader>\r\n"
+                },
+                {
+                    "date": 1740652892815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,10 @@\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n \r\n+  \r\n+\r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n       <div>Address List</div>\r\n"
+                },
+                {
+                    "date": 1740652899756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useState } from \"react\";\r\n+import { useEffect, useState } from \"react\";\r\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n import { useDispatch, useSelector } from \"react-redux\";\r\n@@ -35,9 +35,9 @@\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n \r\n-  \r\n+  useEffect(()=>{})\r\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n"
+                },
+                {
+                    "date": 1740652910682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,11 @@\n       .map((key) => formData[key].trim() !== \"\")\r\n       .every((item) => item);\r\n   }\r\n \r\n-  useEffect(()=>{})\r\n+  useEffect(()=>{\r\n+    dispatch(fetchAllAddress;)\r\n+  },[dispatch])\r\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n"
+                },
+                {
+                    "date": 1740652925115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import CommonForm from \"../common/Form\";\r\n import { Card, CardContent, CardHeader, CardTitle } from \"../ui/card\";\r\n import { addressFormControls } from \"@/config\";\r\n import { useDispatch, useSelector } from \"react-redux\";\r\n-import { addNewAddress } from \"@/Store/shop/address-slice\";\r\n+import { addNewAddress, fetchAllAddress } from \"@/Store/shop/address-slice\";\r\n \r\n const initialAddressFormData = {\r\n   address: \"\",\r\n   city: \"\",\r\n@@ -36,9 +36,9 @@\n       .every((item) => item);\r\n   }\r\n \r\n   useEffect(()=>{\r\n-    dispatch(fetchAllAddress;)\r\n+    dispatch(fetchAllAddress(user?.))\r\n   },[dispatch])\r\n \r\n   console.log(addressList)\r\n   return (\r\n"
+                },
+                {
+                    "date": 1740653004550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,15 +36,17 @@\n       .every((item) => item);\r\n   }\r\n \r\n   useEffect(()=>{\r\n-    dispatch(fetchAllAddress(user?.))\r\n+    dispatch(fetchAllAddress(user?.id))\r\n   },[dispatch])\r\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n-      <div>Address List</div>\r\n+      <div>\r\n+        \r\n+      </div>\r\n       <CardHeader>\r\n         <CardTitle>Add new address</CardTitle>\r\n       </CardHeader>\r\n       <CardContent className=\"space-y-3\">\r\n"
+                },
+                {
+                    "date": 1740653011724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,10 +42,10 @@\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n-      <div>\r\n-        \r\n+      <div className=\"mb-5 \">\r\n+\r\n       </div>\r\n       <CardHeader>\r\n         <CardTitle>Add new address</CardTitle>\r\n       </CardHeader>\r\n"
+                },
+                {
+                    "date": 1740653018156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n-      <div className=\"mb-5 \">\r\n+      <div className=\"mb-5 p-3 grid grid\">\r\n \r\n       </div>\r\n       <CardHeader>\r\n         <CardTitle>Add new address</CardTitle>\r\n"
+                },
+                {
+                    "date": 1740653025377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n-      <div className=\"mb-5 p-3 grid grid\">\r\n+      <div className=\"mb-5 p-3 grid grid-cols-1\">\r\n \r\n       </div>\r\n       <CardHeader>\r\n         <CardTitle>Add new address</CardTitle>\r\n"
+                },
+                {
+                    "date": 1740653036238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n \r\n   console.log(addressList)\r\n   return (\r\n     <Card>\r\n-      <div className=\"mb-5 p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-\">\r\n+      <div className=\"mb-5 p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3\">\r\n \r\n       </div>\r\n       <CardHeader>\r\n         <CardTitle>Add new address</CardTitle>\r\n"
+                },
+                {
+                    "date": 1740654135061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     e.preventDefault();\r\n     dispatch(\r\n       addNewAddress({\r\n         ...formData,\r\n-        userId: user.id,\r\n+        userId: user?.id,\r\n       })\r\n     ).then((data) => console.log(data));\r\n   }\r\n \r\n"
+                }
+            ],
+            "date": 1740645856172,
+            "name": "Commit-0",
+            "content": "\r\n\r\nffc"
+        }
+    ]
+}

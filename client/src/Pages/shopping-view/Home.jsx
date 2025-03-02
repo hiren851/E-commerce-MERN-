@@ -18,10 +18,16 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllFilteredProducts } from "@/Store/shop/product-slice";
+import {
+  fetchAllFilteredProducts,
+  fetchProductDetails,
+} from "@/Store/shop/product-slice";
 import SHoppingProductTile from "@/components/shopping-view/Product-tile";
 import { SiNike, SiAdidas, SiPuma, SiZara } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import { addToCart, fetchCartItems } from "@/Store/shop/cart-slice";
+import { useToast } from "@/hooks/use-toast";
+import ProductDetailsDialog from "@/components/shopping-view/ProductDetails";
 // import { timeEnd } from "console";
 
 const categoriesWithIcons = [
@@ -43,12 +49,37 @@ const brandWithIcon = [
 
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [openProductDialog, setOpenProductDialog] = useState(false);
   const dispatch = useDispatch();
-  const { productList } = useSelector((state) => state.shopProducts);
+  const { productList,productDetails } = useSelector((state) => state.shopProducts);
+  const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   //   console.log(banner2);
   const slides = [banner1, banner2, banner3, banner4];
+
+  function handleGetProductDetails(getCurrentProductId) {
+    console.log(getCurrentProductId);
+    dispatch(fetchProductDetails(getCurrentProductId));
+  }
+
+  function handleAddToCart(getCurrentProductId) {
+    dispatch(
+      addToCart({
+        userId: user.id,
+        productId: getCurrentProductId,
+        quantity: 1,
+      })
+    ).then((data) => {
+      if (data?.payload?.success) {
+        dispatch(fetchCartItems(user?.id));
+        toast({
+          title: "Product Added to Cart",
+        });
+      }
+    });
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -67,18 +98,23 @@ function ShoppingHome() {
     );
   }, [dispatch]);
 
-
-  function handleNavigateToListingPage(getCurrentItem,section){
-    sessionStorage.removeItem('filters')
+  function handleNavigateToListingPage(getCurrentItem, section) {
+    sessionStorage.removeItem("filters");
     const currentFilter = {
-        [section] : [getCurrentItem.id]
-    }
+      [section]: [getCurrentItem.id],
+    };
 
-    sessionStorage.setItem('filters' , JSON.stringify(currentFilter))
-    navigate(`/shop/listing`)
+    sessionStorage.setItem("filters", JSON.stringify(currentFilter));
+    navigate(`/shop/listing`);
   }
 
-  console.log(productList);
+  useEffect(()=>{
+    if(productDetails !== null){
+      setOpenProductDialog(true);
+    }
+  },[productDetails])
+  
+  // console.log(productList);
   return (
     <div className="flex flex-col min-h-screen">
       <div className="relative w-full h-[600px] overflow-hidden">
@@ -112,14 +148,17 @@ function ShoppingHome() {
           <ChevronRight className="w-4 h-4" />
         </Button>
       </div>
-      <section className="py-12 bg-gray-50 " >
+      <section className="py-12 bg-gray-50 ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             Shop By Category
           </h2>
           <div className="grid grid:cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {categoriesWithIcons.map((items) => (
-              <Card className="cursor-pointer hover:shadow-lg transition-shadow" onClick={()=>handleNavigateToListingPage(items , "category")}>
+              <Card key={items.id}
+                className="cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() => handleNavigateToListingPage(items, "category")}
+              >
                 <CardContent className="flex flex-col items-center justify-center p-6 ">
                   <items.icon className="w-12 h-12 mb-4 text-primary" />
                   <span className="font-bold">{items.label}</span>
@@ -134,7 +173,10 @@ function ShoppingHome() {
           <h2 className="text-3xl font-bold text-center mb-8">Shop By Brand</h2>
           <div className="grid grid:cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {brandWithIcon.map((items) => (
-              <Card className="cursor-pointer hover:shadow-lg transition-shadow"  onClick={()=>handleNavigateToListingPage(items , "brand")}>
+              <Card key={items.id}
+                className="cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() => handleNavigateToListingPage(items, "brand")}
+              >
                 <CardContent className="flex flex-col items-center justify-center p-6 ">
                   {typeof items.icon === "string" ? (
                     <img
@@ -160,12 +202,21 @@ function ShoppingHome() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
             {productList && productList.length > 0
               ? productList.map((productItem) => (
-                  <SHoppingProductTile product={productItem} />
+                  <SHoppingProductTile key={productItem._id}
+                    product={productItem}
+                    handleAddToCart={handleAddToCart}
+                    handleGetProductDetails={handleGetProductDetails}
+                  />
                 ))
               : null}
           </div>
         </div>
       </section>
+      <ProductDetailsDialog
+        open={openProductDialog}
+        setOpen={setOpenProductDialog}
+        productDetails={productDetails}
+      />
     </div>
   );
 }

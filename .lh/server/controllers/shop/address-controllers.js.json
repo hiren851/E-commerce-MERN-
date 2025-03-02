@@ -1,0 +1,202 @@
+{
+    "sourceFile": "server/controllers/shop/address-controllers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 46,
+            "patches": [
+                {
+                    "date": 1740634921160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740634926621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n \r\n \r\n+const addAddress\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740634933887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-const addAddress\n\\ No newline at end of file\n+const addAddress \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740634942339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-const addAddress \n\\ No newline at end of file\n+const addAddress = async(requestAnimationFrame,res)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740634948827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n \r\n \r\n-const addAddress = async(requestAnimationFrame,res)\n\\ No newline at end of file\n+const addAddress = async(req,res)=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635339702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n \r\n \r\n const addAddress = async(req,res)=>{\r\n-    \r\n+    try\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635347574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n \r\n \r\n const addAddress = async(req,res)=>{\r\n-    try\r\n+    try {\r\n+        \r\n+    } catch (e) {\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635356749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n const addAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n-        \r\n+        console.log(e)\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635363316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n const addAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n-        console.log(e)\r\n+        console.log(e);\r\n+        res.sta\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635371330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n-        res.sta\r\n+        res.status(500).\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635381931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,10 @@\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n-        res.status(500).\r\n+        res.status(500).json({\r\n+            success: false ,\r\n+            \r\n+        })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635388290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n     } catch (e) {\r\n         console.log(e);\r\n         res.status(500).json({\r\n             success: false ,\r\n-            \r\n+            message : 'Error'\r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635952020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,29 @@\n             success: false ,\r\n             message : 'Error'\r\n         })\r\n     }\r\n+}\r\n+\r\n+const addAddress = async(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (e) {\r\n+        console.log(e);\r\n+        res.status(500).json({\r\n+            success: false ,\r\n+            message : 'Error'\r\n+        })\r\n+    }\r\n+}\r\n+\r\n+const addAddress = async(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (e) {\r\n+        console.log(e);\r\n+        res.status(500).json({\r\n+            success: false ,\r\n+            message : 'Error'\r\n+        })\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740635961369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,20 @@\n         })\r\n     }\r\n }\r\n \r\n+const fetchAllAdress = async(req,res)=>{\r\n+    try {\r\n+        \r\n+    } catch (e) {\r\n+        console.log(e);\r\n+        res.status(500).json({\r\n+            success: false ,\r\n+            message : 'Error'\r\n+        })\r\n+    }\r\n+}\r\n+\r\n const addAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n"
+                },
+                {
+                    "date": 1740635969943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         })\r\n     }\r\n }\r\n \r\n-const fetchAllAdress = async(req,res)=>{\r\n+const fetchAllAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n@@ -23,9 +23,9 @@\n         })\r\n     }\r\n }\r\n \r\n-const addAddress = async(req,res)=>{\r\n+const  = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1740635978217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         })\r\n     }\r\n }\r\n \r\n-const  = async(req,res)=>{\r\n+const EditAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1740635985509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         })\r\n     }\r\n }\r\n \r\n-const addAddress = async(req,res)=>{\r\n+const deleteAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n"
+                },
+                {
+                    "date": 1740635999064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,7 @@\n             success: false ,\r\n             message : 'Error'\r\n         })\r\n     }\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+module.expo\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636007982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,5 @@\n         })\r\n     }\r\n }\r\n \r\n-module.expo\n\\ No newline at end of file\n+module.exports\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636014487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,5 @@\n         })\r\n     }\r\n }\r\n \r\n-module.exports\n\\ No newline at end of file\n+module.exports = {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636025591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,5 @@\n         })\r\n     }\r\n }\r\n \r\n-module.exports = {}\n\\ No newline at end of file\n+module.exports = {addAddress,fetchAllAddress,}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636034490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,5 @@\n         })\r\n     }\r\n }\r\n \r\n-module.exports = {addAddress,fetchAllAddress,}\n\\ No newline at end of file\n+module.exports = {addAddress,fetchAllAddress,EditAddress}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636043186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         })\r\n     }\r\n }\r\n \r\n-const EditAddress = async(req,res)=>{\r\n+const editAddress = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e);\r\n@@ -47,5 +47,5 @@\n         })\r\n     }\r\n }\r\n \r\n-module.exports = {addAddress,fetchAllAddress,EditAddress}\n\\ No newline at end of file\n+module.exports = {addAddress,fetchAllAddress,editAddress}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740636063142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,51 +1,45 @@\n+const addAddress = async (req, res) => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n+const fetchAllAddress = async (req, res) => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-const addAddress = async(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (e) {\r\n-        console.log(e);\r\n-        res.status(500).json({\r\n-            success: false ,\r\n-            message : 'Error'\r\n-        })\r\n-    }\r\n-}\r\n+const editAddress = async (req, res) => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-const fetchAllAddress = async(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (e) {\r\n-        console.log(e);\r\n-        res.status(500).json({\r\n-            success: false ,\r\n\\ No newline at end of file\n-            message : 'Error'\r\n-        })\r\n-    }\r\n-}\r\n+const deleteAddress = async (req, res) => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error\",\r\n+    });\r\n+  }\r\n+};\r\n \r\n-const editAddress = async(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (e) {\r\n-        console.log(e);\r\n-        res.status(500).json({\r\n-            success: false ,\r\n-            message : 'Error'\r\n-        })\r\n-    }\r\n-}\r\n-\r\n-const deleteAddress = async(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (e) {\r\n-        console.log(e);\r\n-        res.status(500).json({\r\n-            success: false ,\r\n-            message : 'Error'\r\n-        })\r\n-    }\r\n-}\r\n-\r\n-module.exports = {addAddress,fetchAllAddress,editAddress}\n+module.exports = { addAddress, fetchAllAddress, editAddress, deleteAddress };\r\n"
+                },
+                {
+                    "date": 1740636383861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n+\r\n+\r\n+\r\n const addAddress = async (req, res) => {\r\n   try {\r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1740636396068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n+const Address = require\r\n \r\n \r\n-\r\n const addAddress = async (req, res) => {\r\n   try {\r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1740636402123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const Address = require\r\n+const Address = require('../')\r\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n"
+                },
+                {
+                    "date": 1740636413156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const Address = require('../')\r\n+const Address = require('../../')\r\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n"
+                },
+                {
+                    "date": 1740636422496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n-const Address = require('../../')\r\n+const Address = require('../../models/Adress')\r\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n+\r\n+    \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740636434263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n+    const{userId , }\r\n \r\n-    \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740636462605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n-    const{userId , }\r\n+    const{userId , addes}\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636474869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n-    const{userId , addes}\r\n+    const{userId , address , city,state,country,}\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636492366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n-    const{userId , address , city,state,country,}\r\n+    const{userId , address , city,state,country,pincode}\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636498677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n-    const{userId , address , city,state,country,pincode}\r\n+    const{userId , address , city,state,country,pincode,phone,notes} = \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636504598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const addAddress = async (req, res) => {\r\n   try {\r\n-    const{userId , address , city,state,country,pincode,phone,notes} = \r\n+    const{userId , address , city,state,country,pincode,phone,notes} = req.body\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636510728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,10 @@\n-const Address = require('../../models/Adress')\r\n+const Address = require(\"../../models/Adress\");\r\n \r\n-\r\n const addAddress = async (req, res) => {\r\n   try {\r\n-    const{userId , address , city,state,country,pincode,phone,notes} = req.body\r\n-\r\n+    const { userId, address, city, state, country, pincode, phone, notes } =\r\n+      req.body;\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740636535601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n const addAddress = async (req, res) => {\r\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n+      \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740636540800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n const addAddress = async (req, res) => {\r\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n+\r\n+\r\n       \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636550566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n+    if()\r\n \r\n-      \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1740636557657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n-    if()\r\n+    if(!userId || !)\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636563121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n-    if(!userId || !)\r\n+    if(!userId || !address |)\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636568541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n-    if(!userId || !address |)\r\n+    if(!userId || !address || !city || !state || !country || !pincode || !phone) \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636574441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n-    if(!userId || !address || !city || !state || !country || !pincode || !phone) \r\n+    if(!userId || !address || !city || !state || !country || !pincode || !phone ) \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636583406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n-    if(!userId || !address || !city || !state || !country || !pincode || !phone ) \r\n+    if(!userId || !address || !city || !state || !country || !pincode || !phone || ) \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636589747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   try {\r\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n-    if(!userId || !address || !city || !state || !country || !pincode || !phone || ) \r\n+    if(!userId || !address || !city || !state || !country || !pincode || !phone || !notes) \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1740636598227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     const { userId, address, city, state, country, pincode, phone, notes } =\r\n       req.body;\r\n \r\n     if(!userId || !address || !city || !state || !country || !pincode || !phone || !notes){\r\n-        res.\r\n+        res.s\r\n     } \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1740636750832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     })\r\n \r\n \r\n     await newAddress.save();\r\n-    \r\n+    res.status(201).\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                }
+            ],
+            "date": 1740634921160,
+            "name": "Commit-0",
+            "content": "\r\n\r\n"
+        }
+    ]
+}

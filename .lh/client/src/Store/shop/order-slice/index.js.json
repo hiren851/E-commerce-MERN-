@@ -1,0 +1,378 @@
+{
+    "sourceFile": "client/src/Store/shop/order-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 90,
+            "patches": [
+                {
+                    "date": 1740740508066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740740515229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n \r\n \r\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740533013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-export \n\\ No newline at end of file\n+export const createOrder \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740538691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-export const createOrder \n\\ No newline at end of file\n+export const createOrder = async (req, res) => {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740557462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n \r\n \r\n-export const createOrder = async (req, res) => {}\n\\ No newline at end of file\n+export const createOrder = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740566037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n+import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n\\ No newline at end of file\n-export const createOrder = \n+export const createOrder = createAsyncThunk()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740578216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-export const createOrder = createAsyncThunk()\n\\ No newline at end of file\n+export const createOrder = createAsyncThunk('shop')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740583807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-export const createOrder = createAsyncThunk('shop')\n\\ No newline at end of file\n+export const createOrder = createAsyncThunk('shop/create')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740740900564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-export const createOrder = createAsyncThunk('shop/create')\n\\ No newline at end of file\n+export const createOrder = createAsyncThunk('shop/createOrder', )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741111275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-export const createOrder = createAsyncThunk('shop/createOrder', )\n\\ No newline at end of file\n+export const createOrder = createAsyncThunk('shop/createOrder',\r\n+    \r\n+ )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741134366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n-    \r\n+    async \r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741141153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n-    async \r\n+    async (order)\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741153725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n-    async (order)\r\n+    async (orderDetails)=>{\r\n+        \r\n+    }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741179828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        \r\n+        const response = \r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741186838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = \r\n+        const response = await axi\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741195319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axi\r\n+        const response = await axios.post('')\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741204352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n+\r\n+\r\n+export const createOrder = createAsyncThunk('shop/createOrder',\r\n+    async (orderDetails)=>{\r\n+        const response = await axios.post('http://localhost:7000/api/shop/cart/add')\r\n+    }\r\n+ )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740741213346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,7 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/cart/add')\r\n+        const response = await axios.post('http://localhost:7000/api/shop/car')\r\n     }\r\n- )\n-import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n-import axios from \"axios\";\r\n-\r\n-\r\n-export const createOrder = createAsyncThunk('shop/createOrder',\r\n-    async (orderDetails)=>{\r\n-        const response = await axios.post('')\r\n-    }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800652998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/car')\r\n+        const response = await axios.post('http://localhost:7000/api/shop/payment')\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800658670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/payment')\r\n+        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',)\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800667255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',)\r\n+        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails)\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800672935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n \r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails)\r\n+        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n+        \r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800688669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n-        \r\n+        return resolve\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800694569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n-        return resolve\r\n+        return response.data\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800708969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n+\r\n+\r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n-        return response.data\r\n+        return response.data;\r\n+\r\n     }\r\n  )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800714297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n+const initialState = {\r\n+    \r\n+}\r\n \r\n-\r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response.data;\r\n"
+                },
+                {
+                    "date": 1740800761066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    \r\n+    orders ;\r\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n"
+                },
+                {
+                    "date": 1740800769761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    orders ;\r\n+    orders :[],\r\n+    isLoading\r\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n"
+                },
+                {
+                    "date": 1740800777045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n const initialState = {\r\n     orders :[],\r\n-    isLoading\r\n+    isLoading : false,\r\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n"
+                },
+                {
+                    "date": 1740800800186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,9 @@\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response.data;\r\n \r\n     }\r\n- )\n\\ No newline at end of file\n+ )\r\n+ \r\n+\r\n+\r\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800808914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n  )\r\n  \r\n \r\n \r\n- \n\\ No newline at end of file\n+ const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800820232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n  )\r\n  \r\n \r\n \r\n- const \n\\ No newline at end of file\n+ const OrderSlice = \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800826865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { createAsyncThunk } from \"@reduxjs/toolkit\";\r\n+import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n@@ -16,5 +16,5 @@\n  )\r\n  \r\n \r\n \r\n- const OrderSlice = \n\\ No newline at end of file\n+ const OrderSlice = createSlice()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800836369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,7 @@\n  )\r\n  \r\n \r\n \r\n- const OrderSlice = createSlice()\n\\ No newline at end of file\n+ const OrderSlice = createSlice({\r\n+    name : ''\r\n+ })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800842473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,7 @@\n  \r\n \r\n \r\n  const OrderSlice = createSlice({\r\n-    name : ''\r\n+    name : 'order',\r\n+    \r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800856757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,7 @@\n \r\n \r\n  const OrderSlice = createSlice({\r\n     name : 'order',\r\n-    \r\n+    initialState,\r\n+    reducers : {}\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800867199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,7 @@\n \r\n  const OrderSlice = createSlice({\r\n     name : 'order',\r\n     initialState,\r\n-    reducers : {}\r\n+    reducers : {},\r\n+    extraReducers\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800873358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n  const OrderSlice = createSlice({\r\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n-    extraReducers\r\n+    extraReducers : (bulder)\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800879964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,8 @@\n  const OrderSlice = createSlice({\r\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n-    extraReducers : (bulder)\r\n+    extraReducers : (builder)=>{\r\n+        \r\n+    }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800888307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n-        \r\n+        builder.addCase()\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800894665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n-        builder.addCase()\r\n+        builder.addCase(create)\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800901139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n-        builder.addCase(create)\r\n+        builder.addCase(createOrder.pending)\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800910550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n-        builder.addCase(createOrder.pending)\r\n+        builder.addCase(createOrder.pending, (STATE)))\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800916949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n-        builder.addCase(createOrder.pending, (STATE)))\r\n+        builder.addCase(createOrder.pending, (state))\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800929887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,9 @@\n     name : 'order',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n-        builder.addCase(createOrder.pending, (state))\r\n+        builder.addCase(createOrder.pending, (state)=>{\r\n+            state.isLoading = true\r\n+        })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800957010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,7 @@\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n+        \r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800964795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n-        \r\n+        .addCase(create)\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800971300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n-        .addCase(create)\r\n+        .addCase(createOrder.fulfilled)\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800977859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n-        .addCase(createOrder.fulfilled)\r\n+        .addCase(createOrder.fulfilled , (state,action))\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800984405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,8 @@\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n-        .addCase(createOrder.fulfilled , (state,action))\r\n+        .addCase(createOrder.fulfilled , (state,action)=.{\r\n+                })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800991505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n-        .addCase(createOrder.fulfilled , (state,action)=.{\r\n-                })\r\n+        .addCase(createOrder.fulfilled , (state,action)=>{\r\n+            \r\n+        })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740800998318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n-            \r\n+            state\r\n         })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801006152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n-            state\r\n+            state.isLoading = false\r\n         })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801015875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n         builder.addCase(createOrder.pending, (state)=>{\r\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n-            state.isLoading = false\r\n+            state.isLoading = false,\r\n+            state.order\r\n         })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801024975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,8 @@\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n-            state.order\r\n+            state.orders = act\r\n         })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801030955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,8 @@\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n-            state.orders = act\r\n+            state.orders = action.payload.data\r\n         })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801041472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,6 +28,7 @@\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = action.payload.data\r\n         })\r\n+        .addCase()\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801047184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = action.payload.data\r\n         })\r\n-        .addCase()\r\n+        .addCase(cerate)\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801054045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = action.payload.data\r\n         })\r\n-        .addCase(cerate)\r\n+        .addCase(createOrder)\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801064423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = action.payload.data\r\n         })\r\n-        .addCase(createOrder)\r\n+        .addCase(createOrder.rejected , (state,action))\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801070050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,9 @@\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = action.payload.data\r\n         })\r\n-        .addCase(createOrder.rejected , (state,action))\r\n+        .addCase(createOrder.rejected , (state,action)=>{\r\n+            state.isLoading = false\r\n+        })\r\n     }\r\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801077095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,11 @@\n             state.isLoading = false,\r\n             state.orders = action.payload.data\r\n         })\r\n         .addCase(createOrder.rejected , (state,action)=>{\r\n-            state.isLoading = false\r\n+            state.isLoading = false,\r\n+            state.orders = []\r\n         })\r\n\\ No newline at end of file\n     }\r\n- })\n+ })\r\n+\r\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801090788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,5 @@\n         })\r\n     }\r\n  })\r\n \r\n- \n\\ No newline at end of file\n+ export default \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740801100912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,5 @@\n         })\r\n     }\r\n  })\r\n \r\n- export default \n\\ No newline at end of file\n+ export default OrderSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740809813660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     orders :[],\r\n     isLoading : false,\r\n }\r\n \r\n-export const createOrder = createAsyncThunk('shop/createOrder',\r\n+export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response.data;\r\n \r\n@@ -35,5 +35,5 @@\n         })\r\n     }\r\n  })\r\n \r\n- export default OrderSlice\n\\ No newline at end of file\n+ export default OrderSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740809870575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     orders :[],\r\n     isLoading : false,\r\n }\r\n \r\n-export const createOrder = createAsyncThunk('/shop/createOrder',\r\n+export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response.data;\r\n \r\n"
+                },
+                {
+                    "date": 1740809877166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     isLoading : false,\r\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n-    async (orderDetails)=>{\r\n+    async ({orderDetails})=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response.data;\r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1740809908085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async ({orderDetails})=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n+        const res = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response.data;\r\n \r\n     }\r\n  )\r\n"
+                },
+                {
+                    "date": 1740809914278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async ({orderDetails})=>{\r\n-        const res = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n-        return response.data;\r\n+        const result = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n+        return result.data;\r\n \r\n     }\r\n  )\r\n  \r\n"
+                },
+                {
+                    "date": 1740810035908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n     async ({orderDetails})=>{\r\n         const result = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n-        return result.data;\r\n+        return result?.data;\r\n \r\n     }\r\n  )\r\n  \r\n@@ -26,9 +26,9 @@\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n-            state.orders = action.payload.data\r\n+            state.orders = action.payload\r\n         })\r\n         .addCase(createOrder.rejected , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = []\r\n"
+                },
+                {
+                    "date": 1740810402965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    orders :[],\r\n+    orders :null,\r\n     isLoading : false,\r\n }\r\n \r\n export const createOrder = createAsyncThunk('shop/createOrder',\r\n"
+                },
+                {
+                    "date": 1740810467361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n  \r\n \r\n \r\n  const OrderSlice = createSlice({\r\n-    name : 'order',\r\n+    name : 'orderSlice',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n"
+                },
+                {
+                    "date": 1740810566071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     orders :null,\r\n     isLoading : false,\r\n }\r\n \r\n-export const createOrder = createAsyncThunk('shop/createOrder',\r\n+export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async ({orderDetails})=>{\r\n         const result = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return result?.data;\r\n \r\n@@ -17,9 +17,9 @@\n  \r\n \r\n \r\n  const OrderSlice = createSlice({\r\n-    name : 'orderSlice',\r\n+    name : 'OrderSlice',\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers : (builder)=>{\r\n         builder.addCase(createOrder.pending, (state)=>{\r\n"
+                },
+                {
+                    "date": 1740810585243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     isLoading : false,\r\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n-    async ({orderDetails})=>{\r\n+    async ({orderDetails)=>{\r\n         const result = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return result?.data;\r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1740810590669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     isLoading : false,\r\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n-    async ({orderDetails)=>{\r\n+    async (orderDetails)=>{\r\n         const result = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return result?.data;\r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1740810605162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const result = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n+        const res = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return result?.data;\r\n \r\n     }\r\n  )\r\n"
+                },
+                {
+                    "date": 1740810656951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const res = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n+        const response = await axios.post('http://localhost:7000/api/shop/orderpayment-checkout',orderDetails);\r\n         return result?.data;\r\n \r\n     }\r\n  )\r\n"
+                },
+                {
+                    "date": 1740810685667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/orderpayment-checkout',orderDetails);\r\n-        return result?.data;\r\n+        const response = await axios.post('http://localhost:7000/api/shop/order/payment-checkout',orderDetails);\r\n+        return r.data;\r\n \r\n     }\r\n  )\r\n  \r\n"
+                },
+                {
+                    "date": 1740810692947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/order/payment-checkout',orderDetails);\r\n-        return r.data;\r\n+        return response .data;\r\n \r\n     }\r\n  )\r\n  \r\n"
+                },
+                {
+                    "date": 1740810951118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/order/payment-checkout',orderDetails);\r\n+        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n         return response .data;\r\n \r\n     }\r\n  )\r\n"
+                },
+                {
+                    "date": 1740811171088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/payment-checkout',orderDetails);\r\n+        const response = await axios.post('http://localhost:7000/api/shop/order/payment-checkout',orderDetails);\r\n         return response .data;\r\n \r\n     }\r\n  )\r\n"
+                },
+                {
+                    "date": 1740821685154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    orders :null,\r\n+    orderDetails :null,\r\n     isLoading : false,\r\n }\r\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n"
+                },
+                {
+                    "date": 1740821855533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n export const createOrder = createAsyncThunk('/shop/createOrder',\r\n     async (orderDetails)=>{\r\n         const response = await axios.post('http://localhost:7000/api/shop/order/payment-checkout',orderDetails);\r\n-        return response .data;\r\n+        return response.data;\r\n \r\n     }\r\n  )\r\n  \r\n"
+                },
+                {
+                    "date": 1740821870893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n-            state.orders = action.payload\r\n+            state.ordersDe = action.payload\r\n         })\r\n         .addCase(createOrder.rejected , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = []\r\n"
+                },
+                {
+                    "date": 1740821878072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n-            state.ordersDe = action.payload\r\n+            state. = action.payload\r\n         })\r\n         .addCase(createOrder.rejected , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = []\r\n"
+                },
+                {
+                    "date": 1740821889187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             state.isLoading = true\r\n         })\r\n         .addCase(createOrder.fulfilled , (state,action)=>{\r\n             state.isLoading = false,\r\n-            state. = action.payload\r\n+            state.orderDetails = action.payload\r\n         })\r\n         .addCase(createOrder.rejected , (state,action)=>{\r\n             state.isLoading = false,\r\n             state.orders = []\r\n"
+                },
+                {
+                    "date": 1740822897841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,39 +1,38 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n-\r\n const initialState = {\r\n-    orderDetails :null,\r\n-    isLoading : false,\r\n-}\r\n+  orderDetails: null,\r\n+  isLoading: false,\r\n+};\r\n \r\n-export const createOrder = createAsyncThunk('/shop/createOrder',\r\n-    async (orderDetails)=>{\r\n-        const response = await axios.post('http://localhost:7000/api/shop/order/payment-checkout',orderDetails);\r\n-        return response.data;\r\n+export const createOrder = createAsyncThunk(\r\n+  \"/shop/createOrder\",\r\n+  async (orderDetails) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n+      orderDetails\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n \r\n-    }\r\n- )\r\n- \r\n+const OrderSlice = createSlice({\r\n+  name: \"OrderSlice\",\r\n+  initialState,\r\n+  reducers: {},\r\n+  extraReducers: (builder) => {\r\n+    builder\r\n+      .addCase(createOrder.pending, (state) => {\r\n+        state.isLoading = true;\r\n+      })\r\n\\ No newline at end of file\n+      .addCase(createOrder.fulfilled, (state, action) => {\r\n+        (state.isLoading = false), (state.orderDetails = action.payload);\r\n+      })\r\n+      .addCase(createOrder.rejected, (state, action) => {\r\n+        (state.isLoading = false), (state.orderDetails = []);\r\n+      });\r\n+  },\r\n+});\r\n \r\n-\r\n- const OrderSlice = createSlice({\r\n-    name : 'OrderSlice',\r\n-    initialState,\r\n-    reducers : {},\r\n-    extraReducers : (builder)=>{\r\n-        builder.addCase(createOrder.pending, (state)=>{\r\n-            state.isLoading = true\r\n-        })\r\n-        .addCase(createOrder.fulfilled , (state,action)=>{\r\n-            state.isLoading = false,\r\n-            state.orderDetails = action.payload\r\n-        })\r\n-        .addCase(createOrder.rejected , (state,action)=>{\r\n-            state.isLoading = false,\r\n-            state.orders = []\r\n-        })\r\n-    }\r\n- })\r\n-\r\n- export default OrderSlice.reducer\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1740822988200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,13 @@\n       .addCase(createOrder.pending, (state) => {\r\n         state.isLoading = true;\r\n       })\r\n       .addCase(createOrder.fulfilled, (state, action) => {\r\n-        (state.isLoading = false), (state.orderDetails = action.payload);\r\n+        (state.isLoading = false) (state.orderDetails = action.payload);\r\n       })\r\n       .addCase(createOrder.rejected, (state, action) => {\r\n         (state.isLoading = false), (state.orderDetails = []);\r\n       });\r\n   },\r\n });\r\n \r\n\\ No newline at end of file\n-export default OrderSlice.reducer;\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1740823144071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,10 @@\n       .addCase(createOrder.fulfilled, (state, action) => {\r\n         (state.isLoading = false) (state.orderDetails = action.payload);\r\n       })\r\n       .addCase(createOrder.rejected, (state, action) => {\r\n-        (state.isLoading = false), (state.orderDetails = []);\r\n+        (state.isLoading = false) (state.orderDetails = []);\r\n       });\r\n   },\r\n });\r\n \r\n\\ No newline at end of file\n-export default OrderSlice.reducer;\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1740823341688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,20 @@\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n     builder\r\n-      .addCase(createOrder.pending, (state) => {\r\n-        state.isLoading = true;\r\n-      })\r\n-      .addCase(createOrder.fulfilled, (state, action) => {\r\n-        (state.isLoading = false) (state.orderDetails = action.payload);\r\n-      })\r\n-      .addCase(createOrder.rejected, (state, action) => {\r\n-        (state.isLoading = false) (state.orderDetails = []);\r\n-      });\r\n+    .addCase(createOrder.pending, (state) => {\r\n+      state.isLoading = true;\r\n+    })\r\n+    .addCase(createOrder.fulfilled, (state, action) => {\r\n\\ No newline at end of file\n+      state.isLoading = false;\r\n+      state.orderDetails = action.payload;\r\n+    })\r\n+    .addCase(createOrder.rejected, (state) => {\r\n+      state.isLoading = false;\r\n+      state.orderDetails = []; // You may also want to store `action.error.message` for debugging\r\n+    });\r\n+  \r\n   },\r\n });\r\n \r\n-export default OrderSlice.reducer;\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1740823369413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,11 @@\n       state.orderDetails = action.payload;\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n-      state.orderDetails = []; // You may also want to store `action.error.message` for debugging\r\n+      state.orderDetails = []; \r\n     });\r\n   \r\n   },\r\n });\r\n \r\n\\ No newline at end of file\n-export default OrderSlice.reducer;\n+export default OrderSlice.reducer;\r\n"
+                }
+            ],
+            "date": 1740740508066,
+            "name": "Commit-0",
+            "content": "\r\n\r\n"
+        }
+    ]
+}

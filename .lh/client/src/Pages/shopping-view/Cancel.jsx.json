@@ -1,0 +1,30 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Cancel.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1740739284922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740739298272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-ffcc\n\\ No newline at end of file\n+function PaymentSuccess() {\r\n+    return (  );\r\n+}\r\n+\r\n+export default PaymentSuccess;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740739305319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n function PaymentSuccess() {\r\n-    return (  );\r\n+    return ( \r\n+        <div>\r\n+            Pa\r\n+        </div>\r\n+     );\r\n }\r\n \r\n export default PaymentSuccess;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740739313859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function PaymentSuccess() {\r\n     return ( \r\n         <div>\r\n-            Pa\r\n+            Payment Sucess\r\n         </div>\r\n      );\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1740739284922,
+            "name": "Commit-0",
+            "content": "ffcc"
+        }
+    ]
+}

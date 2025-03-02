@@ -1,0 +1,318 @@
+{
+    "sourceFile": "client/src/Store/shop/address-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 75,
+            "patches": [
+                {
+                    "date": 1740637518895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740637532555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import \n\\ No newline at end of file\n+import   {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637538527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import   {}\n\\ No newline at end of file\n+import   {} from ''\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637551233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import   {} from ''\n\\ No newline at end of file\n+import   {createSlice,CreateAd} from '@reduxjs/toolkit'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637558467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import   {createSlice,CreateAd} from '@reduxjs/toolkit'\n\\ No newline at end of file\n+import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n+\r\n"
+                },
+                {
+                    "date": 1740637564407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n+const init\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637573159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n-const init\n\\ No newline at end of file\n+const initialState\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637579892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n-const initialState\n\\ No newline at end of file\n+const initialState =  {\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637587311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n const initialState =  {\r\n-    \r\n+    isLoadin\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637595479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n const initialState =  {\r\n-    isLoadin\r\n+    isLoading : false,\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637602380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n const initialState =  {\r\n     isLoading : false,\r\n-    \r\n+    addressList = []\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637612451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n \r\n const initialState =  {\r\n     isLoading : false,\r\n-    addressList = []\r\n-}\n\\ No newline at end of file\n+    addressList : []\r\n+}\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1740637620628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,5 @@\n     addressList : []\r\n }\r\n \r\n \r\n+const addressSlcie\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637629357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n     addressList : []\r\n }\r\n \r\n \r\n-const addressSlcie\n\\ No newline at end of file\n+const addressSlice = createSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637640208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,7 @@\n     addressList : []\r\n }\r\n \r\n \r\n-const addressSlice = createSlice\n\\ No newline at end of file\n+const addressSlice = createSlice({\r\n+    name: address\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637646935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n }\r\n \r\n \r\n const addressSlice = createSlice({\r\n-    name: address\r\n+    name: 'address',\r\n+    \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637655310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n \r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n-    \r\n+    initialState,\r\n+    reducers: \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637660713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n-    reducers: \r\n+    reducers: {},\r\n+    \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637668035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n     reducers: {},\r\n-    \r\n+    extraReducers: ()\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637674178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,8 @@\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n     reducers: {},\r\n-    extraReducers: ()\r\n+    extraReducers: (builder)=>{\r\n+        \r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637708103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,14 @@\n     addressList : []\r\n }\r\n \r\n \r\n+export const addNewAddress \r\n+\r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n     reducers: {},\r\n     extraReducers: (builder)=>{\r\n-        \r\n+\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740637716750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress \r\n+export const addNewAddress = createAsyncThunk()\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637726333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk()\r\n+export const addNewAddress = createAsyncThunk('/')\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637736886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk('/')\r\n+export const addNewAddress = createAsyncThunk('/addresses')\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637746225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk('/addresses')\r\n+export const addNewAddress = createAsyncThunk('/addresses/addNew')\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637755831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk('/addresses/addNew')\r\n+export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async)\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637762224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async)\r\n+export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(form))\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637774337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(form))\r\n+export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData))\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637782832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n     addressList : []\r\n }\r\n \r\n \r\n-export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData))\r\n+export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n+    \r\n+})\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1740637790645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    \r\n+    const respo\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740637797074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const respo\r\n+    const response = await axis\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740637807153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n+import axios from 'axios'\r\n \r\n const initialState =  {\r\n     isLoading : false,\r\n     addressList : []\r\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const response = await axis\r\n+    const response = await axios.post()\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740638027933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const response = await axios.post()\r\n+    const response = await axios.post('http://localhost:7000/api/shop/cart/add')\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740638035628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const response = await axios.post('http://localhost:7000/api/shop/cart/add')\r\n+    const response = await axios.post('http://localhost:7000/api/shop/address/add')\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740638048620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const response = await axios.post('http://localhost:7000/api/shop/address/add')\r\n+    const response = await axios.post('http://localhost:7000/api/shop/address/add' , from)\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740638056571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n }\r\n \r\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const response = await axios.post('http://localhost:7000/api/shop/address/add' , from)\r\n+    const response = await axios.post('http://localhost:7000/api/shop/address/add' , formData)\r\n+\r\n+    re\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740638064189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n     const response = await axios.post('http://localhost:7000/api/shop/address/add' , formData)\r\n \r\n-    re\r\n+    return response.data\r\n })\r\n \r\n const addressSlice = createSlice({\r\n     name: 'address',\r\n"
+                },
+                {
+                    "date": 1740638080965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import { createSlice, createAsyncThunk } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n+\r\n+const initialState = {\r\n+  isLoading: false,\r\n+  addressList: [],\r\n+};\r\n+\r\n+export const addNewAddress = createAsyncThunk(\r\n+  \"/addresses/addNewAddress\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/address/add\",\r\n+      formData\r\n+    );\r\n+\r\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n+const addressSlice = createSlice({\r\n+  name: \"address\",\r\n+  initialState,\r\n+  reducers: {},\r\n+  extraReducers: (builder) => {},\r\n+});\r\n"
+                },
+                {
+                    "date": 1740638087155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,34 +16,44 @@\n \r\n     return response.data;\r\n   }\r\n );\r\n+export const addNewAddress = createAsyncThunk(\r\n+  \"/addresses/addNewAddress\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/address/add\",\r\n+      formData\r\n+    );\r\n \r\n+    return response.data;\r\n+  }\r\n+);\r\n+export const addNewAddress = createAsyncThunk(\r\n+  \"/addresses/addNewAddress\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/address/add\",\r\n+      formData\r\n+    );\r\n+\r\n+    return response.data;\r\n+  }\r\n+);\r\n+export const addNewAddress = createAsyncThunk(\r\n+  \"/addresses/addNewAddress\",\r\n+  async (formData) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/address/add\",\r\n+      formData\r\n+    );\r\n+\r\n\\ No newline at end of file\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n const addressSlice = createSlice({\r\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {},\r\n });\r\n-import   {createSlice,createAsyncThunk} from '@reduxjs/toolkit'\r\n-import axios from 'axios'\r\n-\r\n-const initialState =  {\r\n-    isLoading : false,\r\n-    addressList : []\r\n-}\r\n-\r\n-\r\n-export const addNewAddress = createAsyncThunk('/addresses/addNewAddress',async(formData)=>{\r\n-    const response = await axios.post('http://localhost:7000/api/shop/address/add' , formData)\r\n-\r\n-    return response.data\r\n-})\r\n-\r\n-const addressSlice = createSlice({\r\n-    name: 'address',\r\n-    initialState,\r\n-    reducers: {},\r\n-    extraReducers: (builder)=>{\r\n-\r\n-    }\r\n-})\n"
+                },
+                {
+                    "date": 1740638098223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n     return response.data;\r\n   }\r\n );\r\n-export const addNewAddress = createAsyncThunk(\r\n+export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/addNewAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n@@ -55,5 +55,5 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {},\r\n-});\n\\ No newline at end of file\n+});\r\n"
+                },
+                {
+                    "date": 1740638110005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     return response.data;\r\n   }\r\n );\r\n export const fetchAllAddress = createAsyncThunk(\r\n-  \"/addresses/addNewAddress\",\r\n+  \"/addresses/fetchAllAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n"
+                },
+                {
+                    "date": 1740638165612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/address/add\",\r\n+      \"http://localhost:7000/api/shop/address/add`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638171329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/address/add`,\r\n+      `http://localhost:7000/api/shop/address/`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638183433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/shop/address/`,\r\n+      `http://localhost:7000/api/shop/address/get/${userId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638200842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n );\r\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n   async (formData) => {\r\n-    const response = await axios.post(\r\n-      `http://localhost:7000/api/shop/address/get/${userId}`,\r\n+    const response = await axios.get(\r\n+      `http://localhost:7000/api/shop/address/get/${userId}/${}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638206039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n   async (formData) => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/shop/address/get/${userId}/${}`,\r\n+      `http://localhost:7000/api/shop/address/get/${userId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638213419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,11 @@\n   }\r\n );\r\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n-  async (formData) => {\r\n+  async () => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/address/get/${userId}`,\r\n-      formData\r\n     );\r\n \r\n     return response.data;\r\n   }\r\n"
+                },
+                {
+                    "date": 1740638219210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\r\n );\r\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n-  async () => {\r\n+  async (userId) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/address/get/${userId}`,\r\n     );\r\n \r\n"
+                },
+                {
+                    "date": 1740638229339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n   async (userId) => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/shop/address/get/${userId}`,\r\n+      `http://localhost:7000/api/shop/address/get/${userId}`\r\n     );\r\n \r\n     return response.data;\r\n   }\r\n"
+                },
+                {
+                    "date": 1740638261979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n \r\n     return response.data;\r\n   }\r\n );\r\n-export const addNewAddress = createAsyncThunk(\r\n-  \"/addresses/addNewAddress\",\r\n+export const editAddress = createAsyncThunk(\r\n+  \"/addresses/editAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n"
+                },
+                {
+                    "date": 1740638267011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n );\r\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n   async (formData) => {\r\n-    const response = await axios.post(\r\n+    const response = await axios.put(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n     );\r\n \r\n"
+                },
+                {
+                    "date": 1740638305210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\r\n );\r\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n-  async (userId) => {\r\n+  async ({userId,addressIs,formData}) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/address/get/${userId}`\r\n     );\r\n \r\n@@ -29,9 +29,9 @@\n );\r\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n   async (formData) => {\r\n-    const response = await axios.put(\r\n+    const response = await axios.put (\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n     );\r\n \r\n"
+                },
+                {
+                    "date": 1740638313563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\r\n );\r\n export const fetchAllAddress = createAsyncThunk(\r\n   \"/addresses/fetchAllAddress\",\r\n-  async ({userId,addressIs,formData}) => {\r\n+  async (userId) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/address/get/${userId}`\r\n     );\r\n \r\n@@ -29,9 +29,9 @@\n );\r\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n   async (formData) => {\r\n-    const response = await axios.put (\r\n+    const response = await axios.put(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n     );\r\n \r\n"
+                },
+                {
+                    "date": 1740638331209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   }\r\n );\r\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n-  async (formData) => {\r\n+  async ({userId,addressId,formData}) => {\r\n     const response = await axios.put(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n     );\r\n"
+                },
+                {
+                    "date": 1740638344572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n   async ({userId,addressId,formData}) => {\r\n     const response = await axios.put(\r\n-      \"http://localhost:7000/api/shop/address/add\",\r\n+      `http://localhost:7000/api/shop/address/get/${userId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638350158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n   async ({userId,addressId,formData}) => {\r\n     const response = await axios.put(\r\n-      `http://localhost:7000/api/shop/address/get/${userId}`,\r\n+      `http://localhost:7000/api/shop/address/get/${userId}/${}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638369272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n   async ({userId,addressId,formData}) => {\r\n     const response = await axios.put(\r\n-      `http://localhost:7000/api/shop/address/get/${userId}/${}`,\r\n+      `http://localhost:7000/api/shop/address/update/${userId}/${addressId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638391344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \r\n     return response.data;\r\n   }\r\n );\r\n-export const addNewAddress = createAsyncThunk(\r\n+export const deleteAddress = createAsyncThunk(\r\n   \"/addresses/addNewAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n"
+                },
+                {
+                    "date": 1740638400861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     return response.data;\r\n   }\r\n );\r\n export const deleteAddress = createAsyncThunk(\r\n-  \"/addresses/addNewAddress\",\r\n+  \"/addresses/deleteAddress\",\r\n   async (formData) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n"
+                },
+                {
+                    "date": 1740638406844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n );\r\n export const deleteAddress = createAsyncThunk(\r\n   \"/addresses/deleteAddress\",\r\n   async (formData) => {\r\n-    const response = await axios.post(\r\n+    const response = await axios.delete(\r\n       \"http://localhost:7000/api/shop/address/add\",\r\n       formData\r\n     );\r\n \r\n"
+                },
+                {
+                    "date": 1740638421148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,11 +39,11 @@\n   }\r\n );\r\n export const deleteAddress = createAsyncThunk(\r\n   \"/addresses/deleteAddress\",\r\n-  async (formData) => {\r\n+  async ({userId,addressId,formData}) => {\r\n     const response = await axios.delete(\r\n-      \"http://localhost:7000/api/shop/address/add\",\r\n+    `http://localhost:7000/api/shop/address/get/${userId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638427891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n export const deleteAddress = createAsyncThunk(\r\n   \"/addresses/deleteAddress\",\r\n   async ({userId,addressId,formData}) => {\r\n     const response = await axios.delete(\r\n-    `http://localhost:7000/api/shop/address/get/${userId}`,\r\n+    `http://localhost:7000/api/shop/address/get/${userId}/${}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638443326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n export const deleteAddress = createAsyncThunk(\r\n   \"/addresses/deleteAddress\",\r\n   async ({userId,addressId,formData}) => {\r\n     const response = await axios.delete(\r\n-    `http://localhost:7000/api/shop/address/get/${userId}/${}`,\r\n+    `http://localhost:7000/api/shop/address/delete/${userId}/${addressId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638473646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   }\r\n );\r\n export const editAddress = createAsyncThunk(\r\n   \"/addresses/editAddress\",\r\n-  async ({userId,addressId,formData}) => {\r\n+  async ({ userId, addressId, formData }) => {\r\n     const response = await axios.put(\r\n       `http://localhost:7000/api/shop/address/update/${userId}/${addressId}`,\r\n       formData\r\n     );\r\n@@ -39,11 +39,11 @@\n   }\r\n );\r\n export const deleteAddress = createAsyncThunk(\r\n   \"/addresses/deleteAddress\",\r\n-  async ({userId,addressId,formData}) => {\r\n+  async ({ userId, addressId, formData }) => {\r\n     const response = await axios.delete(\r\n-    `http://localhost:7000/api/shop/address/delete/${userId}/${addressId}`,\r\n+      `http://localhost:7000/api/shop/address/delete/${userId}/${addressId}`,\r\n       formData\r\n     );\r\n \r\n     return response.data;\r\n"
+                },
+                {
+                    "date": 1740638482954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,8 @@\n const addressSlice = createSlice({\r\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n-  extraReducers: (builder) => {},\r\n+  extraReducers: (builder) => {\r\n+    bul\r\n+  },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638489855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,7 +54,7 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n-    bul\r\n+    builder.addCase()\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638499690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,7 +54,7 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n-    builder.addCase()\r\n+    builder.addCase(addNewAddress.pendin)\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638505639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,7 +54,7 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n-    builder.addCase(addNewAddress.pendin)\r\n+    builder.addCase(addNewAddress.pending ,)\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638520300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,7 +54,10 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n-    builder.addCase(addNewAddress.pending ,)\r\n+    builder.addCase(addNewAddress.pending ,(state)=>{\r\n+        state.isLoading = true,\r\n+        \r\n+    })\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638527778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,8 @@\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n     builder.addCase(addNewAddress.pending ,(state)=>{\r\n-        state.isLoading = true,\r\n-        \r\n+        state.isLoading = true\r\n     })\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638534775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n-    builder.addCase(addNewAddress.pending ,(state)=>{\r\n-        state.isLoading = true\r\n-    })\r\n-  },\r\n+},\r\n+builder.addCase(addNewAddress.pending ,(state)=>{\r\n+    state.isLoading = true\r\n+})\r\n });\r\n"
+                },
+                {
+                    "date": 1740638540633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,12 @@\n   name: \"address\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n-},\r\n-builder.addCase(addNewAddress.pending ,(state)=>{\r\n-    state.isLoading = true\r\n-})\r\n+    builder.addCase(addNewAddress.pending ,(state)=>{\r\n+        state.isLoading = true\r\n+    })\r\n+    builder.addCase(addNewAddress.pending ,(state)=>{\r\n+        state.isLoading = true\r\n+    })\r\n+  },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638546345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,10 +56,9 @@\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n     builder.addCase(addNewAddress.pending ,(state)=>{\r\n         state.isLoading = true\r\n-    })\r\n-    builder.addCase(addNewAddress.pending ,(state)=>{\r\n+    }).addCase(addNewAddress.pending ,(state)=>{\r\n         state.isLoading = true\r\n     })\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638555897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n     builder.addCase(addNewAddress.pending ,(state)=>{\r\n         state.isLoading = true\r\n-    }).addCase(addNewAddress.pending ,(state)=>{\r\n+    }).addCase(addNewAddress.fulfilled ,(state,action)=>{\r\n         state.isLoading = true\r\n     })\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638563945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,8 +57,9 @@\n   extraReducers: (builder) => {\r\n     builder.addCase(addNewAddress.pending ,(state)=>{\r\n         state.isLoading = true\r\n     }).addCase(addNewAddress.fulfilled ,(state,action)=>{\r\n-        state.isLoading = true\r\n+        state.isLoading = false,\r\n+\r\n     })\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1740638572135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,8 @@\n     builder.addCase(addNewAddress.pending ,(state)=>{\r\n         state.isLoading = true\r\n     }).addCase(addNewAddress.fulfilled ,(state,action)=>{\r\n         state.isLoading = false,\r\n-        state.i\r\n+        state.\r\n     })\r\n   },\r\n });\r\n"
+                }
+            ],
+            "date": 1740637518895,
+            "name": "Commit-0",
+            "content": "import "
+        }
+    ]
+}

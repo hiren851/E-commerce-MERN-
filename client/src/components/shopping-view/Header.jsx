@@ -24,18 +24,32 @@ import { logoutUser } from "@/Store/auth-slice";
 import UserCartWrapper from "./Cart-wrapper";
 import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/Store/shop/cart-slice";
+import { Label } from "../ui/label";
 
 function MenuItems() {
+  const navigate = useNavigate();
+
+  function handleNavigate(getCurrentMenuItem) {
+    sessionStorage.removeItem("filters");
+    const currentFilter =
+      getCurrentMenuItem.id !== "home"
+        ? { category: [getCurrentMenuItem.id] }
+        : null;
+    // console.log(currentFilter)
+    sessionStorage.setItem("filters", JSON.stringify(currentFilter));
+    navigate(getCurrentMenuItem.path);
+  }
+
   return (
     <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
       {shoppingViewHeaderMenuItems.map((menuitems) => (
-        <Link
+        <Label
           key={menuitems.id}
-          to={menuitems.path}
-          className="text-sm font-medium"
+          onClick={() => handleNavigate(menuitems)}
+          className="text-sm font-medium cursor-pointer"
         >
           {menuitems.label}
-        </Link>
+        </Label>
       ))}
     </nav>
   );
@@ -46,16 +60,15 @@ function HeaderRightContent() {
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const {cartItems } = useSelector(state => state.shopCart)
+  const { cartItems } = useSelector((state) => state.shopCart);
 
   function handleLogout() {
     dispatch(logoutUser());
   }
 
-  useEffect(()=>{
-    dispatch(fetchCartItems(user?.id))
-  },[dispatch])
-
+  useEffect(() => {
+    dispatch(fetchCartItems(user?.id));
+  }, [dispatch]);
 
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
@@ -69,7 +82,14 @@ function HeaderRightContent() {
           <ShoppingCart className="w-6 h-6" />
           <span className="sr-only">User cart</span>
         </Button>
-        <UserCartWrapper cartItems={cartItems &&  cartItems.items && cartItems.items.length > 0  ? cartItems.items : []}  />
+        <UserCartWrapper
+        setOpenCartSheet={setOpenCartSheet}
+          cartItems={
+            cartItems && cartItems.items && cartItems.items.length > 0
+              ? cartItems.items
+              : []
+          }
+        />
       </Sheet>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
