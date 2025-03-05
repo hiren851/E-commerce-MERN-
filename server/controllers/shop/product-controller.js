@@ -39,6 +39,13 @@ const getFilteredProducts = async (req, res) => {
     }
 
     const products = await Product.find(filters).sort(sort);
+    if (!products.length) {
+        return res.status(404).json({
+            success: false,
+            message: "No products found!",
+        });
+    }
+
 
     res.status(200).json({
       success: true,

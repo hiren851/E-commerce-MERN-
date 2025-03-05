@@ -123,7 +123,7 @@
                 },
                 {
                     "date": 1740738994805,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n           message: \"Invalid data!\",\r\n         });\r\n       }\r\n \r\n-      const lineItems =  cartItems && cartItems.length >0 && cartItems((cartItem)=>)\r\n+      const lineItems =  cartItems && cartItems.length >0 && cartItems((cartItem)=>({[\r\n+        \r\n+      ]}))\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n           message: \"Invalid data!\",\r\n         });\r\n       }\r\n \r\n-      const lineItems =  cartItems && cartItems.length >0 && cartItems((cartItems)=>)\r\n+      const lineItems =  cartItems && cartItems.length >0 && cartItems((cartItems)=>({[\r\n+        \r\n+      ]}))\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
                 }
             ],
             "date": 1740736044903,

@@ -1,0 +1,90 @@
+{
+    "sourceFile": "client/src/Store/admin/order-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1741152983523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741152990459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {\r\n-      reset\r\n+      resetOrde\r\n     },\r\n     extraReducers: (builder)=>{\r\n         builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n"
+                },
+                {
+                    "date": 1741152999755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {\r\n-      resetOrde\r\n+      resetOrderDetails \r\n     },\r\n     extraReducers: (builder)=>{\r\n         builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n"
+                },
+                {
+                    "date": 1741153005202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {\r\n-      resetOrderDetails \r\n+      resetOrderDetails : (state)\r\n     },\r\n     extraReducers: (builder)=>{\r\n         builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n"
+                },
+                {
+                    "date": 1741153014783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,11 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {\r\n-      resetOrderDetails : (state)\r\n+      resetOrderDetails : (state)=>{\r\n+        state.order\r\n+      }\r\n     },\r\n     extraReducers: (builder)=>{\r\n         builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n"
+                },
+                {
+                    "date": 1741153022811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {\r\n       resetOrderDetails : (state)=>{\r\n-        state.order\r\n+        state.orderData = null\r\n       }\r\n     },\r\n     extraReducers: (builder)=>{\r\n         builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n"
+                },
+                {
+                    "date": 1741153033015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,5 +61,7 @@\n     }\r\n })\r\n \r\n \r\n+export const \r\n+\r\n export default adminOrderSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741153039949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,7 +61,7 @@\n     }\r\n })\r\n \r\n \r\n-export const \r\n+export const {resetOrderDetails} = \r\n \r\n export default adminOrderSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741153075113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,7 +61,7 @@\n     }\r\n })\r\n \r\n \r\n-export const {resetOrderDetails} = \r\n+export const {resetOrderDetails} = adminOrderSlice.actions\r\n \r\n export default adminOrderSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741153813594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,17 @@\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n+  export const getOrdersDetailsForAdmin = createAsyncThunk(\r\n+    \"/order/getOrdersDetailsForAdmin\",\r\n+    async (id) => {\r\n+      const response = await axios.get(\r\n+        `http://localhost:7000/api/admin/orders/details/${id}`\r\n+      );\r\n+      return response.data;\r\n+    }\r\n+  );\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1741153827672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n-  export const getOrdersDetailsForAdmin = createAsyncThunk(\r\n+  export const updateOrderStatus = createAsyncThunk(\r\n     \"/order/getOrdersDetailsForAdmin\",\r\n     async (id) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/details/${id}`\r\n"
+                },
+                {
+                    "date": 1741153837035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     }\r\n   );\r\n   export const updateOrderStatus = createAsyncThunk(\r\n     \"/order/getOrdersDetailsForAdmin\",\r\n-    async (id) => {\r\n+    async ({id}) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/details/${id}`\r\n       );\r\n       return response.data;\r\n"
+                },
+                {
+                    "date": 1741153842851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     }\r\n   );\r\n   export const updateOrderStatus = createAsyncThunk(\r\n     \"/order/getOrdersDetailsForAdmin\",\r\n-    async ({id}) => {\r\n+    async ({id,ordeStatus}) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/details/${id}`\r\n       );\r\n       return response.data;\r\n"
+                },
+                {
+                    "date": 1741153855924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       return response.data;\r\n     }\r\n   );\r\n   export const updateOrderStatus = createAsyncThunk(\r\n-    \"/order/getOrdersDetailsForAdmin\",\r\n+    \"/order/updateOrderS\",\r\n     async ({id,ordeStatus}) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/details/${id}`\r\n       );\r\n"
+                },
+                {
+                    "date": 1741153866991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,12 +26,12 @@\n       return response.data;\r\n     }\r\n   );\r\n   export const updateOrderStatus = createAsyncThunk(\r\n-    \"/order/updateOrderS\",\r\n+    \"/order/updateOrderStatus\",\r\n     async ({id,ordeStatus}) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/admin/orders/details/${id}`\r\n+        `http://localhost:7000/api/admin/orders/update/${id}`\r\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741153874300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n   export const updateOrderStatus = createAsyncThunk(\r\n     \"/order/updateOrderStatus\",\r\n     async ({id,ordeStatus}) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/admin/orders/update/${id}`\r\n+        `http://localhost:7000/api/admin/orders/update/${id}`,{\r\n+          \r\n+        }\r\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741153881800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     \"/order/updateOrderStatus\",\r\n     async ({id,ordeStatus}) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/update/${id}`,{\r\n-          \r\n+          orderSta\r\n         }\r\n       );\r\n       return response.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741153899210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,12 +27,12 @@\n     }\r\n   );\r\n   export const updateOrderStatus = createAsyncThunk(\r\n     \"/order/updateOrderStatus\",\r\n-    async ({id,ordeStatus}) => {\r\n+    async ({id,orderStatus}) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/update/${id}`,{\r\n-          orderSta\r\n+          orderStatus\r\n         }\r\n       );\r\n       return response.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741154335807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   );\r\n   export const updateOrderStatus = createAsyncThunk(\r\n     \"/order/updateOrderStatus\",\r\n     async ({id,orderStatus}) => {\r\n-      const response = await axios.get(\r\n+      const response = await axios.put(\r\n         `http://localhost:7000/api/admin/orders/update/${id}`,{\r\n           orderStatus\r\n         }\r\n       );\r\n"
+                }
+            ],
+            "date": 1741152983523,
+            "name": "Commit-0",
+            "content": "import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\nimport axios from \"axios\";\r\n\r\n\r\nconst initialState = {\r\n    orderList : [],\r\n    orderData : null,\r\n}\r\n\r\nexport const getAllOrdersForAdmin = createAsyncThunk(\r\n    \"/order/getAllOrdersForAdmin\",\r\n    async () => {\r\n      const response = await axios.get(\r\n        `http://localhost:7000/api/admin/orders/get`\r\n  \r\n      );\r\n      return response.data;\r\n    }\r\n  );\r\n  export const getOrdersDetailsForAdmin = createAsyncThunk(\r\n    \"/order/getOrdersDetailsForAdmin\",\r\n    async (id) => {\r\n      const response = await axios.get(\r\n        `http://localhost:7000/api/admin/orders/details/${id}`\r\n      );\r\n      return response.data;\r\n    }\r\n  );\r\n\r\nconst adminOrderSlice = createSlice({\r\n    name: \"adminOrderSlice\",\r\n    initialState,\r\n    reducers : {\r\n      reset\r\n    },\r\n    extraReducers: (builder)=>{\r\n        builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n                state.isLoading = true;\r\n              })\r\n              .addCase(getAllOrdersForAdmin.fulfilled, (state,action) => {\r\n                state.isLoading = false;\r\n                state.orderList = action.payload.data;\r\n              })\r\n              .addCase(getAllOrdersForAdmin.rejected, (state) => {\r\n                state.isLoading = false;\r\n                state.orderList = [];\r\n              })\r\n              .addCase(getOrdersDetailsForAdmin.pending, (state) => {\r\n                state.isLoading = true;\r\n              })\r\n              .addCase(getOrdersDetailsForAdmin.fulfilled, (state,action) => {\r\n                state.isLoading = false;\r\n                state.orderData = action.payload.data;\r\n              })\r\n              .addCase(getOrdersDetailsForAdmin.rejected, (state) => {\r\n                state.isLoading = false;\r\n                state.orderData = null;\r\n              });\r\n    }\r\n})\r\n\r\n\r\nexport default adminOrderSlice.reducer"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "sourceFile": "server/routes/admin/order-routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1741093288428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741093303828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/shop/order-controller');\r\n+const {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/admin/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n"
+                },
+                {
+                    "date": 1741093313629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/admin/order-controller');\r\n+const {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/admin/');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n"
+                },
+                {
+                    "date": 1741093323362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/admin/');\r\n+const {} = require('../../controllers/admin/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n"
+                },
+                {
+                    "date": 1741093363803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {} = require('../../controllers/admin/order-controller');\r\n+const {getAllOrdersOfAllUser} = require('../../controllers/admin/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n"
+                },
+                {
+                    "date": 1741093382280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n const {getAllOrdersOfAllUser} = require('../../controllers/admin/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n-router.post('/payment-checkout' , createOrder);\r\n-router.post('/capture' , capturePayment);\r\n+\r\n router.get('/list/:userId' , getAllOrderByUser);\r\n router.get('/details/:id' , getOrdersDetails);\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741093387459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.get('/list/:userId' , getAllOrderByUser);\r\n+router.get('/orderd' , getAllOrderByUser);\r\n router.get('/details/:id' , getOrdersDetails);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093394881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.get('/orderd' , getAllOrderByUser);\r\n+router.get('/orders' , getAll);\r\n router.get('/details/:id' , getOrdersDetails);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093413928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.get('/orders' , getAll);\r\n-router.get('/details/:id' , getOrdersDetails);\r\n+router.get('/orders' , getAllOrdersOfAllUser);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093517855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \r\n const router = express.Router();\r\n \r\n \r\n-router.get('/orders' , getAllOrdersOfAllUser);\r\n+router.get('/get' , getAllOrdersOfAllUser);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093669444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n const router = express.Router();\r\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n+router.get('/get' , getAllOrdersOfAllUser);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093676839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n-router.get('/get' , getAllOrdersOfAllUser);\r\n+router.get('/details' , getAllOrdersOfAllUser);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093683750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n const express = require(\"express\");\r\n \r\n-const {getAllOrdersOfAllUser} = require('../../controllers/admin/order-controller');\r\n+const {getAllOrdersOfAllUser,getOrdersDetailsForAdmin} = require('../../controllers/admin/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n-router.get('/details' , getAllOrdersOfAllUser);\r\n+router.get('/details' , getOrdersDetailsForAdmin);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741093693233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n-router.get('/details' , getOrdersDetailsForAdmin);\r\n+router.get('/details/:id' , getOrdersDetailsForAdmin);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741153768788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {getAllOrdersOfAllUser,getOrdersDetailsForAdmin} = require('../../controllers/admin/order-controller');\r\n+const {getAllOrdersOfAllUser,getOrdersDetailsForAdmin,updateOrderStatus} = require('../../controllers/admin/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741153774718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n router.get('/details/:id' , getOrdersDetailsForAdmin);\r\n+router.get('/details/:id' , getOrdersDetailsForAdmin);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741153783815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n router.get('/details/:id' , getOrdersDetailsForAdmin);\r\n-router.get('/details/:id' , getOrdersDetailsForAdmin);\r\n+router.put('/update/:id' , getOrdersDetailsForAdmin);\r\n \r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741153789371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \r\n \r\n router.get('/get' , getAllOrdersOfAllUser);\r\n router.get('/details/:id' , getOrdersDetailsForAdmin);\r\n-router.put('/update/:id' , getOrdersDetailsForAdmin);\r\n+router.put('/update/:id' , updateOrderStatus);\r\n \r\n \r\n module.exports = router;\r\n"
+                }
+            ],
+            "date": 1741093288428,
+            "name": "Commit-0",
+            "content": "const express = require(\"express\");\r\n\r\nconst {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/shop/order-controller');\r\n\r\nconst router = express.Router();\r\n\r\nrouter.post('/payment-checkout' , createOrder);\r\nrouter.post('/capture' , capturePayment);\r\nrouter.get('/list/:userId' , getAllOrderByUser);\r\nrouter.get('/details/:id' , getOrdersDetails);\r\n\r\n\r\nmodule.exports = router;\r\n"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 90,
+            "activePatchIndex": 168,
             "patches": [
                 {
                     "date": 1740740508066,
@@ -368,6 +368,318 @@
                 {
                     "date": 1740823369413,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,11 @@\n       state.orderDetails = action.payload;\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n-      state.orderDetails = []; // You may also want to store `action.error.message` for debugging\r\n+      state.orderDetails = []; \r\n     });\r\n   \r\n   },\r\n });\r\n \r\n\\ No newline at end of file\n-export default OrderSlice.reducer;\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741000798294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   orderDetails: null,\r\n+  \r\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n@@ -37,5 +38,5 @@\n   \r\n   },\r\n });\r\n \r\n-export default OrderSlice.reducer;\n\\ No newline at end of file\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741000811518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   orderDetails: null,\r\n-  \r\n+  url : null,\r\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n"
+                },
+                {
+                    "date": 1741000895583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n+      state.url : null\r\n     });\r\n   \r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1741000901651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n-      state.url : null\r\n+      state.url = null;\r\n     });\r\n   \r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1741000910373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n     })\r\n     .addCase(createOrder.fulfilled, (state, action) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n+      state.\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741000915787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     })\r\n     .addCase(createOrder.fulfilled, (state, action) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n-      state.\r\n+      state.url = \r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741000923927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     })\r\n     .addCase(createOrder.fulfilled, (state, action) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n-      state.url = \r\n+      state.url = action.payload.url\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741000955550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     })\r\n     .addCase(createOrder.fulfilled, (state, action) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n-      state.url = action.payload.url\r\n+      state.url = action.payload.url \r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741005746234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   orderDetails: null,\r\n+  orderId : null,\r\n   url : null,\r\n   isLoading: false,\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1741005751776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n     })\r\n     .addCase(createOrder.fulfilled, (state, action) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n-      state.url = action.payload.url \r\n+      state.url = action.payload.url ,\r\n+      \r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741005774091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,10 @@\n     .addCase(createOrder.fulfilled, (state, action) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n-      \r\n+      state.orderId = action.payload.orderId,\r\n+      sessionStorage.setItem()\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741005779745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n-      sessionStorage.setItem()\r\n+      sessionStorage.setItem(\"\")\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741005785585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n-      sessionStorage.setItem(\"\")\r\n+      sessionStorage.setItem(\"currentOrderId\")\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741005791608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,11 @@\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n-      sessionStorage.setItem(\"currentOrderId\")\r\n+      sessionStorage.setItem(\"currentOrderId\",\r\n+        js\r\n+      )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n"
+                },
+                {
+                    "date": 1741005797690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n       sessionStorage.setItem(\"currentOrderId\",\r\n-        js\r\n+        json.s\r\n       )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741005804765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n       sessionStorage.setItem(\"currentOrderId\",\r\n-        json.s\r\n+        JSON.stringu\r\n       )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741005811171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n       sessionStorage.setItem(\"currentOrderId\",\r\n-        JSON.stringu\r\n+        JSON.string\r\n       )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741005820147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n       sessionStorage.setItem(\"currentOrderId\",\r\n-        JSON.string\r\n+        JSON.stringify(action.)\r\n       )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741005825820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n       sessionStorage.setItem(\"currentOrderId\",\r\n-        JSON.stringify(action.)\r\n+        JSON.stringify(action.payload.orderId)\r\n       )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741005853931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n       state.url = null;\r\n+      state.\r\n     });\r\n   \r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1741005861162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n       state.url = null;\r\n-      state.\r\n+      state.orderId : null\r\n     });\r\n   \r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1741006516816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,10 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n+\r\n+\r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n   reducers: {},\r\n@@ -40,9 +42,9 @@\n     .addCase(createOrder.rejected, (state) => {\r\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n       state.url = null;\r\n-      state.orderId : null\r\n+      state.orderId = null\r\n     });\r\n   \r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1741006525612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n+export const capturePayment\r\n \r\n-\r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n   reducers: {},\r\n"
+                },
+                {
+                    "date": 1741006555205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n-export const capturePayment\r\n+export const capturePayment \r\n \r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n"
+                },
+                {
+                    "date": 1741006563807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n-export const capturePayment \r\n+export const capturePayment = createAsyncThunk(\"\")\r\n \r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n"
+                },
+                {
+                    "date": 1741063743946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,19 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n+export const createOrder = createAsyncThunk(\r\n+  \"/shop/createOrder\",\r\n+  async (orderDetails) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n+      orderDetails\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n export const capturePayment = createAsyncThunk(\"\")\r\n \r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n"
+                },
+                {
+                    "date": 1741063755135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n-export const createOrder = createAsyncThunk(\r\n+export const capture = createAsyncThunk(\r\n   \"/shop/createOrder\",\r\n   async (orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n"
+                },
+                {
+                    "date": 1741063765181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n-export const capture = createAsyncThunk(\r\n+export const capturePayment = createAsyncThunk(\r\n   \"/shop/createOrder\",\r\n   async (orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n@@ -29,10 +29,10 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n-export const capturePayment = createAsyncThunk(\"\")\r\n \r\n+\r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n   reducers: {},\r\n"
+                },
+                {
+                    "date": 1741063822735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"/shop/createOrder\",\r\n-  async (orderDetails) => {\r\n+  async (orderDeta{ils) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n     );\r\n"
+                },
+                {
+                    "date": 1741063829504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"/shop/createOrder\",\r\n-  async (orderDeta{ils) => {\r\n+  async ({paymentId , payerId , orderId}) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n     );\r\n"
+                },
+                {
+                    "date": 1741063843161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,11 @@\n   \"/shop/createOrder\",\r\n   async ({paymentId , payerId , orderId}) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n-      orderDetails\r\n+      {\r\n+        paymentId , payerId , orderId\r\n+      }\r\n     );\r\n     return response.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741064298575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"/shop/createOrder\",\r\n-  async ({paymentId , payerId , orderId}) => {\r\n+  async ( orderId}) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       {\r\n         paymentId , payerId , orderId\r\n"
+                },
+                {
+                    "date": 1741064303948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"/shop/createOrder\",\r\n-  async ( orderId}) => {\r\n+  async ( orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       {\r\n-        paymentId , payerId , orderId\r\n+         orderId\r\n       }\r\n     );\r\n     return response.data;\r\n   }\r\n"
+                },
+                {
+                    "date": 1741065900719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,22 +19,21 @@\n   }\r\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n-  \"/shop/createOrder\",\r\n-  async ( orderId) => {\r\n+  \"/shop/capturePayment\",\r\n+  async (orderId) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n-      {\r\n-         orderId\r\n-      }\r\n+      \"http://localhost:7000/api/shop/order/capture-payment\",\r\n+      { orderId }\r\n     );\r\n     return response.data;\r\n   }\r\n );\r\n \r\n \r\n \r\n+\r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n   reducers: {},\r\n"
+                },
+                {
+                    "date": 1741066343252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,19 @@\n   }\r\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n-  \"/shop/capturePayment\",\r\n-  async (orderId) => {\r\n+  \"order/capturePayment\",\r\n+  async ({ orderId, paymentId, payerId }) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture-payment\",\r\n-      { orderId }\r\n+      {\r\n+        orderId,\r\n+        paymentId,\r\n+        payerId,\r\n+        orderStatus: \"confirmed\", // Updating order status\r\n+        paymentStatus: \"completed\", // Updating payment status\r\n+      }\r\n     );\r\n     return response.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741066370796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,10 @@\n       state.isLoading = false;\r\n       state.orderDetails = []; \r\n       state.url = null;\r\n       state.orderId = null\r\n+    }).addCase(capturePayment.fulfilled, (state, action) => {\r\n+      state.orderDetails = action.payload;\r\n     });\r\n   \r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1741069756236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,11 @@\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n-      sessionStorage.setItem(\"currentOrderId\",\r\n+    sessionStorage.setItem(\"currentOrderId\", \r\n+    sessionStorage.setItem(\"currentCartId\", \r\n+\r\n         JSON.stringify(action.payload.orderId)\r\n       )\r\n     })\r\n     .addCase(createOrder.rejected, (state) => {\r\n"
+                },
+                {
+                    "date": 1741069775272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,8 @@\n       state.isLoading = false;\r\n       state.orderDetails = action.payload;\r\n       state.url = action.payload.url ,\r\n       state.orderId = action.payload.orderId,\r\n-    sessionStorage.setItem(\"currentOrderId\", \r\n     sessionStorage.setItem(\"currentCartId\", \r\n \r\n         JSON.stringify(action.payload.orderId)\r\n       )\r\n"
+                },
+                {
+                    "date": 1741069802587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   orderDetails: null,\r\n-  orderId : null,\r\n-  url : null,\r\n+  orderId: null,\r\n+  url: null,\r\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n@@ -35,39 +35,36 @@\n     return response.data;\r\n   }\r\n );\r\n \r\n-\r\n-\r\n-\r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n   reducers: {},\r\n   extraReducers: (builder) => {\r\n     builder\r\n-    .addCase(createOrder.pending, (state) => {\r\n-      state.isLoading = true;\r\n-    })\r\n-    .addCase(createOrder.fulfilled, (state, action) => {\r\n-      state.isLoading = false;\r\n-      state.orderDetails = action.payload;\r\n-      state.url = action.payload.url ,\r\n-      state.orderId = action.payload.orderId,\r\n-    sessionStorage.setItem(\"currentCartId\", \r\n+      .addCase(createOrder.pending, (state) => {\r\n+        state.isLoading = true;\r\n+      })\r\n+      .addCase(createOrder.fulfilled, (state, action) => {\r\n+        state.isLoading = false;\r\n+        state.orderDetails = action.payload;\r\n+        state.url = action.payload.url;\r\n+        state.orderId = action.payload.orderId;\r\n \r\n-        JSON.stringify(action.payload.orderId)\r\n-      )\r\n-    })\r\n-    .addCase(createOrder.rejected, (state) => {\r\n-      state.isLoading = false;\r\n-      state.orderDetails = []; \r\n-      state.url = null;\r\n-      state.orderId = null\r\n-    }).addCase(capturePayment.fulfilled, (state, action) => {\r\n-      state.orderDetails = action.payload;\r\n-    });\r\n-  \r\n+        // Set currentOrderId and currentCartId in session storage\r\n+        sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n+        sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n+      })\r\n+      .addCase(createOrder.rejected, (state) => {\r\n+        state.isLoading = false;\r\n+        state.orderDetails = [];\r\n+        state.url = null;\r\n+        state.orderId = null;\r\n+      })\r\n+      .addCase(capturePayment.fulfilled, (state, action) => {\r\n+        state.orderDetails = action.payload;\r\n+      });\r\n   },\r\n });\r\n \r\n export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741078423521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n-  \"/shop/createOrder\",\r\n+  \"/order/createOrder\",\r\n   async (orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n"
+                },
+                {
+                    "date": 1741079453036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,10 +51,10 @@\n         state.url = action.payload.url;\r\n         state.orderId = action.payload.orderId;\r\n \r\n         // Set currentOrderId and currentCartId in session storage\r\n-        sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n-        sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n+        // sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n+        // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n       })\r\n       .addCase(createOrder.rejected, (state) => {\r\n         state.isLoading = false;\r\n         state.orderDetails = [];\r\n"
+                },
+                {
+                    "date": 1741079896855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n-  \"/order/createOrder\",\r\n+  \"/shop/createOrder\",\r\n   async (orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n"
+                },
+                {
+                    "date": 1741080012396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n-  \"/shop/createOrder\",\r\n+  \"//createOrder\",\r\n   async (orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n"
+                },
+                {
+                    "date": 1741080606075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"//createOrder\",\r\n-  async (orderDetails) => {\r\n+  async ({orderDetails}) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n     );\r\n"
+                },
+                {
+                    "date": 1741080664735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   isLoading: false,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n-  \"//createOrder\",\r\n+  \"/order/createOrder\",\r\n   async ({orderDetails}) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n"
+                },
+                {
+                    "date": 1741082157100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n-  async ({orderDetails}) => {\r\n+  async ({orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n     );\r\n"
+                },
+                {
+                    "date": 1741082191224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n-  async ({orderDetails) => {\r\n+  async (orderDetails) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n       orderDetails\r\n     );\r\n"
+                },
+                {
+                    "date": 1741082407008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,19 +6,109 @@\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n };\r\n+const createOrder = async (req, res) => {\r\n+  try {\r\n+    console.log(\"Received order request:\", req.body); // ✅ Log request data for debugging\r\n \r\n-export const createOrder = createAsyncThunk(\r\n-  \"/order/createOrder\",\r\n-  async (orderDetails) => {\r\n-    const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n-      orderDetails\r\n-    );\r\n-    return response.data;\r\n+    const {\r\n+      userId,\r\n+      orderId, // Make sure this exists\r\n+      cartId,\r\n+      cartItems,\r\n+      addressInfo,\r\n+      orderStatus = \"pending\",\r\n+      paymentMethod = \"Stripe\",\r\n+      paymentStatus = \"pending\",\r\n+      totalAmount,\r\n+      orderDate = new Date(),\r\n+      orderUpdateDate = new Date(),\r\n+      paymentId = \"\",\r\n+      payerId = \"\",\r\n+      userEmail,\r\n+    } = req.body;\r\n+\r\n+    // 🛑 Validate Required Data\r\n+    if (!cartItems || !Array.isArray(cartItems) || cartItems.length === 0) {\r\n+      return res.status(400).json({\r\n+        success: false,\r\n+        message: \"Invalid data! Cart items are required.\",\r\n+      });\r\n+    }\r\n+\r\n+    console.log(\"Cart Items:\", cartItems); // ✅ Log cart items\r\n+\r\n+    // ✅ Prepare Stripe Payment Data\r\n+    const lineItems = cartItems.map((cartItems) => ({\r\n+      price_data: {\r\n+        currency: \"inr\",\r\n+        product_data: {\r\n+          name: cartItems.title,\r\n+        },\r\n+        unit_amount: Math.round(cartItems.price * 100), // Convert price to smallest currency unit\r\n+      },\r\n+      quantity: cartItems.quantity,\r\n+    }));\r\n+\r\n+    // ✅ Create Stripe Checkout Session\r\n+    let session;\r\n+    try {\r\n+      session = await Stripe.checkout.sessions.create({\r\n+        payment_method_types: [\"card\"],\r\n+        line_items: lineItems,\r\n+        mode: \"payment\",\r\n+        success_url: \"http://localhost:5173/shop/success\",\r\n+        cancel_url: \"http://localhost:5173/shop/cancel\",\r\n+        customer_email: userEmail,\r\n+        metadata: { userId, orderId: orderId || \"temp_order_id\" }, // Ensure orderId exists\r\n+      });\r\n+    } catch (stripeError) {\r\n+      console.error(\"Stripe Error:\", stripeError);\r\n+      return res.status(502).json({\r\n+        success: false,\r\n+        message: \"Stripe session creation failed!\",\r\n+        error: stripeError.message,\r\n+      });\r\n+    }\r\n+\r\n+    // ✅ Create and Save Order in Database\r\n+    const newOrder = new Order({\r\n+      userId,\r\n+      orderId: orderId || new Date().getTime(), // Generate orderId if not provided\r\n+      cartId,\r\n+      cartItems,\r\n+      addressInfo,\r\n+      totalAmount,\r\n+      orderStatus,\r\n+      paymentMethod,\r\n+      paymentStatus,\r\n+      orderDate,\r\n+      orderUpdateDate,\r\n+      paymentId,\r\n+      payerId,\r\n+    });\r\n+\r\n+    await newOrder.save();\r\n+\r\n+    // ✅ Send Response with Stripe Payment URL\r\n+    res.status(201).json({\r\n+      success: true,\r\n+      message: \"Order Created successfully\",\r\n+      orderId: newOrder._id,\r\n+      data: newOrder,\r\n+      sessionId: session.id,\r\n+      url: session.url,\r\n+    });\r\n+  } catch (error) {\r\n+    console.error(\"Server Error:\", error);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Internal Server Error\",\r\n+      error: error.message,\r\n+    });\r\n   }\r\n-);\r\n+};\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"order/capturePayment\",\r\n   async ({ orderId, paymentId, payerId }) => {\r\n"
+                },
+                {
+                    "date": 1741082446940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,109 +6,19 @@\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n };\r\n-const createOrder = async (req, res) => {\r\n-  try {\r\n-    console.log(\"Received order request:\", req.body); // ✅ Log request data for debugging\r\n \r\n-    const {\r\n-      userId,\r\n-      orderId, // Make sure this exists\r\n-      cartId,\r\n-      cartItems,\r\n-      addressInfo,\r\n-      orderStatus = \"pending\",\r\n-      paymentMethod = \"Stripe\",\r\n-      paymentStatus = \"pending\",\r\n-      totalAmount,\r\n-      orderDate = new Date(),\r\n-      orderUpdateDate = new Date(),\r\n-      paymentId = \"\",\r\n-      payerId = \"\",\r\n-      userEmail,\r\n-    } = req.body;\r\n-\r\n-    // 🛑 Validate Required Data\r\n-    if (!cartItems || !Array.isArray(cartItems) || cartItems.length === 0) {\r\n-      return res.status(400).json({\r\n-        success: false,\r\n-        message: \"Invalid data! Cart items are required.\",\r\n-      });\r\n-    }\r\n-\r\n-    console.log(\"Cart Items:\", cartItems); // ✅ Log cart items\r\n-\r\n-    // ✅ Prepare Stripe Payment Data\r\n-    const lineItems = cartItems.map((cartItems) => ({\r\n-      price_data: {\r\n-        currency: \"inr\",\r\n-        product_data: {\r\n-          name: cartItems.title,\r\n-        },\r\n-        unit_amount: Math.round(cartItems.price * 100), // Convert price to smallest currency unit\r\n-      },\r\n-      quantity: cartItems.quantity,\r\n-    }));\r\n-\r\n-    // ✅ Create Stripe Checkout Session\r\n-    let session;\r\n-    try {\r\n-      session = await Stripe.checkout.sessions.create({\r\n-        payment_method_types: [\"card\"],\r\n-        line_items: lineItems,\r\n-        mode: \"payment\",\r\n-        success_url: \"http://localhost:5173/shop/success\",\r\n-        cancel_url: \"http://localhost:5173/shop/cancel\",\r\n-        customer_email: userEmail,\r\n-        metadata: { userId, orderId: orderId || \"temp_order_id\" }, // Ensure orderId exists\r\n-      });\r\n-    } catch (stripeError) {\r\n-      console.error(\"Stripe Error:\", stripeError);\r\n-      return res.status(502).json({\r\n-        success: false,\r\n-        message: \"Stripe session creation failed!\",\r\n-        error: stripeError.message,\r\n-      });\r\n-    }\r\n-\r\n-    // ✅ Create and Save Order in Database\r\n-    const newOrder = new Order({\r\n-      userId,\r\n-      orderId: orderId || new Date().getTime(), // Generate orderId if not provided\r\n-      cartId,\r\n-      cartItems,\r\n-      addressInfo,\r\n-      totalAmount,\r\n-      orderStatus,\r\n-      paymentMethod,\r\n-      paymentStatus,\r\n-      orderDate,\r\n-      orderUpdateDate,\r\n-      paymentId,\r\n-      payerId,\r\n-    });\r\n-\r\n-    await newOrder.save();\r\n-\r\n-    // ✅ Send Response with Stripe Payment URL\r\n-    res.status(201).json({\r\n-      success: true,\r\n-      message: \"Order Created successfully\",\r\n-      orderId: newOrder._id,\r\n-      data: newOrder,\r\n-      sessionId: session.id,\r\n-      url: session.url,\r\n-    });\r\n-  } catch (error) {\r\n-    console.error(\"Server Error:\", error);\r\n-    res.status(500).json({\r\n-      success: false,\r\n-      message: \"Internal Server Error\",\r\n-      error: error.message,\r\n-    });\r\n+export const createOrder = createAsyncThunk(\r\n+  \"/order/createOrder\",\r\n+  async (orderDetails) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n+      orderDetails\r\n+    );\r\n+    return response.data;\r\n   }\r\n-};\r\n+);\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"order/capturePayment\",\r\n   async ({ orderId, paymentId, payerId }) => {\r\n"
+                },
+                {
+                    "date": 1741083538454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,10 +50,10 @@\n         state.orderDetails = action.payload;\r\n         state.url = action.payload.url;\r\n         state.orderId = action.payload.orderId;\r\n \r\n+        // sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n         // Set currentOrderId and currentCartId in session storage\r\n-        // sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n         // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n       })\r\n       .addCase(createOrder.rejected, (state) => {\r\n         state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741083544041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n         state.isLoading = false;\r\n         state.orderDetails = action.payload;\r\n         state.url = action.payload.url;\r\n         state.orderId = action.payload.orderId;\r\n+        sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n \r\n-        // sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n         // Set currentOrderId and currentCartId in session storage\r\n         // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n       })\r\n       .addCase(createOrder.rejected, (state) => {\r\n"
+                },
+                {
+                    "date": 1741083748239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   }\r\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n-  \"order/capturePayment\",\r\n+  \"/order/capturePayment\",\r\n   async ({ orderId, paymentId, payerId }) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture-payment\",\r\n       {\r\n"
+                },
+                {
+                    "date": 1741083760979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,8 @@\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture-payment\",\r\n       {\r\n         orderId,\r\n-        paymentId,\r\n-        payerId,\r\n         orderStatus: \"confirmed\", // Updating order status\r\n         paymentStatus: \"completed\", // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741083766173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n );\r\n \r\n export const capturePayment = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n-  async ({ orderId, paymentId, payerId }) => {\r\n+  async (orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture-payment\",\r\n       {\r\n         orderId,\r\n"
+                },
+                {
+                    "date": 1741083794788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,9 @@\n   async (orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture-payment\",\r\n       {\r\n-        orderId,\r\n-        orderStatus: \"confirmed\", // Updating order status\r\n-        paymentStatus: \"completed\", // Updating payment status\r\n+        orderId, // Updating payment status\r\n       }\r\n     );\r\n     return response.data;\r\n   }\r\n"
+                },
+                {
+                    "date": 1741084346761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n export const capturePayment = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/capture-payment\",\r\n+      \"http://localhost:7000/api/shop/order/capture\",\r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741085171558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,68 @@\n+import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n+\r\n+const initialState = {\r\n+  orderDetails: null,\r\n+  orderId: null,\r\n+  url: null,\r\n+  isLoading: false,\r\n+};\r\n+\r\n+export const createOrder = createAsyncThunk(\r\n+  \"/order/createOrder\",\r\n+  async (orderDetails) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n+      orderDetails\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n+export const capturePayment = createAsyncThunk(\r\n+  \"/order/capturePayment\",\r\n+  async (orderId) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/capture\",\r\n+      {\r\n+        orderId, // Updating payment status\r\n+      }\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n+\r\n+const OrderSlice = createSlice({\r\n+  name: \"OrderSlice\",\r\n+  initialState,\r\n+  reducers: {},\r\n+  extraReducers: (builder) => {\r\n+    builder\r\n+      .addCase(createOrder.pending, (state) => {\r\n+        state.isLoading = true;\r\n+      })\r\n+      .addCase(createOrder.fulfilled, (state, action) => {\r\n+        state.isLoading = false;\r\n+        state.orderDetails = action.payload;\r\n+        state.url = action.payload.url;\r\n+        state.orderId = action.payload.orderId;\r\n+        sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n+        sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n+\r\n+\r\n+        // Set currentOrderId and currentCartId in session storage\r\n+        // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n+      })\r\n+      .addCase(createOrder.rejected, (state) => {\r\n+        state.isLoading = false;\r\n+        state.orderDetails = [];\r\n+        state.url = null;\r\n+        state.orderId = null;\r\n+      })\r\n+      .addCase(capturePayment.fulfilled, (state, action) => {\r\n+        state.orderDetails = action.payload;\r\n+      });\r\n+  },\r\n+});\r\n+\r\n+export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741087226290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   orderDetails: null,\r\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n+  orderLis\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n@@ -65,70 +66,4 @@\n   },\r\n });\r\n \r\n export default OrderSlice.reducer;\r\n-import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n-import axios from \"axios\";\r\n-\r\n-const initialState = {\r\n-  orderDetails: null,\r\n-  orderId: null,\r\n-  url: null,\r\n-  isLoading: false,\r\n-};\r\n-\r\n-export const createOrder = createAsyncThunk(\r\n-  \"/order/createOrder\",\r\n-  async (orderDetails) => {\r\n-    const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/payment-checkout\",\r\n-      orderDetails\r\n-    );\r\n-    return response.data;\r\n-  }\r\n-);\r\n-\r\n-export const capturePayment = createAsyncThunk(\r\n-  \"/order/capturePayment\",\r\n-  async (orderId) => {\r\n-    const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/capture\",\r\n-      {\r\n-        orderId, // Updating payment status\r\n-      }\r\n-    );\r\n-    return response.data;\r\n-  }\r\n-);\r\n-\r\n-const OrderSlice = createSlice({\r\n-  name: \"OrderSlice\",\r\n-  initialState,\r\n-  reducers: {},\r\n-  extraReducers: (builder) => {\r\n-    builder\r\n-      .addCase(createOrder.pending, (state) => {\r\n-        state.isLoading = true;\r\n-      })\r\n-      .addCase(createOrder.fulfilled, (state, action) => {\r\n-        state.isLoading = false;\r\n-        state.orderDetails = action.payload;\r\n-        state.url = action.payload.url;\r\n-        state.orderId = action.payload.orderId;\r\n-        sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n-\r\n-        // Set currentOrderId and currentCartId in session storage\r\n-        // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n-      })\r\n-      .addCase(createOrder.rejected, (state) => {\r\n-        state.isLoading = false;\r\n-        state.orderDetails = [];\r\n-        state.url = null;\r\n-        state.orderId = null;\r\n-      })\r\n-      .addCase(capturePayment.fulfilled, (state, action) => {\r\n-        state.orderDetails = action.payload;\r\n-      });\r\n-  },\r\n-});\r\n-\r\n-export default OrderSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741087234866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   orderDetails: null,\r\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n-  orderLis\r\n+  orderList =\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n"
+                },
+                {
+                    "date": 1741087239903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n   orderDetails: null,\r\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n-  orderList =\r\n+  orderList :[],\r\n+  order\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n"
+                },
+                {
+                    "date": 1741087253565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n   orderList :[],\r\n-  order\r\n+  orderData : \r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n"
+                },
+                {
+                    "date": 1741087266300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n   orderList :[],\r\n-  orderData : \r\n+  orderData : null,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n@@ -32,8 +32,32 @@\n     );\r\n     return response.data;\r\n   }\r\n );\r\n+export const capturePayment = createAsyncThunk(\r\n+  \"/order/capturePayment\",\r\n+  async (orderId) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/capture\",\r\n+      {\r\n+        orderId, // Updating payment status\r\n+      }\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n+export const capturePayment = createAsyncThunk(\r\n+  \"/order/capturePayment\",\r\n+  async (orderId) => {\r\n+    const response = await axios.post(\r\n+      \"http://localhost:7000/api/shop/order/capture\",\r\n+      {\r\n+        orderId, // Updating payment status\r\n+      }\r\n+    );\r\n+    return response.data;\r\n+  }\r\n+);\r\n \r\n const OrderSlice = createSlice({\r\n   name: \"OrderSlice\",\r\n   initialState,\r\n"
+                },
+                {
+                    "date": 1741087273891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n     );\r\n     return response.data;\r\n   }\r\n );\r\n-export const capturePayment = createAsyncThunk(\r\n+export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture\",\r\n"
+                },
+                {
+                    "date": 1741087282781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     return response.data;\r\n   }\r\n );\r\n export const getAllOrderByUser = createAsyncThunk(\r\n-  \"/order/capturePayment\",\r\n+  \"/order/list\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture\",\r\n       {\r\n@@ -44,9 +44,9 @@\n     );\r\n     return response.data;\r\n   }\r\n );\r\n-export const capturePayment = createAsyncThunk(\r\n+export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture\",\r\n"
+                },
+                {
+                    "date": 1741087293918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     return response.data;\r\n   }\r\n );\r\n export const getAllOrderByUser = createAsyncThunk(\r\n-  \"/order/list\",\r\n+  \"/order/AllOrders\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n       \"http://localhost:7000/api/shop/order/capture\",\r\n       {\r\n"
+                },
+                {
+                    "date": 1741087300774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/AllOrders\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/capture\",\r\n+      \"http://localhost:7000/api/shop/order/list\",\r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741087308764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/AllOrders\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/list\",\r\n+      \"http://localhost:7000/api/shop/order/list/:${}\",\r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741087327363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/AllOrders\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/list/:${}\",\r\n+      `http://localhost:7000/api/shop/order/list/:${userId}\",\r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741087337785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,11 +34,11 @@\n   }\r\n );\r\n export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/AllOrders\",\r\n-  async (orderId) => {\r\n+  async (userId) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/shop/order/list/:${userId}\",\r\n+      `http://localhost:7000/api/shop/order/list/:${userId}`,\r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741087346346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,11 +37,9 @@\n   \"/order/AllOrders\",\r\n   async (userId) => {\r\n     const response = await axios.post(\r\n       `http://localhost:7000/api/shop/order/list/:${userId}`,\r\n-      {\r\n-        orderId, // Updating payment status\r\n-      }\r\n+   \r\n     );\r\n     return response.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741087406681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n );\r\n export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/AllOrders\",\r\n   async (userId) => {\r\n-    const response = await axios.post(\r\n+    const response = await axios.get(\r\n       `http://localhost:7000/api/shop/order/list/:${userId}`,\r\n    \r\n     );\r\n     return response.data;\r\n@@ -45,10 +45,10 @@\n );\r\n export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n   async (orderId) => {\r\n-    const response = await axios.post(\r\n-      \"http://localhost:7000/api/shop/order/capture\",\r\n+    const response = await axios.post(      `http://localhost:7000/api/shop/order/list/:${userId}`,\r\n+\r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n     );\r\n"
+                },
+                {
+                    "date": 1741087411774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   orderDetails: null,\r\n   orderId: null,\r\n   url: null,\r\n   isLoading: false,\r\n-  orderList :[],\r\n-  orderData : null,\r\n+  orderList: [],\r\n+  orderData: null,\r\n };\r\n \r\n export const createOrder = createAsyncThunk(\r\n   \"/order/createOrder\",\r\n@@ -36,18 +36,18 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n   \"/order/AllOrders\",\r\n   async (userId) => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/shop/order/list/:${userId}`,\r\n-   \r\n+      `http://localhost:7000/api/shop/order/list/:${userId}`\r\n     );\r\n     return response.data;\r\n   }\r\n );\r\n export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n   async (orderId) => {\r\n-    const response = await axios.post(      `http://localhost:7000/api/shop/order/list/:${userId}`,\r\n+    const response = await axios.post(\r\n+      `http://localhost:7000/api/shop/order/list/:${i}`,\r\n \r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n@@ -69,12 +69,17 @@\n         state.isLoading = false;\r\n         state.orderDetails = action.payload;\r\n         state.url = action.payload.url;\r\n         state.orderId = action.payload.orderId;\r\n-        sessionStorage.setItem(\"currentOrderId\", JSON.stringify(action.payload.orderId));\r\n-        sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n+        sessionStorage.setItem(\r\n+          \"currentOrderId\",\r\n+          JSON.stringify(action.payload.orderId)\r\n+        );\r\n+        sessionStorage.setItem(\r\n+          \"currentCartId\",\r\n+          JSON.stringify(action.payload.cartId)\r\n+        ); // Assuming cartId is part of the payload\r\n \r\n-\r\n         // Set currentOrderId and currentCartId in session storage\r\n         // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n       })\r\n       .addCase(createOrder.rejected, (state) => {\r\n"
+                },
+                {
+                    "date": 1741087418932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/capturePayment\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/shop/order/list/:${i}`,\r\n+      `http://localhost:7000/api/shop/order/details/:${id}`,\r\n \r\n       {\r\n         orderId, // Updating payment status\r\n       }\r\n"
+                },
+                {
+                    "date": 1741087429674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     return response.data;\r\n   }\r\n );\r\n export const getOrdersDetails = createAsyncThunk(\r\n-  \"/order/capturePayment\",\r\n+  \"/order/orderDetails\",\r\n   async (orderId) => {\r\n     const response = await axios.post(\r\n       `http://localhost:7000/api/shop/order/details/:${id}`,\r\n \r\n"
+                },
+                {
+                    "date": 1741087444165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   }\r\n );\r\n export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/orderDetails\",\r\n-  async (orderId) => {\r\n+  async (id) => {\r\n     const response = await axios.post(\r\n       `http://localhost:7000/api/shop/order/details/:${id}`,\r\n \r\n       {\r\n"
+                },
+                {
+                    "date": 1741087449922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,12 +46,8 @@\n   \"/order/orderDetails\",\r\n   async (id) => {\r\n     const response = await axios.post(\r\n       `http://localhost:7000/api/shop/order/details/:${id}`,\r\n-\r\n-      {\r\n-        orderId, // Updating payment status\r\n-      }\r\n     );\r\n     return response.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741087460067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n );\r\n export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/orderDetails\",\r\n   async (id) => {\r\n-    const response = await axios.post(\r\n+    const response = await axios.posgett(\r\n       `http://localhost:7000/api/shop/order/details/:${id}`,\r\n     );\r\n     return response.data;\r\n   }\r\n"
+                },
+                {
+                    "date": 1741087465330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n );\r\n export const getOrdersDetails = createAsyncThunk(\r\n   \"/order/orderDetails\",\r\n   async (id) => {\r\n-    const response = await axios.posget(\r\n+    const response = await axios.get(\r\n       `http://localhost:7000/api/shop/order/details/:${id}`,\r\n     );\r\n     return response.data;\r\n   }\r\n"
                 }
             ],
             "date": 1740740508066,

@@ -55,7 +55,7 @@
                 },
                 {
                     "date": 1740391970573,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const fetch = async(req,res)=>{\r\n+const fetchCartItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const fetch = async(req,res)=>{\r\n+const fetchcartItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
                 },
                 {
                     "date": 1740391978299,
@@ -71,11 +71,11 @@
                 },
                 {
                     "date": 1740391998124,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const delete = async(req,res)=>{\r\n+const deleteCartItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const delete = async(req,res)=>{\r\n+const deletecartItems = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
                 },
                 {
                     "date": 1740392018740,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const updateItemsQty = async(req,res)=>{\r\n+const updateCartItemsQty = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         })\r\n         \r\n     }\r\n }\r\n-const updateItemsQty = async(req,res)=>{\r\n+const updatecartItemsQty = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (error) {\r\n         console.log(error);\r\n"
                 },
                 {
                     "date": 1740392043853,

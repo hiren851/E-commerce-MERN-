@@ -1,9 +1,9 @@
-function PaymentSuccess() {
+function PaymentCancel() {
     return ( 
         <div>
-            Payment Sucess
+            Payment Cancel
         </div>
      );
 }
 
-export default PaymentSuccess;
+export default PaymentCancel;

@@ -2,9 +2,9 @@ const express = require("express");
 
 const {
   addToCart,
-  fetchCartItems,
-  updateCartItemsQty,
-  deleteCartItems,
+  fetchcartItems,
+  updatecartItemsQty,
+  deletecartItems,
 } = require("../../controllers/shop/cart-controllers");
 
 
@@ -12,9 +12,9 @@ const {
 const router = express.Router();
 
 router.post('/add' , addToCart)
-router.get('/get/:userId' , fetchCartItems)
-router.put('/update-cart' , updateCartItemsQty)
-router.delete('/:userId/:productId' , deleteCartItems)
+router.get('/get/:userId' , fetchcartItems)
+router.put('/update-cart' , updatecartItemsQty)
+router.delete('/:userId/:productId' , deletecartItems)
 
 module.exports = router;
 

@@ -53,7 +53,7 @@ const addToCart = async (req, res) => {
     });
   }
 };
-const fetchCartItems = async (req, res) => {
+const fetchcartItems = async (req, res) => {
   try {
     const { userId } = req.params;
 
@@ -82,7 +82,7 @@ if(validItems.length < cart.items.length ){
   await cart.save();
 }
 
-const populateCartItems = validItems.map(item  => ({
+const populatecartItems = validItems.map(item  => ({
   productId :  item.productId._id,
   image : item.productId.image,
   title : item.productId.title,
@@ -95,7 +95,7 @@ res.status(200).json({
   success : true , 
   data : {
     ...cart._doc,
-    items: populateCartItems
+    items: populatecartItems
   }
 })
 
@@ -108,7 +108,7 @@ res.status(200).json({
   }
 };
 
-const updateCartItemsQty = async (req, res) => {
+const updatecartItemsQty = async (req, res) => {
   try {
     const { userId, productId, quantity } = req.body;
     console.log("User ID:", userId); // Log the userId for debugging
@@ -148,7 +148,7 @@ const updateCartItemsQty = async (req, res) => {
       select: "image title price salePrice",
     });
 
-    const populateCartItems = cart.items.map((item) => ({
+    const populatecartItems = cart.items.map((item) => ({
       productId: item.productId ? item.productId._id : null,
       image: item.productId ? item.productId.image : null,
       title: item.productId ? item.productId.title : "product not found",
@@ -161,7 +161,7 @@ const updateCartItemsQty = async (req, res) => {
       success: true,
       data: {
         ...cart._doc,
-        items: populateCartItems,
+        items: populatecartItems,
       },
     });
   } catch (error) {
@@ -172,7 +172,7 @@ const updateCartItemsQty = async (req, res) => {
     });
   }
 };
-const deleteCartItems = async (req, res) => {
+const deletecartItems = async (req, res) => {
   try {
     const { userId, productId } = req.params;
     console.log("User ID:", userId); // Log the userId for debugging
@@ -209,7 +209,7 @@ const deleteCartItems = async (req, res) => {
       select: "image title price salePrice",
     });
 
-    const populateCartItems = cart.items.map((item) => ({
+    const populatecartItems = cart.items.map((item) => ({
       productId: item.productId ? item.productId._id : null,
       image: item.productId ? item.productId.image : null,
       title: item.productId ? item.productId.title : "product not found",
@@ -222,7 +222,7 @@ const deleteCartItems = async (req, res) => {
       success: true,
       data: {
         ...cart._doc,
-        items: populateCartItems,
+        items: populatecartItems,
       },
     });
   } catch (error) {
@@ -236,7 +236,7 @@ const deleteCartItems = async (req, res) => {
 
 module.exports = {
   addToCart,
-  updateCartItemsQty,
-  deleteCartItems,
-  fetchCartItems,
+  updatecartItemsQty,
+  deletecartItems,
+  fetchcartItems,
 };

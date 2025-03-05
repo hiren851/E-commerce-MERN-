@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 35,
+            "activePatchIndex": 44,
             "patches": [
                 {
                     "date": 1739522384046,
@@ -148,6 +148,42 @@
                 {
                     "date": 1740801197932,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n         auth: authReducer,\r\n         adminProducts : adminProductSLice,\r\n         shopProducts : shopProductSLice,\r\n         shopCart : shopCartSlice,\r\n-        shopAddress : shopAddressSlice\r\n-        shopO : OrderSlice\r\n+        shopAddress : shopAddressSlice,\r\n+        shopOrder : OrderSlice\r\n     }\r\n })\r\n \r\n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094461654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n+\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741094468567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-\r\n+import adminOrderSlice from './admin/'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741094477176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './admin/'\r\n+import adminOrderSlice from './'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741094498636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './'\r\n+import adminOrderSlice from './admin/products-slice/'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741094515605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './admin/products-slice/'\r\n+import adminOrderSlice from './admin/products-slice/order-slice'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741094527843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n         adminProducts : adminProductSLice,\r\n+        adminOrder : \r\n         shopProducts : shopProductSLice,\r\n         shopCart : shopCartSlice,\r\n         shopAddress : shopAddressSlice,\r\n         shopOrder : OrderSlice\r\n"
+                },
+                {
+                    "date": 1741094534619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const store = configureStore({\r\n     reducer : {\r\n         auth: authReducer,\r\n         adminProducts : adminProductSLice,\r\n-        adminOrder : \r\n+        adminOrder : adminOrderSlice,\r\n         shopProducts : shopProductSLice,\r\n         shopCart : shopCartSlice,\r\n         shopAddress : shopAddressSlice,\r\n         shopOrder : OrderSlice\r\n"
+                },
+                {
+                    "date": 1741150765099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './admin/products-slice/order-slice'\r\n+import adminOrderSlice from './admin/order-slice'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741181045333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './admin/order-slice'\r\n+import adminOrderSlice from './admin/products-slice/order-slice'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
                 }
             ],
             "date": 1739522384046,

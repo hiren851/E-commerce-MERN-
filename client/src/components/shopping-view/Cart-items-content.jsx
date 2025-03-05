@@ -1,37 +1,67 @@
 import { Minus, Plus, Trash, Trash2 } from "lucide-react";
 import { Button } from "../ui/button";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteCartItem, updateCartQuantity } from "@/Store/shop/cart-slice";
+import { deletecartItems, updateCartQuantity } from "@/Store/shop/cart-slice";
 import { useToast } from "@/hooks/use-toast";
 // import { title } from "process";
 
-function UserCartItemsContent({ cartItems }) {
+function UsercartItemsContent({ cartItems }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
+  const { productList } = useSelector((state) => state.shopProducts);
+  // const {cartItems } = useSelector(state => state.shopCart)
+
+
   const { toast } = useToast();
 
-  function handleCartItemDelete(getCartItem) {
+  function handlecartItemsDelete(getcartItems) {
     dispatch(
-      deleteCartItem({ userId: user?.id, productId: getCartItem?.productId })
-    )
-    .then((data) => {
-        if (data?.payload?.success) {
-          toast({
-            title: "cart item deleted sucessfully",
-          });
-        }
-      });;
+      deletecartItems({ userId: user?.id, productId: getcartItems?.productId })
+    ).then((data) => {
+      if (data?.payload?.success) {
+        toast({
+          title: "cart item deleted sucessfully",
+        });
+      }
+    });
   }
 
-  function handleUpdateItemQty(getCartItem, typeOfAction) {
+  function handleUpdateItemQty(getcartItems, typeOfAction) {
+    if (typeOfAction == "plus") {
+      let getcartItems = cartItems.items || [];
+
+      if (getcartItems.length) {
+        const indexOfCurrentcartItems = getcartItems.findIndex(
+          (item) => item.productId === getcartItems?.productId
+        );
+
+        const getCurrentProductIndex = productList.findIndex(
+          product => product._id === getcartItems?.productId
+        );
+        const getTotalStock = productList[getCurrentProductIndex].totalStock;
+
+        if (indexOfCurrentcartItems > -1) {
+          const getQuantity = getcartItems[indexOfCurrentcartItems].quantity;
+          if (getQuantity + 1 > getTotalStock) {
+            toast({
+              title: `Only ${getQuantity} quantity can be added for this item`,
+              variant: "destructive",
+            });
+
+            return;
+          }
+        }
+      }
+    }
+    // console.log("asd")
     dispatch(
       updateCartQuantity({
         userId: user?.id,
-        productId: getCartItem?.productId,
+        productId: getcartItems?.productId,
         quantity:
           typeOfAction === "plus"
-            ? getCartItem?.quantity + 1
-            : getCartItem?.quantity - 1,
+            ? getcartItems?.quantity + 1
+            : getcartItems?.quantity - 1,
       })
     ).then((data) => {
       if (data?.payload?.success) {
@@ -85,7 +115,7 @@ function UserCartItemsContent({ cartItems }) {
           ).toFixed(2)}
         </p>
         <Trash2
-          onClick={() => handleCartItemDelete(cartItems)}
+          onClick={() => handlecartItemsDelete(cartItems)}
           className="cursor-pointer nt-1 "
           size={20}
         />
@@ -94,4 +124,4 @@ function UserCartItemsContent({ cartItems }) {
   );
 }
 
-export default UserCartItemsContent;
+export default UsercartItemsContent;

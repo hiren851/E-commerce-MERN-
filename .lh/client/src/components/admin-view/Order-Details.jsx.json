@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 107,
+            "activePatchIndex": 124,
             "patches": [
                 {
                     "date": 1740724366812,
@@ -436,6 +436,74 @@
                 {
                     "date": 1740726371746,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n function AdminViewOrdersDetails() {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n \r\n+    function\r\n \r\n+\r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n       <div className=\"grid gap-6\">\r\n         <div className=\"grid  gap-2\">\r\n"
+                },
+                {
+                    "date": 1741153246479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,17 @@\n const initialFormData = {\r\n     status : '',\r\n }\r\n \r\n-function AdminViewOrdersDetails() {\r\n+function AdminViewOrdersDetails(\r\n+  \r\n+) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n \r\n-    function\r\n+    function handleUpdateStatus(e){\r\n+        \r\n+    }\r\n \r\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n"
+                },
+                {
+                    "date": 1741153252626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,9 @@\n const initialFormData = {\r\n     status : '',\r\n }\r\n \r\n-function AdminViewOrdersDetails(\r\n-  \r\n-) {\r\n+function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n \r\n     function handleUpdateStatus(e){\r\n"
+                },
+                {
+                    "date": 1741153309377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,24 +19,44 @@\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n       <div className=\"grid gap-6\">\r\n-        <div className=\"grid  gap-2\">\r\n+      <div className=\"grid  gap-2\">\r\n           <div className=\"flex mt-6 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Id</p>\r\n-            <Label>123456</Label>\r\n+            <Label>{orderData?._id}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n-            <Label>28/02/2025</Label>\r\n+            <Label>{orderData?.orderDate.split(\"T\")[0]}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n-            <Label>₹1000</Label>\r\n+            <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n+            <p className=\"font-medium\">Payment Status</p>\r\n+            <Label>{orderData?.paymentStatus}</Label>\r\n+          </div>\r\n+          <div className=\"flex mt-2 items-center justify-between\">\r\n+            <p className=\"font-medium\">Payment Method</p>\r\n+            <Label>{orderData?.paymentMethod}</Label>\r\n+          </div>\r\n+          <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label>In Process</Label>\r\n+            <Label>\r\n+              <Badge\r\n+                className={`py-1 px-3 ${\r\n+                  orderData?.orderStatus === \"confirmed\"\r\n+                    ? \"bg-green-500\"\r\n+                    : orderData?.orderStatus === \"rejected\"\r\n+                    ? \"bg-red-600\"\r\n+                    : \"bg-black\"\r\n+                }`}\r\n+              >\r\n+                {orderData?.orderStatus}\r\n+              </Badge>\r\n+            </Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741153372158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import CommonForm from \"../common/Form\";\r\n import { DialogContent } from \"../ui/dialog\";\r\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n+import { Badge } from \"../ui/badge\";\r\n \r\n const initialFormData = {\r\n     status : '',\r\n }\r\n@@ -62,27 +63,32 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              <li className=\"flex items-center justify-between\">\r\n-                <span>Product 1</span>\r\n-                <span>₹1000</span>\r\n-              </li>\r\n+              {orderData?.cartItems && orderData?.cartItems.length > 0\r\n+                ? orderData.cartItems.map((item) => (\r\n+                    <li className=\"flex items-center justify-between\" key={item._id}>\r\n+                      <span>Title : {item.title}</span>\r\n+                      <span>Quantity : {item.quantity}</span>\r\n+                      <span>Price : ₹{item.price}</span>\r\n+                    </li>\r\n+                  ))\r\n+                : null}\r\n             </ul>\r\n           </div>\r\n         </div>\r\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n-              <span>Hiren</span>\r\n-              <span>Address</span>\r\n-              <span>City</span>\r\n-              <span>State</span>\r\n-              <span>Country</span>\r\n-              <span>Pincode</span>\r\n-              <span>Phone</span>\r\n-              <span>Notes</span>\r\n+              <span>{user.userName}</span>\r\n+              <span>{orderData?.addressInfo?.address}</span>\r\n+              <span>{orderData?.addressInfo?.city}</span>\r\n+              <span>{orderData?.addressInfo?.state}</span>\r\n+              <span>{orderData?.addressInfo?.country}</span>\r\n+              <span>{orderData?.addressInfo?.pincode}</span>\r\n+              <span>{orderData?.addressInfo?.phone}</span>\r\n+              <span>{orderData?.addressInfo?.notes}</span>\r\n             </div>\r\n           </div>\r\n         </div>\r\n         <div className=\"\">\r\n"
+                },
+                {
+                    "date": 1741153412229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n \r\n function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n+    \r\n \r\n     function handleUpdateStatus(e){\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1741153419302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n-    \r\n+    const {user} = useE\r\n \r\n     function handleUpdateStatus(e){\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1741153426475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,18 @@\n import { DialogContent } from \"../ui/dialog\";\r\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n import { Badge } from \"../ui/badge\";\r\n+import { useSelector } from \"react-redux\";\r\n \r\n const initialFormData = {\r\n     status : '',\r\n }\r\n \r\n function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n-    const {user} = useE\r\n+    const {user} = useSelector(state=>)\r\n \r\n     function handleUpdateStatus(e){\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1741153432950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n-    const {user} = useSelector(state=>)\r\n+    const {user} = useSelector(state=> state.auth)\r\n \r\n     function handleUpdateStatus(e){\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1741153939669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     const [formData , setFormData] = useState(initialFormData);\r\n     const {user} = useSelector(state=> state.auth)\r\n \r\n     function handleUpdateStatus(e){\r\n-        \r\n+        e.\r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741153949668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     const [formData , setFormData] = useState(initialFormData);\r\n     const {user} = useSelector(state=> state.auth)\r\n \r\n     function handleUpdateStatus(e){\r\n-        e.\r\n+        e.preventDefau\r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741153958204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     const [formData , setFormData] = useState(initialFormData);\r\n     const {user} = useSelector(state=> state.auth)\r\n \r\n     function handleUpdateStatus(e){\r\n-        e.preventDefau\r\n+        e.preventDefault();\r\n+        \r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741153966034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     const {user} = useSelector(state=> state.auth)\r\n \r\n     function handleUpdateStatus(e){\r\n         e.preventDefault();\r\n-        \r\n+        console.log(formData)\r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741154037112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n \r\n     function handleUpdateStatus(e){\r\n         e.preventDefault();\r\n         console.log(formData)\r\n+        const {status} = \r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741154050247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,14 @@\n function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n     const {user} = useSelector(state=> state.auth)\r\n+    const \r\n \r\n     function handleUpdateStatus(e){\r\n         e.preventDefault();\r\n         console.log(formData)\r\n-        const {status} = \r\n+        const {status} = formData;\r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741154055541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n function AdminViewOrdersDetails({orderData}) {\r\n \r\n     const [formData , setFormData] = useState(initialFormData);\r\n     const {user} = useSelector(state=> state.auth)\r\n-    const \r\n+    const dispatch = use\r\n \r\n     function handleUpdateStatus(e){\r\n         e.preventDefault();\r\n         console.log(formData)\r\n"
+                },
+                {
+                    "date": 1741154086774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         e.preventDefault();\r\n         console.log(formData)\r\n         const {status} = formData;\r\n \r\n-        dispatch\r\n+        dispatch()\r\n     }\r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741155662910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         })).then(data => {\r\n           console.log(data, \"hki\")\r\n           dispatch(getOrdersDetailsForAdmin(orderData?._id));\r\n           dispatch(getAllOrdersForAdmin());\r\n-          setFormData(initialFormData)\r\n+          setFormData(initialFormData);\r\n         })\r\n     }\r\n \r\n \r\n"
                 }
             ],
             "date": 1740724366812,

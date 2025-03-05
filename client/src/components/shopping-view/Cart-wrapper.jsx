@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "../ui/sheet";
-import UserCartItemsContent from "./Cart-items-content";
+import UsercartItemContent from "./Cart-items-content";
 
-function UserCartWrapper({ cartItems ,setOpenCartSheet }) {
+function UserCartWrapper({ cartItem ,setOpenCartSheet }) {
   const navigate = useNavigate()
 
   const totalCartAmount =
-    cartItems && cartItems.length > 0
-      ? cartItems.reduce(
+    cartItem && cartItem.length > 0
+      ? cartItem.reduce(
           (sum, currentItem) =>
             sum +
             (currentItem?.salePrice > 0
@@ -17,19 +17,19 @@ function UserCartWrapper({ cartItems ,setOpenCartSheet }) {
               currentItem?.quantity , 0
         )
       : 0;
-  // console.log(cartItems)
+  // console.log(cartItem)
   return (
     <SheetContent className="sm:max-w-md">
       <SheetHeader>
         <SheetTitle>Your Cart</SheetTitle>
       </SheetHeader>
       <div className="mt-8 space-y-4 ">
-        {/* {console.log(cartItems)} */}
-        {cartItems && cartItems.length > 0
-          ? cartItems.map((item) => (
-              <UserCartItemsContent
+        {/* {console.log(cartItem)} */}
+        {cartItem && cartItem.length > 0
+          ? cartItem.map((item) => (
+              <UsercartItemContent
                 key={item.productId}
-                cartItems={item}
+                cartItem={item}
               />
             ))
           : null}

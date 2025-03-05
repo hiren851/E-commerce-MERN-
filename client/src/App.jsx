@@ -21,8 +21,8 @@ import UnAuthPage from "./Pages/un-auth";
 import { useDispatch, useSelector } from "react-redux";
 import { checkAuth } from "./Store/auth-slice";
 import { Skeleton } from "./components/ui/skeleton";
-import PaymentSuccess from "./Pages/shopping-view/Cancel";
-import PaymentCancel from "./Pages/shopping-view/Success";
+import PaymentSuccess from "./Pages/shopping-view/Success";
+import PaymentCancel from "./Pages/shopping-view/Cancel";
 
 function App() {
 

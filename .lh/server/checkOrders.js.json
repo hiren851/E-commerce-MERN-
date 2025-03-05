@@ -1,0 +1,18 @@
+{
+    "sourceFile": "server/checkOrders.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1741095595359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1741095595359,
+            "name": "Commit-0",
+            "content": "const mongoose = require(\"mongoose\");\r\nconst Order = require(\"./models/Order\");\r\n\r\nmongoose\r\n  .connect(\"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\")\r\n  .then(async () => {\r\n    console.log(\"MongoDB Connected\");\r\n    const orders = await Order.find();\r\n    console.log(\"Orders in Database:\", orders);\r\n    mongoose.connection.close();\r\n  })\r\n  .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n"
+        }
+    ]
+}

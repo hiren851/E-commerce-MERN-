@@ -42,6 +42,8 @@ function ShoppingListing() {
   const {cartItems } = useSelector(state => state.shopCart)
   const {toast} = useToast();
 
+  const categorySearchParams = searchParams.get('category')
+
  
   function handleSort(value) {
     console.log(value);
@@ -76,7 +78,25 @@ function ShoppingListing() {
     dispatch(fetchProductDetails(getCurrentProductId))
   }
 
-  function handleAddToCart(getCurrentProductId){
+  function handleAddToCart(getCurrentProductId , getTotalStock){
+    console.log(cartItems)
+
+    let getCartItems = cartItems.items || [];
+
+    if(getCartItems.length){
+      const indexOfCurrentItem = getCartItems.findIndex(item => item.productId === getCurrentProductId)
+      if(indexOfCurrentItem > -1){
+        const getQuantity = getCartItems[indexOfCurrentItem].quantity;
+        if(getQuantity + 1 > getTotalStock ){
+          toast({
+            title : `Only ${getQuantity} quantity can be added for this item`,
+            variant : 'destructive'
+          })
+        }
+      }
+    }
+
+
       dispatch(addToCart({userId : user.id , productId : getCurrentProductId , quantity : 1}))
       .then((data)=>{
         if(data?.payload?.success){
@@ -91,7 +111,7 @@ function ShoppingListing() {
   useEffect(() => {
     setSort("price-lowtohigh");
     setFilter(JSON.parse(sessionStorage.getItem("filters")) || {});
-  }, []);
+  }, [categorySearchParams]);
 
   useEffect(() => {
     if (filter && Object.keys(filter).length > 0) {
@@ -112,6 +132,8 @@ function ShoppingListing() {
       setOpenProductDialog(true);
     }
   },[productDetails])
+
+  // console.log(productList, "ProductList")
   // console.log(productDetails);
   // console.log(openProductDialog)
   // console.log(cartItems)
@@ -154,16 +176,21 @@ function ShoppingListing() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-          {productList.length > 0
-            ? productList.map((productItem) => (
-                <SHoppingProductTile
-                  key={productItem._id}
-                  product={productItem}
-                  handleGetProductDetails={handleGetProductDetails}
-                  handleAddToCart={handleAddToCart}
-                />
-              ))
-            : null}
+          {productList.length > 0 ? (
+            productList.map((productItem) => (
+              <SHoppingProductTile
+                key={productItem._id}
+                product={productItem}
+                handleGetProductDetails={handleGetProductDetails}
+                handleAddToCart={handleAddToCart}
+              />
+            ))
+          ) : (
+            <div className="col-span-full text-center text-gray-500">
+              No products found based on your filters.
+            </div>
+          )}
+
         </div>
       </div>
       <ProductDetailsDialog open={openProductDialog} setOpen={setOpenProductDialog} productDetails={productDetails}/>

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 84,
             "patches": [
                 {
                     "date": 1740726482281,
@@ -52,6 +52,298 @@
                 {
                     "date": 1740727077249,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n \r\n function ShoppingViewOrdersDetails() {\r\n-//   const [formData, setFormData] = useState(initialFormData);\r\n \r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741090971006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { DialogContent } from \"../ui/dialog\";\r\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n \r\n-function ShoppingViewOrdersDetails() {\r\n+function ShoppingViewOrdersDetails({orderData}) {\r\n \r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1741090999072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div className=\"grid gap-6\">\r\n         <div className=\"grid  gap-2\">\r\n           <div className=\"flex mt-6 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Id</p>\r\n-            <Label>123456</Label>\r\n+            <Label>{orderData}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n             <Label>28/02/2025</Label>\r\n"
+                },
+                {
+                    "date": 1741091024995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,13 @@\n       <div className=\"grid gap-6\">\r\n         <div className=\"grid  gap-2\">\r\n           <div className=\"flex mt-6 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Id</p>\r\n-            <Label>{orderData}</Label>\r\n+            <Label>{orderData?._id}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n-            <Label>28/02/2025</Label>\r\n+            <Label>{}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹1000</Label>\r\n"
+                },
+                {
+                    "date": 1741091038191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             <Label>{orderData?._id}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n-            <Label>{}</Label>\r\n+            <Label>{orderData?.orderData}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹1000</Label>\r\n"
+                },
+                {
+                    "date": 1741091051002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             <Label>{orderData?._id}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n-            <Label>{orderData?.orderData}</Label>\r\n+            <Label>{orderData?.orderDate.split('t')}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹1000</Label>\r\n"
+                },
+                {
+                    "date": 1741091058253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             <Label>{orderData?._id}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n-            <Label>{orderData?.orderDate.split('t')}</Label>\r\n+            <Label>{orderData?.orderDate.split('T')[0]}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹1000</Label>\r\n"
+                },
+                {
+                    "date": 1741091073942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             <Label>{orderData?.orderDate.split('T')[0]}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n-            <Label>₹1000</Label>\r\n+            <Label>₹{}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>In Process</Label>\r\n"
+                },
+                {
+                    "date": 1741091079427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             <Label>{orderData?.orderDate.split('T')[0]}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n-            <Label>₹{}</Label>\r\n+            <Label>₹{orderData?.to}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>In Process</Label>\r\n"
+                },
+                {
+                    "date": 1741091100188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n             <Label>{orderData?.orderDate.split('T')[0]}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n-            <Label>₹{orderData?.to}</Label>\r\n+            <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label>In Process</Label>\r\n+            <Label></Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091107370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label></Label>\r\n+            <Label>{orderData}</Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091117308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label>{orderData}</Label>\r\n+            <Label>{orderData?.ord}</Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091124448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label>{orderData?.ord}</Label>\r\n+            <Label>{orderData?.orderStatus}</Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091146328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label>{orderData?.orderStatus}</Label>\r\n+            <Label></Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091158176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,21 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n-            <Label></Label>\r\n+            <Label>\r\n+            <Badge\r\n+                        className={`py-1 px-3 ${\r\n+                          orderItem?.orderStatus === \"confirmed\"\r\n+                            ? \"bg-green-500\"\r\n+                            : orderItem?.orderStatus === \"rejected\"\r\n+                            ? \"bg-red-600\"\r\n+                            : \"bg-black\"\r\n+                        }`}\r\n+                      >\r\n+                        {orderItem?.orderStatus}\r\n+                      </Badge>\r\n+            </Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091164868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n import { DialogContent } from \"../ui/dialog\";\r\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n \r\n-function ShoppingViewOrdersDetails({orderData}) {\r\n-\r\n+function ShoppingViewOrdersDetails({ orderData }) {\r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n@@ -16,18 +15,27 @@\n             <Label>{orderData?._id}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Date</p>\r\n-            <Label>{orderData?.orderDate.split('T')[0]}</Label>\r\n+            <Label>{orderData?.orderDate.split(\"T\")[0]}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n-            <Badge\r\n+              <Badge\r\n+                className={`py-1 px-3 ${\r\n+                  orderItem?.orderStatus === \"confirmed\"\r\n+                    ? \"bg-green-500\"\r\n+                    : orderItem?.orderStatus === \"rejected\"\r\n+                    ? \"bg-red-600\"\r\n+                    : \"bg-black\"\r\n+                }`}\r\n+              >\r\n+                  <Badge\r\n                         className={`py-1 px-3 ${\r\n                           orderItem?.orderStatus === \"confirmed\"\r\n                             ? \"bg-green-500\"\r\n                             : orderItem?.orderStatus === \"rejected\"\r\n@@ -36,8 +44,9 @@\n                         }`}\r\n                       >\r\n                         {orderItem?.orderStatus}\r\n                       </Badge>\r\n+              </Badge>\r\n             </Label>\r\n           </div>\r\n         </div>\r\n         <Separator />\r\n"
+                },
+                {
+                    "date": 1741091188869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,19 +33,19 @@\n                     ? \"bg-red-600\"\r\n                     : \"bg-black\"\r\n                 }`}\r\n               >\r\n-                  <Badge\r\n-                        className={`py-1 px-3 ${\r\n-                          orderItem?.orderStatus === \"confirmed\"\r\n-                            ? \"bg-green-500\"\r\n-                            : orderItem?.orderStatus === \"rejected\"\r\n-                            ? \"bg-red-600\"\r\n-                            : \"bg-black\"\r\n-                        }`}\r\n-                      >\r\n-                        {orderItem?.orderStatus}\r\n-                      </Badge>\r\n+                <Badge\r\n+                  className={`py-1 px-3 ${\r\n+                    orderItem?.orderStatus === \"confirmed\"\r\n+                      ? \"bg-green-500\"\r\n+                      : orderItem?.orderStatus === \"rejected\"\r\n+                      ? \"bg-red-600\"\r\n+                      : \"bg-black\"\r\n+                  }`}\r\n+                >\r\n+                  {orderItem?.orderStatus}\r\n+                </Badge>\r\n               </Badge>\r\n             </Label>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1741091322382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,19 +33,9 @@\n                     ? \"bg-red-600\"\r\n                     : \"bg-black\"\r\n                 }`}\r\n               >\r\n-                <Badge\r\n-                  className={`py-1 px-3 ${\r\n-                    orderItem?.orderStatus === \"confirmed\"\r\n-                      ? \"bg-green-500\"\r\n-                      : orderItem?.orderStatus === \"rejected\"\r\n-                      ? \"bg-red-600\"\r\n-                      : \"bg-black\"\r\n-                  }`}\r\n-                >\r\n-                  {orderItem?.orderStatus}\r\n-                </Badge>\r\n+                {orderData?.orderStatus}\r\n               </Badge>\r\n             </Label>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1741091331229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n               <Badge\r\n                 className={`py-1 px-3 ${\r\n-                  orderItem?.orderStatus === \"confirmed\"\r\n+                  orderData?.orderStatus === \"confirmed\"\r\n                     ? \"bg-green-500\"\r\n                     : orderItem?.orderStatus === \"rejected\"\r\n                     ? \"bg-red-600\"\r\n                     : \"bg-black\"\r\n"
+                },
+                {
+                    "date": 1741091350146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n               <Badge\r\n                 className={`py-1 px-3 ${\r\n                   orderData?.orderStatus === \"confirmed\"\r\n                     ? \"bg-green-500\"\r\n-                    : orderItem?.orderStatus === \"rejected\"\r\n+                    : orderData?.orderStatus === \"rejected\"\r\n                     ? \"bg-red-600\"\r\n                     : \"bg-black\"\r\n                 }`}\r\n               >\r\n"
+                },
+                {
+                    "date": 1741091455617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { useState } from \"react\";\r\n import { DialogContent } from \"../ui/dialog\";\r\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n+import { Badge } from \"../ui/badge\";\r\n \r\n function ShoppingViewOrdersDetails({ orderData }) {\r\n   function handleUpdateStatus(e) {}\r\n \r\n@@ -43,8 +44,9 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n+              \r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n               </li>\r\n"
+                },
+                {
+                    "date": 1741091467449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              \r\n+              {}\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n               </li>\r\n"
+                },
+                {
+                    "date": 1741091472679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,11 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              {}\r\n+              {\r\n+                orderData \r\n+              }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n               </li>\r\n"
+                },
+                {
+                    "date": 1741091482070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n-                orderData \r\n+                orderData && orderData?.\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091489011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n-                orderData && orderData?.\r\n+                orderData && orderData?.cartItems\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091494841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n-                orderData && orderData?.cartItems\r\n+                orderData && orderData?.cartItems.length >0 ?\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091505541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n-                orderData && orderData?.cartItems.length >0 ?\r\n+                orderData.cartItems && orderData?.cartItems.length >0 ?\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091518720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n                 orderData.cartItems && orderData?.cartItems.length >0 ?\r\n+                orderData\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091525918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n                 orderData.cartItems && orderData?.cartItems.length >0 ?\r\n-                orderData\r\n+                orderData.cartItems.map()\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091533338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n                 orderData.cartItems && orderData?.cartItems.length >0 ?\r\n-                orderData.cartItems.map()\r\n+                orderData.cartItems.map\r\n               }\r\n               <li className=\"flex items-center justify-between\">\r\n                 <span>Product 1</span>\r\n                 <span>₹1000</span>\r\n"
+                },
+                {
+                    "date": 1741091551283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,14 +46,11 @@\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n                 orderData.cartItems && orderData?.cartItems.length >0 ?\r\n-                orderData.cartItems.map\r\n+                orderData.cartItems.map(item = > )\r\n               }\r\n-              <li className=\"flex items-center justify-between\">\r\n-                <span>Product 1</span>\r\n-                <span>₹1000</span>\r\n-              </li>\r\n+             \r\n             </ul>\r\n           </div>\r\n         </div>\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091556483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,12 @@\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {\r\n                 orderData.cartItems && orderData?.cartItems.length >0 ?\r\n-                orderData.cartItems.map(item = > )\r\n+                orderData.cartItems.map(item =>   <li className=\"flex items-center justify-between\">\r\n+                  <span>Product 1</span>\r\n+                  <span>₹1000</span>\r\n+                </li>)\r\n               }\r\n              \r\n             </ul>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1741091562454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n                 orderData.cartItems && orderData?.cartItems.length >0 ?\r\n                 orderData.cartItems.map(item =>   <li className=\"flex items-center justify-between\">\r\n                   <span>Product 1</span>\r\n                   <span>₹1000</span>\r\n-                </li>)\r\n+                </li>):null\r\n               }\r\n              \r\n             </ul>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1741091575351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,16 +44,16 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              {\r\n-                orderData.cartItems && orderData?.cartItems.length >0 ?\r\n-                orderData.cartItems.map(item =>   <li className=\"flex items-center justify-between\">\r\n-                  <span>Product 1</span>\r\n-                  <span>₹1000</span>\r\n-                </li>):null\r\n-              }\r\n-             \r\n+              {orderData.cartItems && orderData?.cartItems.length > 0\r\n+                ? orderData.cartItems.map((item) => (\r\n+                    <li className=\"flex items-center justify-between\">\r\n+                      <span>{}</span>\r\n+                      <span>₹1000</span>\r\n+                    </li>\r\n+                  ))\r\n+                : null}\r\n             </ul>\r\n           </div>\r\n         </div>\r\n         <div className=\"grid gap-4\">\r\n"
+                },
+                {
+                    "date": 1741091581819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n             <ul className=\"grid gap-3\">\r\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n-                      <span>{}</span>\r\n+                      <span>{item.title}</span>\r\n                       <span>₹1000</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n"
+                },
+                {
+                    "date": 1741091587864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>{item.title}</span>\r\n-                      <span>₹1000</span>\r\n+                      <span>₹{}</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n             </ul>\r\n"
+                },
+                {
+                    "date": 1741091617772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>{item.title}</span>\r\n-                      <span>₹{}</span>\r\n+                      <span>₹{item}</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n             </ul>\r\n"
+                },
+                {
+                    "date": 1741091623785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,10 @@\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>{item.title}</span>\r\n-                      <span>₹{item}</span>\r\n+                      <span>{item.title}</span>\r\n+                      <span>₹{item.price}</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n             </ul>\r\n"
+                },
+                {
+                    "date": 1741091629052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>{item.title}</span>\r\n-                      <span>{item.title}</span>\r\n+                      <span>{item.quantity}</span>\r\n                       <span>₹{item.price}</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n"
+                },
+                {
+                    "date": 1741091635685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n             <ul className=\"grid gap-3\">\r\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n-                      <span>{item.title}</span>\r\n+                      <span>Title : {item.title}</span>\r\n                       <span>{item.quantity}</span>\r\n                       <span>₹{item.price}</span>\r\n                     </li>\r\n                   ))\r\n"
+                },
+                {
+                    "date": 1741091643575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n               {orderData.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>Title : {item.title}</span>\r\n-                      <span>{item.quantity}</span>\r\n+                      <span>Quantity : {item.quantity}</span>\r\n                       <span>₹{item.price}</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n"
+                },
+                {
+                    "date": 1741091648871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>Title : {item.title}</span>\r\n                       <span>Quantity : {item.quantity}</span>\r\n-                      <span>₹{item.price}</span>\r\n+                      <span>Price : ₹{item.price}</span>\r\n                     </li>\r\n                   ))\r\n                 : null}\r\n             </ul>\r\n"
+                },
+                {
+                    "date": 1741091731347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              {orderData.cartItems && orderData?.cartItems.length > 0\r\n+              {orderData.cartItems && orderData.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>Title : {item.title}</span>\r\n                       <span>Quantity : {item.quantity}</span>\r\n"
+                },
+                {
+                    "date": 1741091842595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              {orderData.cartItems && orderData.cartItems.length > 0\r\n+              {orderData?.cartItems && orderData.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n                     <li className=\"flex items-center justify-between\">\r\n                       <span>Title : {item.title}</span>\r\n                       <span>Quantity : {item.quantity}</span>\r\n"
+                },
+                {
+                    "date": 1741091882587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,11 +44,11 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n-              {orderData?.cartItems && orderData.cartItems.length > 0\r\n+              {orderData?.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n-                    <li className=\"flex items-center justify-between\">\r\n+                    <li className=\"flex items-center justify-between\" >\r\n                       <span>Title : {item.title}</span>\r\n                       <span>Quantity : {item.quantity}</span>\r\n                       <span>Price : ₹{item.price}</span>\r\n                     </li>\r\n"
+                },
+                {
+                    "date": 1741091943004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n import { Separator } from \"../ui/separator\";\r\n import { Badge } from \"../ui/badge\";\r\n \r\n function ShoppingViewOrdersDetails({ orderData }) {\r\n+\r\n+  const {}\r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n@@ -46,9 +48,9 @@\n             <div className=\"font-medium\">Order Details</div>\r\n             <ul className=\"grid gap-3\">\r\n               {orderData?.cartItems && orderData?.cartItems.length > 0\r\n                 ? orderData.cartItems.map((item) => (\r\n-                    <li className=\"flex items-center justify-between\" >\r\n+                    <li className=\"flex items-center justify-between\" key={item._id}>\r\n                       <span>Title : {item.title}</span>\r\n                       <span>Quantity : {item.quantity}</span>\r\n                       <span>Price : ₹{item.price}</span>\r\n                     </li>\r\n"
+                },
+                {
+                    "date": 1741091949186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import { Badge } from \"../ui/badge\";\r\n \r\n function ShoppingViewOrdersDetails({ orderData }) {\r\n \r\n-  const {}\r\n+  const {user} = \r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n"
+                },
+                {
+                    "date": 1741091959994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,13 @@\n import { DialogContent } from \"../ui/dialog\";\r\n import { Label } from \"../ui/label\";\r\n import { Separator } from \"../ui/separator\";\r\n import { Badge } from \"../ui/badge\";\r\n+import { useSelector } from \"react-redux\";\r\n \r\n function ShoppingViewOrdersDetails({ orderData }) {\r\n \r\n-  const {user} = \r\n+  const {user} = useSelector(state = > stae)\r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n"
+                },
+                {
+                    "date": 1741091967345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { useSelector } from \"react-redux\";\r\n \r\n function ShoppingViewOrdersDetails({ orderData }) {\r\n \r\n-  const {user} = useSelector(state = > stae)\r\n+  const {user} = useSelector(state => state.auth)\r\n   function handleUpdateStatus(e) {}\r\n \r\n   return (\r\n     <DialogContent className=\"sm:max-w-[600px]\">\r\n"
+                },
+                {
+                    "date": 1741091991843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n-              <span>Hiren</span>\r\n+              <span>{}</span>\r\n               <span>Address</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n"
+                },
+                {
+                    "date": 1741091999577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         <div className=\"grid gap-4\">\r\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n-              <span>{}</span>\r\n+              <span>{user.userName}</span>\r\n               <span>Address</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n"
+                },
+                {
+                    "date": 1741092014813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n-              <span>Address</span>\r\n+              <span>{}</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n"
+                },
+                {
+                    "date": 1741092020227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n-              <span>{}</span>\r\n+              <span>{orderData.</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n"
+                },
+                {
+                    "date": 1741092025872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n-              <span>{orderData.</span>\r\n+              <span>{orderData.addressInfo.</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n"
+                },
+                {
+                    "date": 1741092030907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n-              <span>{orderData.addressInfo.</span>\r\n+              <span>{orderData?.addressInfo.</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n"
+                },
+                {
+                    "date": 1741092037175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n-              <span>{orderData?.addressInfo.</span>\r\n+              <span>{orderData?.addressInfo?.address</span>\r\n               <span>City</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n"
+                },
+                {
+                    "date": 1741092046999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,10 +64,10 @@\n           <div className=\"grid gap-2\">\r\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n-              <span>{orderData?.addressInfo?.address</span>\r\n-              <span>City</span>\r\n+              <span>{orderData?.addressInfo?.address}</span>\r\n+              <span></span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n               <span>Phone</span>\r\n"
+                },
+                {
+                    "date": 1741092064921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n               <span>{orderData?.addressInfo?.address}</span>\r\n-              <span></span>\r\n+              <span>{orderData?.addressInfo?.address}</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n               <span>Phone</span>\r\n"
+                },
+                {
+                    "date": 1741092071823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             <div className=\"font-medium\">Shipping Details</div>\r\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n               <span>{orderData?.addressInfo?.address}</span>\r\n-              <span>{orderData?.addressInfo?.address}</span>\r\n+              <span>{orderData?.addressInfo?.city}</span>\r\n               <span>State</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n               <span>Phone</span>\r\n"
+                },
+                {
+                    "date": 1741092078217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n               <span>{orderData?.addressInfo?.address}</span>\r\n               <span>{orderData?.addressInfo?.city}</span>\r\n-              <span>State</span>\r\n+              <span>{orderData?.addressInfo?.}</span>\r\n               <span>Country</span>\r\n               <span>Pincode</span>\r\n               <span>Phone</span>\r\n               <span>Notes</span>\r\n"
+                },
+                {
+                    "date": 1741092083726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,10 +66,10 @@\n             <div className=\"grid gap-0.5 text-muted-foreground\">\r\n               <span>{user.userName}</span>\r\n               <span>{orderData?.addressInfo?.address}</span>\r\n               <span>{orderData?.addressInfo?.city}</span>\r\n-              <span>{orderData?.addressInfo?.}</span>\r\n-              <span>Country</span>\r\n+              <span>{orderData?.addressInfo?.state}</span>\r\n+              <span>{orderData?.addressInfo?.address}</span>\r\n               <span>Pincode</span>\r\n               <span>Phone</span>\r\n               <span>Notes</span>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1741092092070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n               <span>{user.userName}</span>\r\n               <span>{orderData?.addressInfo?.address}</span>\r\n               <span>{orderData?.addressInfo?.city}</span>\r\n               <span>{orderData?.addressInfo?.state}</span>\r\n-              <span>{orderData?.addressInfo?.address}</span>\r\n+              <span>{orderData?.addressInfo?.country}</span>\r\n               <span>Pincode</span>\r\n               <span>Phone</span>\r\n               <span>Notes</span>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1741092097650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n               <span>{orderData?.addressInfo?.address}</span>\r\n               <span>{orderData?.addressInfo?.city}</span>\r\n               <span>{orderData?.addressInfo?.state}</span>\r\n               <span>{orderData?.addressInfo?.country}</span>\r\n-              <span>Pincode</span>\r\n+              <span>{orderData?.addressInfo?.address}</span>\r\n               <span>Phone</span>\r\n               <span>Notes</span>\r\n             </div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1741092104826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n               <span>{orderData?.addressInfo?.address}</span>\r\n               <span>{orderData?.addressInfo?.city}</span>\r\n               <span>{orderData?.addressInfo?.state}</span>\r\n               <span>{orderData?.addressInfo?.country}</span>\r\n-              <span>{orderData?.addressInfo?.address}</span>\r\n+              <span>Pincode</span>\r\n               <span>Phone</span>\r\n               <span>Notes</span>\r\n             </div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1741092113122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n               <span>{orderData?.addressInfo?.address}</span>\r\n               <span>{orderData?.addressInfo?.city}</span>\r\n               <span>{orderData?.addressInfo?.state}</span>\r\n               <span>{orderData?.addressInfo?.country}</span>\r\n-              <span>Pincode</span>\r\n+              <span>{orderData?.addressInfo?.pincode}</span>\r\n               <span>Phone</span>\r\n               <span>Notes</span>\r\n             </div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1741092119249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n               <span>{orderData?.addressInfo?.city}</span>\r\n               <span>{orderData?.addressInfo?.state}</span>\r\n               <span>{orderData?.addressInfo?.country}</span>\r\n               <span>{orderData?.addressInfo?.pincode}</span>\r\n-              <span>Phone</span>\r\n+              <span>{orderData?.addressInfo?.phone}</span>\r\n               <span>Notes</span>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1741092127811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n               <span>{orderData?.addressInfo?.state}</span>\r\n               <span>{orderData?.addressInfo?.country}</span>\r\n               <span>{orderData?.addressInfo?.pincode}</span>\r\n               <span>{orderData?.addressInfo?.phone}</span>\r\n-              <span>Notes</span>\r\n+              <span>{orderData?.addressInfo?.notes}</span>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1741092210211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,12 @@\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n+            <p className=\"font-medium\">Order Price</p>\r\n+            <Label>₹{orderData?.totalAmount}</Label>\r\n+          </div>\r\n+          <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n               <Badge\r\n                 className={`py-1 px-3 ${\r\n"
+                },
+                {
+                    "date": 1741092219540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n-            <p className=\"font-medium\">Order Price</p>\r\n+            <p className=\"font-medium\">Paymen</p>\r\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n"
+                },
+                {
+                    "date": 1741092224593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             <p className=\"font-medium\">Order Price</p>\r\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n-            <p className=\"font-medium\">Paymen</p>\r\n+            <p className=\"font-medium\">Payment Status</p>\r\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n"
+                },
+                {
+                    "date": 1741092257891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Payment Status</p>\r\n-            <Label>₹{orderData?.totalAmount}</Label>\r\n+            <Label>{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n"
+                },
+                {
+                    "date": 1741092265168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Payment Status</p>\r\n-            <Label>{orderData?.totalAmount}</Label>\r\n+            <Label>{orderData?.paymentSta}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n"
+                },
+                {
+                    "date": 1741092401120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,11 +27,15 @@\n             <Label>₹{orderData?.totalAmount}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Payment Status</p>\r\n-            <Label>{orderData?.paymentSta}</Label>\r\n+            <Label>{orderData?.paymentStatus}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n+            <p className=\"font-medium\">Payment Status</p>\r\n+            <Label>{orderData?.paymentStatus}</Label>\r\n+          </div>\r\n+          <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n               <Badge\r\n                 className={`py-1 px-3 ${\r\n"
+                },
+                {
+                    "date": 1741092412939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n             <p className=\"font-medium\">Payment Status</p>\r\n             <Label>{orderData?.paymentStatus}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n-            <p className=\"font-medium\">Payment Status</p>\r\n-            <Label>{orderData?.paymentStatus}</Label>\r\n+            <p className=\"font-medium\">Payment Method</p>\r\n+            <Label>{orderData?.paymentMethod}</Label>\r\n           </div>\r\n           <div className=\"flex mt-2 items-center justify-between\">\r\n             <p className=\"font-medium\">Order Status</p>\r\n             <Label>\r\n"
                 }
             ],
             "date": 1740726482281,

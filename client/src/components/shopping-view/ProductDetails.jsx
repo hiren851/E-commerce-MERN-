@@ -4,34 +4,57 @@ import { Button } from "../ui/button";
 import { Dialog, DialogContent } from "../ui/dialog";
 import { Separator } from "../ui/separator";
 import { Input } from "../ui/input";
-import { addToCart, fetchCartItems } from "@/Store/shop/cart-slice";
+import { addToCart, fetchcartItems } from "@/Store/shop/cart-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "@/hooks/use-toast";
 import { setProductDetails } from "@/Store/shop/product-slice";
 
-
 function ProductDetailsDialog({ open, setOpen, productDetails }) {
-
   const dispatch = useDispatch();
-  const { toast} = useToast()
-  const {user} = useSelector(state => state.auth)
+  const { toast } = useToast();
+  const { user } = useSelector((state) => state.auth);
+  const { cartItems } = useSelector((state) => state.shopCart);
 
-   function handleAddToCart(getCurrentProductId){
-        dispatch(addToCart({userId : user.id , productId : getCurrentProductId , quantity : 1}))
-        .then((data)=>{
-          if(data?.payload?.success){
-            dispatch(fetchCartItems(user?.id))
-            toast({
-              title: 'Product Added to Cart',
-            })
-          }
-        })
+  function handleAddToCart(getCurrentProductId, getTotalStock) {
+    let getcartItems = cartItems.items || [];
+
+    if (getcartItems.length) {
+      const indexOfCurrentItem = getcartItems.findIndex(
+        (item) => item.productId === getCurrentProductId
+      );
+      if (indexOfCurrentItem > -1) {
+        const getQuantity = getcartItems[indexOfCurrentItem].quantity;
+        if (getQuantity + 1 > getTotalStock) {
+          toast({
+            title: `Only ${getQuantity} quantity can be added for this item`,
+            variant: "destructive",
+          });
+
+          return;
+        }
+      }
     }
 
-    function handleDialogClose( ){
-      setOpen(false)
-      dispatch(setProductDetails())
-    }
+    dispatch(
+      addToCart({
+        userId: user.id,
+        productId: getCurrentProductId,
+        quantity: 1,
+      })
+    ).then((data) => {
+      if (data?.payload?.success) {
+        dispatch(fetchcartItems(user?.id));
+        toast({
+          title: "Product Added to Cart",
+        });
+      }
+    });
+  }
+
+  function handleDialogClose() {
+    setOpen(false);
+    dispatch(setProductDetails());
+  }
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
@@ -67,17 +90,34 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
             ) : null}
           </div>
           <div className="flex items-center gap-2 mt-2">
-          <div className="flex items-center gap-0.5">
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                  </div>
-                  <span className="text-muted-foreground">(4.5)</span>
+            <div className="flex items-center gap-0.5">
+              <StarIcon className="w-5 h-5 fill-primary" />
+              <StarIcon className="w-5 h-5 fill-primary" />
+              <StarIcon className="w-5 h-5 fill-primary" />
+              <StarIcon className="w-5 h-5 fill-primary" />
+              <StarIcon className="w-5 h-5 fill-primary" />
+            </div>
+            <span className="text-muted-foreground">(4.5)</span>
           </div>
           <div className="mt-5 mb-5 ">
-            <Button className="w-full" onClick = {()=>handleAddToCart(productDetails._id)}>Add to cart</Button>
+            {
+              productDetails?.totalStock === 0 ?  <Button
+              className="w-full opacity-60 cursor-not-allowed"
+             
+            >
+              Out Of Stock
+            </Button>
+            :
+            <Button
+            className="w-full"
+            onClick={() =>
+              handleAddToCart(productDetails._id, productDetails?.totalStock)
+            }
+          >
+            Add to cart
+          </Button>
+            }
+       
           </div>
           <Separator />
           <div className="max-h-[300px] overflow-auto ">
@@ -165,10 +205,8 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
               </div>
             </div>
             <div className="mt-6 flex gap-2">
-                <Input placeholder="write a review..."/>
-                <Button>
-                    Submit
-                </Button>
+              <Input placeholder="write a review..." />
+              <Button>Submit</Button>
             </div>
           </div>
         </div>

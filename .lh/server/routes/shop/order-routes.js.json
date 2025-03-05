@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 33,
             "patches": [
                 {
                     "date": 1740736028342,
@@ -72,6 +72,74 @@
                 {
                     "date": 1740740121641,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n \r\n-module.export \n\\ No newline at end of file\n+module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741006466088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n+router.post('/payment-checkout' , createOrder);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741006474463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n-router.post('/payment-checkout' , createOrder);\r\n+router.post('/capture' , createOrder);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741006482368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n-router.post('/capture' , createOrder);\r\n+router.post('/capture' , capture);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741006488236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder} = require('../../controllers/shop/order-controller');\r\n+const {createOrder, capturePayment} = require('../../controllers/shop/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n-router.post('/capture' , capture);\r\n+router.post('/capture' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087049408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder, capturePayment} = require('../../controllers/shop/order-controller');\r\n+const {createOrder, capturePayment , getAllOrderByUser} = require('../../controllers/shop/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n"
+                },
+                {
+                    "date": 1741087055900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder, capturePayment , getAllOrderByUser} = require('../../controllers/shop/order-controller');\r\n+const {createOrder, capturePayment , getAllOrderByUser ,} = require('../../controllers/shop/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n"
+                },
+                {
+                    "date": 1741087084150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n const express = require(\"express\");\r\n \r\n-const {createOrder, capturePayment , getAllOrderByUser ,} = require('../../controllers/shop/order-controller');\r\n+const {createOrder, capturePayment , getAllOrderByUser ,getOrdersDetails} = require('../../controllers/shop/order-controller');\r\n \r\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n+router.post('/capture' , capturePayment);\r\n+router.post('/capture' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087091882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n+router.post('/order' , capturePayment);\r\n router.post('/capture' , capturePayment);\r\n-router.post('/capture' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087145780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n-router.post('/order' , capturePayment);\r\n+router.post('/lis' , capturePayment);\r\n router.post('/capture' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087156856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n-router.post('/lis' , capturePayment);\r\n+router.post('/list/:userId' , captu);\r\n router.post('/capture' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087167334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n-router.post('/list/:userId' , captu);\r\n-router.post('/capture' , capturePayment);\r\n+router.post('/list/:userId' , getAllOrderByUser);\r\n+router.post('/dat' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087173211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n router.post('/list/:userId' , getAllOrderByUser);\r\n-router.post('/dat' , capturePayment);\r\n+router.post('/datails/:id' , capturePayment);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087178708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n router.post('/list/:userId' , getAllOrderByUser);\r\n-router.post('/datails/:id' , capturePayment);\r\n+router.post('/datails/:id' , ca);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087183751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n router.post('/list/:userId' , getAllOrderByUser);\r\n-router.post('/datails/:id' , ca);\r\n+router.post('/datails/:id' , getOrdersDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087354617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n-router.post('/list/:userId' , getAllOrderByUser);\r\n+router.getpost('/list/:userId' , getAllOrderByUser);\r\n router.post('/datails/:id' , getOrdersDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741087364219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n const router = express.Router();\r\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n-router.getpost('/list/:userId' , getAllOrderByUser);\r\n-router.post('/datails/:id' , getOrdersDetails);\r\n+router.get('/list/:userId' , getAllOrderByUser);\r\n+router.get('/datails/:id' , getOrdersDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741090002032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n \r\n router.post('/payment-checkout' , createOrder);\r\n router.post('/capture' , capturePayment);\r\n router.get('/list/:userId' , getAllOrderByUser);\r\n-router.get('/datails/:id' , getOrdersDetails);\r\n+router.get('/details/:id' , getOrdersDetails);\r\n \r\n+\r\n module.exports = router;\r\n"
                 }
             ],
             "date": 1740736028342,

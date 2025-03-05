@@ -1,0 +1,170 @@
+{
+    "sourceFile": "server/controllers/admin/order-controller.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1741092861512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741092867196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+\r\n const getAllOrderByUser = async (req, res) => {\r\n   try {\r\n     const { userId } = req.params;\r\n \r\n"
+                },
+                {
+                    "date": 1741092895058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const getAllOrderByUser = async (req, res) => {\r\n   try {\r\n     const { userId } = req.params;\r\n \r\n-    const orders = await Order.find({ userId });\r\n+    const orders = await Orde.find({ userId });\r\n \r\n     if (!orders.length) {\r\n       return res.status(404).json({\r\n         success: false,\r\n"
+                },
+                {
+                    "date": 1741092919330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n+const Order = require(\"../../models/Order\");\r\n \r\n \r\n const getAllOrderByUser = async (req, res) => {\r\n   try {\r\n     const { userId } = req.params;\r\n \r\n-    const orders = await Orde.find({ userId });\r\n+    const orders = await Order.find({  });\r\n \r\n     if (!orders.length) {\r\n       return res.status(404).json({\r\n         success: false,\r\n"
+                },
+                {
+                    "date": 1741092932735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n const Order = require(\"../../models/Order\");\r\n \r\n \r\n-const getAllOrderByUser = async (req, res) => {\r\n+const getAllOrdersByUser = async (req, res) => {\r\n   try {\r\n-    const { userId } = req.params;\r\n \r\n-    const orders = await Order.find({  });\r\n+    const orders = await Order.find();\r\n \r\n     if (!orders.length) {\r\n       return res.status(404).json({\r\n         success: false,\r\n"
+                },
+                {
+                    "date": 1741092940089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const Order = require(\"../../models/Order\");\r\n \r\n \r\n-const getAllOrdersByUser = async (req, res) => {\r\n+const getAllOrdersOfAllUser = async (req, res) => {\r\n   try {\r\n \r\n     const orders = await Order.find();\r\n \r\n"
+                },
+                {
+                    "date": 1741092947109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,7 @@\n       success: false,\r\n       message: \"Some error occured!\",\r\n     });\r\n   }\r\n-};\n\\ No newline at end of file\n+};\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1741093011068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,4 +26,5 @@\n   }\r\n };\r\n \r\n \r\n+module \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741093021962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,5 @@\n   }\r\n };\r\n \r\n \r\n-module \n\\ No newline at end of file\n+module.exports \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741093027412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,5 @@\n   }\r\n };\r\n \r\n \r\n-module.exports \n\\ No newline at end of file\n+module.exports = {get}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741093630035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,7 @@\n   }\r\n };\r\n \r\n \r\n-module.exports = {get}\n\\ No newline at end of file\n+\r\n+\r\n+module.exports = {getAllOrdersOfAllUser}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741093636340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,37 @@\n     });\r\n   }\r\n };\r\n \r\n+const getOrdersDetailsFor = async (req, res) => {\r\n \r\n+  try {\r\n+    const { id } = req.params;\r\n \r\n+    const order = await Order.findById(id);\r\n \r\n+\r\n+    if (!order) {\r\n+\r\n+      return res.status(404).json({\r\n+        success: false,\r\n+        message: \"Order not Found!\",\r\n+      });\r\n+    }\r\n+\r\n+\r\n+    res.status(200).json({\r\n+      success: true,\r\n+      data: order,\r\n+    });\r\n+\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Some error occured!\",\r\n+    });\r\n+  }\r\n+};\r\n+\r\n+\r\n module.exports = {getAllOrdersOfAllUser}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741093651088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     });\r\n   }\r\n };\r\n \r\n-const getOrdersDetailsFor = async (req, res) => {\r\n+const getOrdersDetailsForAdmin = async (req, res) => {\r\n \r\n   try {\r\n     const { id } = req.params;\r\n \r\n@@ -57,5 +57,5 @@\n   }\r\n };\r\n \r\n \r\n-module.exports = {getAllOrdersOfAllUser}\n\\ No newline at end of file\n+module.exports = {getAllOrdersOfAllUser ,getOrdersDetailsForAdmin}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741153500494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n const Order = require(\"../../models/Order\");\r\n \r\n-\r\n const getAllOrdersOfAllUser = async (req, res) => {\r\n   try {\r\n-\r\n     const orders = await Order.find();\r\n \r\n     if (!orders.length) {\r\n       return res.status(404).json({\r\n@@ -26,29 +24,24 @@\n   }\r\n };\r\n \r\n const getOrdersDetailsForAdmin = async (req, res) => {\r\n-\r\n   try {\r\n     const { id } = req.params;\r\n \r\n     const order = await Order.findById(id);\r\n \r\n-\r\n     if (!order) {\r\n-\r\n       return res.status(404).json({\r\n         success: false,\r\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n \r\n-\r\n     res.status(200).json({\r\n       success: true,\r\n       data: order,\r\n     });\r\n-\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n@@ -56,6 +49,5 @@\n     });\r\n   }\r\n };\r\n \r\n-\r\n-module.exports = {getAllOrdersOfAllUser ,getOrdersDetailsForAdmin}\n\\ No newline at end of file\n+module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153505768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,7 @@\n     });\r\n   }\r\n };\r\n \r\n+\r\n+\r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153523426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     });\r\n   }\r\n };\r\n \r\n+const \r\n \r\n-\r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153530962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,55 @@\n+const Order = require(\"../../models/Order\");\r\n+\r\n+const getAllOrdersOfAllUser = async (req, res) => {\r\n+  try {\r\n+    const orders = await Order.find();\r\n+\r\n+    if (!orders.length) {\r\n+      return res.status(404).json({\r\n+        success: false,\r\n+        message: \"Orders not Found!\",\r\n+      });\r\n+    }\r\n+\r\n+    res.status(200).json({\r\n+      success: true,\r\n+      data: orders,\r\n+    });\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Some error occured!\",\r\n+    });\r\n+  }\r\n+};\r\n+\r\n+const getOrdersDetailsForAdmin = async (req, res) => {\r\n+  try {\r\n+    const { id } = req.params;\r\n+\r\n+    const order = await Order.findById(id);\r\n+\r\n+    if (!order) {\r\n+      return res.status(404).json({\r\n+        success: false,\r\n+        message: \"Order not Found!\",\r\n+      });\r\n+    }\r\n+\r\n+    res.status(200).json({\r\n+      success: true,\r\n+      data: order,\r\n+    });\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Some error occured!\",\r\n+    });\r\n+  }\r\n+};\r\n+\r\n+const updateOrderStatus\r\n+\r\n+module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153540822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,62 +49,9 @@\n     });\r\n   }\r\n };\r\n \r\n-const updateOrderStatus\r\n+const updateOrderStatus  = async(req,res)=>{\r\n+  \r\n+}\r\n \r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n-const Order = require(\"../../models/Order\");\r\n-\r\n-const getAllOrdersOfAllUser = async (req, res) => {\r\n-  try {\r\n-    const orders = await Order.find();\r\n-\r\n-    if (!orders.length) {\r\n-      return res.status(404).json({\r\n-        success: false,\r\n-        message: \"Orders not Found!\",\r\n-      });\r\n-    }\r\n-\r\n-    res.status(200).json({\r\n-      success: true,\r\n-      data: orders,\r\n-    });\r\n-  } catch (e) {\r\n-    console.log(e);\r\n-    res.status(500).json({\r\n-      success: false,\r\n-      message: \"Some error occured!\",\r\n-    });\r\n-  }\r\n-};\r\n-\r\n-const getOrdersDetailsForAdmin = async (req, res) => {\r\n-  try {\r\n-    const { id } = req.params;\r\n-\r\n-    const order = await Order.findById(id);\r\n-\r\n-    if (!order) {\r\n-      return res.status(404).json({\r\n-        success: false,\r\n-        message: \"Order not Found!\",\r\n-      });\r\n-    }\r\n-\r\n-    res.status(200).json({\r\n-      success: true,\r\n-      data: order,\r\n-    });\r\n-  } catch (e) {\r\n-    console.log(e);\r\n-    res.status(500).json({\r\n-      success: false,\r\n-      message: \"Some error occured!\",\r\n-    });\r\n-  }\r\n-};\r\n-\r\n-const \r\n-\r\n-module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153547102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,12 @@\n   }\r\n };\r\n \r\n const updateOrderStatus  = async(req,res)=>{\r\n-  \r\n+  try {\r\n+    \r\n+  } catch (error) {\r\n+    \r\n+  }\r\n }\r\n \r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153555660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,10 +52,10 @@\n \r\n const updateOrderStatus  = async(req,res)=>{\r\n   try {\r\n     \r\n-  } catch (error) {\r\n-    \r\n+  } catch (e) {\r\n+    console.log(e)\r\n   }\r\n }\r\n \r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153568858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,9 @@\n   try {\r\n     \r\n   } catch (e) {\r\n     console.log(e)\r\n+    res.status(500)\r\n   }\r\n }\r\n \r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153574674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,11 @@\n   try {\r\n     \r\n   } catch (e) {\r\n     console.log(e)\r\n-    res.status(500)\r\n+    res.status(500).json({\r\n+      \r\n+    })\r\n   }\r\n }\r\n \r\n module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n"
+                },
+                {
+                    "date": 1741153586999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,13 +51,14 @@\n };\r\n \r\n const updateOrderStatus  = async(req,res)=>{\r\n   try {\r\n-    \r\n+    const \r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n-      \r\n+      success: false,\r\n+      message: \"Some error occured!\"\r\n     })\r\n   }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1741153597032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n };\r\n \r\n const updateOrderStatus  = async(req,res)=>{\r\n   try {\r\n-    const \r\n+    const {id} = req.params\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153602082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n \r\n const updateOrderStatus  = async(req,res)=>{\r\n   try {\r\n     const {id} = req.params\r\n+    const\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153613364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n \r\n const updateOrderStatus  = async(req,res)=>{\r\n   try {\r\n     const {id} = req.params\r\n-    const\r\n+    const {orderStatus} = req.body\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153619641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,10 @@\n const updateOrderStatus  = async(req,res)=>{\r\n   try {\r\n     const {id} = req.params\r\n     const {orderStatus} = req.body\r\n+\r\n+    \r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153641082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,16 @@\n   try {\r\n     const {id} = req.params\r\n     const {orderStatus} = req.body\r\n \r\n-    \r\n+    const order = await Order.findById(id);\r\n+\r\n+    if (!order) {\r\n+      return res.status(404).json({\r\n+        success: false,\r\n+        message: \"Order not Found!\",\r\n+      });\r\n+    }\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153647981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,8 +62,10 @@\n         success: false,\r\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n+\r\n+    \r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153653601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n \r\n-    \r\n+    await \r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153663501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n \r\n-    await \r\n+    await Order\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153668726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n \r\n-    await Order\r\n+    await Order.findBy\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153677117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n \r\n-    await Order.findBy\r\n+    await Order.findByIdAndUpdate(id,{})\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153685830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,11 @@\n         message: \"Order not Found!\",\r\n       });\r\n     }\r\n \r\n-    await Order.findByIdAndUpdate(id,{})\r\n+    await Order.findByIdAndUpdate(id,{orderStatus})\r\n+\r\n+    \r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153693349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     }\r\n \r\n     await Order.findByIdAndUpdate(id,{orderStatus})\r\n \r\n-    \r\n+    res.status(200).json\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153703935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,12 @@\n     }\r\n \r\n     await Order.findByIdAndUpdate(id,{orderStatus})\r\n \r\n-    res.status(200).json\r\n+    res.status(200).json({\r\n+      success : true,\r\n+      \r\n+    })\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741153711911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n     await Order.findByIdAndUpdate(id,{orderStatus})\r\n \r\n     res.status(200).json({\r\n       success : true,\r\n-      \r\n+      message : Order Status \r\n     })\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741153722030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n     await Order.findByIdAndUpdate(id,{orderStatus})\r\n \r\n     res.status(200).json({\r\n       success : true,\r\n-      message : Order Status \r\n+      message : 'Order Status '\r\n     })\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741153741004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n     await Order.findByIdAndUpdate(id,{orderStatus})\r\n \r\n     res.status(200).json({\r\n       success : true,\r\n-      message : 'Order Status '\r\n+      message : 'Order Status Updated Successfully'\r\n     })\r\n   } catch (e) {\r\n     console.log(e)\r\n     res.status(500).json({\r\n@@ -78,5 +78,5 @@\n     })\r\n   }\r\n }\r\n \r\n-module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin };\r\n+module.exports = { getAllOrdersOfAllUser, getOrdersDetailsForAdmin,updateOrderStatus };\r\n"
+                }
+            ],
+            "date": 1741092861512,
+            "name": "Commit-0",
+            "content": "const getAllOrderByUser = async (req, res) => {\r\n  try {\r\n    const { userId } = req.params;\r\n\r\n    const orders = await Order.find({ userId });\r\n\r\n    if (!orders.length) {\r\n      return res.status(404).json({\r\n        success: false,\r\n        message: \"Orders not Found!\",\r\n      });\r\n    }\r\n\r\n    res.status(200).json({\r\n      success: true,\r\n      data: orders,\r\n    });\r\n  } catch (e) {\r\n    console.log(e);\r\n    res.status(500).json({\r\n      success: false,\r\n      message: \"Some error occured!\",\r\n    });\r\n  }\r\n};"
+        }
+    ]
+}

@@ -6,15 +6,19 @@ import { Button } from "@/components/ui/button";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import { createOrder } from "@/Store/shop/order-slice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { clearCart } from "@/Store/shop/cart-slice";
+import { useToast } from "@/hooks/use-toast";
 // import {loadStripe} from '@stripe/react-stripe-js'
 
 function ShoppingCheckout() {
   const { cartItems } = useSelector((state) => state.shopCart);
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const [currentSelectedAddress , setCurrentSelectedAddress] = useState(null);
-
+  const [currentSelectedAddress, setCurrentSelectedAddress] = useState(null);
+  const navigate = useNavigate();
+  const {toast} = useToast()
 
   const totalCartAmount =
     cartItems && cartItems.items && cartItems.items.length > 0
@@ -28,68 +32,81 @@ function ShoppingCheckout() {
           0
         )
       : 0;
-      // console.log(currentSelectedAddress)
-      const handlePayment = async () => {
-        try {
-          const stripe = await loadStripe(
-            "pk_test_51QxPWqA8ZItKkZV01uAeLxLSvG5ycsSHTJNI9csn6qjm2i7rfyKW332AujGAhYj6QqUMeB9hHUoP8yz6no3G70gs00RMFvv6ic"
-          );
-      
-          if (!currentSelectedAddress || !currentSelectedAddress._id) {
-            console.error("No address selected!");
-            return;
-          }
-      
-          const orderDetails = {
-            cartItems: cartItems.items.map((item) => ({
-              productId: item?.productId,
-              title: item?.title,
-              image: item?.image,
-              price: item?.salePrice > 0 ? item?.salePrice : item?.price,
-              quantity: item?.quantity,
-            })),
-            addressInfo: {
-              addressId: currentSelectedAddress?._id,
-              address: currentSelectedAddress?.address,
-              city: currentSelectedAddress?.city,
-              state: currentSelectedAddress?.state,
-              country: currentSelectedAddress?.country,
-              pincode: currentSelectedAddress?.pincode,
-              phone: currentSelectedAddress?.phone,
-              notes: currentSelectedAddress?.notes,
-            },
-            totalAmount: totalCartAmount,
-            userId: user.id,
-            orderStatus: "pending",
-            paymentMethod: "Stripe",
-            paymentStatus: "pending",
-            orderDate: new Date(),
-            orderUpdateDate: new Date(),
-            paymentId: "",
-            payerId: "",
-          };
-      
-          console.log("Order details being sent:", orderDetails);
-      
-          const response = await dispatch(createOrder(orderDetails));
-      
-          if (response?.payload?.id) {
-            const result = await stripe.redirectToCheckout({
-              sessionId: response.payload.id,
-            });
-      
-            if (result.error) {
-              console.error(result.error);
-            }
-          }
-        } catch (error) {
-          console.error("Payment Error:", error);
-        }
+  // console.log(currentSelectedAddress)
+  const handlePayment = async () => {
+    try {
+      const stripe = await loadStripe(
+        "pk_test_51QxPWqA8ZItKkZV01uAeLxLSvG5ycsSHTJNI9csn6qjm2i7rfyKW332AujGAhYj6QqUMeB9hHUoP8yz6no3G70gs00RMFvv6ic"
+      );
+
+      if ( cartItems.items.length == 0 ) {
+       toast({
+        title : 'Your card is empty ! please add some items to cart',
+        variant: 'destructive'
+       });
+
+       return;
+      }
+
+      if (currentSelectedAddress == null) {
+       toast({
+        title : 'Please select an address',
+        variant: 'destructive'
+       });
+
+       return
+      }
+
+      const orderDetails = {
+        cartId: cartItems._id,
+        cartItems: cartItems.items.map((item) => ({
+          productId: item?.productId,
+          title: item?.title,
+          image: item?.image,
+          price: item?.salePrice > 0 ? item?.salePrice : item?.price,
+          quantity: item?.quantity,
+        })),
+        addressInfo: {
+          addressId: currentSelectedAddress?._id,
+          address: currentSelectedAddress?.address,
+          city: currentSelectedAddress?.city,
+          state: currentSelectedAddress?.state,
+          country: currentSelectedAddress?.country,
+          pincode: currentSelectedAddress?.pincode,
+          phone: currentSelectedAddress?.phone,
+          notes: currentSelectedAddress?.notes,
+        },
+        totalAmount: totalCartAmount,
+        userId: user.id,
+        userEmail: user.email,
+        orderStatus: "pending",
+        paymentMethod: "Stripe",
+        paymentStatus: "pending",
+        orderDate: new Date(),
+        orderUpdateDate: new Date(),
+        paymentId: "",
+        payerId: "",
       };
-      
-      
-    
-      
+
+      const response = await dispatch(createOrder(orderDetails));
+
+      if (response?.payload?.id) {
+        const result = await stripe.redirectToCheckout({
+          sessionId: response.payload.id,
+        });
+
+
+
+    // const orderId = response.payload.id;
+        
+        if (result.error) {
+          console.error(result.error);
+        }
+      }
+    } catch (error) {
+      console.error("Payment Error:", error);
+    }
+  };
 
   return (
     <div className="flex flex-col ">

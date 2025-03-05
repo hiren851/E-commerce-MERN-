@@ -5,7 +5,7 @@ import {
   Menu,
   ShoppingCart,
 } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { HiBuildingStorefront } from "react-icons/hi2";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
@@ -23,20 +23,24 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 import { logoutUser } from "@/Store/auth-slice";
 import UserCartWrapper from "./Cart-wrapper";
 import { useEffect, useState } from "react";
-import { fetchCartItems } from "@/Store/shop/cart-slice";
+import { fetchcartItems } from "@/Store/shop/cart-slice";
 import { Label } from "../ui/label";
 
 function MenuItems() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [searchParams , setSearchParmas] = useSearchParams()
 
   function handleNavigate(getCurrentMenuItem) {
     sessionStorage.removeItem("filters");
     const currentFilter =
-      getCurrentMenuItem.id !== "home"
+      getCurrentMenuItem.id !== "home" && getCurrentMenuItem.id !== 'product'
         ? { category: [getCurrentMenuItem.id] }
         : null;
     // console.log(currentFilter)
     sessionStorage.setItem("filters", JSON.stringify(currentFilter));
+    location.pathname.includes('listing') && currentFilter !==  null ? 
+    setSearchParmas(new URLSearchParams(`?category=${getCurrentMenuItem.id}`)) :
     navigate(getCurrentMenuItem.path);
   }
 
@@ -60,19 +64,19 @@ function HeaderRightContent() {
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { cartItems } = useSelector((state) => state.shopCart);
+  const { cartItem } = useSelector((state) => state.shopCart);
 
   function handleLogout() {
     dispatch(logoutUser());
   }
 
   useEffect(() => {
-    dispatch(fetchCartItems(user?.id));
+    dispatch(fetchcartItems(user?.id));
   }, [dispatch]);
 
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
-      {/* {console.log(cartItems)} */}
+      {/* {console.log(cartItem)} */}
       <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
         <Button
           variant="outline"
@@ -84,9 +88,9 @@ function HeaderRightContent() {
         </Button>
         <UserCartWrapper
         setOpenCartSheet={setOpenCartSheet}
-          cartItems={
-            cartItems && cartItems.items && cartItems.items.length > 0
-              ? cartItems.items
+          cartItem={
+            cartItem && cartItem.items && cartItem.items.length > 0
+              ? cartItem.items
               : []
           }
         />

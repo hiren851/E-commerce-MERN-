@@ -1,0 +1,190 @@
+{
+    "sourceFile": "client/src/Store/admin/products-slice/order-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1741094237634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741094243484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n \r\n \r\n-const adminOrderSLice \n\\ No newline at end of file\n+const adminOrderSlice \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094256012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n \r\n \r\n-const adminOrderSlice \n\\ No newline at end of file\n+const adminOrderSlice =\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094310066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n \r\n \r\n-\r\n const adminOrderSlice =\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094320604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n-const adminOrderSlice =\n\\ No newline at end of file\n+const adminOrderSlice = createSlice()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094326953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n-const adminOrderSlice = createSlice()\n\\ No newline at end of file\n+const adminOrderSlice = createSlice({\r\n+    name: \"adminOrder\",\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094336872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import axios from \"axios\";\r\n \r\n \r\n const adminOrderSlice = createSlice({\r\n-    name: \"adminOrder\",\r\n+    name: \"adminOrderSlice\",\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094348159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n+const init\r\n+\r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094355171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\n import axios from \"axios\";\r\n \r\n \r\n-const init\r\n+const initialState = {\r\n+    \r\n+}\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094361919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    \r\n+    ordersList = \r\n }\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n"
+                },
+                {
+                    "date": 1741094368493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    ordersList = \r\n+    ordersList : []\r\n }\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n"
+                },
+                {
+                    "date": 1741094376614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    ordersList : []\r\n+    ordersList : [],\r\n+    ordersData : \r\n }\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n"
+                },
+                {
+                    "date": 1741094388234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,12 @@\n \r\n \r\n const initialState = {\r\n     ordersList : [],\r\n-    ordersData : \r\n+    ordersData : null,\r\n }\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n+    reducers : {},\r\n+    \r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094394267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n }\r\n \r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n+    initialState,\r\n     reducers : {},\r\n-    \r\n+\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094399495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n-\r\n+    extraReducers\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094404744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n-    extraReducers\r\n+    extraReducers: ()\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094410112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n-    extraReducers: ()\r\n+    extraReducers: (builder)\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094421833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,8 @@\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n-    extraReducers: (builder)\r\n+    extraReducers: (builder)=>{\r\n+        \r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094429606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,10 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-        \r\n+\r\n     }\r\n\\ No newline at end of file\n-})\n+})\r\n+\r\n+\r\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094438164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n     }\r\n })\r\n \r\n \r\n-export \n\\ No newline at end of file\n+export default adminOrderSlice.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094597937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n     ordersList : [],\r\n     ordersData : null,\r\n }\r\n \r\n+\r\n+\r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n@@ -16,5 +18,5 @@\n     }\r\n })\r\n \r\n \r\n-export default adminOrderSlice.\n\\ No newline at end of file\n+export default adminOrderSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741094604121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,28 @@\n     ordersList : [],\r\n     ordersData : null,\r\n }\r\n \r\n+export const getAllOrderByUser = createAsyncThunk(\r\n+    \"/order/AllOrders\",\r\n+    async (userId) => {\r\n+      const response = await axios.get(\r\n+        `http://localhost:7000/api/shop/order/list/${userId}`\r\n+  \r\n+      );\r\n+      return response.data;\r\n+    }\r\n+  );\r\n+  export const getOrdersDetails = createAsyncThunk(\r\n+    \"/order/orderDetails\",\r\n+    async (id) => {\r\n+      const response = await axios.get(\r\n+        `http://localhost:7000/api/shop/order/details/${id}`\r\n+      );\r\n+      return response.data;\r\n+    }\r\n+  );\r\n \r\n-\r\n const adminOrderSlice = createSlice({\r\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n"
+                },
+                {
+                    "date": 1741094630199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/shop/order/list/${userId}`\r\n+        `http://localhost:7000/api/admin`\r\n   \r\n       );\r\n       return response.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741094636762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/admin`\r\n+        `http://localhost:7000/api/admin/`\r\n   \r\n       );\r\n       return response.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741094645498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/admin/`\r\n+        `http://localhost:7000/api/admin/orders/get/`\r\n   \r\n       );\r\n       return response.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741094658691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const getAllOrderByUser = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/admin/orders/get/`\r\n+        `http://localhost:7000/api/admin/orders/get`\r\n   \r\n       );\r\n       return response.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741094668947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n-  export const getOrdersDetails = createAsyncThunk(\r\n+  export const getOrdersDetailsFor = createAsyncThunk(\r\n     \"/order/orderDetails\",\r\n     async (id) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/shop/order/details/${id}`\r\n"
+                },
+                {
+                    "date": 1741094679119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     ordersList : [],\r\n     ordersData : null,\r\n }\r\n \r\n-export const getAllOrderByUser = createAsyncThunk(\r\n+export const getAllOrderByAllUser = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/get`\r\n@@ -16,9 +16,9 @@\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n-  export const getOrdersDetailsFor = createAsyncThunk(\r\n+  export const getOrdersDetailsForAdmin = createAsyncThunk(\r\n     \"/order/orderDetails\",\r\n     async (id) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/shop/order/details/${id}`\r\n"
+                },
+                {
+                    "date": 1741094691726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     ordersList : [],\r\n     ordersData : null,\r\n }\r\n \r\n-export const getAllOrderByAllUser = createAsyncThunk(\r\n+export const getAllOrdersFro = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/get`\r\n"
+                },
+                {
+                    "date": 1741094707560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     ordersList : [],\r\n     ordersData : null,\r\n }\r\n \r\n-export const getAllOrdersFro = createAsyncThunk(\r\n+export const getAllOrdersForAdmin = createAsyncThunk(\r\n     \"/order/AllOrders\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/get`\r\n@@ -20,9 +20,9 @@\n   export const getOrdersDetailsForAdmin = createAsyncThunk(\r\n     \"/order/orderDetails\",\r\n     async (id) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/shop/order/details/${id}`\r\n+        `http://localhost:7000/api/admin/order/details/${id}`\r\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741094728329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n       return response.data;\r\n     }\r\n   );\r\n   export const getOrdersDetailsForAdmin = createAsyncThunk(\r\n-    \"/order/orderDetails\",\r\n+    \"/order/getOrdersDetailsForAdmin\",\r\n     async (id) => {\r\n       const response = await axios.get(\r\n-        `http://localhost:7000/api/admin/order/details/${id}`\r\n+        `http://localhost:7000/api/admin/orders/details/${id}`\r\n       );\r\n       return response.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741094733561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     ordersData : null,\r\n }\r\n \r\n export const getAllOrdersForAdmin = createAsyncThunk(\r\n-    \"/order/AllOrders\",\r\n+    \"/order/getAllOrdersForAdmin\",\r\n     async (userId) => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/get`\r\n   \r\n"
+                },
+                {
+                    "date": 1741094822778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,60 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-\r\n+         builder\r\n+              .addCase(createOrder.pending, (state) => {\r\n+                state.isLoading = true;\r\n+              })\r\n+              .addCase(createOrder.fulfilled, (state, action) => {\r\n+                state.isLoading = false;\r\n+                state.orderDetails = action.payload;\r\n+                state.url = action.payload.url;\r\n+                state.orderId = action.payload.orderId;\r\n+                sessionStorage.setItem(\r\n+                  \"currentOrderId\",\r\n+                  JSON.stringify(action.payload.orderId)\r\n+                );\r\n+                sessionStorage.setItem(\r\n+                  \"currentCartId\",\r\n+                  JSON.stringify(action.payload.cartId)\r\n+                ); // Assuming cartId is part of the payload\r\n+        \r\n+                // Set currentOrderId and currentCartId in session storage\r\n+                // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n+              })\r\n+              .addCase(createOrder.rejected, (state) => {\r\n+                state.isLoading = false;\r\n+                state.orderDetails = [];\r\n+                state.url = null;\r\n+                state.orderId = null;\r\n+              })\r\n+              .addCase(capturePayment.fulfilled, (state, action) => {\r\n+                state.orderDetails = action.payload;\r\n+              })\r\n+              .addCase(getAllOrderByUser.pending, (state) => {\r\n+                state.isLoading = true;\r\n+              })\r\n+              .addCase(getAllOrderByUser.fulfilled, (state,action) => {\r\n+                state.isLoading = false;\r\n+                state.orderList = action.payload.data;\r\n+              })\r\n+              .addCase(getAllOrderByUser.rejected, (state) => {\r\n+                state.isLoading = false;\r\n+                state.orderList = [];\r\n+              })\r\n+              .addCase(getOrdersDetails.pending, (state) => {\r\n+                state.isLoading = true;\r\n+              })\r\n+              .addCase(getOrdersDetails.fulfilled, (state,action) => {\r\n+                state.isLoading = false;\r\n+                state.orderData = action.payload.data;\r\n+              })\r\n+              .addCase(getOrdersDetails.rejected, (state) => {\r\n+                state.isLoading = false;\r\n+                state.orderData = null;\r\n+              });\r\n     }\r\n })\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741094914849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,60 +31,9 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-         builder\r\n-              .addCase(createOrder.pending, (state) => {\r\n-                state.isLoading = true;\r\n-              })\r\n-              .addCase(createOrder.fulfilled, (state, action) => {\r\n-                state.isLoading = false;\r\n-                state.orderDetails = action.payload;\r\n-                state.url = action.payload.url;\r\n-                state.orderId = action.payload.orderId;\r\n-                sessionStorage.setItem(\r\n-                  \"currentOrderId\",\r\n-                  JSON.stringify(action.payload.orderId)\r\n-                );\r\n-                sessionStorage.setItem(\r\n-                  \"currentCartId\",\r\n-                  JSON.stringify(action.payload.cartId)\r\n-                ); // Assuming cartId is part of the payload\r\n         \r\n-                // Set currentOrderId and currentCartId in session storage\r\n-                // sessionStorage.setItem(\"currentCartId\", JSON.stringify(action.payload.cartId)); // Assuming cartId is part of the payload\r\n-              })\r\n-              .addCase(createOrder.rejected, (state) => {\r\n-                state.isLoading = false;\r\n-                state.orderDetails = [];\r\n-                state.url = null;\r\n-                state.orderId = null;\r\n-              })\r\n-              .addCase(capturePayment.fulfilled, (state, action) => {\r\n-                state.orderDetails = action.payload;\r\n-              })\r\n-              .addCase(getAllOrderByUser.pending, (state) => {\r\n-                state.isLoading = true;\r\n-              })\r\n-              .addCase(getAllOrderByUser.fulfilled, (state,action) => {\r\n-                state.isLoading = false;\r\n-                state.orderList = action.payload.data;\r\n-              })\r\n-              .addCase(getAllOrderByUser.rejected, (state) => {\r\n-                state.isLoading = false;\r\n-                state.orderList = [];\r\n-              })\r\n-              .addCase(getOrdersDetails.pending, (state) => {\r\n-                state.isLoading = true;\r\n-              })\r\n-              .addCase(getOrdersDetails.fulfilled, (state,action) => {\r\n-                state.isLoading = false;\r\n-                state.orderData = action.payload.data;\r\n-              })\r\n-              .addCase(getOrdersDetails.rejected, (state) => {\r\n-                state.isLoading = false;\r\n-                state.orderData = null;\r\n-              });\r\n     }\r\n })\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741094950032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-        \r\n+        builder\r\n     }\r\n })\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741094958987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n const initialState = {\r\n-    ordersList : [],\r\n+    orderList : [],\r\n     ordersData : null,\r\n }\r\n \r\n export const getAllOrdersForAdmin = createAsyncThunk(\r\n@@ -31,9 +31,30 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-        builder\r\n+        builder.addCase(getAllOrderByUser.pending, (state) => {\r\n+                state.isLoading = true;\r\n+              })\r\n+              .addCase(getAllOrderByUser.fulfilled, (state,action) => {\r\n+                state.isLoading = false;\r\n+                state.orderList = action.payload.data;\r\n+              })\r\n+              .addCase(getAllOrderByUser.rejected, (state) => {\r\n+                state.isLoading = false;\r\n+                state.orderList = [];\r\n+              })\r\n+              .addCase(getOrdersDetails.pending, (state) => {\r\n+                state.isLoading = true;\r\n+              })\r\n+              .addCase(getOrdersDetails.fulfilled, (state,action) => {\r\n+                state.isLoading = false;\r\n+                state.orderData = action.payload.data;\r\n+              })\r\n+              .addCase(getOrdersDetails.rejected, (state) => {\r\n+                state.isLoading = false;\r\n+                state.orderData = null;\r\n+              });\r\n     }\r\n })\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741094968359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n const initialState = {\r\n     orderList : [],\r\n-    ordersData : null,\r\n+    orderData : null,\r\n }\r\n \r\n export const getAllOrdersForAdmin = createAsyncThunk(\r\n     \"/order/getAllOrdersForAdmin\",\r\n@@ -31,9 +31,9 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-        builder.addCase(getAllOrderByUser.pending, (state) => {\r\n+        builder.addCase(getAl.pending, (state) => {\r\n                 state.isLoading = true;\r\n               })\r\n               .addCase(getAllOrderByUser.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741094973601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,12 +31,12 @@\n     name: \"adminOrderSlice\",\r\n     initialState,\r\n     reducers : {},\r\n     extraReducers: (builder)=>{\r\n-        builder.addCase(getAl.pending, (state) => {\r\n+        builder.addCase(getAllOrdersForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n               })\r\n-              .addCase(getAllOrderByUser.fulfilled, (state,action) => {\r\n+              .addCase(getAllOrdersForAdmin.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n                 state.orderList = action.payload.data;\r\n               })\r\n               .addCase(getAllOrderByUser.rejected, (state) => {\r\n"
+                },
+                {
+                    "date": 1741094979910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n               .addCase(getAllOrdersForAdmin.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n                 state.orderList = action.payload.data;\r\n               })\r\n-              .addCase(getAllOrderByUser.rejected, (state) => {\r\n+              .addCase(getAllOrdersForAdmin.rejected, (state) => {\r\n                 state.isLoading = false;\r\n                 state.orderList = [];\r\n               })\r\n               .addCase(getOrdersDetails.pending, (state) => {\r\n"
+                },
+                {
+                    "date": 1741094988331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n               .addCase(getAllOrdersForAdmin.rejected, (state) => {\r\n                 state.isLoading = false;\r\n                 state.orderList = [];\r\n               })\r\n-              .addCase(getOrdersDetails.pending, (state) => {\r\n+              .addCase(get.pending, (state) => {\r\n                 state.isLoading = true;\r\n               })\r\n               .addCase(getOrdersDetails.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741094996035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,12 +42,12 @@\n               .addCase(getAllOrdersForAdmin.rejected, (state) => {\r\n                 state.isLoading = false;\r\n                 state.orderList = [];\r\n               })\r\n-              .addCase(get.pending, (state) => {\r\n+              .addCase(getOrdersDetailsForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n               })\r\n-              .addCase(getOrdersDetails.fulfilled, (state,action) => {\r\n+              .addCase(getAllord.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n                 state.orderData = action.payload.data;\r\n               })\r\n               .addCase(getOrdersDetails.rejected, (state) => {\r\n"
+                },
+                {
+                    "date": 1741095004325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n               })\r\n               .addCase(getOrdersDetailsForAdmin.pending, (state) => {\r\n                 state.isLoading = true;\r\n               })\r\n-              .addCase(getAllord.fulfilled, (state,action) => {\r\n+              .addCase(getOrdersDetailsForAdmin.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n                 state.orderData = action.payload.data;\r\n               })\r\n               .addCase(getOrdersDetails.rejected, (state) => {\r\n"
+                },
+                {
+                    "date": 1741095010136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n               .addCase(getOrdersDetailsForAdmin.fulfilled, (state,action) => {\r\n                 state.isLoading = false;\r\n                 state.orderData = action.payload.data;\r\n               })\r\n-              .addCase(getOrdersDetails.rejected, (state) => {\r\n+              .addCase(getOrdersDetailsForAdmin.rejected, (state) => {\r\n                 state.isLoading = false;\r\n                 state.orderData = null;\r\n               });\r\n     }\r\n"
+                },
+                {
+                    "date": 1741095518272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const getAllOrdersForAdmin = createAsyncThunk(\r\n     \"/order/getAllOrdersForAdmin\",\r\n-    async (userId) => {\r\n+    async () => {\r\n       const response = await axios.get(\r\n         `http://localhost:7000/api/admin/orders/get`\r\n   \r\n       );\r\n"
+                }
+            ],
+            "date": 1741094237634,
+            "name": "Commit-0",
+            "content": "\r\n\r\n\r\nconst adminOrderSLice "
+        }
+    ]
+}
