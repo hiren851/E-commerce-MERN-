@@ -23,7 +23,7 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 import { logoutUser } from "@/Store/auth-slice";
 import UserCartWrapper from "./Cart-wrapper";
 import { useEffect, useState } from "react";
-import { fetchcartItems } from "@/Store/shop/cart-slice";
+import { fetchCartItems } from "@/Store/shop/cart-slice";
 import { Label } from "../ui/label";
 
 function MenuItems() {
@@ -64,14 +64,14 @@ function HeaderRightContent() {
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { cartItem } = useSelector((state) => state.shopCart);
+  const { cartItems } = useSelector((state) => state.shopCart);
 
   function handleLogout() {
     dispatch(logoutUser());
   }
 
   useEffect(() => {
-    dispatch(fetchcartItems(user?.id));
+    dispatch(fetchCartItems(user?.id));
   }, [dispatch]);
 
   return (
@@ -88,9 +88,9 @@ function HeaderRightContent() {
         </Button>
         <UserCartWrapper
         setOpenCartSheet={setOpenCartSheet}
-          cartItem={
-            cartItem && cartItem.items && cartItem.items.length > 0
-              ? cartItem.items
+          cartItems={
+            cartItems && cartItems.items && cartItems.items.length > 0
+              ? cartItems.items
               : []
           }
         />

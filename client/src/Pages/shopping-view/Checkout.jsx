@@ -12,26 +12,29 @@ import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 // import {loadStripe} from '@stripe/react-stripe-js'
 
+// import { useEffect } from "react";
+
 function ShoppingCheckout() {
-  const { cartItems } = useSelector((state) => state.shopCart);
+
+ 
+  const {cartItems} = useSelector(state => state.shopCart)
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [currentSelectedAddress, setCurrentSelectedAddress] = useState(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const {toast} = useToast()
 
   const totalCartAmount =
-    cartItems && cartItems.items && cartItems.items.length > 0
-      ? cartItems.items.reduce(
-          (sum, currentItem) =>
-            sum +
-            (currentItem?.salePrice > 0
-              ? currentItem?.salePrice
-              : currentItem?.price) *
-              currentItem?.quantity,
-          0
-        )
-      : 0;
+  cartItems && cartItems.items && cartItems.items.length > 0
+    ? cartItems.items.reduce(
+        (sum, currentItem) =>
+          sum +
+          ((currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price) *
+            currentItem?.quantity), 
+        0
+      )
+    : 0;
+
   // console.log(currentSelectedAddress)
   const handlePayment = async () => {
     try {
@@ -123,7 +126,7 @@ function ShoppingCheckout() {
           {/* {console.log(cartItems)} */}
           {cartItems && cartItems.items && cartItems.items.length > 0
             ? cartItems.items.map((item) => (
-                <UserCartItemsContent cartItems={item} key={item.productId} />
+                <UserCartItemsContent cartItem={item} key={item.productId} />
               ))
             : null}
           <div className="mt-8 space-y-4">

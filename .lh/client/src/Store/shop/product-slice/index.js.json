@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 85,
+            "activePatchIndex": 86,
             "patches": [
                 {
                     "date": 1740211850037,
@@ -348,6 +348,10 @@
                 {
                     "date": 1740377361907,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \r\n         const query = URLSearchParams(\r\n             {\r\n                 ...filterParams,\r\n-                sortBy : sortParams\r\n+                sortBy : sortParams,\r\n             }\r\n         )\r\n         const result = await axios.get(\"http://localhost:7000/api/shop/products/get\")\r\n             return result?.data\r\n"
+                },
+                {
+                    "date": 1741240148032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,71 @@\n+import { createSlice, createAsyncThunk } from \"@reduxjs/toolkit\";\n+import axios from \"axios\";\n+import { useSearchParams } from \"react-router-dom\";\n+\n+const initialState = {\n+  isLoading: false,\n+  productList: [],\n+  productDetails: null,\n+};\n+\n+export const fetchAllFilteredProducts = createAsyncThunk(\n+  \"/products/fetchAllFilteredProducts\",\n+  async ({ filterParams, sortParams }) => {\n+    const query = new URLSearchParams({\n+      ...filterParams,\n+      sortBy: sortParams,\n+    });\n+    const result = await axios.get(\n+      `http://localhost:7000/api/shop/products/get?${query}`\n+    );\n+    return result?.data;\n+  }\n+);\n+export const fetchProductDetails = createAsyncThunk(\n+  \"/products/fetchProductDetails\",\n+  async (id) => {\n+    const result = await axios.get(\n+      `http://localhost:7000/api/shop/products/get/${id}`\n+    );\n+    return result?.data;\n+  }\n+);\n+\n+const shoppingProductsSlice = createSlice({\n+  name: \"shoppingProducts\",\n+  initialState,\n+  reducers: {\n+    setProductDetails: (state, action) => {\n+      state.productDetails = null;\n+    },\n+  },\n+  extraReducers: (builder) => {\n+    builder\n+      .addCase(fetchAllFilteredProducts.pending, (state, action) => {\n+        state.isLoading = true;\n+      })\n+      .addCase(fetchAllFilteredProducts.fulfilled, (state, action) => {\n+        // console.log(action.payload);\n+        (state.isLoading = false), (state.productList = action.payload.data);\n+      })\n+      .addCase(fetchAllFilteredProducts.rejected, (state, action) => {\n+        console.log(action.payload);\n+        (state.isLoading = false), (state.productList = []);\n+      })\n+      .addCase(fetchProductDetails.pending, (state, action) => {\n+        state.isLoading = true;\n+      })\n+      .addCase(fetchProductDetails.fulfilled, (state, action) => {\n+        // console.log(action.payload);\n+        (state.isLoading = false), (state.productDetails = action.payload.data);\n+      })\n+      .addCase(fetchProductDetails.rejected, (state, action) => {\n+        // console.log(action.payload);\n+        (state.isLoading = false), (state.productDetails = null);\n+      });\n+  },\n+});\n+\n+export const { setProductDetails } = shoppingProductsSlice.actions;\n+\n+export default shoppingProductsSlice.reducer;\n"
                 }
             ],
             "date": 1740211850037,

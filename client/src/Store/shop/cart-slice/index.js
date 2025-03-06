@@ -7,12 +7,9 @@ const initialState = {
 };
 
 // Clear Cart
-export const clearCart = createAsyncThunk(
-  "cart/clearCart",
-  async () => {
-    return [];
-  }
-);
+export const clearCart = createAsyncThunk("cart/clearCart", async () => {
+  return [];
+});
 
 export const addToCart = createAsyncThunk(
   "cart/addToCart",
@@ -26,8 +23,8 @@ export const addToCart = createAsyncThunk(
 );
 
 // Fetch Cart Items
-export const fetchcartItems = createAsyncThunk(
-  "cart/fetchcartItems",
+export const fetchCartItems = createAsyncThunk(
+  "cart/fetchCartItems",
   async (userId) => {
     const response = await axios.get(
       `http://localhost:7000/api/shop/cart/get/${userId}`
@@ -65,7 +62,7 @@ const shoppingCartSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(addToCart.pending, (state) => {
+      .addCase(addToCart.pending, (state) => { 
         state.isLoading = true;
       })
       .addCase(addToCart.fulfilled, (state, action) => {
@@ -74,15 +71,16 @@ const shoppingCartSlice = createSlice({
       })
       .addCase(addToCart.rejected, (state) => {
         state.isLoading = false;
+        state.cartItems = []
       })
-      .addCase(fetchcartItems.pending, (state) => {
+      .addCase(fetchCartItems.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(fetchcartItems.fulfilled, (state, action) => {
+      .addCase(fetchCartItems.fulfilled, (state, action) => {
         state.isLoading = false;
         state.cartItems = action.payload.data;
       })
-      .addCase(fetchcartItems.rejected, (state) => {
+      .addCase(fetchCartItems.rejected, (state) => {
         state.isLoading = false;
       })
       .addCase(updateCartQuantity.pending, (state) => {
@@ -102,8 +100,7 @@ const shoppingCartSlice = createSlice({
         state.isLoading = false;
         state.cartItems = action.payload.data;
       })
-      .addCase(deletecartItems.rejected, (state) => {
-      })
+      .addCase(deletecartItems.rejected, (state) => {})
       .addCase(clearCart.fulfilled, (state) => {
         state.cartItems = []; // Empty the cart
       });

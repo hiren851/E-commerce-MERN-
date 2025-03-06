@@ -25,7 +25,7 @@ import {
 import SHoppingProductTile from "@/components/shopping-view/Product-tile";
 import { SiNike, SiAdidas, SiPuma, SiZara } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
-import { addToCart, fetchcartItem } from "@/Store/shop/cart-slice";
+import { addToCart, fetchCartItems } from "@/Store/shop/cart-slice";
 import { useToast } from "@/hooks/use-toast";
 import ProductDetailsDialog from "@/components/shopping-view/ProductDetails";
 // import { timeEnd } from "console";
@@ -73,7 +73,7 @@ function ShoppingHome() {
       })
     ).then((data) => {
       if (data?.payload?.success) {
-        dispatch(fetchcartItem(user?.id));
+        dispatch(fetchCartItems(user?.id));
         toast({
           title: "Product Added to Cart",
         });

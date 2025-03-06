@@ -79,7 +79,7 @@ function ShoppingListing() {
   }
 
   function handleAddToCart(getCurrentProductId , getTotalStock){
-    console.log(cartItems)
+    // console.log(cartItems)
 
     let getCartItems = cartItems.items || [];
 
@@ -92,6 +92,7 @@ function ShoppingListing() {
             title : `Only ${getQuantity} quantity can be added for this item`,
             variant : 'destructive'
           })
+          return;
         }
       }
     }
