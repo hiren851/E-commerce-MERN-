@@ -1,0 +1,62 @@
+{
+    "sourceFile": "server/routes/shop/review-routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1741266257366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741266278333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const {\r\n   getFilteredProducts,\r\n   getProductDetails\r\n-} = require(\"../../controllers/shop/product-controller\");\r\n+} = require(\"../../controllers/shop/product-c\");\r\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n"
+                },
+                {
+                    "date": 1741266285711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const {\r\n   getFilteredProducts,\r\n   getProductDetails\r\n-} = require(\"../../controllers/shop/product-c\");\r\n+} = require(\"../../controllers/shop/\");\r\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n"
+                },
+                {
+                    "date": 1741266297493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const {\r\n   getFilteredProducts,\r\n   getProductDetails\r\n-} = require(\"../../controllers/shop/\");\r\n+} = require(\"../../controllers/shop/product-review-controller\");\r\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n"
+                },
+                {
+                    "date": 1741266308437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-  getFilteredProducts,\r\n-  getProductDetails\r\n+addProductReview\r\n } = require(\"../../controllers/shop/product-review-controller\");\r\n \r\n const router = express.Router();\r\n \r\n"
+                },
+                {
+                    "date": 1741266314810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-addProductReview\r\n+addProductReview,getProductReviews\r\n } = require(\"../../controllers/shop/product-review-controller\");\r\n \r\n const router = express.Router();\r\n \r\n"
+                },
+                {
+                    "date": 1741266327047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n } = require(\"../../controllers/shop/product-review-controller\");\r\n \r\n const router = express.Router();\r\n \r\n-router.get(\"/get\", getFilteredProducts);\r\n+router.post(\"/get\", getFilteredProducts);\r\n router.get(\"/get/:id\", getProductDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741266334950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n } = require(\"../../controllers/shop/product-review-controller\");\r\n \r\n const router = express.Router();\r\n \r\n-router.post(\"/get\", getFilteredProducts);\r\n+router.post(\"/add\", add);\r\n router.get(\"/get/:id\", getProductDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741266340596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n } = require(\"../../controllers/shop/product-review-controller\");\r\n \r\n const router = express.Router();\r\n \r\n-router.post(\"/add\", add);\r\n+router.post(\"/add\", addProductReview);\r\n+router.post(\"/add\", addProductReview);\r\n router.get(\"/get/:id\", getProductDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741266348466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addProductReview);\r\n-router.post(\"/add\", addProductReview);\r\n-router.get(\"/get/:id\", getProductDetails);\r\n+router.get(\"/add\", addProductReview);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741266365609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addProductReview);\r\n-router.get(\"/add\", addProductReview);\r\n+router.get(\"/:productId\", addProductReview);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741266370709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addProductReview);\r\n-router.get(\"/:productId\", addProductReview);\r\n+router.get(\"/:productId\", get);\r\n \r\n module.exports = router;\r\n"
+                }
+            ],
+            "date": 1741266257365,
+            "name": "Commit-0",
+            "content": "const express = require(\"express\");\r\n\r\nconst {\r\n  getFilteredProducts,\r\n  getProductDetails\r\n} = require(\"../../controllers/shop/product-controller\");\r\n\r\nconst router = express.Router();\r\n\r\nrouter.get(\"/get\", getFilteredProducts);\r\nrouter.get(\"/get/:id\", getProductDetails);\r\n\r\nmodule.exports = router;\r\n"
+        }
+    ]
+}

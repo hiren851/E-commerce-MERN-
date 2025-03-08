@@ -11,9 +11,14 @@ const shopCartRouter = require("./routes/shop/cart-routes");
 const shopAddressRouter = require("./routes/shop/address-routes");
 const shopOrderRouter = require("./routes/shop/order-routes");
 const shopWebHookRouter = require("./routes/shop/webhook-routes");
+const shopSearchRouter = require("./routes/shop/search-routes"); 
+const shopReviewRouter = require("./routes/shop/review-routes"); 
+const commonFeatureRouter = require("./routes/common/feature-routes"); 
 
 mongoose
-  .connect("mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/")
+  .connect(
+    "mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/"
+  )
   .then(() => console.log("MongoDB Connected"))
   .catch((error) => console.error("MongoDB Connection Error:", error));
 
@@ -26,11 +31,16 @@ app.use(
   cors({
     origin: "http://localhost:5173",
     methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: ["Content-Type", "Authorization", "Cache-Control", "Expires", "Pragma"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Cache-Control",
+      "Expires",
+      "Pragma",
+    ],
     credentials: true,
   })
 );
-
 
 app.use("/api/shop/webhook", bodyParser.raw({ type: "application/json" }));
 
@@ -47,6 +57,10 @@ app.use("/api/shop/address", shopAddressRouter);
 app.use("/api/shop/order", shopOrderRouter);
 app.use("/api/shop/webhook", shopWebHookRouter);
 app.use("/api/shop/products", shopProductsRouter);
+app.use("/api/shop/search", shopSearchRouter);
+app.use("/api/shop/review", shopReviewRouter);
 
+
+app.use("/api/common/feature", commonFeatureRouter);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

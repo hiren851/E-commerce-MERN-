@@ -23,6 +23,7 @@ import { checkAuth } from "./Store/auth-slice";
 import { Skeleton } from "./components/ui/skeleton";
 import PaymentSuccess from "./Pages/shopping-view/Success";
 import PaymentCancel from "./Pages/shopping-view/Cancel";
+import Search from "./Pages/shopping-view/Search";
 
 function App() {
 
@@ -49,6 +50,14 @@ function App() {
     <div className="flex flex-col overflow-hidden bg-white">
       
       <Routes>
+        <Route 
+        path="/"
+        element={
+          <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+          
+          </CheckAuth>
+        }
+        />
         <Route
           path="/auth"
           element={
@@ -88,6 +97,7 @@ function App() {
           <Route path="account" element={<ShoppingAccount />} />
           <Route path="success" element={<PaymentSuccess/>}/>
           <Route path="cancel" element={<PaymentCancel/>}/>
+          <Route path="search" element={<Search/>}/>
         </Route>
         <Route path="/unauth-page" element={<UnAuthPage/>} />
         <Route path="*" element={<ErrorPage />} />

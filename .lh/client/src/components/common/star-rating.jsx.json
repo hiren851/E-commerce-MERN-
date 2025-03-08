@@ -1,0 +1,134 @@
+{
+    "sourceFile": "client/src/components/common/star-rating.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1741267910211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741267936785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function StarRatingCo() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default StarRatingCo;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267944726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n-function StarRatingCo() {\r\n-    return (  );\r\n+function StarRatingComponent() {\r\n+    return ( \r\n+        <div>\r\n\\ No newline at end of file\n+            \r\n+        </div>\r\n+     );\r\n }\r\n \r\n-export default StarRatingCo;\n+export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267955360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n function StarRatingComponent() {\r\n     return ( \r\n-        <div>\r\n-            \r\n-        </div>\r\n+        []\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267965066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function StarRatingComponent() {\r\n     return ( \r\n-        []\r\n+        [1,2,3,4,5].map()\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267970306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function StarRatingComponent() {\r\n     return ( \r\n-        [1,2,3,4,5].map()\r\n+        [1,2,3,4,5].map(star =>)\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267976661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function StarRatingComponent() {\r\n     return ( \r\n-        [1,2,3,4,5].map(star =>)\r\n+        [1,2,3,4,5].map(star => <But)\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741268013894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n+import { Button } from \"../ui/button\";\r\n+\r\n function StarRatingComponent() {\r\n     return ( \r\n-        [1,2,3,4,5].map(star => <But)\r\n+        [1,2,3,4,5].map(star => <Button variant=\"outline\" ></Button>)\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741268021147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n     return ( \r\n-        [1,2,3,4,5].map(star => <Button variant=\"outline\" ></Button>)\r\n+        [1,2,3,4,5].map(star => <Button variant=\"outline\" size=\"icon\"></Button>)\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741268047741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n     return ( \r\n-        [1,2,3,4,5].map(star => <Button variant=\"outline\" size=\"icon\"></Button>)\r\n+        [1,2,3,4,5].map(star => <Button variant=\"outline\" size=\"icon\">\r\n+            <starIcon\r\n+        </Button>)\r\n      );\r\n }\r\n \r\n export default StarRatingComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741268059589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import { StarIcon } from \"lucide-react\";\r\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n     return ( \r\n         [1,2,3,4,5].map(star => <Button variant=\"outline\" size=\"icon\">\r\n-            <starIcon\r\n+            <StarIcon />\r\n         </Button>)\r\n      );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1741268327615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { StarIcon } from \"lucide-react\";\r\n import { Button } from \"../ui/button\";\r\n \r\n+\r\n+\r\n function StarRatingComponent() {\r\n     return ( \r\n         [1,2,3,4,5].map(star => <Button variant=\"outline\" size=\"icon\">\r\n             <StarIcon />\r\n"
+                },
+                {
+                    "date": 1741324274147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,12 @@\n import { StarIcon } from \"lucide-react\";\r\n import { Button } from \"../ui/button\";\r\n \r\n-\r\n-\r\n function StarRatingComponent() {\r\n-    return ( \r\n-        [1,2,3,4,5].map(star => <Button variant=\"outline\" size=\"icon\">\r\n-            <StarIcon />\r\n-        </Button>)\r\n-     );\r\n+  return [1, 2, 3, 4, 5].map((star) => (\r\n+    <Button variant=\"outline\" size=\"icon\">\r\n+      <StarIcon />\r\n\\ No newline at end of file\n+    </Button>\r\n+  ));\r\n }\r\n \r\n-export default StarRatingComponent;\n+export default StarRatingComponent;\r\n"
+                },
+                {
+                    "date": 1741324283045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\">\r\n+    <Button variant=\"outline\" size=\"icon\" className=\"\">\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n \r\n\\ No newline at end of file\n-export default StarRatingComponent;\n+export default StarRatingComponent;\r\n"
+                },
+                {
+                    "date": 1741324291554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n     </Button>\r\n   ));\r\n }\r\n \r\n-export default StarRatingComponent;\n\\ No newline at end of file\n+export default StarRatingComponent;\r\n"
+                },
+                {
+                    "date": 1741324299664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className=\"\">\r\n+    <Button variant=\"outline\" size=\"icon\" className=>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324306665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className=>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324314865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full tra`}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324320803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent() {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full tra`}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324365798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { StarIcon } from \"lucide-react\";\r\n import { Button } from \"../ui/button\";\r\n \r\n-function StarRatingComponent() {\r\n+function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n     <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors `}>\r\n       <StarIcon />\r\n     </Button>\r\n"
+                },
+                {
+                    "date": 1741324394126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324403652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324412126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating } `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324419065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating } `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating 'text-yello'} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324426180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating 'text-yello'} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating 'text-yellow-500'} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324437935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating 'text-yellow-500'} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500'} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324444625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500'} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-'} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324462243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-'} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-black' : ''} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324471931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-black' : ''} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-black' : 'text-black '} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                },
+                {
+                    "date": 1741324478476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Button } from \"../ui/button\";\r\n \r\n function StarRatingComponent({rating}) {\r\n   return [1, 2, 3, 4, 5].map((star) => (\r\n-    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-black' : 'text-black hover:b'} `}>\r\n+    <Button variant=\"outline\" size=\"icon\" className={`p-2 rounded-full transition-colors ${star <= rating ? 'text-yellow-500 hover:bg-black' : 'text-black hover:bg-primary'} `}>\r\n       <StarIcon />\r\n     </Button>\r\n   ));\r\n }\r\n"
+                }
+            ],
+            "date": 1741267910211,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

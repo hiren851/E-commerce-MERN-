@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 67,
             "patches": [
                 {
                     "date": 1739529119969,
@@ -12,6 +12,270 @@
                 {
                     "date": 1739529223497,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Dashboard = () => {\r\n+const AdminDas = () => {\r\n   return (\r\n-    <div>Dashboard</div>\r\n+    <div>AdminDas</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Dashboard\n+export default AdminDas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741414177290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n-import React from 'react'\r\n-\r\n-const AdminDas = () => {\r\n-  return (\r\n-    <div>AdminDas</div>\r\n-  )\r\n-}\r\n-\r\n-export default AdminDas\n\\ No newline at end of file\n+import React from 'react'\n+\n+const AdminDashboard = () => {\n+\n+  \n+  return (\n+    <div>AdminDashboard</div>\n+  )\n+}\n+\n+export default AdminDashboard\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741414186989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import React from 'react'\n \n const AdminDashboard = () => {\n \n-  \n+  const [imageFile, setImageFile] = useState(null);\n+    const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n+    const [imageLoadingState, setImageLoadingState] = useState(false);\n+\n+    \n   return (\n     <div>AdminDashboard</div>\n   )\n }\n"
+                },
+                {
+                    "date": 1741414194646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,11 @@\n-import React from 'react'\n+import React from \"react\";\n \n const AdminDashboard = () => {\n-\n   const [imageFile, setImageFile] = useState(null);\n-    const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n-    const [imageLoadingState, setImageLoadingState] = useState(false);\n+  const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n+  const [imageLoadingState, setImageLoadingState] = useState(false);\n \n-    \n-  return (\n-    <div>AdminDashboard</div>\n-  )\n\\ No newline at end of file\n-}\n+  return <div>AdminDashboard</div>;\n+};\n \n-export default AdminDashboard\n+export default AdminDashboard;\n"
+                },
+                {
+                    "date": 1741414225465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n \n-  return <div>AdminDashboard</div>;\n+  return <div>\n+\n+    \n+  </div>;\n };\n \n export default AdminDashboard;\n"
+                },
+                {
+                    "date": 1741414250846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n \n   return <div>\n \n-    \n+    <h1>Uplaod Feature Images</h1>\n   </div>;\n };\n \n export default AdminDashboard;\n"
+                },
+                {
+                    "date": 1741414260795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,12 @@\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n \n-  return <div>\n-\n-    <h1>Uplaod Feature Images</h1>\n-  </div>;\n+  return (\n+    <div>\n+      <h1>Uplaod Feature Images</h1>\n+    </div>\n+  );\n };\n \n export default AdminDashboard;\n"
+                },
+                {
+                    "date": 1741414266395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,16 @@\n \n   return (\n     <div>\n       <h1>Uplaod Feature Images</h1>\n+      <ProductImageUpload\n+            imageFile={imageFile}\n+            setImageFile={setImageFile}\n+            uploadedImageURL={uploadedImageURL}\n+            setUploadedImageURL={setUploadedImageURL}\n+            imageLoadingState={imageLoadingState}\n+            setImageLoadingState={setImageLoadingState}\n+          />\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414272622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n             uploadedImageURL={uploadedImageURL}\n             setUploadedImageURL={setUploadedImageURL}\n             imageLoadingState={imageLoadingState}\n             setImageLoadingState={setImageLoadingState}\n+            isEditedMode={currentEditingId !== null}\n           />\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1741414281275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n import React from \"react\";\n \n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n@@ -14,9 +15,9 @@\n             uploadedImageURL={uploadedImageURL}\n             setUploadedImageURL={setUploadedImageURL}\n             imageLoadingState={imageLoadingState}\n             setImageLoadingState={setImageLoadingState}\n-            isEditedMode={currentEditingId !== null}\n+            // isEditedMode={currentEditingId !== null}\n           />\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1741414293685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n \n   return (\n     <div>\n-      <h1>Uplaod Feature Images</h1>\n+      {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n             imageFile={imageFile}\n             setImageFile={setImageFile}\n             uploadedImageURL={uploadedImageURL}\n"
+                },
+                {
+                    "date": 1741414324189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n-import React from \"react\";\n+import React, { useState } from \"react\";\n \n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n"
+                },
+                {
+                    "date": 1741414451542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n+import { Button } from \"@/components/ui/button\";\n import React, { useState } from \"react\";\n \n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n@@ -17,8 +18,9 @@\n             imageLoadingState={imageLoadingState}\n             setImageLoadingState={setImageLoadingState}\n             // isEditedMode={currentEditingId !== null}\n           />\n+          <Button></Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414457180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             imageLoadingState={imageLoadingState}\n             setImageLoadingState={setImageLoadingState}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button></Button>\n+          <Button>Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414644262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n             uploadedImageURL={uploadedImageURL}\n             setUploadedImageURL={setUploadedImageURL}\n             imageLoadingState={imageLoadingState}\n             setImageLoadingState={setImageLoadingState}\n+            isCustomStyling\n             // isEditedMode={currentEditingId !== null}\n           />\n           <Button>Upload</Button>\n     </div>\n"
+                },
+                {
+                    "date": 1741414672949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,12 @@\n             uploadedImageURL={uploadedImageURL}\n             setUploadedImageURL={setUploadedImageURL}\n             imageLoadingState={imageLoadingState}\n             setImageLoadingState={setImageLoadingState}\n-            isCustomStyling\n+            isCustomStyling={true}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button>Upload</Button>\n+          <Button >Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414678806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             setImageLoadingState={setImageLoadingState}\n             isCustomStyling={true}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button >Upload</Button>\n+          <Button className=\"\">Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414691035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             setImageLoadingState={setImageLoadingState}\n             isCustomStyling={true}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button className=\"\">Upload</Button>\n+          <Button onClick className=\"mt-5 w-full\">Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414702615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             setImageLoadingState={setImageLoadingState}\n             isCustomStyling={true}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button onClick className=\"mt-5 w-full\">Upload</Button>\n+          <Button onClick={handleUplaod} className=\"mt-5 w-full\">Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414710803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             setImageLoadingState={setImageLoadingState}\n             isCustomStyling={true}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button onClick={handleUplaod} className=\"mt-5 w-full\">Upload</Button>\n+          <Button onClick={handleUplaodFeatureImage} className=\"mt-5 w-full\">Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414720051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             setImageLoadingState={setImageLoadingState}\n             isCustomStyling={true}\n             // isEditedMode={currentEditingId !== null}\n           />\n-          <Button onClick={handleUplaodFeatureImage} className=\"mt-5 w-full\">Upload</Button>\n+          <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">Upload</Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741414736758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n \n+\n+  \n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n"
+                },
+                {
+                    "date": 1741414742364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n \n+  function handleUploadFeatureImage()\n \n-  \n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n"
+                },
+                {
+                    "date": 1741414760573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,19 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n import { Button } from \"@/components/ui/button\";\n import React, { useState } from \"react\";\n+import { useDispatch } from \"react-redux\";\n \n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n+  const dispatch = useDispatch()\n \n-  function handleUploadFeatureImage()\n+  function handleUploadFeatureImage(){\n \n+  }\n+\n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n"
+                },
+                {
+                    "date": 1741414767560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n-\n+    dispatch(add)\n   }\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1741415745379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,35 @@\n+import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n+import { Button } from \"@/components/ui/button\";\n+import { addFeatureImage } from \"@/Store/common-slice\";\n+import React, { useState } from \"react\";\n+import { useDispatch } from \"react-redux\";\n+\n+const AdminDashboard = () => {\n+  const [imageFile, setImageFile] = useState(null);\n+  const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n+  const [imageLoadingState, setImageLoadingState] = useState(false);\n+  const dispatch = useDispatch()\n+\n+  function handleUploadFeatureImage(){\n+    dispatch(addFeatureImage())\n+  }\n+\n+  return (\n+    <div>\n+      {/* <h1>Uplaod Feature Images</h1> */}\n+      <ProductImageUpload\n+            imageFile={imageFile}\n+            setImageFile={setImageFile}\n+            uploadedImageURL={uploadedImageURL}\n+            setUploadedImageURL={setUploadedImageURL}\n+            imageLoadingState={imageLoadingState}\n+            setImageLoadingState={setImageLoadingState}\n+            isCustomStyling={true}\n+            // isEditedMode={currentEditingId !== null}\n+          />\n+          <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">Upload</Button>\n+    </div>\n+  );\n+};\n+\n+export default AdminDashboard;\n"
+                },
+                {
+                    "date": 1741415757707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n-    dispatch(addFeatureImage())\n+    dispatch(addFeatureImage(uploadedImageURL)).then()\n   }\n \n   return (\n     <div>\n@@ -32,38 +32,4 @@\n   );\n };\n \n export default AdminDashboard;\n-import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n-import { Button } from \"@/components/ui/button\";\n-import React, { useState } from \"react\";\n-import { useDispatch } from \"react-redux\";\n-\n-const AdminDashboard = () => {\n-  const [imageFile, setImageFile] = useState(null);\n-  const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n-  const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const dispatch = useDispatch()\n-\n-  function handleUploadFeatureImage(){\n-    dispatch(add)\n-  }\n-\n-  return (\n-    <div>\n-      {/* <h1>Uplaod Feature Images</h1> */}\n-      <ProductImageUpload\n-            imageFile={imageFile}\n-            setImageFile={setImageFile}\n-            uploadedImageURL={uploadedImageURL}\n-            setUploadedImageURL={setUploadedImageURL}\n-            imageLoadingState={imageLoadingState}\n-            setImageLoadingState={setImageLoadingState}\n-            isCustomStyling={true}\n-            // isEditedMode={currentEditingId !== null}\n-          />\n-          <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">Upload</Button>\n-    </div>\n-  );\n-};\n-\n-export default AdminDashboard;\n"
+                },
+                {
+                    "date": 1741415766371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n-    dispatch(addFeatureImage(uploadedImageURL)).then()\n+    dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n+      cl\n+    })\n   }\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1741415783065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,14 @@\n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n+  const {featr}\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n-      cl\n+      console.log(data)\n     })\n   }\n \n   return (\n"
+                },
+                {
+                    "date": 1741415788195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const {featr}\n+  const {featureImageList}\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n"
+                },
+                {
+                    "date": 1741415794331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const {featureImageList}\n+  const {featureImageList} = useEle\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n"
+                },
+                {
+                    "date": 1741415804159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n import { Button } from \"@/components/ui/button\";\n import { addFeatureImage } from \"@/Store/common-slice\";\n import React, { useState } from \"react\";\n-import { useDispatch } from \"react-redux\";\n+import { useDispatch, useSelector } from \"react-redux\";\n \n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const {featureImageList} = useEle\n+  const {featureImageList} = useSelector(state => state)\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n"
+                },
+                {
+                    "date": 1741415811508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const {featureImageList} = useSelector(state => state)\n+  const {featureImageList} = useSelector(state => state.commonFa)\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n"
+                },
+                {
+                    "date": 1741415836635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const {featureImageList} = useSelector(state => state.commonFa)\n+  const {featureImageList} = useSelector(state => state.commonFeature)\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n"
+                },
+                {
+                    "date": 1741415851375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n import { Button } from \"@/components/ui/button\";\n import { addFeatureImage } from \"@/Store/common-slice\";\n-import React, { useState } from \"react\";\n+import React, { useEffect, useState } from \"react\";\n import { useDispatch, useSelector } from \"react-redux\";\n \n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n@@ -16,8 +16,10 @@\n       console.log(data)\n     })\n   }\n \n+  useEffect(())\n+\n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n"
+                },
+                {
+                    "date": 1741415857597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       console.log(data)\n     })\n   }\n \n-  useEffect(())\n+  useEffect(()=>{},[dispatch])\n \n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n"
+                },
+                {
+                    "date": 1741415867458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n       console.log(data)\n     })\n   }\n \n-  useEffect(()=>{},[dispatch])\n+  useEffect(()=>{\n+    disa\n+  },[dispatch])\n \n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n"
+                },
+                {
+                    "date": 1741415875378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import ProductImageUpload from \"@/components/admin-view/Image-upload\";\n import { Button } from \"@/components/ui/button\";\n-import { addFeatureImage } from \"@/Store/common-slice\";\n+import { addFeatureImage, getFeatureImages } from \"@/Store/common-slice\";\n import React, { useEffect, useState } from \"react\";\n import { useDispatch, useSelector } from \"react-redux\";\n \n const AdminDashboard = () => {\n@@ -17,9 +17,9 @@\n     })\n   }\n \n   useEffect(()=>{\n-    disa\n+    dispatch(getFeatureImages())\n   },[dispatch])\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1741415893463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,10 @@\n   useEffect(()=>{\n     dispatch(getFeatureImages())\n   },[dispatch])\n \n+\n+    \n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n"
+                },
+                {
+                    "date": 1741415903342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     dispatch(getFeatureImages())\n   },[dispatch])\n \n \n-    \n+  console.log(featureImageList , \"features\")\n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n"
+                },
+                {
+                    "date": 1741416203564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n-      console.log(data)\n     })\n   }\n \n   useEffect(()=>{\n"
+                },
+                {
+                    "date": 1741416216973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n+      if(data?.payload?.success)\n     })\n   }\n \n   useEffect(()=>{\n"
+                },
+                {
+                    "date": 1741416240327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,12 @@\n   const dispatch = useDispatch()\n \n   function handleUploadFeatureImage(){\n     dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n-      if(data?.payload?.success)\n+      if(data?.payload?.success){\n+    dispatch(getFeatureImages())\n+\n+      }\n     })\n   }\n \n   useEffect(()=>{\n"
+                },
+                {
+                    "date": 1741416567755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,40 +7,41 @@\n const AdminDashboard = () => {\n   const [imageFile, setImageFile] = useState(null);\n   const [uploadedImageURL, setUploadedImageURL] = useState(\"\");\n   const [imageLoadingState, setImageLoadingState] = useState(false);\n-  const {featureImageList} = useSelector(state => state.commonFeature)\n-  const dispatch = useDispatch()\n+  const { featureImageList } = useSelector((state) => state.commonFeature);\n+  const dispatch = useDispatch();\n \n-  function handleUploadFeatureImage(){\n-    dispatch(addFeatureImage(uploadedImageURL)).then((data)=>{\n-      if(data?.payload?.success){\n-    dispatch(getFeatureImages())\n-\n+  function handleUploadFeatureImage() {\n+    dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n+      if (data?.payload?.success) {\n+        dispatch(getFeatureImages());\n+        \n       }\n-    })\n+    });\n   }\n \n-  useEffect(()=>{\n-    dispatch(getFeatureImages())\n-  },[dispatch])\n+  useEffect(() => {\n+    dispatch(getFeatureImages());\n+  }, [dispatch]);\n \n-\n-  console.log(featureImageList , \"features\")\n+  console.log(featureImageList, \"features\");\n   return (\n     <div>\n       {/* <h1>Uplaod Feature Images</h1> */}\n       <ProductImageUpload\n-            imageFile={imageFile}\n-            setImageFile={setImageFile}\n-            uploadedImageURL={uploadedImageURL}\n-            setUploadedImageURL={setUploadedImageURL}\n-            imageLoadingState={imageLoadingState}\n-            setImageLoadingState={setImageLoadingState}\n-            isCustomStyling={true}\n-            // isEditedMode={currentEditingId !== null}\n-          />\n-          <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">Upload</Button>\n+        imageFile={imageFile}\n+        setImageFile={setImageFile}\n+        uploadedImageURL={uploadedImageURL}\n+        setUploadedImageURL={setUploadedImageURL}\n+        imageLoadingState={imageLoadingState}\n+        setImageLoadingState={setImageLoadingState}\n+        isCustomStyling={true}\n+        // isEditedMode={currentEditingId !== null}\n+      />\n+      <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n+        Upload\n+      </Button>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741416572969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   function handleUploadFeatureImage() {\n     dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n       if (data?.payload?.success) {\n         dispatch(getFeatureImages());\n-        \n+        setImageFile\n       }\n     });\n   }\n \n"
+                },
+                {
+                    "date": 1741416587428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n   function handleUploadFeatureImage() {\n     dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n       if (data?.payload?.success) {\n         dispatch(getFeatureImages());\n-        setImageFile\n+        setImageFile(null)\n+        \n       }\n     });\n   }\n \n"
+                },
+                {
+                    "date": 1741416596337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n       if (data?.payload?.success) {\n         dispatch(getFeatureImages());\n         setImageFile(null)\n-        \n+        set\n       }\n     });\n   }\n \n"
+                },
+                {
+                    "date": 1741416652195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n       if (data?.payload?.success) {\n         dispatch(getFeatureImages());\n         setImageFile(null)\n-        set\n+        setUploadedImageURL\n       }\n     });\n   }\n \n"
+                },
+                {
+                    "date": 1741416764181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n       if (data?.payload?.success) {\n         dispatch(getFeatureImages());\n         setImageFile(null)\n-        setUploadedImageURL\n+        setUploadedImageURL('')\n       }\n     });\n   }\n \n@@ -41,8 +41,12 @@\n       />\n       <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n         Upload\n       </Button>\n+\n+      <div className=\"relative\">\n+          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n+        </div>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741416778294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         Upload\n       </Button>\n \n       <div className=\"relative\">\n-          <img src={product?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n+          <img src={featureImageList?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1741416791210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         Upload\n       </Button>\n \n       <div className=\"relative\">\n-          <img src={featureImageList?.image} alt={product?.title} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n+          <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1741416844595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n         Upload\n       </Button>\n \n       <div className=\"relative\">\n+        \n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1741416854324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,11 @@\n         Upload\n       </Button>\n \n       <div className=\"relative\">\n-        \n+        {\n+          featureImageList && \n+        }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1741416860422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n       <div className=\"relative\">\n         {\n-          featureImageList && \n+          featureImageList && fe\n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416870473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n       <div className=\"relative\">\n         {\n-          featureImageList && fe\n+          featureImageList && featureImageList.length > 0 \n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416878656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n       <div className=\"relative\">\n         {\n-          featureImageList && featureImageList.length > 0 \n+          featureImageList && featureImageList.length > 0 ? featureImageList\n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416884096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n       <div className=\"relative\">\n         {\n-          featureImageList && featureImageList.length > 0 ? featureImageList\n+          featureImageList && featureImageList.length > 0 ? featureImageList.map()\n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416894291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n       <div className=\"relative\">\n         {\n-          featureImageList && featureImageList.length > 0 ? featureImageList.map()\n+          featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg))\n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416902600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n       <div className=\"relative\">\n         {\n-          featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg))\n+          featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg)=>)\n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416913178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,11 +42,13 @@\n       <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n         Upload\n       </Button>\n \n-      <div className=\"relative\">\n+     \n         {\n-          featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg)=>)\n+          featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg)=>(\n+\n+          ))\n         }\n           <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1741416918960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,9 @@\n           featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg)=>(\n \n           ))\n         }\n-          <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n-        </div>\n+      \n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741416930719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,10 +45,13 @@\n \n      \n         {\n           featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg)=>(\n-\n+            <div className=\"relative\">\n+            <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n+          </div>\n           ))\n+          : null\n         }\n       \n     </div>\n   );\n"
+                },
+                {
+                    "date": 1741416937175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n       </Button>\n \n      \n         {\n-          featureImageList && featureImageList.length > 0 ? featureImageList.map((feaureImg)=>(\n+          featureImageList && featureImageList.length > 0 ? featureImageList.map((featureImg)=>(\n             <div className=\"relative\">\n             <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n           </div>\n           ))\n"
+                },
+                {
+                    "date": 1741416962108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   function handleUploadFeatureImage() {\n     dispatch(addFeatureImage(uploadedImageURL)).then((data) => {\n       if (data?.payload?.success) {\n         dispatch(getFeatureImages());\n-        setImageFile(null)\n-        setUploadedImageURL('')\n+        setImageFile(null);\n+        setUploadedImageURL(\"\");\n       }\n     });\n   }\n \n@@ -42,18 +42,18 @@\n       <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n         Upload\n       </Button>\n \n-     \n-        {\n-          featureImageList && featureImageList.length > 0 ? featureImageList.map((featureImg)=>(\n+      {featureImageList && featureImageList.length > 0\n+        ? featureImageList.map((featureImg) => (\n             <div className=\"relative\">\n-            <img src={featureImageList?.image} className=\"w-full h-[300px] object-cover rounded-t-lg\"/>\n-          </div>\n+              <img\n+                src={featureImg?.image}\n+                className=\"w-full h-[300px] object-cover rounded-t-lg\"\n+              />\n+            </div>\n           ))\n-          : null\n-        }\n-      \n+        : null}\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741416974563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n       <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n         Upload\n       </Button>\n \n+      <div>\n       {featureImageList && featureImageList.length > 0\n         ? featureImageList.map((featureImg) => (\n             <div className=\"relative\">\n               <img\n@@ -52,8 +53,9 @@\n               />\n             </div>\n           ))\n         : null}\n+      </div>\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1741416981749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n       <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n         Upload\n       </Button>\n \n-      <div>\n+      <div className=\"flex flex-col\">\n       {featureImageList && featureImageList.length > 0\n         ? featureImageList.map((featureImg) => (\n             <div className=\"relative\">\n               <img\n"
+                },
+                {
+                    "date": 1741416988496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n       <Button onClick={handleUploadFeatureImage} className=\"mt-5 w-full\">\n         Upload\n       </Button>\n \n-      <div className=\"flex flex-col\">\n+      <div className=\"flex flex-col gap-4 mt-5\">\n       {featureImageList && featureImageList.length > 0\n         ? featureImageList.map((featureImg) => (\n             <div className=\"relative\">\n               <img\n"
                 }
             ],
             "date": 1739529119969,

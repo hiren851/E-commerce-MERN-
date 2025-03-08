@@ -15,49 +15,51 @@ import { useToast } from "@/hooks/use-toast";
 // import { useEffect } from "react";
 
 function ShoppingCheckout() {
-
- 
-  const {cartItems} = useSelector(state => state.shopCart)
+  const { cartItems } = useSelector((state) => state.shopCart);
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [currentSelectedAddress, setCurrentSelectedAddress] = useState(null);
   // const navigate = useNavigate();
-  const {toast} = useToast()
+  const { toast } = useToast();
+  const [paymentLoading, setPaymentLoading] = useState(false);
 
   const totalCartAmount =
-  cartItems && cartItems.items && cartItems.items.length > 0
-    ? cartItems.items.reduce(
-        (sum, currentItem) =>
-          sum +
-          ((currentItem?.salePrice > 0 ? currentItem?.salePrice : currentItem?.price) *
-            currentItem?.quantity), 
-        0
-      )
-    : 0;
+    cartItems && cartItems.items && cartItems.items.length > 0
+      ? cartItems.items.reduce(
+          (sum, currentItem) =>
+            sum +
+            (currentItem?.salePrice > 0
+              ? currentItem?.salePrice
+              : currentItem?.price) *
+              currentItem?.quantity,
+          0
+        )
+      : 0;
 
   // console.log(currentSelectedAddress)
   const handlePayment = async () => {
+    setPaymentLoading(true);
     try {
       const stripe = await loadStripe(
         "pk_test_51QxPWqA8ZItKkZV01uAeLxLSvG5ycsSHTJNI9csn6qjm2i7rfyKW332AujGAhYj6QqUMeB9hHUoP8yz6no3G70gs00RMFvv6ic"
       );
 
-      if ( cartItems.items.length == 0 ) {
-       toast({
-        title : 'Your card is empty ! please add some items to cart',
-        variant: 'destructive'
-       });
+      if (cartItems.items.length == 0) {
+        toast({
+          title: "Your card is empty ! please add some items to cart",
+          variant: "destructive",
+        });
 
-       return;
+        return;
       }
 
       if (currentSelectedAddress == null) {
-       toast({
-        title : 'Please select an address',
-        variant: 'destructive'
-       });
+        toast({
+          title: "Please select an address",
+          variant: "destructive",
+        });
 
-       return
+        return;
       }
 
       const orderDetails = {
@@ -98,16 +100,16 @@ function ShoppingCheckout() {
           sessionId: response.payload.id,
         });
 
+        // const orderId = response.payload.id;
 
-
-    // const orderId = response.payload.id;
-        
         if (result.error) {
           console.error(result.error);
         }
       }
     } catch (error) {
       console.error("Payment Error:", error);
+    } finally {
+      setPaymentLoading(false);
     }
   };
 
@@ -121,7 +123,10 @@ function ShoppingCheckout() {
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5 p-5">
-        <Address setCurrentSelectedAddress={setCurrentSelectedAddress} />
+        <Address
+          selectedId={currentSelectedAddress}
+          setCurrentSelectedAddress={setCurrentSelectedAddress}
+        />
         <div className="flex flex-col gap-4">
           {/* {console.log(cartItems)} */}
           {cartItems && cartItems.items && cartItems.items.length > 0
@@ -137,7 +142,33 @@ function ShoppingCheckout() {
           </div>
           <div className="mt-4 w-full">
             <Button className="w-full" onClick={handlePayment}>
-              Checkout With Stripe{" "}
+              {paymentLoading ? (
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 mr-2 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v8H4z"
+                    ></path>
+                  </svg>
+                  Processing Payment...
+                </>
+              ) : (
+                "Checkout With Stripe"
+              )}
             </Button>
           </div>
         </div>

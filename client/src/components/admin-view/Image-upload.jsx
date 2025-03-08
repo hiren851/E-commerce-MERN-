@@ -14,6 +14,7 @@ function ProductImageUpload({
   imageLoadingState, 
   isEditedMode,
   setImageLoadingState, 
+  isCustomStyling = false
 }) {
   const inputRef = useRef();
 
@@ -68,7 +69,7 @@ function ProductImageUpload({
   }, [imageFile]);
 
   return (
-    <div className="w-full max-w-md mx-auto mt-4">
+    <div className={`w-full ${isCustomStyling ? '' : 'max-w-md mx-auto mt-4'}`}>
       <Label className="text-lg font-semibold mb-2 block">Upload Image</Label>
       <div
         className={` ${

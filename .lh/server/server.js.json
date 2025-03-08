@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 151,
+            "activePatchIndex": 172,
             "patches": [
                 {
                     "date": 1739511971884,
@@ -612,6 +612,90 @@
                 {
                     "date": 1741152095666,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,10 @@\n // Routes\r\n app.use(\"/api/auth\", authRouter);\r\n app.use(\"/api/admin/products\", adminProductsRouter);\r\n app.use(\"/api/admin/products\", adminProductsRouter);\r\n-app.use(\"/api/shop/orders\", adminOrderRouter);\r\n+app.use(\"/api/admin/orders\", adminOrderRouter);\r\n+\r\n app.use(\"/api/shop/cart\", shopCartRouter);\r\n app.use(\"/api/shop/address\", shopAddressRouter);\r\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n"
+                },
+                {
+                    "date": 1741259066325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n const shopCartRouter = require(\"./routes/shop/cart-routes\");\r\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n+const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n \r\n mongoose\r\n   .connect(\"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\")\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1741259072976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const shopCartRouter = require(\"./routes/shop/cart-routes\");\r\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n-const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n+const shopSearchRouter = require(\"./routes/shop/webhook-routes\");\r\n \r\n mongoose\r\n   .connect(\"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\")\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1741259078422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const shopCartRouter = require(\"./routes/shop/cart-routes\");\r\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n-const shopSearchRouter = require(\"./routes/shop/webhook-routes\");\r\n+const shopSearchRouter = require(\"./routes/shop/\");\r\n \r\n mongoose\r\n   .connect(\"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\")\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1741259097813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const shopCartRouter = require(\"./routes/shop/cart-routes\");\r\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n-const shopSearchRouter = require(\"./routes/shop/\");\r\n+const shopSearchRouter = require(\"./routes/shop/search-routes\");\r\n \r\n mongoose\r\n   .connect(\"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\")\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n"
+                },
+                {
+                    "date": 1741259120671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,7 +47,8 @@\n app.use(\"/api/shop/address\", shopAddressRouter);\r\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n+app.use()\r\n \r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741259133608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,8 @@\n app.use(\"/api/shop/address\", shopAddressRouter);\r\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n-app.use()\r\n+app.use('/api/shop/')\r\n \r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741259141242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,8 @@\n app.use(\"/api/shop/address\", shopAddressRouter);\r\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n-app.use('/api/shop/')\r\n+app.use('/api/shop/search' , )\r\n \r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741259147355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,8 @@\n app.use(\"/api/shop/address\", shopAddressRouter);\r\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n-app.use('/api/shop/search' , )\r\n+app.use('/api/shop/search' , shopSearchRouter)\r\n \r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741259154698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\");\r\n \r\n mongoose\r\n-  .connect(\"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\")\r\n+  .connect(\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n+  )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n \r\n const app = express();\r\n@@ -26,14 +28,19 @@\n app.use(\r\n   cors({\r\n     origin: \"http://localhost:5173\",\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n-    allowedHeaders: [\"Content-Type\", \"Authorization\", \"Cache-Control\", \"Expires\", \"Pragma\"],\r\n+    allowedHeaders: [\r\n+      \"Content-Type\",\r\n+      \"Authorization\",\r\n+      \"Cache-Control\",\r\n+      \"Expires\",\r\n+      \"Pragma\",\r\n+    ],\r\n     credentials: true,\r\n   })\r\n );\r\n \r\n-\r\n app.use(\"/api/shop/webhook\", bodyParser.raw({ type: \"application/json\" }));\r\n \r\n app.use(express.json()); // Apply JSON parsing for all other routes\r\n \r\n@@ -47,8 +54,7 @@\n app.use(\"/api/shop/address\", shopAddressRouter);\r\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n-app.use('/api/shop/search' , shopSearchRouter)\r\n+app.use(\"/api/shop/search\", shopSearchRouter);\r\n \r\n-\r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741266405251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const shopCartRouter = require(\"./routes/shop/cart-routes\");\r\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n-const shopSearchRouter = require(\"./routes/shop/search-routes\");\r\n+const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1741266413938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n+const shopReviewRouter = require(\"./routes/shop/search-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1741266419107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n-const shopReviewRouter = require(\"./routes/shop/search-routes\"); \r\n+const shopReviewRouter = require(\"./routes/shop/\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1741266425456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n-const shopReviewRouter = require(\"./routes/shop/\"); \r\n+const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n@@ -56,6 +56,7 @@\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n+app.use(\"/api/shop/search\", shopSearchRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741266435522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,7 +56,7 @@\n app.use(\"/api/shop/order\", shopOrderRouter);\r\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n-app.use(\"/api/shop/search\", shopSearchRouter);\r\n+app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741412968916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n+const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1741412977495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n-const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n+const commonFeature = require(\"./routes/shop/review-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1741412990494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n-const commonFeature = require(\"./routes/shop/review-routes\"); \r\n+const commonFeatureRouter = require(\"./routes/\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n"
+                },
+                {
+                    "date": 1741414074853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n-const commonFeatureRouter = require(\"./routes/\"); \r\n+const commonFeatureRouter = require(\"./routes/common/feature-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n     \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n@@ -58,6 +58,7 @@\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n app.use(\"/api/shop/review\", shopReviewRouter);\r\n+app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741414084255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,7 +58,9 @@\n app.use(\"/api/shop/webhook\", shopWebHookRouter);\r\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n app.use(\"/api/shop/review\", shopReviewRouter);\r\n-app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n+\r\n+app.use(\"/api/common/review\", shopReviewRouter);\r\n+\r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741414089751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,7 +60,7 @@\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n \r\n-app.use(\"/api/common/review\", shopReviewRouter);\r\n+app.use(\"/api/common/feature\", shopReviewRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741414099754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,7 +60,7 @@\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n \r\n-app.use(\"/api/common/feature\", shopReviewRouter);\r\n+app.use(\"/api/common/feature\", commonFeatureRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
                 }
             ],
             "date": 1739511971884,

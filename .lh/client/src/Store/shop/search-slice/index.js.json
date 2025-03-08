@@ -1,0 +1,62 @@
+{
+    "sourceFile": "client/src/Store/shop/search-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1741259237007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741259261981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n \r\n \r\n-const \n\\ No newline at end of file\n+const searchSlice = createSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259276418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n+import {cretae}\r\n \r\n \r\n-\r\n const searchSlice = createSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259282259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n-import {cretae}\r\n+import { createSlice } from \"@reduxjs/toolkit\"\r\n \r\n \r\n const searchSlice = createSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259288586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n import { createSlice } from \"@reduxjs/toolkit\"\r\n \r\n \r\n-const searchSlice = createSlice\n\\ No newline at end of file\n+const searchSlice = createSlice({\r\n+    \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259295614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createSlice } from \"@reduxjs/toolkit\"\r\n \r\n \r\n const searchSlice = createSlice({\r\n-    \r\n+    name : 'sea'\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259302868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { createSlice } from \"@reduxjs/toolkit\"\r\n \r\n \r\n const searchSlice = createSlice({\r\n-    name : 'sea'\r\n+    name : 'searchSlice',\r\n+    initialState\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259313850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { createSlice } from \"@reduxjs/toolkit\"\r\n \r\n \r\n+const initialState = \r\n+\r\n const searchSlice = createSlice({\r\n     name : 'searchSlice',\r\n-    initialState\r\n+    initialState,\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259324901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import { createSlice } from \"@reduxjs/toolkit\"\r\n \r\n \r\n-const initialState = \r\n+const initialState = {\r\n+    isLoading : false,\r\n+}\r\n \r\n const searchSlice = createSlice({\r\n     name : 'searchSlice',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1741259333113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n \r\n const initialState = {\r\n     isLoading : false,\r\n+    sea\r\n }\r\n \r\n const searchSlice = createSlice({\r\n     name : 'searchSlice',\r\n"
+                },
+                {
+                    "date": 1741259339524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const initialState = {\r\n     isLoading : false,\r\n-    searchResults \r\n+    searchResults : \r\n }\r\n \r\n const searchSlice = createSlice({\r\n     name : 'searchSlice',\r\n"
+                },
+                {
+                    "date": 1741259351082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n \r\n const searchSlice = createSlice({\r\n     name : 'searchSlice',\r\n     initialState,\r\n-    reducers:{}\r\n+    reducers:{},\r\n })\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1741259237007,
+            "name": "Commit-0",
+            "content": "\r\n\r\n\r\nconst "
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "sourceFile": "client/src/Pages/shopping-view/Search.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1741259926544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741259931975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function () {\r\n+function Search() {\r\n     return (  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default ;\n+export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259937689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function Search() {\r\n-    return (  );\r\n+    return ( \r\n+        <div>Searc</div>\r\n+     );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259944311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Search() {\r\n     return ( \r\n-        <div>Searc</div>\r\n+        <div>Search Products</div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260185952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Search() {\r\n     return ( \r\n-        <div>Search Products</div>\r\n+        <div></div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260195645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Search() {\r\n     return ( \r\n-        <div></div>\r\n+        <div className=\"container m\"></div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260203486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Search() {\r\n     return ( \r\n-        <div className=\"container m\"></div>\r\n+        <div className=\"container mx-auto md:px-4\"></div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260211716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Search() {\r\n     return ( \r\n-        <div className=\"container mx-auto md:px-4\"></div>\r\n+        <div className=\"container mx-auto md:px-6 \"></div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260219237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function Search() {\r\n     return ( \r\n-        <div className=\"container mx-auto md:px-6 \"></div>\r\n+        <div className=\"container mx-auto md:px-6 px-4 \"></div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260228269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n function Search() {\r\n     return ( \r\n-        <div className=\"container mx-auto md:px-6 px-4 \"></div>\r\n+        <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n+            <div>\r\n+                \r\n+            </div>\r\n+        </div>\r\n      );\r\n }\r\n \r\n export default Search;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741260234540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function Search() {\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n-            <div>\r\n-                \r\n+            <div className=\"flex justify-center\">\r\n+\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1741260242200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function Search() {\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n-            <div className=\"flex justify-center\">\r\n-\r\n+            <div className=\"flex justify-center mb-8\">\r\n+                \r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1741260248132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n function Search() {\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n-                \r\n+                <div className=\"\">\r\n+\r\n+                </div>\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1741260254138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function Search() {\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n-                <div className=\"\">\r\n+                <div className=\"w-full flex\">\r\n \r\n                 </div>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1741260260271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function Search() {\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n-                <div className=\"w-full flex\">\r\n+                <div className=\"w-full flex items-center\">\r\n \r\n                 </div>\r\n             </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1741260274358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-\r\n+                <Input\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260286112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n+import { Input } from \"@/components/ui/input\";\r\n+\r\n function Search() {\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-                <Input\r\n+                <Input/>\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260295124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-                <Input/>\r\n+                <Input placeholder = {/>\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260301969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-                <Input placeholder = {/>\r\n+                <Input placeholder =\"Search \"/>\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260323663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-                <Input placeholder =\"Search \"/>\r\n+                <Input className placeholder =\"Search Products...\"/>\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260330270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-                <Input className placeholder =\"Search Products...\"/>\r\n+                <Input className=\"px-6\" placeholder =\"Search Products...\"/>\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260339343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n-                <Input className=\"px-6\" placeholder =\"Search Products...\"/>\r\n+                <Input className=\"py-6\" placeholder =\"Search Products...\"/>\r\n                 </div>\r\n             </div>\r\n         </div>\r\n      );\r\n"
+                },
+                {
+                    "date": 1741260347367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n                 <Input className=\"py-6\" placeholder =\"Search Products...\"/>\r\n                 </div>\r\n+                \r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1741260352530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Button } from \"@/components/ui/button\";\r\n import { Input } from \"@/components/ui/input\";\r\n \r\n function Search() {\r\n     return ( \r\n@@ -6,9 +7,9 @@\n             <div className=\"flex justify-center mb-8\">\r\n                 <div className=\"w-full flex items-center\">\r\n                 <Input className=\"py-6\" placeholder =\"Search Products...\"/>\r\n                 </div>\r\n-                <Button\r\n+                <Button></Button>\r\n             </div>\r\n         </div>\r\n      );\r\n }\r\n"
+                },
+                {
+                    "date": 1741260558812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n     const [keyword , setKeyword] = useState(\"\")\r\n \r\n     useEffect(()=>{\r\n-        if(keyword && keyword.trim() !== \"\" && keyword.length)\r\n+        if(keyword && keyword.trim() !== \"\" && keyword.length )\r\n     },[keyword])\r\n     return ( \r\n         <div className=\"container mx-auto md:px-6 px-4 py-8\">\r\n             <div className=\"flex justify-center mb-8\">\r\n"
+                }
+            ],
+            "date": 1741259926544,
+            "name": "Commit-0",
+            "content": "function () {\r\n    return (  );\r\n}\r\n\r\nexport default ;"
+        }
+    ]
+}

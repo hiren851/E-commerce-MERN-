@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 44,
+            "activePatchIndex": 67,
             "patches": [
                 {
                     "date": 1739522384046,
@@ -184,6 +184,98 @@
                 {
                     "date": 1741181045333,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import  { configureStore }  from \"@reduxjs/toolkit\";\r\n import authReducer   from \"./auth-slice\"\r\n import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './admin/order-slice'\r\n+import adminOrderSlice from './admin/products-slice/order-slice'\r\n import shopProductSLice  from './shop/product-slice'\r\n import shopCartSlice  from './shop/cart-slice'\r\n import shopAddressSlice  from './shop/address-slice'\r\n import OrderSlice  from './shop/order-slice'\r\n"
+                },
+                {
+                    "date": 1741259724381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,23 @@\n-import  { configureStore }  from \"@reduxjs/toolkit\";\r\n-import authReducer   from \"./auth-slice\"\r\n-import adminProductSLice  from './admin/products-slice'\r\n-import adminOrderSlice from './admin/products-slice/order-slice'\r\n-import shopProductSLice  from './shop/product-slice'\r\n-import shopCartSlice  from './shop/cart-slice'\r\n-import shopAddressSlice  from './shop/address-slice'\r\n-import OrderSlice  from './shop/order-slice'\r\n-\r\n-const store = configureStore({\r\n-    reducer : {\r\n-        auth: authReducer,\r\n-        adminProducts : adminProductSLice,\r\n-        adminOrder : adminOrderSlice,\r\n-        shopProducts : shopProductSLice,\r\n-        shopCart : shopCartSlice,\r\n-        shopAddress : shopAddressSlice,\r\n-        shopOrder : OrderSlice\r\n-    }\r\n-})\r\n-\r\n+import  { configureStore }  from \"@reduxjs/toolkit\";\n+import authReducer   from \"./auth-slice\"\n+import adminProductSLice  from './admin/products-slice'\n+import adminOrderSlice from './admin/products-slice/order-slice'\n+import shopProductSLice  from './shop/product-slice'\n+import shopCartSlice  from './shop/cart-slice'\n+import shopAddressSlice  from './shop/address-slice'\n+import OrderSlice  from './shop/order-slice'\n+import OrderSlice  from './shop/order-slice'\n+\n+const store = configureStore({\n+    reducer : {\n+        auth: authReducer,\n+        adminProducts : adminProductSLice,\n+        adminOrder : adminOrderSlice,\n+        shopProducts : shopProductSLice,\n+        shopCart : shopCartSlice,\n+        shopAddress : shopAddressSlice,\n+        shopOrder : OrderSlice\n+    }\n+})\n+\n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259731978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import shopProductSLice  from './shop/product-slice'\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n-import OrderSlice  from './shop/order-slice'\n+import SearchSlice  from './shop/order-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741259747741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import shopProductSLice  from './shop/product-slice'\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n-import SearchSlice  from './shop/order-slice'\n+import SearchSlice  from './shop/'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741259757194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import shopProductSLice  from './shop/product-slice'\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n-import SearchSlice  from './shop/'\n+import SearchSlice  from './shop/search-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n@@ -15,9 +15,10 @@\n         adminOrder : adminOrderSlice,\n         shopProducts : shopProductSLice,\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n-        shopOrder : OrderSlice\n+        shopOrder : OrderSlice,\n+        \n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259762493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         shopProducts : shopProductSLice,\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n-        \n+        shopSearch\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259769664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         shopProducts : shopProductSLice,\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n-        shopSearch\n+        shopSearch : sear\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741259776004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         shopProducts : shopProductSLice,\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n-        shopSearch : sear\n+        shopSearch : SearchSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267786103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n+import SearchSlice  from './shop/search-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741267798638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n-import SearchSlice  from './shop/search-slice'\n+import review  from './shop/search-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741267807113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n-import review  from './shop/search-slice'\n+import reviewSlice  from './shop/'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741267812607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import shopCartSlice  from './shop/cart-slice'\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n-import reviewSlice  from './shop/'\n+import reviewSlice  from './shop/review-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n@@ -18,8 +18,10 @@\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice\n+        shopSearch : SearchSlice\n+        shopSearch : SearchSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267818183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice\n         shopSearch : SearchSlice\n-        shopSearch : SearchSlice\n+        shopSea : SearchSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267826681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,9 @@\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice\n-        shopSearch : SearchSlice\n-        shopSea : SearchSlice\n+        shopSearch : reviewSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267833297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice\n-        shopSearch : reviewSlice\n+        shopRevies : reviewSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741415137526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n import reviewSlice  from './shop/review-slice'\n+import reviewSlice  from './shop/review-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n@@ -17,10 +18,10 @@\n         shopProducts : shopProductSLice,\n         shopCart : shopCartSlice,\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n-        shopSearch : SearchSlice\n-        shopRevies : reviewSlice\n+        shopSearch : SearchSlice,\n+        shopReview : reviewSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741415143436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n import reviewSlice  from './shop/review-slice'\n-import reviewSlice  from './shop/review-slice'\n+import commonFea  from './shop/review-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741415149516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n import reviewSlice  from './shop/review-slice'\n-import commonFea  from './shop/review-slice'\n+import commonFeatureSlice  from './shop/review-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741415157528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n import reviewSlice  from './shop/review-slice'\n-import commonFeatureSlice  from './shop/review-slice'\n+import commonFeatureSlice  from '\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741415164395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n import reviewSlice  from './shop/review-slice'\n-import commonFeatureSlice  from '\n+import commonFeatureSlice  from './common-slice/index'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741415169538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import shopAddressSlice  from './shop/address-slice'\n import OrderSlice  from './shop/order-slice'\n import SearchSlice  from './shop/search-slice'\n import reviewSlice  from './shop/review-slice'\n-import commonFeatureSlice  from './common-slice/index'\n+import commonFeatureSlice  from './common-slice'\n \n const store = configureStore({\n     reducer : {\n         auth: authReducer,\n"
+                },
+                {
+                    "date": 1741415178797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice,\n         shopReview : reviewSlice\n+        shopReview : reviewSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741415184558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice,\n         shopReview : reviewSlice\n-        shopReview : reviewSlice\n+        commonFeature : reviewSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741415191053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         shopAddress : shopAddressSlice,\n         shopOrder : OrderSlice,\n         shopSearch : SearchSlice,\n         shopReview : reviewSlice\n-        commonFeature : reviewSlice\n+        commonFeature : commonFeatureSlice\n     }\n })\n \n export default store;\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1739522384046,

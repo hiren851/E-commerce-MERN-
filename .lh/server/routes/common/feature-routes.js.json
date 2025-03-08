@@ -1,0 +1,54 @@
+{
+    "sourceFile": "server/routes/common/feature-routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1741412807972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741412879179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n-const express = require('express');\r\n+const express = require(\"express\");\r\n \r\n-const { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\r\n+const {\r\n+  addAddress,\r\n+  fetchAllAddress,\r\n+  editAddress,\r\n+  deleteAddress,\r\n+} = require(\"../../controllers/shop/address-controllers\");\r\n \r\n-\r\n const router = express.Router();\r\n \r\n+router.post(\"/add\", addAddress);\r\n+router.get(\"/get/:userId\", fetchAllAddress);\r\n+router.put(\"/update/:userId/:addressId\", editAddress);\r\n+router.delete(\"/delete/:userId/:addressId\", deleteAddress);\r\n \r\n-router.post('/add' , addAddress);\r\n-router.get('/get/:userId' , fetchAllAddress);\r\n-router.put('/update/:userId/:addressId' , editAddress);\r\n-router.delete('/delete/:userId/:addressId',deleteAddress)\r\n-\r\n-\r\n-module.exports  = router;\r\n-\r\n+module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741412885482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   addAddress,\r\n   fetchAllAddress,\r\n   editAddress,\r\n   deleteAddress,\r\n-} = require(\"../../controllers/shop/address-controllers\");\r\n+} = require(\"../../controllers/\");\r\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addAddress);\r\n"
+                },
+                {
+                    "date": 1741412895462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,9 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-  addAddress,\r\n-  fetchAllAddress,\r\n-  editAddress,\r\n-  deleteAddress,\r\n-} = require(\"../../controllers/\");\r\n+    \r\n+} = require(\"../../controllers/common/feature-controller\");\r\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addAddress);\r\n"
+                },
+                {
+                    "date": 1741412907905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-    \r\n+    addFeatureImage\r\n } = require(\"../../controllers/common/feature-controller\");\r\n \r\n const router = express.Router();\r\n \r\n"
+                },
+                {
+                    "date": 1741412921640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-    addFeatureImage\r\n+    addFeatureImage,getFeatureImages\r\n } = require(\"../../controllers/common/feature-controller\");\r\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addAddress);\r\n-router.get(\"/get/:userId\", fetchAllAddress);\r\n+router.get(\"/get\", fetchAllAddress);\r\n router.put(\"/update/:userId/:addressId\", editAddress);\r\n router.delete(\"/delete/:userId/:addressId\", deleteAddress);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741412927972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n } = require(\"../../controllers/common/feature-controller\");\r\n \r\n const router = express.Router();\r\n \r\n-router.post(\"/add\", addAddress);\r\n+router.post(\"/add\", add);\r\n router.get(\"/get\", fetchAllAddress);\r\n router.put(\"/update/:userId/:addressId\", editAddress);\r\n router.delete(\"/delete/:userId/:addressId\", deleteAddress);\r\n \r\n"
+                },
+                {
+                    "date": 1741412933680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n } = require(\"../../controllers/common/feature-controller\");\r\n \r\n const router = express.Router();\r\n \r\n-router.post(\"/add\", add);\r\n-router.get(\"/get\", fetchAllAddress);\r\n+router.post(\"/add\", addFeatureImage);\r\n+router.get(\"/get\", get);\r\n router.put(\"/update/:userId/:addressId\", editAddress);\r\n router.delete(\"/delete/:userId/:addressId\", deleteAddress);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741412946162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,7 @@\n \r\n const router = express.Router();\r\n \r\n router.post(\"/add\", addFeatureImage);\r\n-router.get(\"/get\", get);\r\n-router.put(\"/update/:userId/:addressId\", editAddress);\r\n-router.delete(\"/delete/:userId/:addressId\", deleteAddress);\r\n+router.get(\"/get\", getFeatureImages);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741412953145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-    addFeatureImage,getFeatureImages\r\n+  addFeatureImage,\r\n+  getFeatureImages,\r\n } = require(\"../../controllers/common/feature-controller\");\r\n \r\n const router = express.Router();\r\n \r\n"
+                }
+            ],
+            "date": 1741412807972,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\n\r\nconst { addAddress , fetchAllAddress , editAddress , deleteAddress} = require('../../controllers/shop/address-controllers')\r\n\r\n\r\nconst router = express.Router();\r\n\r\n\r\nrouter.post('/add' , addAddress);\r\nrouter.get('/get/:userId' , fetchAllAddress);\r\nrouter.put('/update/:userId/:addressId' , editAddress);\r\nrouter.delete('/delete/:userId/:addressId',deleteAddress)\r\n\r\n\r\nmodule.exports  = router;\r\n\r\n"
+        }
+    ]
+}

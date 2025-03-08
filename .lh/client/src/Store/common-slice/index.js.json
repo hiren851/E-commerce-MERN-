@@ -1,0 +1,118 @@
+{
+    "sourceFile": "client/src/Store/common-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1741414884033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741414899964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   isLoading: false,\r\n-  searchResults: [],\r\n+  searchRefeaturesults: [],\r\n };\r\n \r\n export const getSearchResults = createAsyncThunk(\r\n   \"/shop/getSearchResults\",\r\n"
+                },
+                {
+                    "date": 1741414909076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   isLoading: false,\r\n-  searchRefeaturesults: [],\r\n+  featureIamege: [],\r\n };\r\n \r\n export const getSearchResults = createAsyncThunk(\r\n   \"/shop/getSearchResults\",\r\n"
+                },
+                {
+                    "date": 1741414914947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n const initialState = {\r\n   isLoading: false,\r\n-  featureIamege: [],\r\n+  featureImageList: [],\r\n };\r\n \r\n export const getSearchResults = createAsyncThunk(\r\n   \"/shop/getSearchResults\",\r\n"
+                },
+                {
+                    "date": 1741414925693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   isLoading: false,\r\n   featureImageList: [],\r\n };\r\n \r\n-export const getSearchResults = createAsyncThunk(\r\n+export const getFeatureImages = createAsyncThunk(\r\n   \"/shop/getSearchResults\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/search/${keyword}`\r\n"
+                },
+                {
+                    "date": 1741414937779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n   featureImageList: [],\r\n };\r\n \r\n export const getFeatureImages = createAsyncThunk(\r\n-  \"/shop/getSearchResults\",\r\n+  \"/shop/export const getFeatureImages = createAsyncThunk(\r\n+\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/search/${keyword}`\r\n     );\r\n"
+                },
+                {
+                    "date": 1741414943359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n   featureImageList: [],\r\n };\r\n \r\n export const getFeatureImages = createAsyncThunk(\r\n-  \"/shop/export const getFeatureImages = createAsyncThunk(\r\n-\",\r\n+  \"/shop/getFeatureImages\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/shop/search/${keyword}`\r\n     );\r\n"
+                },
+                {
+                    "date": 1741414955518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n export const getFeatureImages = createAsyncThunk(\r\n   \"/shop/getFeatureImages\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/shop/search/${keyword}`\r\n+      `http://localhost:7000/api/common/search/${keyword}`\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741414964993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n export const getFeatureImages = createAsyncThunk(\r\n   \"/shop/getFeatureImages\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/common/search/${keyword}`\r\n+      `http://localhost:7000/api/common/featuew/${keyword}`\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741414972099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n export const getFeatureImages = createAsyncThunk(\r\n   \"/shop/getFeatureImages\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/common/featuew/${keyword}`\r\n+      `http://localhost:7000/api/common/feature/get`\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741414984390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,17 @@\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n+export const getFeatureImages = createAsyncThunk(\r\n+  \"/shop/getFeatureImages\",\r\n+  async (keyword) => {\r\n+    const response = await axios.get(\r\n+      `http://localhost:7000/api/common/feature/get`\r\n+    );\r\n+    return response?.data;\r\n+  }\r\n+);\r\n \r\n const searchSlice = createSlice({\r\n   name: \"searchSlice\",\r\n   initialState,\r\n"
+                },
+                {
+                    "date": 1741414991832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n-export const getFeatureImages = createAsyncThunk(\r\n+export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/getFeatureImages\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/common/feature/get`\r\n"
+                },
+                {
+                    "date": 1741414997211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     return response?.data;\r\n   }\r\n );\r\n export const addFeatureImage = createAsyncThunk(\r\n-  \"/shop/getFeatureImages\",\r\n+  \"/shop/addFeatureImage\",\r\n   async (keyword) => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/common/feature/get`\r\n     );\r\n"
+                },
+                {
+                    "date": 1741415008443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n );\r\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n   async (keyword) => {\r\n-    const response = await axios.get(\r\n+    const response = await axios.post(\r\n       `http://localhost:7000/api/common/feature/get`\r\n     );\r\n     return response?.data;\r\n   }\r\n"
+                },
+                {
+                    "date": 1741415014367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   }\r\n );\r\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n-  async (keyword) => {\r\n+  async (image) => {\r\n     const response = await axios.post(\r\n       `http://localhost:7000/api/common/feature/get`\r\n     );\r\n     return response?.data;\r\n"
+                },
+                {
+                    "date": 1741415022062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const getFeatureImages = createAsyncThunk(\r\n   \"/shop/getFeatureImages\",\r\n-  async (keyword) => {\r\n+  async () => {\r\n     const response = await axios.get(\r\n       `http://localhost:7000/api/common/feature/get`\r\n     );\r\n     return response?.data;\r\n"
+                },
+                {
+                    "date": 1741415033629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n   async (image) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/common/feature/get`\r\n+      `http://localhost:7000/api/common/feature/add`\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741415039299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n   async (image) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/common/feature/add`\r\n+      `http://localhost:7000/api/common/feature/add`,image\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741415052256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     return response?.data;\r\n   }\r\n );\r\n \r\n-const searchSlice = createSlice({\r\n+const commonSlice = createSlice({\r\n   name: \"searchSlice\",\r\n   initialState,\r\n   reducers: {\r\n     resetSearchResults: (state)=>{\r\n"
+                },
+                {
+                    "date": 1741415065775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,14 +25,11 @@\n   }\r\n );\r\n \r\n const commonSlice = createSlice({\r\n-  name: \"searchSlice\",\r\n+  name: \"commonSlice\",\r\n   initialState,\r\n   reducers: {\r\n-    resetSearchResults: (state)=>{\r\n-      state.searchResults = []\r\n-    }\r\n   },\r\n   extraReducers: (builder) => {\r\n     builder\r\n       .addCase(getSearchResults.pending, (state) => {\r\n"
+                },
+                {
+                    "date": 1741415071906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   reducers: {\r\n   },\r\n   extraReducers: (builder) => {\r\n     builder\r\n-      .addCase(getSearchResults.pending, (state) => {\r\n+      .addCase(getFeatureImages.pending, (state) => {\r\n         state.isLoading = true;\r\n       })\r\n       .addCase(getSearchResults.fulfilled, (state, action) => {\r\n         state.isLoading = false;\r\n"
+                },
+                {
+                    "date": 1741415078438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,13 +34,13 @@\n     builder\r\n       .addCase(getFeatureImages.pending, (state) => {\r\n         state.isLoading = true;\r\n       })\r\n-      .addCase(getSearchResults.fulfilled, (state, action) => {\r\n+      .addCase(getFeatureImages.fulfilled, (state, action) => {\r\n         state.isLoading = false;\r\n         state.searchResults = action.payload.data;\r\n       })\r\n-      .addCase(getSearchResults.rejected, (state, action) => {\r\n+      .addCase(getFeatureImages.rejected, (state, action) => {\r\n         state.isLoading = false;\r\n         state.searchResults = [];\r\n       });\r\n   },\r\n"
+                },
+                {
+                    "date": 1741415091034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         state.isLoading = true;\r\n       })\r\n       .addCase(getFeatureImages.fulfilled, (state, action) => {\r\n         state.isLoading = false;\r\n-        state.searchResults = action.payload.data;\r\n+        state.featureImageList = action.payload.data;\r\n       })\r\n       .addCase(getFeatureImages.rejected, (state, action) => {\r\n         state.isLoading = false;\r\n         state.searchResults = [];\r\n"
+                },
+                {
+                    "date": 1741415096594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n         state.featureImageList = action.payload.data;\r\n       })\r\n       .addCase(getFeatureImages.rejected, (state, action) => {\r\n         state.isLoading = false;\r\n-        state.searchResults = [];\r\n+        state.featureImageList = [];\r\n       });\r\n   },\r\n });\r\n \r\n"
+                },
+                {
+                    "date": 1741415113096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,5 @@\n });\r\n \r\n export const {resetSearchResults} = searchSlice.actions\r\n \r\n-export default searchSlice.reducer;\r\n+export default commonSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741415710918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n   async (image) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/common/feature/add`,image\r\n+      `http://localhost:7000/api/common/feature/add`,{image}\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n@@ -45,7 +45,6 @@\n       });\r\n   },\r\n });\r\n \r\n-export const {resetSearchResults} = searchSlice.actions\r\n \r\n export default commonSlice.reducer;\r\n"
+                }
+            ],
+            "date": 1741414884033,
+            "name": "Commit-0",
+            "content": "import { createAsyncThunk, createSlice } from \"@reduxjs/toolkit\";\r\nimport axios from \"axios\";\r\n\r\nconst initialState = {\r\n  isLoading: false,\r\n  searchResults: [],\r\n};\r\n\r\nexport const getSearchResults = createAsyncThunk(\r\n  \"/shop/getSearchResults\",\r\n  async (keyword) => {\r\n    const response = await axios.get(\r\n      `http://localhost:7000/api/shop/search/${keyword}`\r\n    );\r\n    return response?.data;\r\n  }\r\n);\r\n\r\nconst searchSlice = createSlice({\r\n  name: \"searchSlice\",\r\n  initialState,\r\n  reducers: {\r\n    resetSearchResults: (state)=>{\r\n      state.searchResults = []\r\n    }\r\n  },\r\n  extraReducers: (builder) => {\r\n    builder\r\n      .addCase(getSearchResults.pending, (state) => {\r\n        state.isLoading = true;\r\n      })\r\n      .addCase(getSearchResults.fulfilled, (state, action) => {\r\n        state.isLoading = false;\r\n        state.searchResults = action.payload.data;\r\n      })\r\n      .addCase(getSearchResults.rejected, (state, action) => {\r\n        state.isLoading = false;\r\n        state.searchResults = [];\r\n      });\r\n  },\r\n});\r\n\r\nexport const {resetSearchResults} = searchSlice.actions\r\n\r\nexport default searchSlice.reducer;\r\n"
+        }
+    ]
+}

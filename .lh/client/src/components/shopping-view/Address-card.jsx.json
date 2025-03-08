@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 43,
+            "activePatchIndex": 66,
             "patches": [
                 {
                     "date": 1740647519168,
@@ -180,6 +180,98 @@
                 {
                     "date": 1740826417328,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Label } from \"../ui/label\";\r\n \r\n function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n   return (\r\n-    <Card onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo?.) : null}>\r\n+    <Card onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo) : null}>\r\n       <CardContent className=\"grid gap-4 p-4\">\r\n         <Label>Address: {addressInfo?.address}</Label>\r\n         <Label>City : {addressInfo?.city}</Label>\r\n         <Label>State: {addressInfo?.state}</Label>\r\n"
+                },
+                {
+                    "date": 1741330114698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,25 @@\n-import { Button } from \"../ui/button\";\r\n-import { Card, CardContent, CardFooter } from \"../ui/card\";\r\n-import { Label } from \"../ui/label\";\r\n-\r\n-function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\r\n-  return (\r\n-    <Card onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo) : null}>\r\n-      <CardContent className=\"grid gap-4 p-4\">\r\n-        <Label>Address: {addressInfo?.address}</Label>\r\n-        <Label>City : {addressInfo?.city}</Label>\r\n-        <Label>State: {addressInfo?.state}</Label>\r\n-        <Label>Country: {addressInfo?.country}</Label>\r\n-        <Label>Pincode: {addressInfo?.pincode}</Label>\r\n-        <Label>Phone: {addressInfo?.phone}</Label>\r\n-        <Label>Notes: {addressInfo?.notes}</Label>\r\n-      </CardContent>\r\n-      <CardFooter className=\"flex justify-between p-3\">\r\n-        <Button onClick={()=>handleEditAddress(addressInfo)}>Edit</Button>\r\n-        <Button onClick={()=>handleDeleteAddress(addressInfo)}>Delete</Button>\r\n-      </CardFooter>\r\n-    </Card>\r\n-  );\r\n-}\r\n-\r\n-export default AddressCard;\r\n+import { Button } from \"../ui/button\";\n+import { Card, CardContent, CardFooter } from \"../ui/card\";\n+import { Label } from \"../ui/label\";\n+\n+function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\n+  return (\n+    <Card className=\"\" onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo) : null}>\n+      <CardContent className=\"grid gap-4 p-4\">\n+        <Label>Address: {addressInfo?.address}</Label>\n+        <Label>City : {addressInfo?.city}</Label>\n+        <Label>State: {addressInfo?.state}</Label>\n+        <Label>Country: {addressInfo?.country}</Label>\n+        <Label>Pincode: {addressInfo?.pincode}</Label>\n+        <Label>Phone: {addressInfo?.phone}</Label>\n+        <Label>Notes: {addressInfo?.notes}</Label>\n+      </CardContent>\n+      <CardFooter className=\"flex justify-between p-3\">\n+        <Button onClick={()=>handleEditAddress(addressInfo)}>Edit</Button>\n+        <Button onClick={()=>handleDeleteAddress(addressInfo)}>Delete</Button>\n+      </CardFooter>\n+    </Card>\n+  );\n+}\n+\n+export default AddressCard;\n"
+                },
+                {
+                    "date": 1741330365132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,23 @@\n import { Button } from \"../ui/button\";\n import { Card, CardContent, CardFooter } from \"../ui/card\";\n import { Label } from \"../ui/label\";\n \n-function AddressCard({ addressInfo , handleDeleteAddress , handleEditAddress , setCurrentSelectedAddress }) {\n+function AddressCard({\n+  addressInfo,\n+  handleDeleteAddress,\n+  handleEditAddress,\n+  setCurrentSelectedAddress,\n+}) {\n   return (\n-    <Card className=\"\" onClick={setCurrentSelectedAddress ? () => setCurrentSelectedAddress(addressInfo) : null}>\n+    <Card\n+      className=\"cursor-pointer\"\n+      onClick={\n+        setCurrentSelectedAddress\n+          ? () => setCurrentSelectedAddress(addressInfo)\n+          : null\n+      }\n+    >\n       <CardContent className=\"grid gap-4 p-4\">\n         <Label>Address: {addressInfo?.address}</Label>\n         <Label>City : {addressInfo?.city}</Label>\n         <Label>State: {addressInfo?.state}</Label>\n@@ -14,10 +26,10 @@\n         <Label>Phone: {addressInfo?.phone}</Label>\n         <Label>Notes: {addressInfo?.notes}</Label>\n       </CardContent>\n       <CardFooter className=\"flex justify-between p-3\">\n-        <Button onClick={()=>handleEditAddress(addressInfo)}>Edit</Button>\n-        <Button onClick={()=>handleDeleteAddress(addressInfo)}>Delete</Button>\n+        <Button onClick={() => handleEditAddress(addressInfo)}>Edit</Button>\n+        <Button onClick={() => handleDeleteAddress(addressInfo)}>Delete</Button>\n       </CardFooter>\n     </Card>\n   );\n }\n"
+                },
+                {
+                    "date": 1741330370539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   addressInfo,\n   handleDeleteAddress,\n   handleEditAddress,\n   setCurrentSelectedAddress,\n+  selectedId\n }) {\n   return (\n     <Card\n       className=\"cursor-pointer\"\n"
+                },
+                {
+                    "date": 1741330378527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   addressInfo,\n   handleDeleteAddress,\n   handleEditAddress,\n   setCurrentSelectedAddress,\n-  selectedId\n+  c\n }) {\n   return (\n     <Card\n       className=\"cursor-pointer\"\n"
+                },
+                {
+                    "date": 1741330609428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className=\"cursor-pointer\"\n+      className=\"cursor-pointer \"\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330616742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className=\"cursor-pointer \"\n+      className={cursor-pointer }\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330636312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className={cursor-pointer }\n+      className={`cursor-pointer `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330647497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer `}\n+      className={`cursor-pointer border `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330652736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border `}\n+      className={`cursor-pointer border-green-200 `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330662634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-green-200 `}\n+      className={`cursor-pointer border-gr `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330673610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   c\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gr `}\n+      className={`cursor-pointer border-gray-600  `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330690591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   addressInfo,\n   handleDeleteAddress,\n   handleEditAddress,\n   setCurrentSelectedAddress,\n-  c\n+  selectedId\n }) {\n   return (\n     <Card\n       className={`cursor-pointer border-gray-600  `}\n"
+                },
+                {
+                    "date": 1741330698435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600  `}\n+      className={`cursor-pointer border-gray-600 ${} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330707113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741330714484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id } `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331082001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id } `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === } `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331093403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === } `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331115614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? ''} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331131987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? ''} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-red-600'} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331137522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-red-600'} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-red-600' : ''} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331143487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-red-600' : ''} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-red-600' : 'border-black'} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331193086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-red-600' : 'border-black'} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-blue-600' : 'border-black-200'} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
+                },
+                {
+                    "date": 1741331200796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   selectedId\n }) {\n   return (\n     <Card\n-      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-blue-600' : 'border-black-200'} `}\n+      className={`cursor-pointer border-gray-600 ${selectedId?._id  === addressInfo?._id ? 'border-blue-' : 'border-black-200'} `}\n       onClick={\n         setCurrentSelectedAddress\n           ? () => setCurrentSelectedAddress(addressInfo)\n           : null\n"
                 }
             ],
             "date": 1740647519168,

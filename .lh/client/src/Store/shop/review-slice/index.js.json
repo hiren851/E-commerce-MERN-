@@ -1,0 +1,234 @@
+{
+    "sourceFile": "client/src/Store/shop/review-slice/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 54,
+            "patches": [
+                {
+                    "date": 1741266488005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741266494779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import {crea}\n\\ No newline at end of file\n+import { createSlice,creta } from \"@reduxjs/toolkit\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266503476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-import { createSlice,creta } from \"@reduxjs/toolkit\";\n\\ No newline at end of file\n+import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1741266550753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n+const r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266562399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-const r\n\\ No newline at end of file\n+const reviewSlice = createSlice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266569602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-const reviewSlice = createSlice\n\\ No newline at end of file\n+const reviewSlice = createSlice({\r\n+    name: \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266575233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n const reviewSlice = createSlice({\r\n-    name: \r\n+    name: 'reviewSlice',\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266585590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n \r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n+    initialState,\r\n+    reducers:{}\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266597165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n+const initialState\r\n+\r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n-    reducers:{}\r\n+    reducers:{},\r\n+    extraReducers: (builder) => {}\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266604755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n-const initialState\r\n+const initialState= {\r\n+    isLoading\r\n+}\r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1741266611141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n const initialState= {\r\n-    isLoading\r\n+    isLoading = false ;\r\n+    \r\n }\r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n"
+                },
+                {
+                    "date": 1741266617641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n const initialState= {\r\n-    isLoading = false ;\r\n+    isLoading = false ,\r\n     \r\n }\r\n \r\n const reviewSlice = createSlice({\r\n"
+                },
+                {
+                    "date": 1741266639347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n const initialState= {\r\n     isLoading = false ,\r\n-    \r\n+    reviews \r\n }\r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n"
+                },
+                {
+                    "date": 1741266655257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n \r\n \r\n const initialState= {\r\n-    isLoading = false ,\r\n-    reviews \r\n+    isLoading : false ,\r\n+    reviews : []\r\n }\r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n-    extraReducers: (builder) => {}\r\n+    extraReducers: (builder) => {\r\n+        \r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266667846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n     extraReducers: (builder) => {\r\n-        \r\n+        builder.addCase()\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741266681825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n     isLoading : false ,\r\n     reviews : []\r\n }\r\n \r\n+\r\n+\r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n"
+                },
+                {
+                    "date": 1741266691353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,22 @@\n     isLoading : false ,\r\n     reviews : []\r\n }\r\n \r\n+export const fetchAllFilteredProducts = createAsyncThunk(\r\n+    \"/products/fetchAllFilteredProducts\",\r\n+    async ({ filterParams, sortParams }) => {\r\n+      const query = new URLSearchParams({\r\n+        ...filterParams,\r\n+        sortBy: sortParams,\r\n+      });\r\n+      const result = await axios.get(\r\n+        `http://localhost:7000/api/shop/products/get?${query}`\r\n+      );\r\n+      return result?.data;\r\n+    }\r\n+  );\r\n \r\n-\r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n"
+                },
+                {
+                    "date": 1741266839326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n+  \r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1741266857785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     isLoading : false ,\r\n     reviews : []\r\n }\r\n \r\n-export const fetchAllFilteredProducts = createAsyncThunk(\r\n+export const addNew = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const query = new URLSearchParams({\r\n         ...filterParams,\r\n@@ -18,9 +18,21 @@\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n-  \r\n+  export const fetchAllFilteredProducts = createAsyncThunk(\r\n+    \"/products/fetchAllFilteredProducts\",\r\n+    async ({ filterParams, sortParams }) => {\r\n+      const query = new URLSearchParams({\r\n+        ...filterParams,\r\n+        sortBy: sortParams,\r\n+      });\r\n+      const result = await axios.get(\r\n+        `http://localhost:7000/api/shop/products/get?${query}`\r\n+      );\r\n+      return result?.data;\r\n+    }\r\n+  );\r\n \r\n const reviewSlice = createSlice({\r\n     name: 'reviewSlice',\r\n     initialState,\r\n"
+                },
+                {
+                    "date": 1741266878444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     isLoading : false ,\r\n     reviews : []\r\n }\r\n \r\n-export const addNew = createAsyncThunk(\r\n+export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const query = new URLSearchParams({\r\n         ...filterParams,\r\n"
+                },
+                {
+                    "date": 1741266885664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       const query = new URLSearchParams({\r\n         ...filterParams,\r\n         sortBy: sortParams,\r\n       });\r\n-      const result = await axios.get(\r\n+      const result = await axios.post(\r\n         `http://localhost:7000/api/shop/products/get?${query}`\r\n       );\r\n       return result?.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741266894345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { createSlice,createAsyncThunk } from \"@reduxjs/toolkit\";\r\n+import axios from \"axios\";\r\n \r\n \r\n const initialState= {\r\n     isLoading : false ,\r\n@@ -8,12 +9,9 @@\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n-      const query = new URLSearchParams({\r\n-        ...filterParams,\r\n-        sortBy: sortParams,\r\n-      });\r\n+     \r\n       const result = await axios.post(\r\n         `http://localhost:7000/api/shop/products/get?${query}`\r\n       );\r\n       return result?.data;\r\n"
+                },
+                {
+                    "date": 1741266900506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,9 @@\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n-     \r\n-      const result = await axios.post(\r\n+      const res = await axios.post(\r\n         `http://localhost:7000/api/shop/products/get?${query}`\r\n       );\r\n       return result?.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741266905660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n-      const res = await axios.post(\r\n+      const response = await axios.post(\r\n         `http://localhost:7000/api/shop/products/get?${query}`\r\n       );\r\n       return result?.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741266923812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const response = await axios.post(\r\n-        `http://localhost:7000/api/shop/products/get?${query}`\r\n+        `http://localhost:7000/api/shop/review/get?${query}`\r\n       );\r\n-      return result?.data;\r\n+      return response?.data;\r\n     }\r\n   );\r\n   export const fetchAllFilteredProducts = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n"
+                },
+                {
+                    "date": 1741266933612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const response = await axios.post(\r\n-        `http://localhost:7000/api/shop/review/get?${query}`\r\n+        `http://localhost:7000/api/shop/review/add`\r\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741266942660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const addReview = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const response = await axios.post(\r\n-        `http://localhost:7000/api/shop/review/add`\r\n+        `http://localhost:7000/api/shop/review/add`,{data}\r\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741266955430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     reviews : []\r\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n-    \"/products/fetchAllFilteredProducts\",\r\n+    \"/products/add\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const response = await axios.post(\r\n         `http://localhost:7000/api/shop/review/add`,{data}\r\n       );\r\n"
+                },
+                {
+                    "date": 1741267015992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,17 @@\n     reviews : []\r\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n-    \"/products/add\",\r\n+    \"/products/addReview\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const response = await axios.post(\r\n         `http://localhost:7000/api/shop/review/add`,{data}\r\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n-  export const fetchAllFilteredProducts = createAsyncThunk(\r\n+  export const getRevies = createAsyncThunk(\r\n     \"/products/fetchAllFilteredProducts\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const query = new URLSearchParams({\r\n         ...filterParams,\r\n"
+                },
+                {
+                    "date": 1741267029021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n-  export const getRevies = createAsyncThunk(\r\n-    \"/products/fetchAllFilteredProducts\",\r\n+  export const getReviews = createAsyncThunk(\r\n+    \"/products/getReviews\",\r\n     async ({ filterParams, sortParams }) => {\r\n       const query = new URLSearchParams({\r\n         ...filterParams,\r\n         sortBy: sortParams,\r\n"
+                },
+                {
+                    "date": 1741267036761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         ...filterParams,\r\n         sortBy: sortParams,\r\n       });\r\n       const result = await axios.get(\r\n-        `http://localhost:7000/api/shop/products/get?${query}`\r\n+        `http://localhost:7000/api/shop/}`\r\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741267048070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     }\r\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n-    async ({ filterParams, sortParams }) => {\r\n+    async ({  }) => {\r\n       const query = new URLSearchParams({\r\n         ...filterParams,\r\n         sortBy: sortParams,\r\n       });\r\n"
+                },
+                {
+                    "date": 1741267054763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,9 @@\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n     async ({  }) => {\r\n-      const query = new URLSearchParams({\r\n-        ...filterParams,\r\n-        sortBy: sortParams,\r\n-      });\r\n+\r\n       const result = await axios.get(\r\n         `http://localhost:7000/api/shop/}`\r\n       );\r\n       return result?.data;\r\n"
+                },
+                {
+                    "date": 1741267112395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,10 @@\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n     async ({  }) => {\r\n-\r\n       const result = await axios.get(\r\n-        `http://localhost:7000/api/shop/}`\r\n+        `http://localhost:7000/api/shop/`\r\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741267574476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     }\r\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n-    async ({  }) => {\r\n+    async () => {\r\n       const result = await axios.get(\r\n         `http://localhost:7000/api/shop/`\r\n       );\r\n       return result?.data;\r\n"
+                },
+                {
+                    "date": 1741267591688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n     }\r\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n-    async () => {\r\n+    async (id) => {\r\n       const result = await axios.get(\r\n-        `http://localhost:7000/api/shop/`\r\n+        `http://localhost:7000/api/shop/review`\r\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741267599945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n     async (id) => {\r\n       const result = await axios.get(\r\n-        `http://localhost:7000/api/shop/review`\r\n+        `http://localhost:7000/api/shop/review/:${id}`\r\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741267605005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n     async (id) => {\r\n       const result = await axios.get(\r\n-        `http://localhost:7000/api/shop/review/:${id}`\r\n+        `http://localhost:7000/api/shop/review/${id}`\r\n       );\r\n       return result?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741267615729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n     async (id) => {\r\n-      const result = await axios.get(\r\n+      const res = await axios.get(\r\n         `http://localhost:7000/api/shop/review/${id}`\r\n       );\r\n       return result?.data;\r\n     }\r\n"
+                },
+                {
+                    "date": 1741267625854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/addReview\",\r\n-    async ({ filterParams, sortParams }) => {\r\n+    async () => {\r\n       const response = await axios.post(\r\n         `http://localhost:7000/api/shop/review/add`,{data}\r\n       );\r\n       return response?.data;\r\n@@ -18,12 +18,12 @@\n   );\r\n   export const getReviews = createAsyncThunk(\r\n     \"/products/getReviews\",\r\n     async (id) => {\r\n-      const res = await axios.get(\r\n+      const response = await axios.get(\r\n         `http://localhost:7000/api/shop/review/${id}`\r\n       );\r\n-      return result?.data;\r\n+      return response?.data;\r\n     }\r\n   );\r\n \r\n const reviewSlice = createSlice({\r\n"
+                },
+                {
+                    "date": 1741267642291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/addReview\",\r\n-    async () => {\r\n+    async (data) => {\r\n       const response = await axios.post(\r\n         `http://localhost:7000/api/shop/review/add`,{data}\r\n       );\r\n       return response?.data;\r\n"
+                },
+                {
+                    "date": 1741267673382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n     extraReducers: (builder) => {\r\n-        builder.addCase()\r\n+        builder.addCase(getReviews.pending)\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267681307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n     extraReducers: (builder) => {\r\n-        builder.addCase(getReviews.pending)\r\n+        builder.addCase(getReviews.pending, (state))\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267690516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,9 @@\n     name: 'reviewSlice',\r\n     initialState,\r\n     reducers:{},\r\n     extraReducers: (builder) => {\r\n-        builder.addCase(getReviews.pending, (state))\r\n+        builder.addCase(getReviews.pending, (state)=>{\r\n+            state.isLoading =true\r\n+        })\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267697762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,6 +33,12 @@\n     extraReducers: (builder) => {\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n+        builder.addCase(getReviews.pending, (state)=>{\r\n+            state.isLoading =true\r\n+        })\r\n+        builder.addCase(getReviews.pending, (state)=>{\r\n+            state.isLoading =true\r\n+        })\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267704474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     extraReducers: (builder) => {\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n-        builder.addCase(getReviews.pending, (state)=>{\r\n+        builder.addCase(getReviews.fulfilled, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n"
+                },
+                {
+                    "date": 1741267709714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     extraReducers: (builder) => {\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n-        builder.addCase(getReviews.fulfilled, (state)=>{\r\n+        builder.addCase(getReviews.fulfilled, (state,action)=>{\r\n             state.isLoading =true\r\n         })\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n"
+                },
+                {
+                    "date": 1741267718683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,10 @@\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n         builder.addCase(getReviews.fulfilled, (state,action)=>{\r\n-            state.isLoading =true\r\n+            state.isLoading =false,\r\n+            \r\n         })\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n"
+                },
+                {
+                    "date": 1741267726079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             state.isLoading =true\r\n         })\r\n         builder.addCase(getReviews.fulfilled, (state,action)=>{\r\n             state.isLoading =false,\r\n-            \r\n+            state.reviews = action.payload.data\r\n         })\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =true\r\n         })\r\n"
+                },
+                {
+                    "date": 1741267737821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n             state.isLoading =false,\r\n             state.reviews = action.payload.data\r\n         })\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n-            state.isLoading =true\r\n+            state.isLoading =false,\r\n+            state.reviews = action.payload.data\r\n         })\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267742997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,8 @@\n             state.reviews = action.payload.data\r\n         })\r\n         builder.addCase(getReviews.pending, (state)=>{\r\n             state.isLoading =false,\r\n-            state.reviews = action.payload.data\r\n+            state.reviews = []\r\n         })\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267760894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,12 @@\n         builder.addCase(getReviews.fulfilled, (state,action)=>{\r\n             state.isLoading =false,\r\n             state.reviews = action.payload.data\r\n         })\r\n-        builder.addCase(getReviews.pending, (state)=>{\r\n+        builder.addCase(getReviews.rejected, (state)=>{\r\n             state.isLoading =false,\r\n             state.reviews = []\r\n         })\r\n     }\r\n\\ No newline at end of file\n-})\n+})\r\n+\r\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741267768941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,5 @@\n         })\r\n     }\r\n })\r\n \r\n-export \n\\ No newline at end of file\n+export default reviewSlice.reducer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741326061009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/addReview\",\r\n-    async (data) => {\r\n+    async (fo) => {\r\n       const response = await axios.post(\r\n         `http://localhost:7000/api/shop/review/add`,{data}\r\n       );\r\n       return response?.data;\r\n@@ -44,5 +44,5 @@\n         })\r\n     }\r\n })\r\n \r\n-export default reviewSlice.reducer\n\\ No newline at end of file\n+export default reviewSlice.reducer;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741326067797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,11 @@\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/addReview\",\r\n-    async (fo) => {\r\n+    async (formData) => {\r\n       const response = await axios.post(\r\n-        `http://localhost:7000/api/shop/review/add`,{data}\r\n+        `http://localhost:7000/api/shop/review/add`,\r\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n"
+                }
+            ],
+            "date": 1741266488005,
+            "name": "Commit-0",
+            "content": "import {crea}"
+        }
+    ]
+}

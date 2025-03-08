@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 63,
+            "activePatchIndex": 81,
             "patches": [
                 {
                     "date": 1740739320053,
@@ -260,6 +260,78 @@
                 {
                     "date": 1741085389502,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n \r\n   const dispatch = useDispatch();\r\n \r\n   useEffect(()=>{\r\n-    const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentCartId'));\r\n+    const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\r\n+\r\n     dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\r\n       if(data?.payload?.success){\r\n         sessionStorage.removeItem(\"currentCartId\")\r\n       }\r\n@@ -21,5 +22,5 @@\n     </div>\r\n    );\r\n }\r\n \r\n-export default PaymentSuccess;\n\\ No newline at end of file\n+export default PaymentSuccess;\r\n"
+                },
+                {
+                    "date": 1741331355232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,26 @@\n-import { capturePayment } from \"@/Store/shop/order-slice\";\r\n-import { useEffect } from \"react\";\r\n-import { useDispatch } from \"react-redux\";\r\n-\r\n-function PaymentSuccess() {\r\n-\r\n-  const dispatch = useDispatch();\r\n-\r\n-  useEffect(()=>{\r\n-    const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\r\n-\r\n-    dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\r\n-      if(data?.payload?.success){\r\n-        sessionStorage.removeItem(\"currentCartId\")\r\n-      }\r\n-    })\r\n-\r\n-  },[dispatch])\r\n-  return ( \r\n-    <div>\r\n-      success\r\n-    </div>\r\n-   );\r\n-}\r\n-\r\n-export default PaymentSuccess;\r\n+import { capturePayment } from \"@/Store/shop/order-slice\";\n+import { useEffect } from \"react\";\n+import { useDispatch } from \"react-redux\";\n+\n+function PaymentSuccess() {\n+\n+  const dispatch = useDispatch();\n+\n+  useEffect(()=>{\n+    const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n+\n+    dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\n+      if(data?.payload?.success){\n+        sessionStorage.removeItem(\"currentCartId\")\n+      }\n+    })\n+\n+  },[dispatch])\n+  return ( \n+    <div>\n+     \n+    </div>\n+   );\n+}\n+\n+export default PaymentSuccess;\n"
+                },
+                {
+                    "date": 1741331379141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,9 @@\n     })\n \n   },[dispatch])\n   return ( \n-    <div>\n-     \n-    </div>\n+   \n    );\n }\n \n export default PaymentSuccess;\n"
+                },
+                {
+                    "date": 1741331386698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Card } from \"@/components/ui/card\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n import { useDispatch } from \"react-redux\";\n \n@@ -16,9 +17,11 @@\n     })\n \n   },[dispatch])\n   return ( \n-   \n+   <Card>\n+    \n+   </Card>\n    );\n }\n \n export default PaymentSuccess;\n"
+                },
+                {
+                    "date": 1741331393297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Card } from \"@/components/ui/card\";\n+import { Card, CardHeader } from \"@/components/ui/card\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n import { useDispatch } from \"react-redux\";\n \n@@ -18,9 +18,11 @@\n \n   },[dispatch])\n   return ( \n    <Card>\n-    \n+    <CardHeader>\n+      \n+    </CardHeader>\n    </Card>\n    );\n }\n \n"
+                },
+                {
+                    "date": 1741331401181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Card, CardHeader } from \"@/components/ui/card\";\n+import { Card, CardHeader, CardTitle } from \"@/components/ui/card\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n import { useDispatch } from \"react-redux\";\n \n@@ -19,9 +19,11 @@\n   },[dispatch])\n   return ( \n    <Card>\n     <CardHeader>\n-      \n+      <CardTitle>\n+        \n+      </CardTitle>\n     </CardHeader>\n    </Card>\n    );\n }\n"
+                },
+                {
+                    "date": 1741331406910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   return ( \n    <Card>\n     <CardHeader>\n       <CardTitle>\n-        \n+        Payment is \n       </CardTitle>\n     </CardHeader>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331414716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,12 @@\n   return ( \n    <Card>\n     <CardHeader>\n       <CardTitle>\n-        Payment is \n+        Payment is successful\n       </CardTitle>\n     </CardHeader>\n+    \n    </Card>\n    );\n }\n \n"
+                },
+                {
+                    "date": 1741331425284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Button } from \"@/components/ui/button\";\n import { Card, CardHeader, CardTitle } from \"@/components/ui/card\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n import { useDispatch } from \"react-redux\";\n@@ -23,9 +24,11 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    \n+    <Button>\n+      View Orders\n+    </Button>\n    </Card>\n    );\n }\n \n"
+                },
+                {
+                    "date": 1741331462853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,12 @@\n import { Card, CardHeader, CardTitle } from \"@/components/ui/card\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n import { useDispatch } from \"react-redux\";\n+import { useNavigate } from \"react-router-dom\";\n \n function PaymentSuccess() {\n-\n+  const navigate = useNavigate()\n   const dispatch = useDispatch();\n \n   useEffect(()=>{\n     const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n"
+                },
+                {
+                    "date": 1741331473158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    <Button>\n+    <Button onClick>\n       View Orders\n     </Button>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331479699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    <Button onClick>\n+    <Button onClick={()=>}>\n       View Orders\n     </Button>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331486441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    <Button onClick={()=>}>\n+    <Button onClick={()=>navigate()}>\n       View Orders\n     </Button>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331495513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    <Button onClick={()=>navigate()}>\n+    <Button onClick={()=>navigate('/shop/account')}>\n       View Orders\n     </Button>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331505287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    <Button onClick={()=>navigate('/shop/account')}>\n+    <Button clas onClick={()=>navigate('/shop/account')}>\n       View Orders\n     </Button>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331511516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n-    <Button clas onClick={()=>navigate('/shop/account')}>\n+    <Button className=\"mt-5\" onClick={()=>navigate('/shop/account')}>\n       View Orders\n     </Button>\n    </Card>\n    );\n"
+                },
+                {
+                    "date": 1741331520656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     })\n \n   },[dispatch])\n   return ( \n-   <Card>\n+   <Card className=\"\">\n     <CardHeader>\n       <CardTitle>\n         Payment is successful\n       </CardTitle>\n"
+                },
+                {
+                    "date": 1741331553136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n     })\n \n   },[dispatch])\n   return ( \n-   <Card className=\"\">\n+   <Card className=\"p-10\">\n     <CardHeader>\n-      <CardTitle>\n+      <CardTitle className=\"\">\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n     <Button className=\"mt-5\" onClick={()=>navigate('/shop/account')}>\n"
+                },
+                {
+                    "date": 1741331561878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n \n   },[dispatch])\n   return ( \n    <Card className=\"p-10\">\n-    <CardHeader>\n-      <CardTitle className=\"\">\n+    <CardHeader className=\"p-0\">\n+      <CardTitle className=\"text-4xl\">\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n     <Button className=\"mt-5\" onClick={()=>navigate('/shop/account')}>\n"
                 }
             ],
             "date": 1740739320053,

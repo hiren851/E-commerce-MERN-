@@ -5,7 +5,12 @@ import {
   Menu,
   ShoppingCart,
 } from "lucide-react";
-import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { HiBuildingStorefront } from "react-icons/hi2";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
@@ -25,23 +30,28 @@ import UserCartWrapper from "./Cart-wrapper";
 import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/Store/shop/cart-slice";
 import { Label } from "../ui/label";
+import { Badge } from "../ui/badge";
 
 function MenuItems() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchParams , setSearchParmas] = useSearchParams()
+  const [searchParams, setSearchParmas] = useSearchParams();
 
   function handleNavigate(getCurrentMenuItem) {
     sessionStorage.removeItem("filters");
     const currentFilter =
-      getCurrentMenuItem.id !== "home" && getCurrentMenuItem.id !== 'product'
+      getCurrentMenuItem.id !== "home" &&
+      getCurrentMenuItem.id !== "product" &&
+      getCurrentMenuItem.id !== "search"
         ? { category: [getCurrentMenuItem.id] }
         : null;
     // console.log(currentFilter)
     sessionStorage.setItem("filters", JSON.stringify(currentFilter));
-    location.pathname.includes('listing') && currentFilter !==  null ? 
-    setSearchParmas(new URLSearchParams(`?category=${getCurrentMenuItem.id}`)) :
-    navigate(getCurrentMenuItem.path);
+    location.pathname.includes("listing") && currentFilter !== null
+      ? setSearchParmas(
+          new URLSearchParams(`?category=${getCurrentMenuItem.id}`)
+        )
+      : navigate(getCurrentMenuItem.path);
   }
 
   return (
@@ -81,13 +91,18 @@ function HeaderRightContent() {
         <Button
           variant="outline"
           size="icon"
+          className="relative"
           onClick={() => setOpenCartSheet(true)}
         >
           <ShoppingCart className="w-6 h-6" />
+          <span className="absolute top-[-10px] right-[-2px] font-bold text-sm">
+            {" "}
+            <Badge className="h-3 w-3 rounded-full p-2 flex justify-center"> {cartItems?.items?.length || 0}</Badge>
+          </span>
           <span className="sr-only">User cart</span>
         </Button>
         <UserCartWrapper
-        setOpenCartSheet={setOpenCartSheet}
+          setOpenCartSheet={setOpenCartSheet}
           cartItems={
             cartItems && cartItems.items && cartItems.items.length > 0
               ? cartItems.items

@@ -1,0 +1,190 @@
+{
+    "sourceFile": "server/controllers/admin/feature-controller.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1741412229479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741412243061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const \n\\ No newline at end of file\n+const  Feature = require()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412250262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const  Feature = require()\n\\ No newline at end of file\n+const  Feature = require('../../')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412256795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const  Feature = require('../../')\n\\ No newline at end of file\n+const  Feature = require('../../models/')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412263533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-const  Feature = require('../../models/')\n\\ No newline at end of file\n+const  Feature = require('../../models/Features')\r\n+\r\n"
+                },
+                {
+                    "date": 1741412275682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n const  Feature = require('../../models/Features')\r\n \r\n+const addFeau\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412286914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const  Feature = require('../../models/Features')\r\n \r\n-const addFeau\n\\ No newline at end of file\n+const addFeatureImage = async(req,rs)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412293125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n const  Feature = require('../../models/Features')\r\n \r\n-const addFeatureImage = async(req,rs)\n\\ No newline at end of file\n+const addFeatureImage = async(req,res)\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412300241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n const  Feature = require('../../models/Features')\r\n \r\n-const addFeatureImage = async(req,res)\r\n+const addFeatureImage = async(req,res)=>{\r\n+    tr\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412305278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n const  Feature = require('../../models/Features')\r\n \r\n const addFeatureImage = async(req,res)=>{\r\n-    tr\r\n+    try {\r\n+        \r\n+    } catch (e) {\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412311972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n const addFeatureImage = async(req,res)=>{\r\n     try {\r\n         \r\n     } catch (e) {\r\n-        \r\n+        console.log(e)\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412324965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n+        res.\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412333910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,10 @@\n     try {\r\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n-        res.\r\n+        res.status(500).json({\r\n+\r\n+            \r\n+        })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412340572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n-\r\n             \r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412351446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n         \r\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n+            success: false,\r\n             \r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412357428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success: false,\r\n-            \r\n+            message : \r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412362454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n     } catch (e) {\r\n         console.log(e)\r\n         res.status(500).json({\r\n             success: false,\r\n-            message : \r\n+            message : \"Error!\"\r\n         })\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412373830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n-const  Feature = require('../../models/Features')\r\n+const Feature = require(\"../../models/Features\");\r\n \r\n-const addFeatureImage = async(req,res)=>{\r\n-    try {\r\n-        \r\n-    } catch (e) {\r\n-        console.log(e)\r\n-        res.status(500).json({\r\n-            success: false,\r\n-            message : \"Error!\"\r\n-        })\r\n-    }\r\n\\ No newline at end of file\n-}\n+const addFeatureImage = async (req, res) => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error!\",\r\n+    });\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1741412383171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,15 @@\n       message: \"Error!\",\r\n     });\r\n   }\r\n };\r\n+\r\n+const getFeatureImage = async (req, res) => {\r\n+  try {\r\n+  } catch (e) {\r\n+    console.log(e);\r\n+    res.status(500).json({\r\n+      success: false,\r\n+      message: \"Error!\",\r\n+    });\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1741412394006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     });\r\n   }\r\n };\r\n \r\n-const getFeatureImage = async (req, res) => {\r\n+const getFeatureImages = async (req, res) => {\r\n   try {\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741412409921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n const Feature = require(\"../../models/Features\");\r\n \r\n const addFeatureImage = async (req, res) => {\r\n   try {\r\n+    const getImage = req.body \r\n+    const \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412429232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const Feature = require(\"../../models/Features\");\r\n \r\n const addFeatureImage = async (req, res) => {\r\n   try {\r\n-    const getImage = req.body \r\n+    const } = req.body \r\n     const \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741412442019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const Feature = require(\"../../models/Features\");\r\n \r\n const addFeatureImage = async (req, res) => {\r\n   try {\r\n-    const } = req.body \r\n-    const \r\n+    const {image} = req.body \r\n+    const  \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412453580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const addFeatureImage = async (req, res) => {\r\n   try {\r\n     const {image} = req.body \r\n-    const  \r\n+    const  featureImages = new Feature \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412464661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \r\n const addFeatureImage = async (req, res) => {\r\n   try {\r\n     const {image} = req.body \r\n-    const  featureImages = new Feature \r\n+    const  featureImages = new Feature ({\r\n+        image: image\r\n+    })\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412475306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n     const {image} = req.body \r\n     const  featureImages = new Feature ({\r\n         image: image\r\n     })\r\n+\r\n+     \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412523442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n         image: image\r\n     })\r\n \r\n      \r\n+\r\n+    \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412528539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n     const  featureImages = new Feature ({\r\n         image: image\r\n     })\r\n \r\n-     \r\n+    await feature \r\n \r\n-    \r\n+\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412535996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const  featureImages = new Feature ({\r\n         image: image\r\n     })\r\n \r\n-    await feature \r\n+    await featureImages.save() \r\n \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1741412548014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n     const  featureImages = new Feature ({\r\n         image: image\r\n     })\r\n \r\n-    await featureImages.save() \r\n+    await featureImages.save();\r\n+    \r\n+    res.status(201)\r\n \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1741412559942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,12 @@\n     })\r\n \r\n     await featureImages.save();\r\n     \r\n-    res.status(201)\r\n+    res.status(201).json({\r\n+        success: true,\r\n+        \r\n+    })\r\n \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1741412566235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     await featureImages.save();\r\n     \r\n     res.status(201).json({\r\n         success: true,\r\n-        \r\n+        data : featureImages\r\n     })\r\n \r\n \r\n   } catch (e) {\r\n"
+                },
+                {
+                    "date": 1741412572437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     await featureImages.save();\r\n     \r\n     res.status(201).json({\r\n         success: true,\r\n-        data : featureImages\r\n+        data : featureImages,\r\n     })\r\n \r\n \r\n   } catch (e) {\r\n"
+                },
+                {
+                    "date": 1741412578595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,19 @@\n const Feature = require(\"../../models/Features\");\r\n \r\n const addFeatureImage = async (req, res) => {\r\n   try {\r\n-    const {image} = req.body \r\n-    const  featureImages = new Feature ({\r\n-        image: image\r\n-    })\r\n+    const { image } = req.body;\r\n+    const featureImages = new Feature({\r\n+      image: image,\r\n+    });\r\n \r\n     await featureImages.save();\r\n-    \r\n+\r\n     res.status(201).json({\r\n-        success: true,\r\n-        data : featureImages,\r\n-    })\r\n-\r\n-\r\n+      success: true,\r\n+      data: featureImages,\r\n+    });\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412589079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,11 @@\n };\r\n \r\n const getFeatureImages = async (req, res) => {\r\n   try {\r\n+\r\n+    \r\n+\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412599434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n const getFeatureImages = async (req, res) => {\r\n   try {\r\n \r\n-    \r\n+    const images = \r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741412606541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n const getFeatureImages = async (req, res) => {\r\n   try {\r\n \r\n-    const images = \r\n+    const images = await feature\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741412614793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n const getFeatureImages = async (req, res) => {\r\n   try {\r\n \r\n-    const images = await feature\r\n+    const images = await Feature\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741412623313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n const getFeatureImages = async (req, res) => {\r\n   try {\r\n \r\n-    const images = await Feature\r\n+    const images = await Feature.find({})\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n"
+                },
+                {
+                    "date": 1741412651394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,13 @@\n   try {\r\n \r\n     const images = await Feature.find({})\r\n \r\n+    res.status(201).json({\r\n+        success: true,\r\n+        data: featureImages,\r\n+      });\r\n+\r\n   } catch (e) {\r\n     console.log(e);\r\n     res.status(500).json({\r\n       success: false,\r\n"
+                },
+                {
+                    "date": 1741412657690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,11 @@\n   try {\r\n \r\n     const images = await Feature.find({})\r\n \r\n-    res.status(201).json({\r\n+    res.status(20).json({\r\n         success: true,\r\n-        data: featureImages,\r\n+        data: imag,\r\n       });\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1741412664790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,11 @@\n   try {\r\n \r\n     const images = await Feature.find({})\r\n \r\n-    res.status(20).json({\r\n+    res.status(201).json({\r\n         success: true,\r\n-        data: imag,\r\n+        data: images,\r\n       });\r\n \r\n   } catch (e) {\r\n     console.log(e);\r\n"
+                },
+                {
+                    "date": 1741412676994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,4 +39,7 @@\n       message: \"Error!\",\r\n     });\r\n   }\r\n };\r\n+\r\n+\r\n+module.exports \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1741412684975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,5 @@\n   }\r\n };\r\n \r\n \r\n-module.exports \n\\ No newline at end of file\n+module.exports = {addFeatureImage,getFEa}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1741412229479,
+            "name": "Commit-0",
+            "content": "const "
+        }
+    ]
+}

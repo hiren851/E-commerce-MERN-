@@ -1,0 +1,38 @@
+{
+    "sourceFile": "server/routes/shop/search-rouets.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1741258990669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741259001956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const {\r\n   getFilteredProducts,\r\n   getProductDetails\r\n-} = require(\"../../controllers/shop/product-controller\");\r\n+} = require(\"../../controllers/\");\r\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n"
+                },
+                {
+                    "date": 1741259014206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n const express = require(\"express\");\r\n \r\n const {\r\n-  getFilteredProducts,\r\n-  getProductDetails\r\n-} = require(\"../../controllers/\");\r\n+ searchProducts\r\n+} = require(\"../../controllers/shop/search-controllers\");\r\n \r\n const router = express.Router();\r\n \r\n router.get(\"/get\", getFilteredProducts);\r\n"
+                },
+                {
+                    "date": 1741259035208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n } = require(\"../../controllers/shop/search-controllers\");\r\n \r\n const router = express.Router();\r\n \r\n-router.get(\"/get\", getFilteredProducts);\r\n+router.get(\"/:keyword\", getFilteredProducts);\r\n router.get(\"/get/:id\", getProductDetails);\r\n \r\n module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741259044269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+const express = require(\"express\");\r\n+\r\n+const {\r\n+ searchProducts\r\n+} = require(\"../../controllers/shop/search-controllers\");\r\n+\r\n+const router = express.Router();\r\n+\r\n+router.get(\"/:keyword\", this.search);\r\n+router.get(\"/get/:id\", getProductDetails);\r\n+\r\n+module.exports = router;\r\n"
+                },
+                {
+                    "date": 1741259050737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,20 +5,7 @@\n } = require(\"../../controllers/shop/search-controllers\");\r\n \r\n const router = express.Router();\r\n \r\n-router.get(\"/:keyword\", this.search);\r\n-router.get(\"/get/:id\", getProductDetails);\r\n+router.get(\"/:keyword\", searchProducts);\r\n \r\n module.exports = router;\r\n-const express = require(\"express\");\r\n-\r\n-const {\r\n- searchProducts\r\n-} = require(\"../../controllers/shop/search-controllers\");\r\n-\r\n-const router = express.Router();\r\n-\r\n-router.get(\"/:keyword\", getFilteredProducts);\r\n-router.get(\"/get/:id\", getProductDetails);\r\n-\r\n-module.exports = router;\r\n"
+                }
+            ],
+            "date": 1741258990669,
+            "name": "Commit-0",
+            "content": "const express = require(\"express\");\r\n\r\nconst {\r\n  getFilteredProducts,\r\n  getProductDetails\r\n} = require(\"../../controllers/shop/product-controller\");\r\n\r\nconst router = express.Router();\r\n\r\nrouter.get(\"/get\", getFilteredProducts);\r\nrouter.get(\"/get/:id\", getProductDetails);\r\n\r\nmodule.exports = router;\r\n"
+        }
+    ]
+}

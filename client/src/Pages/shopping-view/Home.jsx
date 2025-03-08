@@ -28,6 +28,10 @@ import { useNavigate } from "react-router-dom";
 import { addToCart, fetchCartItems } from "@/Store/shop/cart-slice";
 import { useToast } from "@/hooks/use-toast";
 import ProductDetailsDialog from "@/components/shopping-view/ProductDetails";
+import { getFeatureImages } from "@/Store/common-slice";
+
+
+
 // import { timeEnd } from "console";
 
 const categoriesWithIcons = [
@@ -55,9 +59,10 @@ function ShoppingHome() {
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { featureImageList } = useSelector((state) => state.commonFeature);
+
 
   //   console.log(banner2);
-  const slides = [banner1, banner2, banner3, banner4];
 
   function handleGetProductDetails(getCurrentProductId) {
     console.log(getCurrentProductId);
@@ -83,7 +88,7 @@ function ShoppingHome() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % featureImageList.length);
     }, 5000);
 
     return () => clearTimeout(timer);
@@ -114,26 +119,31 @@ function ShoppingHome() {
     }
   },[productDetails])
   
+
+
+    useEffect(() => {
+      dispatch(getFeatureImages());
+    }, [dispatch]);
   // console.log(productList);
   return (
     <div className="flex flex-col min-h-screen">
       <div className="relative w-full h-[600px] overflow-hidden">
-        {slides.map((slide, index) => (
+        {featureImageList  && featureImageList.length> 0 ? featureImageList.map((slide, index) => (
           <img
-            src={slide}
+            src={slide?.image}
             key={index}
             className={` ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             } absolute top-0 left-0 w-full h-full object-fill transition-opacity duration-1000`}
           />
-        ))}
+        )) : null}
         <Button
           variant="outline"
           size="icon"
           className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80"
           onClick={() =>
             setCurrentSlide(
-              (prev) => (prev - 1 + slides.length) % slides.length
+              (prev) => (prev - 1 + featureImageList.length) % featureImageList.length
             )
           }
         >
@@ -143,7 +153,7 @@ function ShoppingHome() {
           variant="outline"
           size="icon"
           className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80"
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % featureImageList.length)}
         >
           <ChevronRight className="w-4 h-4" />
         </Button>
