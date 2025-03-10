@@ -51,8 +51,8 @@ const createOrder = async (req, res) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:5173/shop/success",
-      cancel_url: "http://localhost:5173/shop/cancel",
+      success_url: `${process.env.CLIENT_BASE_URL}/shop/success`,
+      cancel_url: `${process.env.CLIENT_BASE_URL}/shop/cancel`,
       customer_email: req.body.userEmail,
       metadata: { userId: userId, orderId: orderId },
     });
