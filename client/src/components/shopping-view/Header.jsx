@@ -25,7 +25,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "../ui/avatar";
-import { logoutUser } from "@/Store/auth-slice";
+import { logoutUser, resetTokenAndCredentials } from "@/Store/auth-slice";
 import UserCartWrapper from "./Cart-wrapper";
 import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/Store/shop/cart-slice";
@@ -77,7 +77,10 @@ function HeaderRightContent() {
   const { cartItems } = useSelector((state) => state.shopCart);
 
   function handleLogout() {
-    dispatch(logoutUser());
+    // dispatch(logoutUser());
+    dispatch(resetTokenAndCredentials())
+    sessionStorage.clear()
+    navigate('/auth/login')
   }
 
   useEffect(() => {

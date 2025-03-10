@@ -3,16 +3,20 @@ import { Button } from '../ui/button';
 import { AlignJustify } from 'lucide-react';
 import { LogOut } from 'lucide-react';
 import { useDispatch } from 'react-redux';
-import { logoutUser } from '@/Store/auth-slice';
+import { logoutUser, resetTokenAndCredentials } from '@/Store/auth-slice';
+import { useNavigate } from 'react-router-dom';
 
 
 const AdminHeader =({setOpenSidebar})=> {
    const dispatch = useDispatch();
+   const navigate = useNavigate()
 
 
   function handleLogout(){
-    dispatch(logoutUser())
-
+    // dispatch(logoutUser())
+    dispatch(resetTokenAndCredentials())
+        sessionStorage.clear()
+        navigate('/auth/login')
   }
   return (
     <div className='bg-lime-500'>
