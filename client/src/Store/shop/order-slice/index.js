@@ -26,9 +26,9 @@ export const capturePayment = createAsyncThunk(
   async (orderId) => {
     const response = await axios.post(
       "http://localhost:7000/api/shop/order/capture",
-      {
-        orderId, // Updating payment status
-      }
+      
+       { orderId}, // Updating payment status
+      
     );
     return response.data;
   }

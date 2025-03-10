@@ -1,6 +1,8 @@
 const Order = require("../../models/Order");
+const { clearCart } = require("./cart-controllers"); // Import clearCart function
+
 const Cart = require("../../models/Cart");
-const Product = require('../../models/Products')
+const Product = require("../../models/Products");
 const Stripe = require("stripe")(
   "sk_test_51QxPWqA8ZItKkZV0Gb0GVJNN2RhnVTSbrnPQCp5X4PF7M7Ui4oy3Hth9LMvfUNiuUaifhkFpCBeqY31eRQFknJzz00SpyiT0wR"
 );
@@ -99,7 +101,6 @@ const capturePayment = async (req, res) => {
   try {
     const { orderId } = req.body;
 
-    // ✅ Fetch Order from Database
     let order = await Order.findById(orderId);
 
     if (!order) {
@@ -113,60 +114,57 @@ const capturePayment = async (req, res) => {
     order.paymentStatus = "paid";
     order.orderStatus = "confirmed";
 
-    for(let item of order.cartItems){
-      let product = await Product.findById(item.productId)
-
-      if(!product){
-        return res.status(404).json({
-          success : false,
-          message : `Not enough stock fot this product ${product.title}`
-        })
-      }
-
-      product.totalStock -= item.quantity
-
-      await product.save()
-    }
-
-    const getCartId = order.cartId;
-    // console.log("Cart ID to delete:", getCartId); // ✅ Log cartId before deleting
-    console.log("Attempting to delete cart with ID:", getCartId); // Additional logging for debugging
-
-    // ✅ Check if getCartId Exists
-    if (!getCartId) {
+    // ✅ Ensure cartId is defined
+    const cartId = order.cartId;
+    
+    if (!cartId) {
       return res.status(400).json({
         success: false,
         message: "Cart ID is missing, cannot delete cart",
       });
     }
 
-    // ✅ Delete Cart & Check Result
-    const deletedCart = await Cart.findByIdAndDelete(getCartId);
-    if (!deletedCart) {
-      return res.status(404).json({
-        success: false,
-        message: "Cart not found, deletion failed",
-      });
-    }
+    // ✅ Delete Cart
+    await Cart.findByIdAndDelete(cartId);
 
-    // ✅ Save Order Update
+    // ✅ Save updated order
     await order.save();
 
-    // ✅ Send Success Response
-    res.status(200).json({
+
+
+    for (let item of order.cartItems) {
+        let product = await Product.findById(item.productId);
+  
+        if (!product) {
+          return res.status(404).json({
+            success: false,
+            message: `Not enough stock fot this product ${product.title}`,
+          });
+        }
+  
+        product.totalStock -= item.quantity;
+  
+        await product.save();
+      }
+
+      
+    return res.status(200).json({
       success: true,
       message: "Order confirmed & cart deleted",
       data: order,
     });
+
   } catch (error) {
-    console.error("Capture Payment Error:", error);
-    res.status(500).json({
+    console.error("Capture Payment Error:", error.message); // Log the error message for debugging
+
+    return res.status(500).json({
       success: false,
       message: "Internal Server Error",
-      error: error.message,
+      error: error.message || "An unexpected error occurred",
     });
   }
 };
+
 
 const getAllOrderByUser = async (req, res) => {
   try {
@@ -194,27 +192,22 @@ const getAllOrderByUser = async (req, res) => {
   }
 };
 const getOrdersDetails = async (req, res) => {
-
   try {
     const { id } = req.params;
 
     const order = await Order.findById(id);
 
-
     if (!order) {
-
       return res.status(404).json({
         success: false,
         message: "Order not Found!",
       });
     }
 
-
     res.status(200).json({
       success: true,
       data: order,
     });
-
   } catch (e) {
     console.log(e);
     res.status(500).json({
@@ -224,4 +217,9 @@ const getOrdersDetails = async (req, res) => {
   }
 };
 
-module.exports = { createOrder, capturePayment ,getAllOrderByUser , getOrdersDetails};
+module.exports = {
+  createOrder,
+  capturePayment,
+  getAllOrderByUser,
+  getOrdersDetails,
+};

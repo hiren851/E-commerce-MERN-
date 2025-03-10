@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1741179308363,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741438997799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n   addToCart,\r\n   fetchcartItems,\r\n   updatecartItemsQty,\r\n   deletecartItems,\r\n+  clearCart\r\n } = require(\"../../controllers/shop/cart-controllers\");\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741439003872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,9 @@\n router.post('/add' , addToCart)\r\n router.get('/get/:userId' , fetchcartItems)\r\n router.put('/update-cart' , updatecartItemsQty)\r\n router.delete('/:userId/:productId' , deletecartItems)\r\n+router.delete('/clear/:userId', clearCart);\r\n \r\n+\r\n module.exports = router;\r\n \r\n"
+                },
+                {
+                    "date": 1741583867540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   addToCart,\r\n   fetchcartItems,\r\n   updatecartItemsQty,\r\n   deletecartItems,\r\n-  clearCart\r\n+  // clearCart\r\n } = require(\"../../controllers/shop/cart-controllers\");\r\n \r\n \r\n \r\n"
                 }
             ],
             "date": 1741179308363,

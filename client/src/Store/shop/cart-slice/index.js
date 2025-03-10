@@ -7,9 +7,6 @@ const initialState = {
 };
 
 // Clear Cart
-export const clearCart = createAsyncThunk("cart/clearCart", async () => {
-  return [];
-});
 
 export const addToCart = createAsyncThunk(
   "cart/addToCart",
@@ -56,13 +53,20 @@ export const updateCartQuantity = createAsyncThunk(
   }
 );
 
+// export const clearCart = createAsyncThunk("cart/clearCart", async (userId) => {
+//   const response = await axios.delete(
+//     `http://localhost:7000/api/shop/cart/clear/${userId}`
+//   );
+//   return response.data;
+// });
+
 const shoppingCartSlice = createSlice({
   name: "shoppingCart",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(addToCart.pending, (state) => { 
+      .addCase(addToCart.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(addToCart.fulfilled, (state, action) => {
@@ -71,7 +75,7 @@ const shoppingCartSlice = createSlice({
       })
       .addCase(addToCart.rejected, (state) => {
         state.isLoading = false;
-        state.cartItems = []
+        state.cartItems = [];
       })
       .addCase(fetchCartItems.pending, (state) => {
         state.isLoading = true;
@@ -100,10 +104,16 @@ const shoppingCartSlice = createSlice({
         state.isLoading = false;
         state.cartItems = action.payload.data;
       })
-      .addCase(deletecartItems.rejected, (state) => {})
-      .addCase(clearCart.fulfilled, (state) => {
-        state.cartItems = []; // Empty the cart
-      });
+      // .addCase(clearCart.pending, (state) => {
+      //   state.isLoading = true;
+      // })
+      // .addCase(clearCart.fulfilled, (state) => {
+      //   state.isLoading = false;
+      //   state.cartItems = []; // Clear the cart state
+      // })
+      // .addCase(clearCart.rejected, (state) => {
+      //   state.isLoading = false;
+      // });
   },
 });
 

@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { clearCart } from "@/Store/shop/cart-slice";
 import { useToast } from "@/hooks/use-toast";
+import { fetchCartItems } from "@/Store/shop/cart-slice";
+// import { clearCart, fetchCartItems } from "@/Store/shop/cart-slice";
 // import {loadStripe} from '@stripe/react-stripe-js'
 
 // import { useEffect } from "react";
@@ -22,6 +24,8 @@ function ShoppingCheckout() {
   // const navigate = useNavigate();
   const { toast } = useToast();
   const [paymentLoading, setPaymentLoading] = useState(false);
+
+
 
   const totalCartAmount =
     cartItems && cartItems.items && cartItems.items.length > 0
@@ -61,7 +65,6 @@ function ShoppingCheckout() {
 
         return;
       }
-
       const orderDetails = {
         cartId: cartItems._id,
         cartItems: cartItems.items.map((item) => ({
@@ -94,17 +97,27 @@ function ShoppingCheckout() {
       };
 
       const response = await dispatch(createOrder(orderDetails));
+      console.log(response)
+
 
       if (response?.payload?.id) {
         const result = await stripe.redirectToCheckout({
           sessionId: response.payload.id,
         });
 
+        if(response?.success){
+          dispatch(fetchCartItems(user.id))
+        }else{
+          alert("Payment failed")
+        }
+
+
         // const orderId = response.payload.id;
 
-        if (result.error) {
-          console.error(result.error);
-        }
+        // if (!result.error) {
+        //   dispatch(clearCart(user.id)); 
+        //   toast({ title: "Payment successful!.", variant: "success" });
+        // }
       }
     } catch (error) {
       console.error("Payment Error:", error);
@@ -112,6 +125,7 @@ function ShoppingCheckout() {
       setPaymentLoading(false);
     }
   };
+  // console.log(cartItems)
 
   return (
     <div className="flex flex-col ">

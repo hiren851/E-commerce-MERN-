@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 81,
+            "activePatchIndex": 101,
             "patches": [
                 {
                     "date": 1740739320053,
@@ -332,6 +332,86 @@
                 {
                     "date": 1741331561878,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n \n   },[dispatch])\n   return ( \n    <Card className=\"p-10\">\n-    <CardHeader>\n-      <CardTitle className=\"\">\n+    <CardHeader className=\"p-0\">\n+      <CardTitle className=\"text-4xl\">\n         Payment is successful\n       </CardTitle>\n     </CardHeader>\n     <Button className=\"mt-5\" onClick={()=>navigate('/shop/account')}>\n"
+                },
+                {
+                    "date": 1741442197804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n   const dispatch = useDispatch();\n-\n   useEffect(()=>{\n     const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n     dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\n"
+                },
+                {
+                    "date": 1741442290781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,18 +7,19 @@\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n   const dispatch = useDispatch();\n-  useEffect(()=>{\n-    const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n-    dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\n-      if(data?.payload?.success){\n-        sessionStorage.removeItem(\"currentCartId\")\n-      }\n-    })\n+  // useEffect(()=>{\n+  //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n-  },[dispatch])\n+  //   dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\n+  //     if(data?.payload?.success){\n+  //       sessionStorage.removeItem(\"currentCartId\")\n+  //     }\n+  //   })\n+\n+  // },[dispatch])\n   return ( \n    <Card className=\"p-10\">\n     <CardHeader className=\"p-0\">\n       <CardTitle className=\"text-4xl\">\n"
+                },
+                {
+                    "date": 1741442296687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { useNavigate } from \"react-router-dom\";\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n-  const dispatch = useDispatch();\n+  // const dispatch = useDispatch();\n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n"
+                },
+                {
+                    "date": 1741442323425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,12 @@\n   //     }\n   //   })\n \n   // },[dispatch])\n+\n+  useEffect(()=>{\n+    dispatch(fetchCartItems(user.id))\n+  },[dispatch])\n   return ( \n    <Card className=\"p-10\">\n     <CardHeader className=\"p-0\">\n       <CardTitle className=\"text-4xl\">\n"
+                },
+                {
+                    "date": 1741442329825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,10 @@\n \n   useEffect(()=>{\n     dispatch(fetchCartItems(user.id))\n   },[dispatch])\n+\n+\n   return ( \n    <Card className=\"p-10\">\n     <CardHeader className=\"p-0\">\n       <CardTitle className=\"text-4xl\">\n"
+                },
+                {
+                    "date": 1741442335121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Button } from \"@/components/ui/button\";\n import { Card, CardHeader, CardTitle } from \"@/components/ui/card\";\n+import { fetchCartItems } from \"@/Store/shop/cart-slice\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n import { useDispatch } from \"react-redux\";\n import { useNavigate } from \"react-router-dom\";\n"
+                },
+                {
+                    "date": 1741442341856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import { useNavigate } from \"react-router-dom\";\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n+  const \n   // const dispatch = useDispatch();\n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n"
+                },
+                {
+                    "date": 1741442351023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import { useNavigate } from \"react-router-dom\";\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n-  const \n+  \n   // const dispatch = useDispatch();\n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n@@ -21,11 +21,11 @@\n   //   })\n \n   // },[dispatch])\n \n-  useEffect(()=>{\n-    dispatch(fetchCartItems(user.id))\n-  },[dispatch])\n+  // useEffect(()=>{\n+  //   dispatch(fetchCartItems(user.id))\n+  // },[dispatch])\n \n \n   return ( \n    <Card className=\"p-10\">\n"
+                },
+                {
+                    "date": 1741442358146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import { useNavigate } from \"react-router-dom\";\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n+  const {user}\n   \n   // const dispatch = useDispatch();\n \n   // useEffect(()=>{\n"
+                },
+                {
+                    "date": 1741442373430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n import { Card, CardHeader, CardTitle } from \"@/components/ui/card\";\n import { fetchCartItems } from \"@/Store/shop/cart-slice\";\n import { capturePayment } from \"@/Store/shop/order-slice\";\n import { useEffect } from \"react\";\n-import { useDispatch } from \"react-redux\";\n+import { useDispatch, useSelector } from \"react-redux\";\n import { useNavigate } from \"react-router-dom\";\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n-  const {user}\n+  const {user} = useSelector(state => state.auth)\n   \n   // const dispatch = useDispatch();\n \n   // useEffect(()=>{\n"
+                },
+                {
+                    "date": 1741442380067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   const navigate = useNavigate()\n   const {user} = useSelector(state => state.auth)\n   \n   // const dispatch = useDispatch();\n+  console.log(user)\n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n"
+                },
+                {
+                    "date": 1741442395297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n   const {user} = useSelector(state => state.auth)\n+  const {cart}\n   \n   // const dispatch = useDispatch();\n   console.log(user)\n \n"
+                },
+                {
+                    "date": 1741442402276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n   const {user} = useSelector(state => state.auth)\n-  const {cart}\n+  const {cartItems} = useSelector()\n   \n   // const dispatch = useDispatch();\n   console.log(user)\n \n"
+                },
+                {
+                    "date": 1741442415044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n   const {user} = useSelector(state => state.auth)\n-  const {cartItems} = useSelector()\n+  const {cartItems} = useSelector(stae)\n   \n   // const dispatch = useDispatch();\n   console.log(user)\n \n"
+                },
+                {
+                    "date": 1741442443120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n function PaymentSuccess() {\n   const navigate = useNavigate()\n   const {user} = useSelector(state => state.auth)\n-  const {cartItems} = useSelector(stae)\n+  const {cartItems} = useSelector(state => state.shopCart)\n   \n   // const dispatch = useDispatch();\n   console.log(user)\n \n"
+                },
+                {
+                    "date": 1741442449103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   const {cartItems} = useSelector(state => state.shopCart)\n   \n   // const dispatch = useDispatch();\n   console.log(user)\n+  console.log(ca)\n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n"
+                },
+                {
+                    "date": 1741442468700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,9 @@\n   const {user} = useSelector(state => state.auth)\n   const {cartItems} = useSelector(state => state.shopCart)\n   \n   // const dispatch = useDispatch();\n-  console.log(user)\n-  console.log(ca)\n+  \n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n"
+                },
+                {
+                    "date": 1741442485954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   const navigate = useNavigate()\n   const {user} = useSelector(state => state.auth)\n   const {cartItems} = useSelector(state => state.shopCart)\n   \n-  // const dispatch = useDispatch();\n+  const dispatch = useDispatch();\n   \n \n   // useEffect(()=>{\n   //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n@@ -24,11 +24,11 @@\n   //   })\n \n   // },[dispatch])\n \n-  // useEffect(()=>{\n-  //   dispatch(fetchCartItems(user.id))\n-  // },[dispatch])\n+  useEffect(()=>{\n+    dispatch(fetchCartItems(user.id))\n+  },[dispatch])\n \n \n   return ( \n    <Card className=\"p-10\">\n"
+                },
+                {
+                    "date": 1741442571190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,18 +13,18 @@\n   \n   const dispatch = useDispatch();\n   \n \n-  // useEffect(()=>{\n-  //   const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n+  useEffect(()=>{\n+    const getCurrentOrderId = JSON.parse(sessionStorage.getItem('currentOrderId'));\n \n-  //   dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\n-  //     if(data?.payload?.success){\n-  //       sessionStorage.removeItem(\"currentCartId\")\n-  //     }\n-  //   })\n+    dispatch(capturePayment( getCurrentOrderId )).then((data)=>{\n+      if(data?.payload?.success){\n+        sessionStorage.removeItem(\"currentCartId\")\n+      }\n+    })\n \n-  // },[dispatch])\n+  },[dispatch])\n \n   useEffect(()=>{\n     dispatch(fetchCartItems(user.id))\n   },[dispatch])\n"
+                },
+                {
+                    "date": 1741584029854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,11 @@\n     })\n \n   },[dispatch])\n \n-  useEffect(()=>{\n-    dispatch(fetchCartItems(user.id))\n-  },[dispatch])\n+  // useEffect(()=>{\n+  //   dispatch(fetchCartItems(user.id))\n+  // },[dispatch])\n \n \n   return ( \n    <Card className=\"p-10\">\n"
                 }
             ],
             "date": 1740739320053,

@@ -85,6 +85,7 @@ function ShoppingHome() {
       }
     });
   }
+  console.log(featureImageList)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -92,7 +93,7 @@ function ShoppingHome() {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [featureImageList]);
 
   useEffect(() => {
     dispatch(

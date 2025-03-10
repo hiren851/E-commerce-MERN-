@@ -2,6 +2,8 @@ const Cart = require("../../models/Cart");
 const Product = require("../../models/Products");
 
 const addToCart = async (req, res) => {
+  console.log("Adding to cart for user ID:", req.body.userId); // Log userId for debugging
+
   // console.log("User ID:", req.body.userId); // Log the userId for debugging
 
   try {
@@ -108,7 +110,7 @@ const fetchcartItems = async (req, res) => {
 const updatecartItemsQty = async (req, res) => {
   try {
     const { userId, productId, quantity } = req.body;
-    console.log("User ID:", userId);  
+    console.log("User ID:", userId);
 
     if (!userId || !productId || quantity <= 0) {
       return res.status(400).json({
@@ -231,9 +233,12 @@ const deletecartItems = async (req, res) => {
   }
 };
 
+
+
 module.exports = {
   addToCart,
   updatecartItemsQty,
   deletecartItems,
   fetchcartItems,
+  // clearCart,
 };

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 28,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1740554873848,
@@ -120,6 +120,54 @@
                 {
                     "date": 1741251407037,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n         state.cartItems = action.payload.data;\n       })\n       .addCase(addToCart.rejected, (state) => {\n         state.isLoading = false;\n+        state.\n       })\n       .addCase(fetchCartItems.pending, (state) => {\n         state.isLoading = true;\n       })\n"
+                },
+                {
+                    "date": 1741438312742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,10 @@\n   isLoading: false,\n };\n \n // Clear Cart\n-export const clearCart = createAsyncThunk(\"cart/clearCart\", async () => {\n-  return [];\n-});\n \n+\n export const addToCart = createAsyncThunk(\n   \"cart/addToCart\",\n   async ({ userId, productId, quantity }) => {\n     const response = await axios.post(\n@@ -70,9 +68,9 @@\n         state.cartItems = action.payload.data;\n       })\n       .addCase(addToCart.rejected, (state) => {\n         state.isLoading = false;\n-        state.\n+        state.cartItems = []\n       })\n       .addCase(fetchCartItems.pending, (state) => {\n         state.isLoading = true;\n       })\n"
+                },
+                {
+                    "date": 1741438425650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,12 +97,8 @@\n       .addCase(deletecartItems.fulfilled, (state, action) => {\n         state.isLoading = false;\n         state.cartItems = action.payload.data;\n       })\n-      .addCase(deletecartItems.rejected, (state) => {})\n-      .addCase(clearCart.fulfilled, (state) => {\n-        state.cartItems = []; // Empty the cart\n-      });\n   },\n });\n \n export default shoppingCartSlice.reducer;\n"
+                },
+                {
+                    "date": 1741438692037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,18 @@\n     );\n     return response.data;\n   }\n );\n+export const updateCartQuantity = createAsyncThunk(\n+  \"cart/updateCartQuantity\",\n+  async ({ userId, productId, quantity }) => {\n+    const response = await axios.put(\n+      \"http://localhost:7000/api/shop/cart/update-cart\",\n+      { userId, productId, quantity }\n+    );\n+    return response.data;\n+  }\n+);\n \n const shoppingCartSlice = createSlice({\n   name: \"shoppingCart\",\n   initialState,\n"
+                },
+                {
+                    "date": 1741438702998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,10 @@\n     );\n     return response.data;\n   }\n );\n-export const updateCartQuantity = createAsyncThunk(\n+\n+export const clearCart = createAsyncThunk(\n   \"cart/updateCartQuantity\",\n   async ({ userId, productId, quantity }) => {\n     const response = await axios.put(\n       \"http://localhost:7000/api/shop/cart/update-cart\",\n"
+                },
+                {
+                    "date": 1741438710690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n   }\n );\n \n export const clearCart = createAsyncThunk(\n-  \"cart/updateCartQuantity\",\n+  \"cart/clearCart\",\n   async ({ userId, productId, quantity }) => {\n     const response = await axios.put(\n       \"http://localhost:7000/api/shop/cart/update-cart\",\n       { userId, productId, quantity }\n"
+                },
+                {
+                    "date": 1741438716955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n );\n \n export const clearCart = createAsyncThunk(\n   \"cart/clearCart\",\n-  async ({ userId, productId, quantity }) => {\n+  async () => {\n     const response = await axios.put(\n       \"http://localhost:7000/api/shop/cart/update-cart\",\n       { userId, productId, quantity }\n     );\n"
+                },
+                {
+                    "date": 1741438726041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,10 +55,10 @@\n );\n \n export const clearCart = createAsyncThunk(\n   \"cart/clearCart\",\n-  async () => {\n-    const response = await axios.put(\n+  async (userId) => {\n+    const response = await axios.delete(\n       \"http://localhost:7000/api/shop/cart/update-cart\",\n       { userId, productId, quantity }\n     );\n     return response.data;\n"
+                },
+                {
+                    "date": 1741439047821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n export const clearCart = createAsyncThunk(\n   \"cart/clearCart\",\n   async (userId) => {\n     const response = await axios.delete(\n-      \"http://localhost:7000/api/shop/cart/update-cart\",\n+      \"http://localhost:7000/api/shop/cart/clear/\",\n       { userId, productId, quantity }\n     );\n     return response.data;\n   }\n"
+                },
+                {
+                    "date": 1741439057352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n export const clearCart = createAsyncThunk(\n   \"cart/clearCart\",\n   async (userId) => {\n     const response = await axios.delete(\n-      \"http://localhost:7000/api/shop/cart/clear/\",\n+      \"http://localhost:7000/api/shop/cart/clear/${userId}\",\n       { userId, productId, quantity }\n     );\n     return response.data;\n   }\n"
+                },
+                {
+                    "date": 1741439062909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n export const clearCart = createAsyncThunk(\n   \"cart/clearCart\",\n   async (userId) => {\n     const response = await axios.delete(\n-      \"http://localhost:7000/api/shop/cart/clear/${userId}\",\n+      \"`http://localhost:7000/api/shop/cart/clear/${userId}`,\n       { userId, productId, quantity }\n     );\n     return response.data;\n   }\n"
+                },
+                {
+                    "date": 1741439076769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n export const clearCart = createAsyncThunk(\n   \"cart/clearCart\",\n   async (userId) => {\n     const response = await axios.delete(\n-      \"`http://localhost:7000/api/shop/cart/clear/${userId}`,\n+      http://localhost:7000/api/shop/cart/clear/${userId}`,\n       { userId, productId, quantity }\n     );\n     return response.data;\n   }\n"
+                },
+                {
+                    "date": 1741439084975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   \"cart/clearCart\",\n   async (userId) => {\n     const response = await axios.delete(\n       `http://localhost:7000/api/shop/cart/clear/${userId}`,\n-      { userId, productId, quantity }\n+  \n     );\n     return response.data;\n   }\n );\n"
                 }
             ],
             "date": 1740554873848,
