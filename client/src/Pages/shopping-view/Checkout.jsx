@@ -44,27 +44,20 @@ function ShoppingCheckout() {
   const handlePayment = async () => {
     setPaymentLoading(true);
     try {
-      const stripe = await loadStripe(
-        process.env.STRIPE_PUBLIC_KEY
-      );
-
-      if (cartItems.items.length == 0) {
-        toast({
-          title: "Your card is empty ! please add some items to cart",
-          variant: "destructive",
-        });
-
+      const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+  
+      if (!cartItems.items.length) {
+        toast({ title: "Your cart is empty! Please add items.", variant: "destructive" });
+        setPaymentLoading(false);
         return;
       }
-
-      if (currentSelectedAddress == null) {
-        toast({
-          title: "Please select an address",
-          variant: "destructive",
-        });
-
+  
+      if (!currentSelectedAddress) {
+        toast({ title: "Please select an address", variant: "destructive" });
+        setPaymentLoading(false);
         return;
       }
+  
       const orderDetails = {
         cartId: cartItems._id,
         cartItems: cartItems.items.map((item) => ({
@@ -95,36 +88,30 @@ function ShoppingCheckout() {
         paymentId: "",
         payerId: "",
       };
-
+  
       const response = await dispatch(createOrder(orderDetails));
-      console.log(response)
-
-
+  
       if (response?.payload?.id) {
-        const result = await stripe.redirectToCheckout({
-          sessionId: response.payload.id,
-        });
-
-        if(response?.success){
-          dispatch(fetchCartItems(user.id))
-        }else{
-          alert("Payment failed")
+        const result = await stripe.redirectToCheckout({ sessionId: response.payload.id });
+  
+        if (result.error) {
+          console.error("Stripe Checkout Error:", result.error);
+          toast({ title: "Payment failed. Please try again.", variant: "destructive" });
+        } else {
+          dispatch(fetchCartItems(user.id));
+          toast({ title: "Payment successful!", variant: "success" });
         }
-
-
-        // const orderId = response.payload.id;
-
-        // if (!result.error) {
-        //   dispatch(clearCart(user.id)); 
-        //   toast({ title: "Payment successful!.", variant: "success" });
-        // }
+      } else {
+        toast({ title: "Order creation failed!", variant: "destructive" });
       }
     } catch (error) {
       console.error("Payment Error:", error);
+      toast({ title: "Something went wrong! Try again later.", variant: "destructive" });
     } finally {
       setPaymentLoading(false);
     }
   };
+  
   // console.log(cartItems)
 
   return (
