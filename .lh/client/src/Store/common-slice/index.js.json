@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 25,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1741414884033,
@@ -108,6 +108,14 @@
                 {
                     "date": 1741415710918,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n   async (image) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/common/feature/add`,image\r\n+      `http://localhost:7000/api/common/feature/add`,{image}\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n@@ -45,7 +45,6 @@\n       });\r\n   },\r\n });\r\n \r\n-export const {resetSearchResults} = searchSlice.actions\r\n \r\n export default commonSlice.reducer;\r\n"
+                },
+                {
+                    "date": 1741590963863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n export const getFeatureImages = createAsyncThunk(\r\n   \"/shop/getFeatureImages\",\r\n   async () => {\r\n     const response = await axios.get(\r\n-      `http://localhost:7000/api/common/feature/get`\r\n+      `${import.meta.env.VITE_API_URL}/api/common/feature/get`\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1741590969611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export const addFeatureImage = createAsyncThunk(\r\n   \"/shop/addFeatureImage\",\r\n   async (image) => {\r\n     const response = await axios.post(\r\n-      `http://localhost:7000/api/common/feature/add`,{image}\r\n+      `${import.meta.env.VITE_API_URL}/api/common/feature/add`,{image}\r\n     );\r\n     return response?.data;\r\n   }\r\n );\r\n"
                 }
             ],
             "date": 1741414884033,

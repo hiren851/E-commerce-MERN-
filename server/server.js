@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
@@ -11,14 +13,12 @@ const shopCartRouter = require("./routes/shop/cart-routes");
 const shopAddressRouter = require("./routes/shop/address-routes");
 const shopOrderRouter = require("./routes/shop/order-routes");
 const shopWebHookRouter = require("./routes/shop/webhook-routes");
-const shopSearchRouter = require("./routes/shop/search-routes"); 
-const shopReviewRouter = require("./routes/shop/review-routes"); 
-const commonFeatureRouter = require("./routes/common/feature-routes"); 
+const shopSearchRouter = require("./routes/shop/search-routes");
+const shopReviewRouter = require("./routes/shop/review-routes");
+const commonFeatureRouter = require("./routes/common/feature-routes");
 
 mongoose
-  .connect(
-    "mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/"
-  )
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch((error) => console.error("MongoDB Connection Error:", error));
 
@@ -29,7 +29,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_BASE_URL,
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
@@ -59,7 +59,6 @@ app.use("/api/shop/webhook", shopWebHookRouter);
 app.use("/api/shop/products", shopProductsRouter);
 app.use("/api/shop/search", shopSearchRouter);
 app.use("/api/shop/review", shopReviewRouter);
-
 
 app.use("/api/common/feature", commonFeatureRouter);
 

@@ -45,7 +45,7 @@ function ShoppingCheckout() {
     setPaymentLoading(true);
     try {
       const stripe = await loadStripe(
-        "pk_test_51QxPWqA8ZItKkZV01uAeLxLSvG5ycsSHTJNI9csn6qjm2i7rfyKW332AujGAhYj6QqUMeB9hHUoP8yz6no3G70gs00RMFvv6ic"
+        process.env.STRIPE_PUBLIC_KEY
       );
 
       if (cartItems.items.length == 0) {

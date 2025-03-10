@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 172,
+            "activePatchIndex": 183,
             "patches": [
                 {
                     "date": 1739511971884,
@@ -696,6 +696,50 @@
                 {
                     "date": 1741414099754,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,7 +60,7 @@\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n \r\n-app.use(\"/api/common/feature\", shopReviewRouter);\r\n+app.use(\"/api/common/feature\", commonFeatureRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741589659890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+\r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n"
+                },
+                {
+                    "date": 1741589665535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+require()\r\n \r\n-\r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n"
+                },
+                {
+                    "date": 1741589670844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-require()\r\n+require(\"dotenv\")\r\n \r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n"
+                },
+                {
+                    "date": 1741589676658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-require(\"dotenv\")\r\n+require(\"dotenv\").config\r\n \r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n"
+                },
+                {
+                    "date": 1741589689932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-require(\"dotenv\").config\r\n+require(\"dotenv\").config()\r\n \r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n"
+                },
+                {
+                    "date": 1741590233454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n-require(\"dotenv\").config()\r\n+require(\"dotenv\").config();\r\n \r\n+\r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n@@ -18,9 +19,9 @@\n const commonFeatureRouter = require(\"./routes/common/feature-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    \"c\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n \r\n"
+                },
+                {
+                    "date": 1741590254888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const commonFeatureRouter = require(\"./routes/common/feature-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n-    \"c\"\r\n+    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n \r\n"
+                },
+                {
+                    "date": 1741590265297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const commonFeatureRouter = require(\"./routes/common/feature-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n-    \"mongodb+srv://hirenkanzariya851:Hiren7456@e-commerce-cluster.43guc.mongodb.net/\"\r\n+    process.env.\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n \r\n"
+                },
+                {
+                    "date": 1741590270683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const commonFeatureRouter = require(\"./routes/common/feature-routes\"); \r\n \r\n mongoose\r\n   .connect(\r\n-    process.env.\r\n+    process.env.MONGO_URL\r\n   )\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n \r\n"
+                },
+                {
+                    "date": 1741590300249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n require(\"dotenv\").config();\r\n \r\n-\r\n const express = require(\"express\");\r\n const mongoose = require(\"mongoose\");\r\n const cookieParser = require(\"cookie-parser\");\r\n const cors = require(\"cors\");\r\n@@ -13,16 +12,14 @@\n const shopCartRouter = require(\"./routes/shop/cart-routes\");\r\n const shopAddressRouter = require(\"./routes/shop/address-routes\");\r\n const shopOrderRouter = require(\"./routes/shop/order-routes\");\r\n const shopWebHookRouter = require(\"./routes/shop/webhook-routes\");\r\n-const shopSearchRouter = require(\"./routes/shop/search-routes\"); \r\n-const shopReviewRouter = require(\"./routes/shop/review-routes\"); \r\n-const commonFeatureRouter = require(\"./routes/common/feature-routes\"); \r\n+const shopSearchRouter = require(\"./routes/shop/search-routes\");\r\n+const shopReviewRouter = require(\"./routes/shop/review-routes\");\r\n+const commonFeatureRouter = require(\"./routes/common/feature-routes\");\r\n \r\n mongoose\r\n-  .connect(\r\n-    process.env.MONGO_URL\r\n-  )\r\n+  .connect(process.env.MONGO_URL)\r\n   .then(() => console.log(\"MongoDB Connected\"))\r\n   .catch((error) => console.error(\"MongoDB Connection Error:\", error));\r\n \r\n const app = express();\r\n@@ -62,8 +59,7 @@\n app.use(\"/api/shop/products\", shopProductsRouter);\r\n app.use(\"/api/shop/search\", shopSearchRouter);\r\n app.use(\"/api/shop/review\", shopReviewRouter);\r\n \r\n-\r\n app.use(\"/api/common/feature\", commonFeatureRouter);\r\n \r\n app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\r\n"
+                },
+                {
+                    "date": 1741590411886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n app.use(cookieParser());\r\n \r\n app.use(\r\n   cors({\r\n-    origin: \"http://localhost:5173\",\r\n+    origin: process.env.,\r\n     methods: [\"GET\", \"POST\", \"DELETE\", \"PUT\"],\r\n     allowedHeaders: [\r\n       \"Content-Type\",\r\n       \"Authorization\",\r\n"
                 }
             ],
             "date": 1739511971884,

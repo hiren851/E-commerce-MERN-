@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 54,
+            "activePatchIndex": 55,
             "patches": [
                 {
                     "date": 1741266488005,
@@ -224,6 +224,10 @@
                 {
                     "date": 1741326067797,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,11 @@\n }\r\n \r\n export const addReview = createAsyncThunk(\r\n     \"/products/addReview\",\r\n-    async (fo) => {\r\n+    async (formData) => {\r\n       const response = await axios.post(\r\n-        `http://localhost:7000/api/shop/review/add`,{data}\r\n+        `http://localhost:7000/api/shop/review/add`,\r\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n"
+                },
+                {
+                    "date": 1741591111154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export const addReview = createAsyncThunk(\r\n     \"/products/addReview\",\r\n     async (formData) => {\r\n       const response = await axios.post(\r\n-        `http://localhost:7000/api/shop/review/add`,\r\n+        `${import.meta.env.VITE_API_URL}/api/shop/review/add`,formData\r\n       );\r\n       return response?.data;\r\n     }\r\n   );\r\n"
                 }
             ],
             "date": 1741266488005,

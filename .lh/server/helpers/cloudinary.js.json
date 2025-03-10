@@ -1,0 +1,54 @@
+{
+    "sourceFile": "server/helpers/cloudinary.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1741589860496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1741589865783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const cloudinary = require('cloudinary').v2;\r\n const multer = require(\"multer\")\r\n \r\n cloudinary.config({\r\n-    cloud_name: ,\r\n+    cloud_name: process.env,\r\n     api_key:'687958456671215',\r\n     api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1741589872865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const cloudinary = require('cloudinary').v2;\r\n const multer = require(\"multer\")\r\n \r\n cloudinary.config({\r\n-    cloud_name: process.env,\r\n+    cloud_name: process.env.Cl,\r\n     api_key:'687958456671215',\r\n     api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1741589877964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const cloudinary = require('cloudinary').v2;\r\n const multer = require(\"multer\")\r\n \r\n cloudinary.config({\r\n-    cloud_name: process.env.Cl,\r\n+    cloud_name: process.env.CLOUDINAR,\r\n     api_key:'687958456671215',\r\n     api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1741589885587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const cloudinary = require('cloudinary').v2;\r\n const multer = require(\"multer\")\r\n \r\n cloudinary.config({\r\n-    cloud_name: process.env.CLOUDINAR,\r\n+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,\r\n     api_key:'687958456671215',\r\n     api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1741589894047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const multer = require(\"multer\")\r\n \r\n cloudinary.config({\r\n     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,\r\n-    api_key:'687958456671215',\r\n+    api_key:process.env.CLOUDINARY_CLOUD_NAME,\r\n     api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n })\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741589901329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const multer = require(\"multer\")\r\n \r\n cloudinary.config({\r\n     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,\r\n-    api_key:process.env.CLOUDINARY_CLOUD_NAME,\r\n+    api_key:process.env.CLOUDINARY_API_KEY,\r\n     api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n })\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1741589907727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n cloudinary.config({\r\n     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,\r\n     api_key:process.env.CLOUDINARY_API_KEY,\r\n-    api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n+    api_secret: CLOUDINARY_API_KEY\r\n })\r\n \r\n \r\n const storage = new multer.memoryStorage();\r\n"
+                },
+                {
+                    "date": 1741589916096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n cloudinary.config({\r\n     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,\r\n     api_key:process.env.CLOUDINARY_API_KEY,\r\n-    api_secret: CLOUDINARY_API_KEY\r\n+    api_secret: process.env.CLOUDINARY_API_KEY\r\n })\r\n \r\n \r\n const storage = new multer.memoryStorage();\r\n"
+                },
+                {
+                    "date": 1741589923794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n cloudinary.config({\r\n     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,\r\n     api_key:process.env.CLOUDINARY_API_KEY,\r\n-    api_secret: process.env.CLOUDINARY_API_KEY\r\n+    api_secret: process.env.CLOUDINARY_API_SECRET\r\n })\r\n \r\n \r\n const storage = new multer.memoryStorage();\r\n"
+                }
+            ],
+            "date": 1741589860496,
+            "name": "Commit-0",
+            "content": "const cloudinary = require('cloudinary').v2;\r\nconst multer = require(\"multer\")\r\n\r\ncloudinary.config({\r\n    cloud_name: ,\r\n    api_key:'687958456671215',\r\n    api_secret: 'NRK8RmMhYupO_5tCp6cUsg94i80'\r\n})\r\n\r\n\r\nconst storage = new multer.memoryStorage();\r\n\r\nasync function imageUploadUtils (file){\r\n    const result = await cloudinary.uploader.upload(file,{\r\n        resource_type: 'auto'\r\n    })\r\n\r\n    return result;\r\n}   \r\n\r\nconst upload = multer ({storage});\r\nmodule.exports= {upload,imageUploadUtils}"
+        }
+    ]
+}

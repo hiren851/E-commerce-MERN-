@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 26,
             "patches": [
                 {
                     "date": 1740994095489,
@@ -84,6 +84,34 @@
                 {
                     "date": 1741068097969,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     const event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);\r\n \r\n     if (event.type === \"checkout.session.completed\") {\r\n       const session = event.data.object;\r\n-      const orderId = session.metadata?.orderId; \r\n+      // const orderId = session.metadata?.orderId; \r\n \r\n       // Extract Payment & Payer Info\r\n       const payerId = session.customer || \"Guest\"; // Stripe Customer ID\r\n       const payerEmail = session.customer_email || \"No email provided\";\r\n"
+                },
+                {
+                    "date": 1741590113179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const stripe = require(\"stripe\")(\"sk_test_51QxPWqA8ZItKkZV0Gb0GVJNN2RhnVTSbrnPQCp5X4PF7M7Ui4oy3Hth9LMvfUNiuUaifhkFpCBeqY31eRQFknJzz00SpyiT0wR\");\r\n+const stripe = require(\"stripe\")();\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n const endpointSecret = \"whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb\";\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n"
+                },
+                {
+                    "date": 1741590120809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const stripe = require(\"stripe\")();\r\n+const stripe = require(\"stripe\")(process.env);\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n const endpointSecret = \"whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb\";\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n"
+                },
+                {
+                    "date": 1741590136862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const stripe = require(\"stripe\")(process.env);\r\n+const stripe = require(\"stripe\")(process.env.whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb);\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n const endpointSecret = \"whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb\";\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n"
+                },
+                {
+                    "date": 1741590142651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const stripe = require(\"stripe\")(process.env.whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb);\r\n+const stripe = require(\"stripe\")(process.env.STRIPE_SECRET_KEY);\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n const endpointSecret = \"whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb\";\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n"
+                },
+                {
+                    "date": 1741590148364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n const stripe = require(\"stripe\")(process.env.STRIPE_SECRET_KEY);\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n-const endpointSecret = \"whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb\";\r\n+const endpointSecret = \"whsec_ee3a2\";\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n   const sig = req.headers[\"stripe-signature\"];\r\n \r\n"
+                },
+                {
+                    "date": 1741590157265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n const stripe = require(\"stripe\")(process.env.STRIPE_SECRET_KEY);\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n-const endpointSecret = \"whsec_ee3a2\";\r\n+const endpointSecret = process.e;\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n   const sig = req.headers[\"stripe-signature\"];\r\n \r\n"
+                },
+                {
+                    "date": 1741590169170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n const stripe = require(\"stripe\")(process.env.STRIPE_SECRET_KEY);\r\n const Order = require(\"../../models/Order\"); // Import Order model\r\n-const endpointSecret = process.e;\r\n+const endpointSecret = process.env.STRIPE_ENDPOINTSECRET;\r\n \r\n router.post(\"/stripe\", express.raw({ type: \"application/json\" }), async (req, res) => {\r\n   const sig = req.headers[\"stripe-signature\"];\r\n \r\n"
                 }
             ],
             "date": 1740994095489,

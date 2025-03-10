@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const stripe = require("stripe")("sk_test_51QxPWqA8ZItKkZV0Gb0GVJNN2RhnVTSbrnPQCp5X4PF7M7Ui4oy3Hth9LMvfUNiuUaifhkFpCBeqY31eRQFknJzz00SpyiT0wR");
-const Order = require("../../models/Order"); // Import Order model
-const endpointSecret = "whsec_ee3a2844a7e0b439172d80797b16e93d251a099716a05fc093d40fed0ad109cb";
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const Order = require("../../models/Order"); 
+const endpointSecret = process.env.STRIPE_ENDPOINTSECRET;
 
 router.post("/stripe", express.raw({ type: "application/json" }), async (req, res) => {
   const sig = req.headers["stripe-signature"];
